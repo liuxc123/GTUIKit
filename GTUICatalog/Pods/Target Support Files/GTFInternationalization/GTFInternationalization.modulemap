@@ -1,0 +1,6 @@
+framework module GTFInternationalization {
+  umbrella header "GTFInternationalization-umbrella.h"
+
+  export *
+  module * { export * }
+}

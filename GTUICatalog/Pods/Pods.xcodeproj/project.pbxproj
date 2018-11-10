@@ -1,0 +1,1976 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006C8AEDD7F07425ACB3DD611021C864 /* GTUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB92C5F8B7D4F32981777E262CD1EC9 /* GTUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00D415DF1B601F881738B39B1D127446 /* UIView+GTRTL.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E90A3F07D8C6E39E6343BFB4DE3E27 /* UIView+GTRTL.m */; };
+		00FC8FA6ADC1A56F41BB8914E4B66A21 /* GTUICurvedCornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F93DFB54F21B99B3A0C50D7D1D9237 /* GTUICurvedCornerTreatment.m */; };
+		03BE83A7B99E692E0028DFDCF455972E /* GTShapeScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = F36CD0A4C3F5249A146BE1BE90B2F630 /* GTShapeScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0746C1F6F9739000087D4C4F0A473059 /* GTUIFontTraits.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C354A5B1DA835ECAB8CB4B133F595C4 /* GTUIFontTraits.m */; };
+		08A28F232CECBAD37E8A6F119949F91D /* GTUIShapeGenerating.h in Headers */ = {isa = PBXBuildFile; fileRef = 64268C27B07E3B912158E568EB7CB45B /* GTUIShapeGenerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0901B2AEB586924424846DF101E7C69D /* GTUIInkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BAFD0D5FEF14106A8DAE2BCAA5D4E /* GTUIInkView.m */; };
+		09D74BF7B127B108FE8503B05AC33093 /* GTUIInkGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F1CA4F25DC84124313DAC95B524D6 /* GTUIInkGestureRecognizer.m */; };
+		0B234EE7A94E0BDF9FFF67C9532845F9 /* GTFColorCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D1D8778A4236EAC72ACD45EF7D0866 /* GTFColorCalculations.m */; };
+		0CB0A913F688C597E29F45746E3860D4 /* GTKeyboardWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 97D03C666C87375285DE36D1189435C7 /* GTKeyboardWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DBD41A55DBA9E6B54DD146312E5330C /* GTUITypography.m in Sources */ = {isa = PBXBuildFile; fileRef = 7756B66B813822496D1E7BED67BF548B /* GTUITypography.m */; };
+		0E3B9325A407446FABCEE49CF01F6A59 /* GTUIShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 399A8EA932175D82050AAC6110309A38 /* GTUIShadowLayer.m */; };
+		0E47F6458240EAB687A9C041D1AE8676 /* GTUICheckBoxPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B96E536B06E9D509BAC33A5C6A2EDA /* GTUICheckBoxPath.m */; };
+		0FD87ED6CB1013D956F4A4DFFA26194E /* GTFTextAccessibility-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3830E2117589976C296F35ACC261DB /* GTFTextAccessibility-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		123229FD2CCFC4D8E77AD6A872E20EE2 /* GTColorScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B284D835BC4E7158044140806D3D6F /* GTColorScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		129670419CF6D3695AB142DC656626D6 /* GTFRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D728DE41A2ADFAB12D85465DBE9354 /* GTFRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		16F1134D946910EB0EFC15B7DD31EFA3 /* GTUIAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AE1F375360D15C4B092C0F3B5016D /* GTUIAttributedLabel.m */; };
+		1DAB2E19CF36A13EF4D5F7E26576DBE3 /* NSLocale+GTRTL.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBBB3AB47EEFC5AD53607F7333FA3A6 /* NSLocale+GTRTL.m */; };
+		1DCDE7B998A11FCACB6E382F3482F4DB /* GTFTextAccessibility-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = E3561ED4726382D5CCE38076985B2CB3 /* GTFTextAccessibility-Bridging-Header.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1ECD4AF722FE51714CD2BE12C6703AD1 /* NSArray+GTFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA19F23947AC617230063A7527CD089F /* NSArray+GTFUtils.m */; };
+		1FF4D050735450E5CA6130AF278D2AAC /* NSArray+GTFUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EAF34D44AA8DE082171AB750DADDA4 /* NSArray+GTFUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		20511B13B1E9F93BF814461D274C1E9F /* GTUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0726AEC63F84AD1A9E20910F8C5B62 /* GTUIButton.m */; };
+		20799B4E8865A0DE2C89726225B957C1 /* GTLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 32621BEDBEAD953105596B15A5978775 /* GTLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2199CB835598B7281D453A13C205D147 /* GTUICutCornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E2346F4197082B8C5D4FA5F32B184A /* GTUICutCornerTreatment.m */; };
+		21DD79978B000AEAE149B09A0372F8B4 /* GTUIShapeScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = EB63F489510E3171F747CE0452D9143F /* GTUIShapeScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2390C49CD0E12661DF71546EBBEE2F57 /* UIImage+GTRTL.m in Sources */ = {isa = PBXBuildFile; fileRef = D67A791B7D30C3F33F2CC5BECD3ADC20 /* UIImage+GTRTL.m */; };
+		270B483DBA4EF6AEB834403A9CD967D5 /* GTUILayoutMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD00D4DC32352F49245B1AD60CFC49 /* GTUILayoutMetrics.m */; };
+		2B0091B0DB629048D04D1148D224B0B3 /* NSLocale+GTRTL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8B17B361F0DC4F1B4C7C3196183494 /* NSLocale+GTRTL.h */; };
+		2B9720F99F04A084369587F620339EFA /* GTUIEdgeTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 317754930683110EBF327ACEB33D99F0 /* GTUIEdgeTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC454F9DCAD381E7D8B840E5F514429 /* GTFCatalogExample.h in Headers */ = {isa = PBXBuildFile; fileRef = D6BF0B0B2D2D3283D82E10A95ABAC0AE /* GTFCatalogExample.h */; };
+		2D732FAADD80D36E755F79C855B334AE /* GTMath.h in Headers */ = {isa = PBXBuildFile; fileRef = BB91D9795E10C6AB8FD894FF53C5FF87 /* GTMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FBDF4B622047A48537B2C8AF2496D63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D49495CAD535893610A4D7640455B4C /* Foundation.framework */; };
+		306627893E413BF633980FF0C3248A84 /* GTUIRectangleShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4829139E2F0B7048FF045BE42E2720E5 /* GTUIRectangleShapeGenerator.m */; };
+		30A31A03755685C26C69BB7C95859D66 /* GTUIRectangleShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F627ECEB50A09ED9EDE919C6DB68EB /* GTUIRectangleShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3441296FE243018823777156484EE82A /* GTUIActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 854A51B34449C4B4474E4B815535BAD6 /* GTUIActivityIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		345A7604BF1FAA3BE39E1419C88E209F /* GTUILegacyInkLayer+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A35C12C03B50EABA72DC10014B54B2A /* GTUILegacyInkLayer+Testing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34B32DF8AE65E4896F46B299F7ACF707 /* GTUITriangleEdgeTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF06F96B54608C3D4DC90158F68BFEE /* GTUITriangleEdgeTreatment.m */; };
+		350D3767B70C15F135673E7BA93172C7 /* GTUITypography.h in Headers */ = {isa = PBXBuildFile; fileRef = C07EF912B2000EEEA4248EB575779348 /* GTUITypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		366CD0FB63C5DFF4B4B0CFC6E3A5268D /* UIImage+GTRTL.h in Headers */ = {isa = PBXBuildFile; fileRef = CA4E4FE88256136994AC0BCDC34E8A63 /* UIImage+GTRTL.h */; };
+		3773E2AA4C9BADF7FD6972A3B57AD1F8 /* GTUIMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E165754BFC7AEBBE3ECE231BFCBE87C /* GTUIMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37CFED4C6FC3318BB714752525D31879 /* GTFRTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 047E6A25911D84512A340F944B553DB5 /* GTFRTL.m */; };
+		388A9F7BA96FF15CD44AD98469B37661 /* GTUIInkTouchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BE61D8AB814F31F9F504C3A3361E28 /* GTUIInkTouchController.m */; };
+		39CF78A7BF24024FB0118EB5F76D4E7D /* GTTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = 9132A14EA082BC2937ED919F02E14139 /* GTTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AD1F883F0A04220BC66F2A26A5C3322 /* GTUITonalPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D0FE6C24B8596F9439A644FFBBFE7 /* GTUITonalPalette.m */; };
+		3C30D762CE55E211760B905B2C5182C0 /* GTUITonalPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8095D2816CBBDA188364A2DB302D82 /* GTUITonalPalette.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D15108B95B955852B9F8D901809E01C /* GTUITypographyScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C0EC78245EF1EC12E504EE9550A28E1 /* GTUITypographyScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ED5DF5DED5825DFA4E4980682BB8293 /* GTUIInkTouchController.h in Headers */ = {isa = PBXBuildFile; fileRef = E88852ADD5F21187EFEEB36478312F3C /* GTUIInkTouchController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F43881CE0A12EEAAE4F5FBC4FD61355 /* GTUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF3AF99F1905D60BC6A21E299F669C8 /* GTUILabel.m */; };
+		4054BEF2CA5780C63E6B847F2E0BB9CA /* UIApplication+AppExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA1C16F6A97B3283684744F8A713324 /* UIApplication+AppExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40687D333BF60F2169A7C5A6D33E0E92 /* GTCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = D381E1A21E3EF47345D02652B7EFCA00 /* GTCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		408FAC381FDD7E06BACA0923BC5F74FA /* GTUIMath.h in Headers */ = {isa = PBXBuildFile; fileRef = CF3012F2C4D52B0942953BBB7F1FA6A8 /* GTUIMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41C5841F2A8314110ABB04291F6EC861 /* GTFRTL.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 77C4671F2BA43D607DF4510EB5CCC59F /* GTFRTL.h */; };
+		42C7B616DF667EA023D916387A4F582C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D49495CAD535893610A4D7640455B4C /* Foundation.framework */; };
+		42F8B4B0C501A24DE44D036527AE726E /* Pods-GTUICatalog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CF7E75039016CB8CCD73634063708 /* Pods-GTUICatalog-dummy.m */; };
+		4316DA8BB6978B472F4E9BC851C693C2 /* GTUICheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BEE66B4DFBD65D5F2725343553DC2B /* GTUICheckBox.m */; };
+		4413C48B25A4C61D97CE3A2948216221 /* GTUICutCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AA2C405E2DBAF37C856FBB20DD8707 /* GTUICutCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		479A3E17BAEDBF655D80525D940E81AF /* UIFont+GTUITypographyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = BA7DA9B0086E2E73D363AB533FEA392A /* UIFont+GTUITypographyPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4B3265FF92D7CB330867CC6E2427712C /* GTUIShadowElevations.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA4B817DF09527640B5F008AF61CE36 /* GTUIShadowElevations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EFD0AFBC110D3D574DA3C5FF610576C /* GTButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EC935E75D0B5252D94F0CE4D3DC4B3 /* GTButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5293CF537FF43682615AC55BEE1DE2C0 /* GTUICornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9BB918FA4EC1EA44E33C0F7313725D /* GTUICornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53114292903452BACADF4F3EC316F143 /* GTApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BA02645A773A00BFFDE1C68CBD0722 /* GTApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54D54C61F51452676454D99B24F22520 /* GTUICornerTreatment+CornerTypeInitalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3341F364412672C7ECDD6BD84DE2EA /* GTUICornerTreatment+CornerTypeInitalizer.m */; };
+		5521840BF36B7EFD31430A34F5E2DAA7 /* NSLocale+GTRTL.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 6F8B17B361F0DC4F1B4C7C3196183494 /* NSLocale+GTRTL.h */; };
+		55D984A711F24F1FBFFB59464AA9DDDA /* GTUILegacyInkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5C50783A50DB6956EB4F53E429793 /* GTUILegacyInkLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A460FE4638EC0B6348B15055E6DC56E /* GTFRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC9F084E1B974E32B0036BDB0BE098 /* GTFRuntime.m */; };
+		5CA09289DB4F636A03D86CECF4A7C796 /* GTUIFontTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8132C03FE8220C786CB7693DF8E2333F /* GTUIFontTextStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61B55A29C55951FDC8D65A9D1C70DA65 /* GTUIIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = B34D73C574B0625383F82BAAC04237B9 /* GTUIIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		626C17B0A4495D4182B938460C93D70A /* GTFRTL.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C4671F2BA43D607DF4510EB5CCC59F /* GTFRTL.h */; };
+		647C5B92203FB9A901F7E7C3E387A71F /* GTUICornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 188484D8476C89E657F6F74DAE7A93AF /* GTUICornerTreatment.m */; };
+		65E17C80F6E863E980F34B0B7E43F8E1 /* GTIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 988BB39C7B04C1AA433923B40A48FD19 /* GTIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68B43D255AE659EEBD0F1314F9D4B7FC /* GTTypographyScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = DE54411D5B0A2455DE9EB359228BC29A /* GTTypographyScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5834A074E449DB0A391058D06DDDDA /* UIImage+GTRTL.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = CA4E4FE88256136994AC0BCDC34E8A63 /* UIImage+GTRTL.h */; };
+		6DE94B9F9A894F7325B02E82D220F872 /* GTShapes.h in Headers */ = {isa = PBXBuildFile; fileRef = DF8CCC029398901E5E8DE4C1C9EA208A /* GTShapes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B184725AD5AC32DD81E0942D99FE15 /* GTUIPathGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A1A28B47E017EAD88FB28A4A9460D2 /* GTUIPathGenerator.m */; };
+		76F622DFC9FE40CE0421CA6151B01512 /* GTFTextAccessibility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D29391EF73244C9B35B71348362D77D /* GTFTextAccessibility-dummy.m */; };
+		776F4823F608E064F1601E7E93F14BF5 /* GTUIShapedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65D5F65F77745823BA9FC112EC0A6AC /* GTUIShapedView.m */; };
+		77E1A6BD92A2BA9DC93F365E0AED7CBA /* GTFInternationalization.h in Headers */ = {isa = PBXBuildFile; fileRef = 11BB4DF507D7965582C8045F3C9AFD41 /* GTFInternationalization.h */; };
+		7A1C6AB44DD9BEAF6CA5E5B804751467 /* UIFont+GTUITypography.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E8A30A0DCBBFE3588A9B286521709 /* UIFont+GTUITypography.m */; };
+		7F91343DCD577979DA8303510BECC647 /* GTUIShapedShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BF328BCD5571A11F9313490D2341BA0B /* GTUIShapedShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FFFDEE85B1B2A44EFA18CB187A08898 /* GTUIFontTraits.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC03A227C01BC08339060B1402E7801 /* GTUIFontTraits.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		818247155193F735ABF96169017FBFE0 /* GTIconfont.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56626C4B4062CCD3E05655D1B0B797E7 /* GTIconfont.bundle */; };
+		81B967AC4E84DB076EB06BE39998DD4C /* GTUIImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = B3059CD8D0F72D88F6386319BDC69F7C /* GTUIImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81FA681158BE04A05FC78E68553CC62A /* GTUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3702CFB1A83E7A6FF1B46BD9FCE24425 /* GTUIImageView.m */; };
+		8633624540B1010B30B85FD2E2FECE47 /* GTShapeLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 89794F3C70D4BE211E92437981D89F41 /* GTShapeLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		873ECB78F5B83BB0A57311BA9D22298B /* GTUIShapedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 642C5BFC4280078A6C455085CFEEC758 /* GTUIShapedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		878681188C1CBDD555C9C3DCEF2C24DB /* GTFTextAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2FE915DE13597617CABAA803E48DF0 /* GTFTextAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		896A0D4CBD4F3E8F0F7BE52D9B338B67 /* GTUIKeyboardWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 12013692B869BB8946591B6DD43909D3 /* GTUIKeyboardWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D87882000A1460682B9B41844D21F7B /* GTFCatalogExample.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = D6BF0B0B2D2D3283D82E10A95ABAC0AE /* GTFCatalogExample.h */; };
+		8E583F2CB6670CFBA327115B0470A5C3 /* GTUIColorScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6A3BF9E1EF0CF8DDE9CDB107249DDE /* GTUIColorScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EC2D1248CBA51B34FDAEABC90F88A5F /* GTUITypographyScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = B5280ECCD8CCE37F95BAB4173C28C4A1 /* GTUITypographyScheme.m */; };
+		91C0A3F052C180219D685FB292E3B84A /* UIFont+GTUITypographyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9349698B16EBFDEEBA6D4B39A36D43A /* UIFont+GTUITypographyPrivate.m */; };
+		92B838C0586424CA47362B6ED0F8C258 /* GTUICheckBoxPath.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC701BA2201C024CAC43A24A83D6F81 /* GTUICheckBoxPath.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		997BB53EAF83758EB946934D323F1499 /* GTFImageCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = E644291BEF15F52FEB87AA25F07BF9EC /* GTFImageCalculations.m */; };
+		9A8EFD6DAB061FA8242725B8C6119987 /* NSString+GTBidi.h in Headers */ = {isa = PBXBuildFile; fileRef = FB3D63D5F9D9F61B22FD3BE0C867A06A /* NSString+GTBidi.h */; };
+		9A9C7111DE1E86ABA3AEC4BC33350E52 /* UIApplication+AppExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2124CA820A8516BEB6569C766F0813F5 /* UIApplication+AppExtensions.m */; };
+		9C57FC7EC8EEFCA2032B59F377097078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D49495CAD535893610A4D7640455B4C /* Foundation.framework */; };
+		9DB45A2A8ACFD2E971E0BF4C32A7EE1B /* GTFTextAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9E334E56AEE875B61F46DBD05F0DA3 /* GTFTextAccessibility.framework */; };
+		9DC4DD21D524BE3C98AF752E3DF91E01 /* GTFInternationalization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06837DE2D2DFDB383A8B3AB3E98D60 /* GTFInternationalization-dummy.m */; };
+		A1579EF7AE0E07B77845FDEB51B1FEAB /* UIFont+GTUITypography.h in Headers */ = {isa = PBXBuildFile; fileRef = F03F7861122B155BCC088B47E47E481D /* UIFont+GTUITypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1A7648782796FA7D1A20A07CB538489 /* GTUICornerTreatment+CornerTypeInitalizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0990419BE4B8AE171D8D18CA9A45C8 /* GTUICornerTreatment+CornerTypeInitalizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7FDB5A6F8FC109B3A95C606A3B25070 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D49495CAD535893610A4D7640455B4C /* Foundation.framework */; };
+		A84BECEB4ED74C62D1ACB28ED049F13E /* GTUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C7FA94ED2F70A60E8A3D0F61F474 /* GTUISwitch.m */; };
+		A924F3704F954042FFE30E287619FAD5 /* GTUIAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6780361A6A05923F3CEAA413AC6AC5A2 /* GTUIAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9316D7CF0AC41BD13875F6397791D75 /* GTFNodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEA12C1E77A27D1B2DFB0FBAD4E71F /* GTFNodeListViewController.m */; };
+		ABB7A3224B6709C6AFC639AF1315B711 /* GTFNodeListViewController.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 05D67EB2392967166385E9B365A6678F /* GTFNodeListViewController.h */; };
+		AC540F61511F260075855944DE559717 /* GTUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ADE6163823BE52A473CAC19607DA2C4 /* GTUIButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD1AC1168900092F731296720CB33BBC /* GTFColorCalculations.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A291C06DE744D8A37F263413103602 /* GTFColorCalculations.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B1E227A620D5F154E1D45A3FEEC98160 /* GTImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = CCFCD02D84E289E8583F45D3F2F8A6E8 /* GTImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3013C1556F6D4353772A0624D6E5A54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D49495CAD535893610A4D7640455B4C /* Foundation.framework */; };
+		B8E939A8025F8B0FB4E8A019B7DAA059 /* GTCatalog.h in Headers */ = {isa = PBXBuildFile; fileRef = E5873A1BCC487D4CB7A5B0CE4DC83FB3 /* GTCatalog.h */; };
+		BB1A70ADDFE90FFBDF6BF46F3C573F92 /* GTUIBorderEdgeTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4017F8C0C2A74E9DCEFA9FEDB9A8DF7E /* GTUIBorderEdgeTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB346C741C928867C617CABF3941D2DF /* GTUICheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 49C14E02E9520CC4008116365A27A2B1 /* GTUICheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB538B9F8BB5F3CD5FF8B531EE681580 /* GTUITriangleEdgeTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = C6FD088395A806A1087559F9C745D607 /* GTUITriangleEdgeTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFF587DC76BD97DDE8A8AB26477A126 /* GTUIEdgeTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBB21972CD6AC7CF5A4C7879F190470 /* GTUIEdgeTreatment.m */; };
+		BE2B8DC19E85C34E8C7EA8D25159EF46 /* GTUIShapeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A146254D3FD220341D2DCFB348627F40 /* GTUIShapeCategory.m */; };
+		BE5E92511B81C17453914DFC607C6438 /* GTFImageCalculations.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BD32E88F4535D509A370EC77142476 /* GTFImageCalculations.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BE8625C22895F2F503D0BD21AA1ED666 /* GTUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F75D30BF6063741DC3ED860B01F098F /* GTUIKit-dummy.m */; };
+		BEB0564714AAC42223F8AE9A0BC41CD6 /* GTFTextAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479818A095AD2183C968D8B57D2A292 /* GTFTextAccessibility.m */; };
+		BFA28F3AABC3AC584798D01E77996B0F /* Pods-GTUICatalog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5AF6BA0A9AD3EB8E030C33353EE4620 /* Pods-GTUICatalog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C102761CC795495548FC2B21C2C32917 /* GTUIShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 23440D241A7A91B9A25B658C024AE25D /* GTUIShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2C789299079FA1BD17902F785679BE6 /* GTUIKeyboardWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8420FA9E00CA5ADCCC4B7EF4BB20B /* GTUIKeyboardWatcher.m */; };
+		C302A691D8250472A981375883134ABA /* GTUICurvedRectShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D9B4B7C9B95103DC1DA94F402C2451 /* GTUICurvedRectShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5B140B889A77DFC0C25F8BE10A675D1 /* UIFontDescriptor+GTUITypography.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B44C0B9C34614A2C957673209E2A4B /* UIFontDescriptor+GTUITypography.m */; };
+		C698364E0968C0995B8679842351FDE2 /* GTUIShapedShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E8A389A697D2692924A83B0169BFA8 /* GTUIShapedShadowLayer.m */; };
+		C6A450452402577C288C91995FFEB426 /* GTSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = BC921F65842163C52DD8A6AD0CC56C0C /* GTSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8C8D3B30649B8C48F4476017C1085FF /* UIView+GTRTL.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D5F15CD1E33078FE5A02CC49A417BB /* UIView+GTRTL.h */; };
+		C9B2D4770351EB99E3F5862E09537B10 /* GTUILayoutMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBFDFFD2B1792A4069C49282AEDF172 /* GTUILayoutMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC96EE197FF0F62C82FDCAE6574F003C /* GTUIShapeScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E487F47B270CEEAA86DA8C0ACE0558E /* GTUIShapeScheme.m */; };
+		CD426DF6673814ECBAFF67B3F265D460 /* GTFInternationalization-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7742E6A2623E02CEAB2EB6F8BC59AE9 /* GTFInternationalization-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE50313EAFCF0632704A2EA4508777EA /* GTUIColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC6161601D81A291CE831BD1D5EC3C /* GTUIColorScheme.m */; };
+		CEB33DDC11AB5C2DDB27D6F8E0125F30 /* GTUIInkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDDCA03522B3A5B24FBA9BCAC87E954 /* GTUIInkLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D015D3B8C6A94E63F2154D4A0941A788 /* GTUIIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8E590EE878E13071A427610584A4C8 /* GTUIIconView.m */; };
+		D22346A025A2280861F7D298F7DE7630 /* GTUIButton+Subclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 8191561CDB746C5D190231A88B9593F4 /* GTUIButton+Subclassing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D24C4968BD0855809091466381E2FE7C /* GTFNodeListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D67EB2392967166385E9B365A6678F /* GTFNodeListViewController.h */; };
+		D25096E4FF5EC7EDACA7B12D12EDEEC7 /* GTUIRoundedCornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9378F0341CC8A4E89A458B692B7645E0 /* GTUIRoundedCornerTreatment.m */; };
+		D5A5F259FDC522392646E139EDCCCBA9 /* GTUIInkGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E5BFBCC87F88C300FE2C42FE1FB656 /* GTUIInkGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5E3F2CE31AB4CE9A11E1EDB1004338A /* GTUISlantedRectShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD02C66927EEC43F9430BC7C38502750 /* GTUISlantedRectShapeGenerator.m */; };
+		D7DE63BAF1A87F374E2C08031C5EF848 /* GTUIPillShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C5CC89864AA12ADF182AE7CC66A795 /* GTUIPillShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD999831FA1F523095D0E74F8C4BA450 /* GTUIShapeCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E38F2D2C08563AD1396C50C7F8F3A45 /* GTUIShapeCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0EFB4D36FF7F639F0C5BCCAD5BD8B16 /* GTUISlantedRectShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E3D5767530D8DBEE3E4887A57ECABE3 /* GTUISlantedRectShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2E9CFD1704BF2D39D46EA46869502B3 /* GTUICheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 344940D7C507E4183BCEC8F8668FE52A /* GTUICheckBoxGroup.m */; };
+		E3A43B1614A67988951642EA19C664DB /* GTUIInkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DD4D7DC38D887C10DD9F8741824A03 /* GTUIInkLayer.m */; };
+		E3E66B7B298D7BFA4F711CF0BE525701 /* GTUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F6BC327ADCC0F1E6EA8B7658BEF767 /* GTUILabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41134531A391D4130E32EC11780A712 /* GTUICurvedRectShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD1FF7B30BD82DB9B91928D5C1DAFE /* GTUICurvedRectShapeGenerator.m */; };
+		E42383D097F982142253A25A2C915F50 /* NSString+GTBidi.m in Sources */ = {isa = PBXBuildFile; fileRef = D773E9A0E66950069FD8696129A3901C /* NSString+GTBidi.m */; };
+		E5A15A3C72D79261AC78347F810DFEBC /* GTUICurvedCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = E2E43B455F194331FD217C1BEF5C0803 /* GTUICurvedCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5EF1EC7EE9B8F1F76C4E687F9D352F7 /* GTUIPillShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF743A52C2E4C31061344E4CDCDCF2F1 /* GTUIPillShapeGenerator.m */; };
+		E6E01BD597AA2632BEBADA0D8E198DE3 /* GTUIShadowElevations.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FF8DDE682BA15C35690CD902E7D85 /* GTUIShadowElevations.m */; };
+		E7038AE9894DC3C1C6CF4C3720CA5F94 /* GTUIActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE39A1EDBF1A1AABC3AE21C006732371 /* GTUIActivityIndicatorView.m */; };
+		E92C4BB833311163C6B9E20C50B747AF /* GTUIPathGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = DFEFE0307454A0DD27F8EF9DD439A189 /* GTUIPathGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E93B385D02D06D944D64CC007D7FBDEA /* UIFontDescriptor+GTUITypography.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D56A394E7405CDDBAA0D23674644A70 /* UIFontDescriptor+GTUITypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA532F54E1115B45213B50C8DB959FE9 /* GTFInternationalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F7921D62E7674A8EF9179BD2AAC36D /* GTFInternationalization.framework */; };
+		EC06D02F43ACDA3AE00ED119344D122F /* GTUICheckBoxAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = B65EB2DCE3C78833281C22466AF44265 /* GTUICheckBoxAnimations.m */; };
+		EE04620D8F88064B2F77BF53066E7970 /* GTActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75932E83E956BC01DAC767A8F9465A44 /* GTActivityIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE2CE2D0FBA788B0E58617E7B325C2C8 /* GTCatalog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A14893F8F5A3A6440AD158866B25D58 /* GTCatalog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1AC28E80A90666EEC8FEE39606333DF /* NSString+GTBidi.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FB3D63D5F9D9F61B22FD3BE0C867A06A /* NSString+GTBidi.h */; };
+		F1B5A9DEA0C7142D6CBE44B94E6009DE /* GTUILegacyInkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B365AF94CDC6FDF83AE4BD3541068 /* GTUILegacyInkLayer.m */; };
+		F2F587263EE97E3BF901930E74E34CB1 /* GTUIRoundedCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = A20A29B78DCD5928D91581550A5C0AA2 /* GTUIRoundedCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F31E52C210D71D80F2402D0AD598103B /* GTUICheckBoxAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = ABEC5AA2A9E0C045A13B199F20438190 /* GTUICheckBoxAnimations.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F3F1C3048D7A20A799111C5820AFEFC4 /* GTUISwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B0E52A0B659723E2FBC6AA8C003ABE4 /* GTUISwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F721A8CD8BDBA81467EAFA2A54BD7017 /* GTCatalog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F45A70B14DF6803A7A9BB0E5668AA3A /* GTCatalog-dummy.m */; };
+		F79E8104962C36C809B31E7D8D20D157 /* GTShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C105A7B71511C7D476AA3F0A6E293D45 /* GTShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F80B30BE372B88969241C853A0B25557 /* GTUICheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = FD8389B5A16EB0295776DE41607251E9 /* GTUICheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA027A395DDB8010C1FA34532FE7C52C /* GTUIBorderEdgeTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7CEA9EE5941E7739CE6755FF50B2F /* GTUIBorderEdgeTreatment.m */; };
+		FA85F317A04DA0DC067BD012A5026DCA /* GTCatalog.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = E5873A1BCC487D4CB7A5B0CE4DC83FB3 /* GTCatalog.h */; };
+		FB910AF13AAC8D92DC0A3F0FD11425E6 /* GTFInternationalization.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 11BB4DF507D7965582C8045F3C9AFD41 /* GTFInternationalization.h */; };
+		FD893E02C7F0F51D2EF2EF45F1EDCE1A /* GTInk.h in Headers */ = {isa = PBXBuildFile; fileRef = 21822A0178BAA3DEF0B76A831186FB1B /* GTInk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE2042BFD2DC2EB1DC25ADCE857A06CE /* GTUIInkView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A78F85AD80A899C1EDB9A20D06BEA36 /* GTUIInkView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFB21024F29CD48F5896FF04FE8CE2F6 /* UIView+GTRTL.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 41D5F15CD1E33078FE5A02CC49A417BB /* UIView+GTRTL.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24A2EE20893922D53F0FB0DBEF3AFECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC6D0CF95C234BB8A1AB6BEFAD9B730;
+			remoteInfo = GTFTextAccessibility;
+		};
+		50FC0E924D8B8EF84E5AC6CC2564258D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 688A67C0E5F60FA3D9A0A044F5BC385B;
+			remoteInfo = GTCatalog;
+		};
+		95D07C85F6B36AE1E2551C1E9BC102C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC6D0CF95C234BB8A1AB6BEFAD9B730;
+			remoteInfo = GTFTextAccessibility;
+		};
+		DC175A2A76D1B2925A9B45C81445879D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF321559B5E1C53FEB049AF24F38085D;
+			remoteInfo = GTUIKit;
+		};
+		EB149B8D0A74C889504E035308FDC9E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64BA33547A029AC817449BF746A78A70;
+			remoteInfo = GTFInternationalization;
+		};
+		ED17D2CC2CB0367F9F613C8C2AC974D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64BA33547A029AC817449BF746A78A70;
+			remoteInfo = GTFInternationalization;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		780C247CB25B0ACCF6F914DE8C5CBA3A /* Copy . Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/.";
+			dstSubfolderSpec = 16;
+			files = (
+				FB910AF13AAC8D92DC0A3F0FD11425E6 /* GTFInternationalization.h in Copy . Public Headers */,
+				41C5841F2A8314110ABB04291F6EC861 /* GTFRTL.h in Copy . Public Headers */,
+				5521840BF36B7EFD31430A34F5E2DAA7 /* NSLocale+GTRTL.h in Copy . Public Headers */,
+				F1AC28E80A90666EEC8FEE39606333DF /* NSString+GTBidi.h in Copy . Public Headers */,
+				6D5834A074E449DB0A391058D06DDDDA /* UIImage+GTRTL.h in Copy . Public Headers */,
+				FFB21024F29CD48F5896FF04FE8CE2F6 /* UIView+GTRTL.h in Copy . Public Headers */,
+			);
+			name = "Copy . Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF042B9FC353BBFB2983A54CCE99E2E3 /* Copy . Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/.";
+			dstSubfolderSpec = 16;
+			files = (
+				FA85F317A04DA0DC067BD012A5026DCA /* GTCatalog.h in Copy . Public Headers */,
+				8D87882000A1460682B9B41844D21F7B /* GTFCatalogExample.h in Copy . Public Headers */,
+				ABB7A3224B6709C6AFC639AF1315B711 /* GTFNodeListViewController.h in Copy . Public Headers */,
+			);
+			name = "Copy . Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0105EE318AC67539833DA8A483FAC7A3 /* GTCatalog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTCatalog.xcconfig; sourceTree = "<group>"; };
+		047E6A25911D84512A340F944B553DB5 /* GTFRTL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFRTL.m; path = src/GTFRTL.m; sourceTree = "<group>"; };
+		05D67EB2392967166385E9B365A6678F /* GTFNodeListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFNodeListViewController.h; path = src/GTFNodeListViewController.h; sourceTree = "<group>"; };
+		09BD32E88F4535D509A370EC77142476 /* GTFImageCalculations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFImageCalculations.h; path = src/private/GTFImageCalculations.h; sourceTree = "<group>"; };
+		0B6A3BF9E1EF0CF8DDE9CDB107249DDE /* GTUIColorScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIColorScheme.h; path = components/CommonComponent/schemes/ColorScheme/src/GTUIColorScheme.h; sourceTree = "<group>"; };
+		0CC03A227C01BC08339060B1402E7801 /* GTUIFontTraits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUIFontTraits.h; sourceTree = "<group>"; };
+		0D56A394E7405CDDBAA0D23674644A70 /* UIFontDescriptor+GTUITypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFontDescriptor+GTUITypography.h"; path = "components/BasicComponent/Typography/src/UIFontDescriptor+GTUITypography.h"; sourceTree = "<group>"; };
+		0E4E8A30A0DCBBFE3588A9B286521709 /* UIFont+GTUITypography.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+GTUITypography.m"; path = "components/BasicComponent/Typography/src/UIFont+GTUITypography.m"; sourceTree = "<group>"; };
+		0F75D30BF6063741DC3ED860B01F098F /* GTUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTUIKit-dummy.m"; sourceTree = "<group>"; };
+		11BB4DF507D7965582C8045F3C9AFD41 /* GTFInternationalization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFInternationalization.h; path = src/GTFInternationalization.h; sourceTree = "<group>"; };
+		12013692B869BB8946591B6DD43909D3 /* GTUIKeyboardWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIKeyboardWatcher.h; path = components/private/KeyboardWatcher/src/GTUIKeyboardWatcher.h; sourceTree = "<group>"; };
+		17EFB0828B2FC5C36C9FE2A447A651F1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		188484D8476C89E657F6F74DAE7A93AF /* GTUICornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUICornerTreatment.m; path = components/BasicComponent/Shapes/src/GTUICornerTreatment.m; sourceTree = "<group>"; };
+		1A9BB918FA4EC1EA44E33C0F7313725D /* GTUICornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUICornerTreatment.h; path = components/BasicComponent/Shapes/src/GTUICornerTreatment.h; sourceTree = "<group>"; };
+		1BB68E5511933571233CBA34A2F514EA /* GTUIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTUIKit.xcconfig; sourceTree = "<group>"; };
+		1BB92C5F8B7D4F32981777E262CD1EC9 /* GTUIKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTUIKit-umbrella.h"; sourceTree = "<group>"; };
+		1D0990419BE4B8AE171D8D18CA9A45C8 /* GTUICornerTreatment+CornerTypeInitalizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTUICornerTreatment+CornerTypeInitalizer.h"; path = "components/BasicComponent/ShapeLibrary/src/GTUICornerTreatment+CornerTypeInitalizer.h"; sourceTree = "<group>"; };
+		1E06837DE2D2DFDB383A8B3AB3E98D60 /* GTFInternationalization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTFInternationalization-dummy.m"; sourceTree = "<group>"; };
+		1EA6E36BCEA74319FBA94B42A4884443 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2124CA820A8516BEB6569C766F0813F5 /* UIApplication+AppExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+AppExtensions.m"; path = "components/private/Application/src/UIApplication+AppExtensions.m"; sourceTree = "<group>"; };
+		21822A0178BAA3DEF0B76A831186FB1B /* GTInk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTInk.h; path = components/CommonComponent/Ink/src/GTInk.h; sourceTree = "<group>"; };
+		23440D241A7A91B9A25B658C024AE25D /* GTUIShadowLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIShadowLayer.h; path = components/BasicComponent/ShadowLayer/src/GTUIShadowLayer.h; sourceTree = "<group>"; };
+		28F627ECEB50A09ED9EDE919C6DB68EB /* GTUIRectangleShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIRectangleShapeGenerator.h; path = components/BasicComponent/Shapes/src/GTUIRectangleShapeGenerator.h; sourceTree = "<group>"; };
+		2BA1C16F6A97B3283684744F8A713324 /* UIApplication+AppExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+AppExtensions.h"; path = "components/private/Application/src/UIApplication+AppExtensions.h"; sourceTree = "<group>"; };
+		2BF06F96B54608C3D4DC90158F68BFEE /* GTUITriangleEdgeTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUITriangleEdgeTreatment.m; path = components/BasicComponent/ShapeLibrary/src/GTUITriangleEdgeTreatment.m; sourceTree = "<group>"; };
+		2D29391EF73244C9B35B71348362D77D /* GTFTextAccessibility-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTFTextAccessibility-dummy.m"; sourceTree = "<group>"; };
+		2DDDCA03522B3A5B24FBA9BCAC87E954 /* GTUIInkLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUIInkLayer.h; sourceTree = "<group>"; };
+		2E38F2D2C08563AD1396C50C7F8F3A45 /* GTUIShapeCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIShapeCategory.h; path = components/CommonComponent/schemes/ShapeScheme/src/GTUIShapeCategory.h; sourceTree = "<group>"; };
+		2E487F47B270CEEAA86DA8C0ACE0558E /* GTUIShapeScheme.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIShapeScheme.m; path = components/CommonComponent/schemes/ShapeScheme/src/GTUIShapeScheme.m; sourceTree = "<group>"; };
+		2F45A70B14DF6803A7A9BB0E5668AA3A /* GTCatalog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTCatalog-dummy.m"; sourceTree = "<group>"; };
+		2FF3AF99F1905D60BC6A21E299F669C8 /* GTUILabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUILabel.m; path = components/CommonComponent/Label/src/GTUILabel.m; sourceTree = "<group>"; };
+		317754930683110EBF327ACEB33D99F0 /* GTUIEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIEdgeTreatment.h; path = components/BasicComponent/Shapes/src/GTUIEdgeTreatment.h; sourceTree = "<group>"; };
+		32621BEDBEAD953105596B15A5978775 /* GTLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLabel.h; path = components/CommonComponent/Label/src/GTLabel.h; sourceTree = "<group>"; };
+		344940D7C507E4183BCEC8F8668FE52A /* GTUICheckBoxGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUICheckBoxGroup.m; path = components/CommonComponent/CheckBox/src/GTUICheckBoxGroup.m; sourceTree = "<group>"; };
+		3702CFB1A83E7A6FF1B46BD9FCE24425 /* GTUIImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIImageView.m; path = components/CommonComponent/ImageView/src/GTUIImageView.m; sourceTree = "<group>"; };
+		386F1CA4F25DC84124313DAC95B524D6 /* GTUIInkGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIInkGestureRecognizer.m; path = components/CommonComponent/Ink/src/GTUIInkGestureRecognizer.m; sourceTree = "<group>"; };
+		399A8EA932175D82050AAC6110309A38 /* GTUIShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIShadowLayer.m; path = components/BasicComponent/ShadowLayer/src/GTUIShadowLayer.m; sourceTree = "<group>"; };
+		3A35C12C03B50EABA72DC10014B54B2A /* GTUILegacyInkLayer+Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTUILegacyInkLayer+Testing.h"; sourceTree = "<group>"; };
+		3A78F85AD80A899C1EDB9A20D06BEA36 /* GTUIInkView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIInkView.h; path = components/CommonComponent/Ink/src/GTUIInkView.h; sourceTree = "<group>"; };
+		3ADE6163823BE52A473CAC19607DA2C4 /* GTUIButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIButton.h; path = components/CommonComponent/Button/src/GTUIButton.h; sourceTree = "<group>"; };
+		3C9E334E56AEE875B61F46DBD05F0DA3 /* GTFTextAccessibility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFTextAccessibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D49495CAD535893610A4D7640455B4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4017F8C0C2A74E9DCEFA9FEDB9A8DF7E /* GTUIBorderEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIBorderEdgeTreatment.h; path = components/BasicComponent/ShapeLibrary/src/GTUIBorderEdgeTreatment.h; sourceTree = "<group>"; };
+		41B284D835BC4E7158044140806D3D6F /* GTColorScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTColorScheme.h; path = components/CommonComponent/schemes/ColorScheme/src/GTColorScheme.h; sourceTree = "<group>"; };
+		41D5F15CD1E33078FE5A02CC49A417BB /* UIView+GTRTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+GTRTL.h"; path = "src/UIView+GTRTL.h"; sourceTree = "<group>"; };
+		43EC935E75D0B5252D94F0CE4D3DC4B3 /* GTButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTButton.h; path = components/CommonComponent/Button/src/GTButton.h; sourceTree = "<group>"; };
+		440791F54D8BF2EA3D8DDEC0026AB63E /* Pods-GTUICatalog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GTUICatalog.modulemap"; sourceTree = "<group>"; };
+		46F6C1B31DEEEBC3D1F44CA208F7B2A4 /* GTUIKitExamples.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = GTUIKitExamples.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		479BAFD0D5FEF14106A8DAE2BCAA5D4E /* GTUIInkView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIInkView.m; path = components/CommonComponent/Ink/src/GTUIInkView.m; sourceTree = "<group>"; };
+		4829139E2F0B7048FF045BE42E2720E5 /* GTUIRectangleShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIRectangleShapeGenerator.m; path = components/BasicComponent/Shapes/src/GTUIRectangleShapeGenerator.m; sourceTree = "<group>"; };
+		49C14E02E9520CC4008116365A27A2B1 /* GTUICheckBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUICheckBox.h; path = components/CommonComponent/CheckBox/src/GTUICheckBox.h; sourceTree = "<group>"; };
+		4A14893F8F5A3A6440AD158866B25D58 /* GTCatalog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTCatalog-umbrella.h"; sourceTree = "<group>"; };
+		4B0E52A0B659723E2FBC6AA8C003ABE4 /* GTUISwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUISwitch.h; path = components/CommonComponent/Switch/src/GTUISwitch.h; sourceTree = "<group>"; };
+		4B7F2D402F1371E68AF708DEDBA9D066 /* Pods-GTUICatalog-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GTUICatalog-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4E7B254DCC1FF5A1ACFABD7292EC9EAA /* GTFInternationalization.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTFInternationalization.xcconfig; sourceTree = "<group>"; };
+		50EAF34D44AA8DE082171AB750DADDA4 /* NSArray+GTFUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+GTFUtils.h"; path = "src/private/NSArray+GTFUtils.h"; sourceTree = "<group>"; };
+		538FB4CA80BD8196B16ACD1EC649AB97 /* Pods-GTUICatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GTUICatalog.release.xcconfig"; sourceTree = "<group>"; };
+		56626C4B4062CCD3E05655D1B0B797E7 /* GTIconfont.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GTIconfont.bundle; path = components/BasicComponent/IconFont/src/GTIconfont.bundle; sourceTree = "<group>"; };
+		56AA2C405E2DBAF37C856FBB20DD8707 /* GTUICutCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUICutCornerTreatment.h; path = components/BasicComponent/ShapeLibrary/src/GTUICutCornerTreatment.h; sourceTree = "<group>"; };
+		57BEE66B4DFBD65D5F2725343553DC2B /* GTUICheckBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUICheckBox.m; path = components/CommonComponent/CheckBox/src/GTUICheckBox.m; sourceTree = "<group>"; };
+		58F7921D62E7674A8EF9179BD2AAC36D /* GTFInternationalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFInternationalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DE7CEA9EE5941E7739CE6755FF50B2F /* GTUIBorderEdgeTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIBorderEdgeTreatment.m; path = components/BasicComponent/ShapeLibrary/src/GTUIBorderEdgeTreatment.m; sourceTree = "<group>"; };
+		5E7DD56D60BF104656888A892BCD396D /* GTFTextAccessibility-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTFTextAccessibility-prefix.pch"; sourceTree = "<group>"; };
+		6237CA83C5BC53851B43014C90808841 /* GTFInternationalization-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTFInternationalization-prefix.pch"; sourceTree = "<group>"; };
+		63D728DE41A2ADFAB12D85465DBE9354 /* GTFRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFRuntime.h; path = src/private/GTFRuntime.h; sourceTree = "<group>"; };
+		64268C27B07E3B912158E568EB7CB45B /* GTUIShapeGenerating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIShapeGenerating.h; path = components/BasicComponent/Shapes/src/GTUIShapeGenerating.h; sourceTree = "<group>"; };
+		642C5BFC4280078A6C455085CFEEC758 /* GTUIShapedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIShapedView.h; path = components/BasicComponent/Shapes/src/GTUIShapedView.h; sourceTree = "<group>"; };
+		66E2346F4197082B8C5D4FA5F32B184A /* GTUICutCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUICutCornerTreatment.m; path = components/BasicComponent/ShapeLibrary/src/GTUICutCornerTreatment.m; sourceTree = "<group>"; };
+		6780361A6A05923F3CEAA413AC6AC5A2 /* GTUIAttributedLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIAttributedLabel.h; path = components/CommonComponent/Label/src/GTUIAttributedLabel.h; sourceTree = "<group>"; };
+		68C5CC89864AA12ADF182AE7CC66A795 /* GTUIPillShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIPillShapeGenerator.h; path = components/BasicComponent/ShapeLibrary/src/GTUIPillShapeGenerator.h; sourceTree = "<group>"; };
+		69E5BFBCC87F88C300FE2C42FE1FB656 /* GTUIInkGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIInkGestureRecognizer.h; path = components/CommonComponent/Ink/src/GTUIInkGestureRecognizer.h; sourceTree = "<group>"; };
+		6B8095D2816CBBDA188364A2DB302D82 /* GTUITonalPalette.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUITonalPalette.h; path = components/CommonComponent/schemes/ColorScheme/src/GTUITonalPalette.h; sourceTree = "<group>"; };
+		6C3341F364412672C7ECDD6BD84DE2EA /* GTUICornerTreatment+CornerTypeInitalizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTUICornerTreatment+CornerTypeInitalizer.m"; path = "components/BasicComponent/ShapeLibrary/src/GTUICornerTreatment+CornerTypeInitalizer.m"; sourceTree = "<group>"; };
+		6C8E590EE878E13071A427610584A4C8 /* GTUIIconView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIIconView.m; path = components/BasicComponent/IconFont/src/GTUIIconView.m; sourceTree = "<group>"; };
+		6E165754BFC7AEBBE3ECE231BFCBE87C /* GTUIMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIMetrics.h; path = components/private/UIMetrics/src/GTUIMetrics.h; sourceTree = "<group>"; };
+		6E3D5767530D8DBEE3E4887A57ECABE3 /* GTUISlantedRectShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUISlantedRectShapeGenerator.h; path = components/BasicComponent/ShapeLibrary/src/GTUISlantedRectShapeGenerator.h; sourceTree = "<group>"; };
+		6F8B17B361F0DC4F1B4C7C3196183494 /* NSLocale+GTRTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLocale+GTRTL.h"; path = "src/NSLocale+GTRTL.h"; sourceTree = "<group>"; };
+		75932E83E956BC01DAC767A8F9465A44 /* GTActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTActivityIndicatorView.h; path = components/CommonComponent/ActivityIndicatorView/src/GTActivityIndicatorView.h; sourceTree = "<group>"; };
+		75DD4D7DC38D887C10DD9F8741824A03 /* GTUIInkLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUIInkLayer.m; sourceTree = "<group>"; };
+		7756B66B813822496D1E7BED67BF548B /* GTUITypography.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUITypography.m; path = components/BasicComponent/Typography/src/GTUITypography.m; sourceTree = "<group>"; };
+		77C4671F2BA43D607DF4510EB5CCC59F /* GTFRTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFRTL.h; path = src/GTFRTL.h; sourceTree = "<group>"; };
+		7B3CCD2284729B68277510F10849E6A0 /* GTUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTUIKit.modulemap; sourceTree = "<group>"; };
+		7C0EC78245EF1EC12E504EE9550A28E1 /* GTUITypographyScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUITypographyScheme.h; path = components/CommonComponent/schemes/TypographyScheme/src/GTUITypographyScheme.h; sourceTree = "<group>"; };
+		7C354A5B1DA835ECAB8CB4B133F595C4 /* GTUIFontTraits.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUIFontTraits.m; sourceTree = "<group>"; };
+		7CBFDFFD2B1792A4069C49282AEDF172 /* GTUILayoutMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUILayoutMetrics.h; path = components/private/UIMetrics/src/GTUILayoutMetrics.h; sourceTree = "<group>"; };
+		7EE8420FA9E00CA5ADCCC4B7EF4BB20B /* GTUIKeyboardWatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIKeyboardWatcher.m; path = components/private/KeyboardWatcher/src/GTUIKeyboardWatcher.m; sourceTree = "<group>"; };
+		80BD1FF7B30BD82DB9B91928D5C1DAFE /* GTUICurvedRectShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUICurvedRectShapeGenerator.m; path = components/BasicComponent/ShapeLibrary/src/GTUICurvedRectShapeGenerator.m; sourceTree = "<group>"; };
+		8132C03FE8220C786CB7693DF8E2333F /* GTUIFontTextStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIFontTextStyle.h; path = components/BasicComponent/Typography/src/GTUIFontTextStyle.h; sourceTree = "<group>"; };
+		8191561CDB746C5D190231A88B9593F4 /* GTUIButton+Subclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTUIButton+Subclassing.h"; sourceTree = "<group>"; };
+		8409B5F180AC4B6F83D0A9A824E3C2B1 /* Pods-GTUICatalog-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GTUICatalog-acknowledgements.plist"; sourceTree = "<group>"; };
+		8479818A095AD2183C968D8B57D2A292 /* GTFTextAccessibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFTextAccessibility.m; path = src/GTFTextAccessibility.m; sourceTree = "<group>"; };
+		854A51B34449C4B4474E4B815535BAD6 /* GTUIActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIActivityIndicatorView.h; path = components/CommonComponent/ActivityIndicatorView/src/GTUIActivityIndicatorView.h; sourceTree = "<group>"; };
+		89794F3C70D4BE211E92437981D89F41 /* GTShapeLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShapeLibrary.h; path = components/BasicComponent/ShapeLibrary/src/GTShapeLibrary.h; sourceTree = "<group>"; };
+		89C5C50783A50DB6956EB4F53E429793 /* GTUILegacyInkLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUILegacyInkLayer.h; sourceTree = "<group>"; };
+		8BBA765012646360613858AB849D6217 /* GTCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5AE1F375360D15C4B092C0F3B5016D /* GTUIAttributedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIAttributedLabel.m; path = components/CommonComponent/Label/src/GTUIAttributedLabel.m; sourceTree = "<group>"; };
+		8C9B365AF94CDC6FDF83AE4BD3541068 /* GTUILegacyInkLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUILegacyInkLayer.m; sourceTree = "<group>"; };
+		8D0C674B62C82DA6D669C87566A6AC79 /* GTCatalog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTCatalog.modulemap; sourceTree = "<group>"; };
+		909C28C8B0B333DA434A75D05F5566AA /* GTFTextAccessibility.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTFTextAccessibility.modulemap; sourceTree = "<group>"; };
+		90E2EA9095C8730B50DC9B466DDCA5C6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9132A14EA082BC2937ED919F02E14139 /* GTTypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTTypography.h; path = components/BasicComponent/Typography/src/GTTypography.h; sourceTree = "<group>"; };
+		92B96E536B06E9D509BAC33A5C6A2EDA /* GTUICheckBoxPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUICheckBoxPath.m; sourceTree = "<group>"; };
+		9378F0341CC8A4E89A458B692B7645E0 /* GTUIRoundedCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIRoundedCornerTreatment.m; path = components/BasicComponent/ShapeLibrary/src/GTUIRoundedCornerTreatment.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		948F45CC60FE7D4D4A14444C9A3C518D /* GTFTextAccessibility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFTextAccessibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B44C0B9C34614A2C957673209E2A4B /* UIFontDescriptor+GTUITypography.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFontDescriptor+GTUITypography.m"; path = "components/BasicComponent/Typography/src/UIFontDescriptor+GTUITypography.m"; sourceTree = "<group>"; };
+		97D03C666C87375285DE36D1189435C7 /* GTKeyboardWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTKeyboardWatcher.h; path = components/private/KeyboardWatcher/src/GTKeyboardWatcher.h; sourceTree = "<group>"; };
+		988BB39C7B04C1AA433923B40A48FD19 /* GTIconFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTIconFont.h; path = components/BasicComponent/IconFont/src/GTIconFont.h; sourceTree = "<group>"; };
+		99CC6161601D81A291CE831BD1D5EC3C /* GTUIColorScheme.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIColorScheme.m; path = components/CommonComponent/schemes/ColorScheme/src/GTUIColorScheme.m; sourceTree = "<group>"; };
+		9A8A54543DFD442AD2F69C6485EAD0AD /* GTCatalog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTCatalog-prefix.pch"; sourceTree = "<group>"; };
+		A076F4424AC16ECF7E613084BDD813B8 /* GTFTextAccessibility.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTFTextAccessibility.xcconfig; sourceTree = "<group>"; };
+		A11FF8DDE682BA15C35690CD902E7D85 /* GTUIShadowElevations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIShadowElevations.m; path = components/BasicComponent/ShadowLayer/src/GTUIShadowElevations.m; sourceTree = "<group>"; };
+		A146254D3FD220341D2DCFB348627F40 /* GTUIShapeCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIShapeCategory.m; path = components/CommonComponent/schemes/ShapeScheme/src/GTUIShapeCategory.m; sourceTree = "<group>"; };
+		A1BE61D8AB814F31F9F504C3A3361E28 /* GTUIInkTouchController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIInkTouchController.m; path = components/CommonComponent/Ink/src/GTUIInkTouchController.m; sourceTree = "<group>"; };
+		A1F6BC327ADCC0F1E6EA8B7658BEF767 /* GTUILabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUILabel.h; path = components/CommonComponent/Label/src/GTUILabel.h; sourceTree = "<group>"; };
+		A20A29B78DCD5928D91581550A5C0AA2 /* GTUIRoundedCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIRoundedCornerTreatment.h; path = components/BasicComponent/ShapeLibrary/src/GTUIRoundedCornerTreatment.h; sourceTree = "<group>"; };
+		A3A291C06DE744D8A37F263413103602 /* GTFColorCalculations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFColorCalculations.h; path = src/private/GTFColorCalculations.h; sourceTree = "<group>"; };
+		A5D9B4B7C9B95103DC1DA94F402C2451 /* GTUICurvedRectShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUICurvedRectShapeGenerator.h; path = components/BasicComponent/ShapeLibrary/src/GTUICurvedRectShapeGenerator.h; sourceTree = "<group>"; };
+		AB3830E2117589976C296F35ACC261DB /* GTFTextAccessibility-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTFTextAccessibility-umbrella.h"; sourceTree = "<group>"; };
+		ABEC5AA2A9E0C045A13B199F20438190 /* GTUICheckBoxAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUICheckBoxAnimations.h; sourceTree = "<group>"; };
+		AD02C66927EEC43F9430BC7C38502750 /* GTUISlantedRectShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUISlantedRectShapeGenerator.m; path = components/BasicComponent/ShapeLibrary/src/GTUISlantedRectShapeGenerator.m; sourceTree = "<group>"; };
+		AD0726AEC63F84AD1A9E20910F8C5B62 /* GTUIButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIButton.m; path = components/CommonComponent/Button/src/GTUIButton.m; sourceTree = "<group>"; };
+		AEBB21972CD6AC7CF5A4C7879F190470 /* GTUIEdgeTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIEdgeTreatment.m; path = components/BasicComponent/Shapes/src/GTUIEdgeTreatment.m; sourceTree = "<group>"; };
+		B3059CD8D0F72D88F6386319BDC69F7C /* GTUIImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIImageView.h; path = components/CommonComponent/ImageView/src/GTUIImageView.h; sourceTree = "<group>"; };
+		B34D73C574B0625383F82BAAC04237B9 /* GTUIIconView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIIconView.h; path = components/BasicComponent/IconFont/src/GTUIIconView.h; sourceTree = "<group>"; };
+		B3F8D5B1B59B22619AB0C3844DFC3B4E /* GTUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = GTUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B5280ECCD8CCE37F95BAB4173C28C4A1 /* GTUITypographyScheme.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUITypographyScheme.m; path = components/CommonComponent/schemes/TypographyScheme/src/GTUITypographyScheme.m; sourceTree = "<group>"; };
+		B65EB2DCE3C78833281C22466AF44265 /* GTUICheckBoxAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUICheckBoxAnimations.m; sourceTree = "<group>"; };
+		B6E90A3F07D8C6E39E6343BFB4DE3E27 /* UIView+GTRTL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+GTRTL.m"; path = "src/UIView+GTRTL.m"; sourceTree = "<group>"; };
+		B8F93DFB54F21B99B3A0C50D7D1D9237 /* GTUICurvedCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUICurvedCornerTreatment.m; path = components/BasicComponent/ShapeLibrary/src/GTUICurvedCornerTreatment.m; sourceTree = "<group>"; };
+		BA34D1335E2B96040300B69C7BAF9D51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA7DA9B0086E2E73D363AB533FEA392A /* UIFont+GTUITypographyPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+GTUITypographyPrivate.h"; sourceTree = "<group>"; };
+		BB91D9795E10C6AB8FD894FF53C5FF87 /* GTMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMath.h; path = components/private/Math/src/GTMath.h; sourceTree = "<group>"; };
+		BC2DF7A3501D57021C86C859D22AEB89 /* Pods-GTUICatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GTUICatalog.debug.xcconfig"; sourceTree = "<group>"; };
+		BC921F65842163C52DD8A6AD0CC56C0C /* GTSwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTSwitch.h; path = components/CommonComponent/Switch/src/GTSwitch.h; sourceTree = "<group>"; };
+		BE2D0FE6C24B8596F9439A644FFBBFE7 /* GTUITonalPalette.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUITonalPalette.m; path = components/CommonComponent/schemes/ColorScheme/src/GTUITonalPalette.m; sourceTree = "<group>"; };
+		BF328BCD5571A11F9313490D2341BA0B /* GTUIShapedShadowLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIShapedShadowLayer.h; path = components/BasicComponent/Shapes/src/GTUIShapedShadowLayer.h; sourceTree = "<group>"; };
+		BF743A52C2E4C31061344E4CDCDCF2F1 /* GTUIPillShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIPillShapeGenerator.m; path = components/BasicComponent/ShapeLibrary/src/GTUIPillShapeGenerator.m; sourceTree = "<group>"; };
+		C07EF912B2000EEEA4248EB575779348 /* GTUITypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUITypography.h; path = components/BasicComponent/Typography/src/GTUITypography.h; sourceTree = "<group>"; };
+		C105A7B71511C7D476AA3F0A6E293D45 /* GTShadowLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShadowLayer.h; path = components/BasicComponent/ShadowLayer/src/GTShadowLayer.h; sourceTree = "<group>"; };
+		C2EEA12C1E77A27D1B2DFB0FBAD4E71F /* GTFNodeListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFNodeListViewController.m; path = src/GTFNodeListViewController.m; sourceTree = "<group>"; };
+		C40EE86A866AB75092DA452FBC2711FD /* GTFInternationalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFInternationalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6FD088395A806A1087559F9C745D607 /* GTUITriangleEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUITriangleEdgeTreatment.h; path = components/BasicComponent/ShapeLibrary/src/GTUITriangleEdgeTreatment.h; sourceTree = "<group>"; };
+		C71CF7E75039016CB8CCD73634063708 /* Pods-GTUICatalog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GTUICatalog-dummy.m"; sourceTree = "<group>"; };
+		C7742E6A2623E02CEAB2EB6F8BC59AE9 /* GTFInternationalization-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTFInternationalization-umbrella.h"; sourceTree = "<group>"; };
+		C8BC9F084E1B974E32B0036BDB0BE098 /* GTFRuntime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFRuntime.m; path = src/private/GTFRuntime.m; sourceTree = "<group>"; };
+		C92271A8DE4D552EBE0F48E20BD99AEB /* Pods-GTUICatalog-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GTUICatalog-resources.sh"; sourceTree = "<group>"; };
+		C9A1A28B47E017EAD88FB28A4A9460D2 /* GTUIPathGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIPathGenerator.m; path = components/BasicComponent/Shapes/src/GTUIPathGenerator.m; sourceTree = "<group>"; };
+		C9E8A389A697D2692924A83B0169BFA8 /* GTUIShapedShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIShapedShadowLayer.m; path = components/BasicComponent/Shapes/src/GTUIShapedShadowLayer.m; sourceTree = "<group>"; };
+		CA4E4FE88256136994AC0BCDC34E8A63 /* UIImage+GTRTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GTRTL.h"; path = "src/UIImage+GTRTL.h"; sourceTree = "<group>"; };
+		CB070FAAC15DFD8C00E43BCC9B7C59CF /* Pods_GTUICatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTUICatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB1B6874DAC4E0819392C8032AE4828 /* GTUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTUIKit-prefix.pch"; sourceTree = "<group>"; };
+		CCFCD02D84E289E8583F45D3F2F8A6E8 /* GTImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTImageView.h; path = components/CommonComponent/ImageView/src/GTImageView.h; sourceTree = "<group>"; };
+		CDBD00D4DC32352F49245B1AD60CFC49 /* GTUILayoutMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUILayoutMetrics.m; path = components/private/UIMetrics/src/GTUILayoutMetrics.m; sourceTree = "<group>"; };
+		CE39A1EDBF1A1AABC3AE21C006732371 /* GTUIActivityIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIActivityIndicatorView.m; path = components/CommonComponent/ActivityIndicatorView/src/GTUIActivityIndicatorView.m; sourceTree = "<group>"; };
+		CF2FE915DE13597617CABAA803E48DF0 /* GTFTextAccessibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFTextAccessibility.h; path = src/GTFTextAccessibility.h; sourceTree = "<group>"; };
+		CF3012F2C4D52B0942953BBB7F1FA6A8 /* GTUIMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIMath.h; path = components/private/Math/src/GTUIMath.h; sourceTree = "<group>"; };
+		D381E1A21E3EF47345D02652B7EFCA00 /* GTCheckBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCheckBox.h; path = components/CommonComponent/CheckBox/src/GTCheckBox.h; sourceTree = "<group>"; };
+		D5AF6BA0A9AD3EB8E030C33353EE4620 /* Pods-GTUICatalog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GTUICatalog-umbrella.h"; sourceTree = "<group>"; };
+		D664394BE21AB848B03AA88208252971 /* Pods-GTUICatalog-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GTUICatalog-frameworks.sh"; sourceTree = "<group>"; };
+		D67A791B7D30C3F33F2CC5BECD3ADC20 /* UIImage+GTRTL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GTRTL.m"; path = "src/UIImage+GTRTL.m"; sourceTree = "<group>"; };
+		D6BF0B0B2D2D3283D82E10A95ABAC0AE /* GTFCatalogExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFCatalogExample.h; path = src/GTFCatalogExample.h; sourceTree = "<group>"; };
+		D773E9A0E66950069FD8696129A3901C /* NSString+GTBidi.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+GTBidi.m"; path = "src/NSString+GTBidi.m"; sourceTree = "<group>"; };
+		D9349698B16EBFDEEBA6D4B39A36D43A /* UIFont+GTUITypographyPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GTUITypographyPrivate.m"; sourceTree = "<group>"; };
+		DE54411D5B0A2455DE9EB359228BC29A /* GTTypographyScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTTypographyScheme.h; path = components/CommonComponent/schemes/TypographyScheme/src/GTTypographyScheme.h; sourceTree = "<group>"; };
+		DF8CCC029398901E5E8DE4C1C9EA208A /* GTShapes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShapes.h; path = components/BasicComponent/Shapes/src/GTShapes.h; sourceTree = "<group>"; };
+		DFEFE0307454A0DD27F8EF9DD439A189 /* GTUIPathGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIPathGenerator.h; path = components/BasicComponent/Shapes/src/GTUIPathGenerator.h; sourceTree = "<group>"; };
+		E2E43B455F194331FD217C1BEF5C0803 /* GTUICurvedCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUICurvedCornerTreatment.h; path = components/BasicComponent/ShapeLibrary/src/GTUICurvedCornerTreatment.h; sourceTree = "<group>"; };
+		E3561ED4726382D5CCE38076985B2CB3 /* GTFTextAccessibility-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTFTextAccessibility-Bridging-Header.h"; path = "src/GTFTextAccessibility-Bridging-Header.h"; sourceTree = "<group>"; };
+		E5873A1BCC487D4CB7A5B0CE4DC83FB3 /* GTCatalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCatalog.h; path = src/GTCatalog.h; sourceTree = "<group>"; };
+		E644291BEF15F52FEB87AA25F07BF9EC /* GTFImageCalculations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFImageCalculations.m; path = src/private/GTFImageCalculations.m; sourceTree = "<group>"; };
+		E65D5F65F77745823BA9FC112EC0A6AC /* GTUIShapedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIShapedView.m; path = components/BasicComponent/Shapes/src/GTUIShapedView.m; sourceTree = "<group>"; };
+		E7BA02645A773A00BFFDE1C68CBD0722 /* GTApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTApplication.h; path = components/private/Application/src/GTApplication.h; sourceTree = "<group>"; };
+		E88852ADD5F21187EFEEB36478312F3C /* GTUIInkTouchController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIInkTouchController.h; path = components/CommonComponent/Ink/src/GTUIInkTouchController.h; sourceTree = "<group>"; };
+		EA19F23947AC617230063A7527CD089F /* NSArray+GTFUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+GTFUtils.m"; path = "src/private/NSArray+GTFUtils.m"; sourceTree = "<group>"; };
+		EB63F489510E3171F747CE0452D9143F /* GTUIShapeScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIShapeScheme.h; path = components/CommonComponent/schemes/ShapeScheme/src/GTUIShapeScheme.h; sourceTree = "<group>"; };
+		EBA4B817DF09527640B5F008AF61CE36 /* GTUIShadowElevations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIShadowElevations.h; path = components/BasicComponent/ShadowLayer/src/GTUIShadowElevations.h; sourceTree = "<group>"; };
+		ECC701BA2201C024CAC43A24A83D6F81 /* GTUICheckBoxPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUICheckBoxPath.h; sourceTree = "<group>"; };
+		EFF0C7FA94ED2F70A60E8A3D0F61F474 /* GTUISwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUISwitch.m; path = components/CommonComponent/Switch/src/GTUISwitch.m; sourceTree = "<group>"; };
+		F03F7861122B155BCC088B47E47E481D /* UIFont+GTUITypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+GTUITypography.h"; path = "components/BasicComponent/Typography/src/UIFont+GTUITypography.h"; sourceTree = "<group>"; };
+		F2688DE2433CFA5171536E6CCF6B387D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F36CD0A4C3F5249A146BE1BE90B2F630 /* GTShapeScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShapeScheme.h; path = components/CommonComponent/schemes/ShapeScheme/src/GTShapeScheme.h; sourceTree = "<group>"; };
+		F3D1D8778A4236EAC72ACD45EF7D0866 /* GTFColorCalculations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFColorCalculations.m; path = src/private/GTFColorCalculations.m; sourceTree = "<group>"; };
+		F8A5FC19CEFBB2D502C47B1C4C5B7942 /* GTUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3D63D5F9D9F61B22FD3BE0C867A06A /* NSString+GTBidi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+GTBidi.h"; path = "src/NSString+GTBidi.h"; sourceTree = "<group>"; };
+		FB7F114EC24F7928A178ED9F51E9B87A /* GTFInternationalization.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTFInternationalization.modulemap; sourceTree = "<group>"; };
+		FCBBB3AB47EEFC5AD53607F7333FA3A6 /* NSLocale+GTRTL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLocale+GTRTL.m"; path = "src/NSLocale+GTRTL.m"; sourceTree = "<group>"; };
+		FD4551B9597C6F34DB4A5185F9E11E52 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD8389B5A16EB0295776DE41607251E9 /* GTUICheckBoxGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUICheckBoxGroup.h; path = components/CommonComponent/CheckBox/src/GTUICheckBoxGroup.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4390D09720C3B3F31D10F1721CB05A14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FDB5A6F8FC109B3A95C606A3B25070 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F159700EDD7507E7CC58D53A8086F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C57FC7EC8EEFCA2032B59F377097078 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7740CE511E8547C7A80D5C8D842360E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3013C1556F6D4353772A0624D6E5A54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F386A7DDF4149C9C1E2B8BA6EA1DDC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FBDF4B622047A48537B2C8AF2496D63 /* Foundation.framework in Frameworks */,
+				EA532F54E1115B45213B50C8DB959FE9 /* GTFInternationalization.framework in Frameworks */,
+				9DB45A2A8ACFD2E971E0BF4C32A7EE1B /* GTFTextAccessibility.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABA345B105EEB66244CEE5F1AC772976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C7B616DF667EA023D916387A4F582C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0069B3404CFDF5E51ECAB798032BA22E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E7BA02645A773A00BFFDE1C68CBD0722 /* GTApplication.h */,
+				2BA1C16F6A97B3283684744F8A713324 /* UIApplication+AppExtensions.h */,
+				2124CA820A8516BEB6569C766F0813F5 /* UIApplication+AppExtensions.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		01AEA86C86AA99E743E1FE77135F8EC8 /* GTFInternationalization */ = {
+			isa = PBXGroup;
+			children = (
+				11BB4DF507D7965582C8045F3C9AFD41 /* GTFInternationalization.h */,
+				77C4671F2BA43D607DF4510EB5CCC59F /* GTFRTL.h */,
+				047E6A25911D84512A340F944B553DB5 /* GTFRTL.m */,
+				6F8B17B361F0DC4F1B4C7C3196183494 /* NSLocale+GTRTL.h */,
+				FCBBB3AB47EEFC5AD53607F7333FA3A6 /* NSLocale+GTRTL.m */,
+				FB3D63D5F9D9F61B22FD3BE0C867A06A /* NSString+GTBidi.h */,
+				D773E9A0E66950069FD8696129A3901C /* NSString+GTBidi.m */,
+				CA4E4FE88256136994AC0BCDC34E8A63 /* UIImage+GTRTL.h */,
+				D67A791B7D30C3F33F2CC5BECD3ADC20 /* UIImage+GTRTL.m */,
+				41D5F15CD1E33078FE5A02CC49A417BB /* UIView+GTRTL.h */,
+				B6E90A3F07D8C6E39E6343BFB4DE3E27 /* UIView+GTRTL.m */,
+				89B35A36D547B65D3DB4B31817284381 /* Support Files */,
+			);
+			path = GTFInternationalization;
+			sourceTree = "<group>";
+		};
+		050F0C108FF10B54C9E501F83EE08758 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B3CCD2284729B68277510F10849E6A0 /* GTUIKit.modulemap */,
+				1BB68E5511933571233CBA34A2F514EA /* GTUIKit.xcconfig */,
+				0F75D30BF6063741DC3ED860B01F098F /* GTUIKit-dummy.m */,
+				CBB1B6874DAC4E0819392C8032AE4828 /* GTUIKit-prefix.pch */,
+				1BB92C5F8B7D4F32981777E262CD1EC9 /* GTUIKit-umbrella.h */,
+				1EA6E36BCEA74319FBA94B42A4884443 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "GTUICatalog/Pods/Target Support Files/GTUIKit";
+			sourceTree = "<group>";
+		};
+		0852585D61D93515FB204B68A114B1C4 /* ShadowLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C105A7B71511C7D476AA3F0A6E293D45 /* GTShadowLayer.h */,
+				EBA4B817DF09527640B5F008AF61CE36 /* GTUIShadowElevations.h */,
+				A11FF8DDE682BA15C35690CD902E7D85 /* GTUIShadowElevations.m */,
+				23440D241A7A91B9A25B658C024AE25D /* GTUIShadowLayer.h */,
+				399A8EA932175D82050AAC6110309A38 /* GTUIShadowLayer.m */,
+			);
+			name = ShadowLayer;
+			sourceTree = "<group>";
+		};
+		0CDB78303736D1678255D8F70BEBC855 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8D5B1B59B22619AB0C3844DFC3B4E /* GTUIKit.podspec */,
+				17EFB0828B2FC5C36C9FE2A447A651F1 /* LICENSE */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		22E5786B9E2FEF3F036F46EE9733C531 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				DF8CCC029398901E5E8DE4C1C9EA208A /* GTShapes.h */,
+				1A9BB918FA4EC1EA44E33C0F7313725D /* GTUICornerTreatment.h */,
+				188484D8476C89E657F6F74DAE7A93AF /* GTUICornerTreatment.m */,
+				317754930683110EBF327ACEB33D99F0 /* GTUIEdgeTreatment.h */,
+				AEBB21972CD6AC7CF5A4C7879F190470 /* GTUIEdgeTreatment.m */,
+				DFEFE0307454A0DD27F8EF9DD439A189 /* GTUIPathGenerator.h */,
+				C9A1A28B47E017EAD88FB28A4A9460D2 /* GTUIPathGenerator.m */,
+				28F627ECEB50A09ED9EDE919C6DB68EB /* GTUIRectangleShapeGenerator.h */,
+				4829139E2F0B7048FF045BE42E2720E5 /* GTUIRectangleShapeGenerator.m */,
+				BF328BCD5571A11F9313490D2341BA0B /* GTUIShapedShadowLayer.h */,
+				C9E8A389A697D2692924A83B0169BFA8 /* GTUIShapedShadowLayer.m */,
+				642C5BFC4280078A6C455085CFEEC758 /* GTUIShapedView.h */,
+				E65D5F65F77745823BA9FC112EC0A6AC /* GTUIShapedView.m */,
+				64268C27B07E3B912158E568EB7CB45B /* GTUIShapeGenerating.h */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
+		231DB0DB05C819A4F8266698F62EC64D /* CommonComponent */ = {
+			isa = PBXGroup;
+			children = (
+				4DE0C691E54BD4505C80693EDCBBE5B4 /* ActivityIndicatorView */,
+				ACF0CE6074AC9EBF95985B280C90F9A1 /* Button */,
+				90D02E34542DAA50EFFB157270F81182 /* CheckBox */,
+				516E5E7B903A25681EE426B3B95995FE /* ImageView */,
+				AF83A7B194282C108941BCDB74D632BB /* Ink */,
+				F119D03C7C35614DD3E93147DF0A18D5 /* Label */,
+				69FF33084B21D4F135D00DB1B642C228 /* schemes */,
+				DE13E734A7DDC5DD5A2BC349480632A2 /* Switch */,
+			);
+			name = CommonComponent;
+			sourceTree = "<group>";
+		};
+		2C161B4F3F3DA6E8EEF170D29FBE8DE1 /* ShapeScheme */ = {
+			isa = PBXGroup;
+			children = (
+				F36CD0A4C3F5249A146BE1BE90B2F630 /* GTShapeScheme.h */,
+				2E38F2D2C08563AD1396C50C7F8F3A45 /* GTUIShapeCategory.h */,
+				A146254D3FD220341D2DCFB348627F40 /* GTUIShapeCategory.m */,
+				EB63F489510E3171F747CE0452D9143F /* GTUIShapeScheme.h */,
+				2E487F47B270CEEAA86DA8C0ACE0558E /* GTUIShapeScheme.m */,
+			);
+			name = ShapeScheme;
+			sourceTree = "<group>";
+		};
+		30884D3EE0351CFDD4D42AD31293EF80 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				0069B3404CFDF5E51ECAB798032BA22E /* Application */,
+				7C1C942D6B2F53EA5BB22244C2912536 /* KeyboardWatcher */,
+				977D9D7F266BC37955FFE9073D3738CD /* Math */,
+				DD0D80A14C9D0C5013CD3C8EBDD7CD5D /* UIMetrics */,
+			);
+			name = private;
+			sourceTree = "<group>";
+		};
+		38BC931C8D632353AC52CF229C8F2B90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58F7921D62E7674A8EF9179BD2AAC36D /* GTFInternationalization.framework */,
+				3C9E334E56AEE875B61F46DBD05F0DA3 /* GTFTextAccessibility.framework */,
+				699DC53F1D3F53A2FC9998ABA994012A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F0F4B70F857397BF87F12FC1DF0E21C /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				9132A14EA082BC2937ED919F02E14139 /* GTTypography.h */,
+				8132C03FE8220C786CB7693DF8E2333F /* GTUIFontTextStyle.h */,
+				C07EF912B2000EEEA4248EB575779348 /* GTUITypography.h */,
+				7756B66B813822496D1E7BED67BF548B /* GTUITypography.m */,
+				F03F7861122B155BCC088B47E47E481D /* UIFont+GTUITypography.h */,
+				0E4E8A30A0DCBBFE3588A9B286521709 /* UIFont+GTUITypography.m */,
+				0D56A394E7405CDDBAA0D23674644A70 /* UIFontDescriptor+GTUITypography.h */,
+				95B44C0B9C34614A2C957673209E2A4B /* UIFontDescriptor+GTUITypography.m */,
+				442AE58882CA2ACC7DD02C2C7A598CD3 /* private */,
+			);
+			name = Typography;
+			sourceTree = "<group>";
+		};
+		442AE58882CA2ACC7DD02C2C7A598CD3 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				0CC03A227C01BC08339060B1402E7801 /* GTUIFontTraits.h */,
+				7C354A5B1DA835ECAB8CB4B133F595C4 /* GTUIFontTraits.m */,
+				BA7DA9B0086E2E73D363AB533FEA392A /* UIFont+GTUITypographyPrivate.h */,
+				D9349698B16EBFDEEBA6D4B39A36D43A /* UIFont+GTUITypographyPrivate.m */,
+			);
+			name = private;
+			path = components/BasicComponent/Typography/src/private;
+			sourceTree = "<group>";
+		};
+		487F0767A837761872CF9596B9D6EDE2 /* BasicComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BD1BDA0578C2802CF470A817CE9775EF /* IconFont */,
+				0852585D61D93515FB204B68A114B1C4 /* ShadowLayer */,
+				61C7F0C227CA22020CA3EF3EF07B9997 /* ShapeLibrary */,
+				22E5786B9E2FEF3F036F46EE9733C531 /* Shapes */,
+				3F0F4B70F857397BF87F12FC1DF0E21C /* Typography */,
+			);
+			name = BasicComponent;
+			sourceTree = "<group>";
+		};
+		4DE0C691E54BD4505C80693EDCBBE5B4 /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				75932E83E956BC01DAC767A8F9465A44 /* GTActivityIndicatorView.h */,
+				854A51B34449C4B4474E4B815535BAD6 /* GTUIActivityIndicatorView.h */,
+				CE39A1EDBF1A1AABC3AE21C006732371 /* GTUIActivityIndicatorView.m */,
+			);
+			name = ActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		516E5E7B903A25681EE426B3B95995FE /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CCFCD02D84E289E8583F45D3F2F8A6E8 /* GTImageView.h */,
+				B3059CD8D0F72D88F6386319BDC69F7C /* GTUIImageView.h */,
+				3702CFB1A83E7A6FF1B46BD9FCE24425 /* GTUIImageView.m */,
+			);
+			name = ImageView;
+			sourceTree = "<group>";
+		};
+		535A18C7F6C1045E50ADD656BA2FFAA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3846916A039F9F80029739646381162 /* GTCatalog */,
+				01AEA86C86AA99E743E1FE77135F8EC8 /* GTFInternationalization */,
+				A87C5D0DEE5293C014C294CB34D79F53 /* GTFTextAccessibility */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		61C7F0C227CA22020CA3EF3EF07B9997 /* ShapeLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				89794F3C70D4BE211E92437981D89F41 /* GTShapeLibrary.h */,
+				4017F8C0C2A74E9DCEFA9FEDB9A8DF7E /* GTUIBorderEdgeTreatment.h */,
+				5DE7CEA9EE5941E7739CE6755FF50B2F /* GTUIBorderEdgeTreatment.m */,
+				1D0990419BE4B8AE171D8D18CA9A45C8 /* GTUICornerTreatment+CornerTypeInitalizer.h */,
+				6C3341F364412672C7ECDD6BD84DE2EA /* GTUICornerTreatment+CornerTypeInitalizer.m */,
+				E2E43B455F194331FD217C1BEF5C0803 /* GTUICurvedCornerTreatment.h */,
+				B8F93DFB54F21B99B3A0C50D7D1D9237 /* GTUICurvedCornerTreatment.m */,
+				A5D9B4B7C9B95103DC1DA94F402C2451 /* GTUICurvedRectShapeGenerator.h */,
+				80BD1FF7B30BD82DB9B91928D5C1DAFE /* GTUICurvedRectShapeGenerator.m */,
+				56AA2C405E2DBAF37C856FBB20DD8707 /* GTUICutCornerTreatment.h */,
+				66E2346F4197082B8C5D4FA5F32B184A /* GTUICutCornerTreatment.m */,
+				68C5CC89864AA12ADF182AE7CC66A795 /* GTUIPillShapeGenerator.h */,
+				BF743A52C2E4C31061344E4CDCDCF2F1 /* GTUIPillShapeGenerator.m */,
+				A20A29B78DCD5928D91581550A5C0AA2 /* GTUIRoundedCornerTreatment.h */,
+				9378F0341CC8A4E89A458B692B7645E0 /* GTUIRoundedCornerTreatment.m */,
+				6E3D5767530D8DBEE3E4887A57ECABE3 /* GTUISlantedRectShapeGenerator.h */,
+				AD02C66927EEC43F9430BC7C38502750 /* GTUISlantedRectShapeGenerator.m */,
+				C6FD088395A806A1087559F9C745D607 /* GTUITriangleEdgeTreatment.h */,
+				2BF06F96B54608C3D4DC90158F68BFEE /* GTUITriangleEdgeTreatment.m */,
+			);
+			name = ShapeLibrary;
+			sourceTree = "<group>";
+		};
+		699DC53F1D3F53A2FC9998ABA994012A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3D49495CAD535893610A4D7640455B4C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		69FF33084B21D4F135D00DB1B642C228 /* schemes */ = {
+			isa = PBXGroup;
+			children = (
+				8620D49D022E6E8B6F540EE84CDACE04 /* ColorScheme */,
+				2C161B4F3F3DA6E8EEF170D29FBE8DE1 /* ShapeScheme */,
+				E0AA6CA59317717734A480A615F8A717 /* TypographyScheme */,
+			);
+			name = schemes;
+			sourceTree = "<group>";
+		};
+		7C1C942D6B2F53EA5BB22244C2912536 /* KeyboardWatcher */ = {
+			isa = PBXGroup;
+			children = (
+				97D03C666C87375285DE36D1189435C7 /* GTKeyboardWatcher.h */,
+				12013692B869BB8946591B6DD43909D3 /* GTUIKeyboardWatcher.h */,
+				7EE8420FA9E00CA5ADCCC4B7EF4BB20B /* GTUIKeyboardWatcher.m */,
+			);
+			name = KeyboardWatcher;
+			sourceTree = "<group>";
+		};
+		7D84F5C062929A55D007A8EEB6DC2BAC /* private */ = {
+			isa = PBXGroup;
+			children = (
+				ABEC5AA2A9E0C045A13B199F20438190 /* GTUICheckBoxAnimations.h */,
+				B65EB2DCE3C78833281C22466AF44265 /* GTUICheckBoxAnimations.m */,
+				ECC701BA2201C024CAC43A24A83D6F81 /* GTUICheckBoxPath.h */,
+				92B96E536B06E9D509BAC33A5C6A2EDA /* GTUICheckBoxPath.m */,
+			);
+			name = private;
+			path = components/CommonComponent/CheckBox/src/private;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				DA4210CD624BC05276B4021F0A992919 /* Development Pods */,
+				38BC931C8D632353AC52CF229C8F2B90 /* Frameworks */,
+				535A18C7F6C1045E50ADD656BA2FFAA8 /* Pods */,
+				EE983EFAA9B7251F7A873D106CB51577 /* Products */,
+				FA4A82ED9B24B6CCA8AF633077DCBBD0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7EB01B2C166532AE0E4B433443581792 /* GTUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				487F0767A837761872CF9596B9D6EDE2 /* BasicComponent */,
+				231DB0DB05C819A4F8266698F62EC64D /* CommonComponent */,
+				0CDB78303736D1678255D8F70BEBC855 /* Pod */,
+				30884D3EE0351CFDD4D42AD31293EF80 /* private */,
+				050F0C108FF10B54C9E501F83EE08758 /* Support Files */,
+			);
+			name = GTUIKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		8620D49D022E6E8B6F540EE84CDACE04 /* ColorScheme */ = {
+			isa = PBXGroup;
+			children = (
+				41B284D835BC4E7158044140806D3D6F /* GTColorScheme.h */,
+				0B6A3BF9E1EF0CF8DDE9CDB107249DDE /* GTUIColorScheme.h */,
+				99CC6161601D81A291CE831BD1D5EC3C /* GTUIColorScheme.m */,
+				6B8095D2816CBBDA188364A2DB302D82 /* GTUITonalPalette.h */,
+				BE2D0FE6C24B8596F9439A644FFBBFE7 /* GTUITonalPalette.m */,
+			);
+			name = ColorScheme;
+			sourceTree = "<group>";
+		};
+		89B35A36D547B65D3DB4B31817284381 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB7F114EC24F7928A178ED9F51E9B87A /* GTFInternationalization.modulemap */,
+				4E7B254DCC1FF5A1ACFABD7292EC9EAA /* GTFInternationalization.xcconfig */,
+				1E06837DE2D2DFDB383A8B3AB3E98D60 /* GTFInternationalization-dummy.m */,
+				6237CA83C5BC53851B43014C90808841 /* GTFInternationalization-prefix.pch */,
+				C7742E6A2623E02CEAB2EB6F8BC59AE9 /* GTFInternationalization-umbrella.h */,
+				90E2EA9095C8730B50DC9B466DDCA5C6 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTFInternationalization";
+			sourceTree = "<group>";
+		};
+		8EF15DC47D0F5CEEA3489EA00BF1310F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				46F6C1B31DEEEBC3D1F44CA208F7B2A4 /* GTUIKitExamples.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		90D02E34542DAA50EFFB157270F81182 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				D381E1A21E3EF47345D02652B7EFCA00 /* GTCheckBox.h */,
+				49C14E02E9520CC4008116365A27A2B1 /* GTUICheckBox.h */,
+				57BEE66B4DFBD65D5F2725343553DC2B /* GTUICheckBox.m */,
+				FD8389B5A16EB0295776DE41607251E9 /* GTUICheckBoxGroup.h */,
+				344940D7C507E4183BCEC8F8668FE52A /* GTUICheckBoxGroup.m */,
+				7D84F5C062929A55D007A8EEB6DC2BAC /* private */,
+			);
+			name = CheckBox;
+			sourceTree = "<group>";
+		};
+		977D9D7F266BC37955FFE9073D3738CD /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				BB91D9795E10C6AB8FD894FF53C5FF87 /* GTMath.h */,
+				CF3012F2C4D52B0942953BBB7F1FA6A8 /* GTUIMath.h */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+		A29FD08FC85B2BEC893758237538110D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				909C28C8B0B333DA434A75D05F5566AA /* GTFTextAccessibility.modulemap */,
+				A076F4424AC16ECF7E613084BDD813B8 /* GTFTextAccessibility.xcconfig */,
+				2D29391EF73244C9B35B71348362D77D /* GTFTextAccessibility-dummy.m */,
+				5E7DD56D60BF104656888A892BCD396D /* GTFTextAccessibility-prefix.pch */,
+				AB3830E2117589976C296F35ACC261DB /* GTFTextAccessibility-umbrella.h */,
+				BA34D1335E2B96040300B69C7BAF9D51 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTFTextAccessibility";
+			sourceTree = "<group>";
+		};
+		A626B54A42A1945D333BB313EC6ADD7F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C674B62C82DA6D669C87566A6AC79 /* GTCatalog.modulemap */,
+				0105EE318AC67539833DA8A483FAC7A3 /* GTCatalog.xcconfig */,
+				2F45A70B14DF6803A7A9BB0E5668AA3A /* GTCatalog-dummy.m */,
+				9A8A54543DFD442AD2F69C6485EAD0AD /* GTCatalog-prefix.pch */,
+				4A14893F8F5A3A6440AD158866B25D58 /* GTCatalog-umbrella.h */,
+				F2688DE2433CFA5171536E6CCF6B387D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTCatalog";
+			sourceTree = "<group>";
+		};
+		A87C5D0DEE5293C014C294CB34D79F53 /* GTFTextAccessibility */ = {
+			isa = PBXGroup;
+			children = (
+				A3A291C06DE744D8A37F263413103602 /* GTFColorCalculations.h */,
+				F3D1D8778A4236EAC72ACD45EF7D0866 /* GTFColorCalculations.m */,
+				09BD32E88F4535D509A370EC77142476 /* GTFImageCalculations.h */,
+				E644291BEF15F52FEB87AA25F07BF9EC /* GTFImageCalculations.m */,
+				CF2FE915DE13597617CABAA803E48DF0 /* GTFTextAccessibility.h */,
+				8479818A095AD2183C968D8B57D2A292 /* GTFTextAccessibility.m */,
+				E3561ED4726382D5CCE38076985B2CB3 /* GTFTextAccessibility-Bridging-Header.h */,
+				50EAF34D44AA8DE082171AB750DADDA4 /* NSArray+GTFUtils.h */,
+				EA19F23947AC617230063A7527CD089F /* NSArray+GTFUtils.m */,
+				A29FD08FC85B2BEC893758237538110D /* Support Files */,
+			);
+			path = GTFTextAccessibility;
+			sourceTree = "<group>";
+		};
+		ACF0CE6074AC9EBF95985B280C90F9A1 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				43EC935E75D0B5252D94F0CE4D3DC4B3 /* GTButton.h */,
+				3ADE6163823BE52A473CAC19607DA2C4 /* GTUIButton.h */,
+				AD0726AEC63F84AD1A9E20910F8C5B62 /* GTUIButton.m */,
+				D6C94E393A5ACC689C457FD4DEC6C36C /* private */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
+		AF1C9282F8768C7AE6C0C51EC025716E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				56626C4B4062CCD3E05655D1B0B797E7 /* GTIconfont.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AF83A7B194282C108941BCDB74D632BB /* Ink */ = {
+			isa = PBXGroup;
+			children = (
+				21822A0178BAA3DEF0B76A831186FB1B /* GTInk.h */,
+				69E5BFBCC87F88C300FE2C42FE1FB656 /* GTUIInkGestureRecognizer.h */,
+				386F1CA4F25DC84124313DAC95B524D6 /* GTUIInkGestureRecognizer.m */,
+				E88852ADD5F21187EFEEB36478312F3C /* GTUIInkTouchController.h */,
+				A1BE61D8AB814F31F9F504C3A3361E28 /* GTUIInkTouchController.m */,
+				3A78F85AD80A899C1EDB9A20D06BEA36 /* GTUIInkView.h */,
+				479BAFD0D5FEF14106A8DAE2BCAA5D4E /* GTUIInkView.m */,
+				F611EA15DF8AC58699154CFB58A4805D /* private */,
+			);
+			name = Ink;
+			sourceTree = "<group>";
+		};
+		B3F27D4BA8A0C61A06F829C340F193FD /* GTUIKitExamples */ = {
+			isa = PBXGroup;
+			children = (
+				8EF15DC47D0F5CEEA3489EA00BF1310F /* Pod */,
+			);
+			name = GTUIKitExamples;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BD1BDA0578C2802CF470A817CE9775EF /* IconFont */ = {
+			isa = PBXGroup;
+			children = (
+				988BB39C7B04C1AA433923B40A48FD19 /* GTIconFont.h */,
+				B34D73C574B0625383F82BAAC04237B9 /* GTUIIconView.h */,
+				6C8E590EE878E13071A427610584A4C8 /* GTUIIconView.m */,
+				AF1C9282F8768C7AE6C0C51EC025716E /* Resources */,
+			);
+			name = IconFont;
+			sourceTree = "<group>";
+		};
+		C3846916A039F9F80029739646381162 /* GTCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				E5873A1BCC487D4CB7A5B0CE4DC83FB3 /* GTCatalog.h */,
+				D6BF0B0B2D2D3283D82E10A95ABAC0AE /* GTFCatalogExample.h */,
+				05D67EB2392967166385E9B365A6678F /* GTFNodeListViewController.h */,
+				C2EEA12C1E77A27D1B2DFB0FBAD4E71F /* GTFNodeListViewController.m */,
+				63D728DE41A2ADFAB12D85465DBE9354 /* GTFRuntime.h */,
+				C8BC9F084E1B974E32B0036BDB0BE098 /* GTFRuntime.m */,
+				A626B54A42A1945D333BB313EC6ADD7F /* Support Files */,
+			);
+			path = GTCatalog;
+			sourceTree = "<group>";
+		};
+		D6C94E393A5ACC689C457FD4DEC6C36C /* private */ = {
+			isa = PBXGroup;
+			children = (
+				8191561CDB746C5D190231A88B9593F4 /* GTUIButton+Subclassing.h */,
+			);
+			name = private;
+			path = components/CommonComponent/Button/src/private;
+			sourceTree = "<group>";
+		};
+		DA4210CD624BC05276B4021F0A992919 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EB01B2C166532AE0E4B433443581792 /* GTUIKit */,
+				B3F27D4BA8A0C61A06F829C340F193FD /* GTUIKitExamples */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DD0D80A14C9D0C5013CD3C8EBDD7CD5D /* UIMetrics */ = {
+			isa = PBXGroup;
+			children = (
+				7CBFDFFD2B1792A4069C49282AEDF172 /* GTUILayoutMetrics.h */,
+				CDBD00D4DC32352F49245B1AD60CFC49 /* GTUILayoutMetrics.m */,
+				6E165754BFC7AEBBE3ECE231BFCBE87C /* GTUIMetrics.h */,
+			);
+			name = UIMetrics;
+			sourceTree = "<group>";
+		};
+		DE13E734A7DDC5DD5A2BC349480632A2 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				BC921F65842163C52DD8A6AD0CC56C0C /* GTSwitch.h */,
+				4B0E52A0B659723E2FBC6AA8C003ABE4 /* GTUISwitch.h */,
+				EFF0C7FA94ED2F70A60E8A3D0F61F474 /* GTUISwitch.m */,
+			);
+			name = Switch;
+			sourceTree = "<group>";
+		};
+		E0AA6CA59317717734A480A615F8A717 /* TypographyScheme */ = {
+			isa = PBXGroup;
+			children = (
+				DE54411D5B0A2455DE9EB359228BC29A /* GTTypographyScheme.h */,
+				7C0EC78245EF1EC12E504EE9550A28E1 /* GTUITypographyScheme.h */,
+				B5280ECCD8CCE37F95BAB4173C28C4A1 /* GTUITypographyScheme.m */,
+			);
+			name = TypographyScheme;
+			sourceTree = "<group>";
+		};
+		EE983EFAA9B7251F7A873D106CB51577 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BBA765012646360613858AB849D6217 /* GTCatalog.framework */,
+				C40EE86A866AB75092DA452FBC2711FD /* GTFInternationalization.framework */,
+				948F45CC60FE7D4D4A14444C9A3C518D /* GTFTextAccessibility.framework */,
+				F8A5FC19CEFBB2D502C47B1C4C5B7942 /* GTUIKit.framework */,
+				CB070FAAC15DFD8C00E43BCC9B7C59CF /* Pods_GTUICatalog.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F119D03C7C35614DD3E93147DF0A18D5 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				32621BEDBEAD953105596B15A5978775 /* GTLabel.h */,
+				6780361A6A05923F3CEAA413AC6AC5A2 /* GTUIAttributedLabel.h */,
+				8C5AE1F375360D15C4B092C0F3B5016D /* GTUIAttributedLabel.m */,
+				A1F6BC327ADCC0F1E6EA8B7658BEF767 /* GTUILabel.h */,
+				2FF3AF99F1905D60BC6A21E299F669C8 /* GTUILabel.m */,
+			);
+			name = Label;
+			sourceTree = "<group>";
+		};
+		F41B9213076E96FC0A86F4318539FDE2 /* Pods-GTUICatalog */ = {
+			isa = PBXGroup;
+			children = (
+				FD4551B9597C6F34DB4A5185F9E11E52 /* Info.plist */,
+				440791F54D8BF2EA3D8DDEC0026AB63E /* Pods-GTUICatalog.modulemap */,
+				4B7F2D402F1371E68AF708DEDBA9D066 /* Pods-GTUICatalog-acknowledgements.markdown */,
+				8409B5F180AC4B6F83D0A9A824E3C2B1 /* Pods-GTUICatalog-acknowledgements.plist */,
+				C71CF7E75039016CB8CCD73634063708 /* Pods-GTUICatalog-dummy.m */,
+				D664394BE21AB848B03AA88208252971 /* Pods-GTUICatalog-frameworks.sh */,
+				C92271A8DE4D552EBE0F48E20BD99AEB /* Pods-GTUICatalog-resources.sh */,
+				D5AF6BA0A9AD3EB8E030C33353EE4620 /* Pods-GTUICatalog-umbrella.h */,
+				BC2DF7A3501D57021C86C859D22AEB89 /* Pods-GTUICatalog.debug.xcconfig */,
+				538FB4CA80BD8196B16ACD1EC649AB97 /* Pods-GTUICatalog.release.xcconfig */,
+			);
+			name = "Pods-GTUICatalog";
+			path = "Target Support Files/Pods-GTUICatalog";
+			sourceTree = "<group>";
+		};
+		F611EA15DF8AC58699154CFB58A4805D /* private */ = {
+			isa = PBXGroup;
+			children = (
+				2DDDCA03522B3A5B24FBA9BCAC87E954 /* GTUIInkLayer.h */,
+				75DD4D7DC38D887C10DD9F8741824A03 /* GTUIInkLayer.m */,
+				89C5C50783A50DB6956EB4F53E429793 /* GTUILegacyInkLayer.h */,
+				8C9B365AF94CDC6FDF83AE4BD3541068 /* GTUILegacyInkLayer.m */,
+				3A35C12C03B50EABA72DC10014B54B2A /* GTUILegacyInkLayer+Testing.h */,
+			);
+			name = private;
+			path = components/CommonComponent/Ink/src/private;
+			sourceTree = "<group>";
+		};
+		FA4A82ED9B24B6CCA8AF633077DCBBD0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F41B9213076E96FC0A86F4318539FDE2 /* Pods-GTUICatalog */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0847F42456E375E1A9EBA9482B654AD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA28F3AABC3AC584798D01E77996B0F /* Pods-GTUICatalog-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19729FA0B1C9CF3DD7CD9287E0F86661 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD1AC1168900092F731296720CB33BBC /* GTFColorCalculations.h in Headers */,
+				BE5E92511B81C17453914DFC607C6438 /* GTFImageCalculations.h in Headers */,
+				1DCDE7B998A11FCACB6E382F3482F4DB /* GTFTextAccessibility-Bridging-Header.h in Headers */,
+				0FD87ED6CB1013D956F4A4DFFA26194E /* GTFTextAccessibility-umbrella.h in Headers */,
+				878681188C1CBDD555C9C3DCEF2C24DB /* GTFTextAccessibility.h in Headers */,
+				1FF4D050735450E5CA6130AF278D2AAC /* NSArray+GTFUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AB69562D0A266A146DA39999DF45C6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE04620D8F88064B2F77BF53066E7970 /* GTActivityIndicatorView.h in Headers */,
+				53114292903452BACADF4F3EC316F143 /* GTApplication.h in Headers */,
+				4EFD0AFBC110D3D574DA3C5FF610576C /* GTButton.h in Headers */,
+				40687D333BF60F2169A7C5A6D33E0E92 /* GTCheckBox.h in Headers */,
+				123229FD2CCFC4D8E77AD6A872E20EE2 /* GTColorScheme.h in Headers */,
+				65E17C80F6E863E980F34B0B7E43F8E1 /* GTIconFont.h in Headers */,
+				B1E227A620D5F154E1D45A3FEEC98160 /* GTImageView.h in Headers */,
+				FD893E02C7F0F51D2EF2EF45F1EDCE1A /* GTInk.h in Headers */,
+				0CB0A913F688C597E29F45746E3860D4 /* GTKeyboardWatcher.h in Headers */,
+				20799B4E8865A0DE2C89726225B957C1 /* GTLabel.h in Headers */,
+				2D732FAADD80D36E755F79C855B334AE /* GTMath.h in Headers */,
+				F79E8104962C36C809B31E7D8D20D157 /* GTShadowLayer.h in Headers */,
+				8633624540B1010B30B85FD2E2FECE47 /* GTShapeLibrary.h in Headers */,
+				6DE94B9F9A894F7325B02E82D220F872 /* GTShapes.h in Headers */,
+				03BE83A7B99E692E0028DFDCF455972E /* GTShapeScheme.h in Headers */,
+				C6A450452402577C288C91995FFEB426 /* GTSwitch.h in Headers */,
+				39CF78A7BF24024FB0118EB5F76D4E7D /* GTTypography.h in Headers */,
+				68B43D255AE659EEBD0F1314F9D4B7FC /* GTTypographyScheme.h in Headers */,
+				3441296FE243018823777156484EE82A /* GTUIActivityIndicatorView.h in Headers */,
+				A924F3704F954042FFE30E287619FAD5 /* GTUIAttributedLabel.h in Headers */,
+				BB1A70ADDFE90FFBDF6BF46F3C573F92 /* GTUIBorderEdgeTreatment.h in Headers */,
+				D22346A025A2280861F7D298F7DE7630 /* GTUIButton+Subclassing.h in Headers */,
+				AC540F61511F260075855944DE559717 /* GTUIButton.h in Headers */,
+				BB346C741C928867C617CABF3941D2DF /* GTUICheckBox.h in Headers */,
+				F31E52C210D71D80F2402D0AD598103B /* GTUICheckBoxAnimations.h in Headers */,
+				F80B30BE372B88969241C853A0B25557 /* GTUICheckBoxGroup.h in Headers */,
+				92B838C0586424CA47362B6ED0F8C258 /* GTUICheckBoxPath.h in Headers */,
+				8E583F2CB6670CFBA327115B0470A5C3 /* GTUIColorScheme.h in Headers */,
+				A1A7648782796FA7D1A20A07CB538489 /* GTUICornerTreatment+CornerTypeInitalizer.h in Headers */,
+				5293CF537FF43682615AC55BEE1DE2C0 /* GTUICornerTreatment.h in Headers */,
+				E5A15A3C72D79261AC78347F810DFEBC /* GTUICurvedCornerTreatment.h in Headers */,
+				C302A691D8250472A981375883134ABA /* GTUICurvedRectShapeGenerator.h in Headers */,
+				4413C48B25A4C61D97CE3A2948216221 /* GTUICutCornerTreatment.h in Headers */,
+				2B9720F99F04A084369587F620339EFA /* GTUIEdgeTreatment.h in Headers */,
+				5CA09289DB4F636A03D86CECF4A7C796 /* GTUIFontTextStyle.h in Headers */,
+				7FFFDEE85B1B2A44EFA18CB187A08898 /* GTUIFontTraits.h in Headers */,
+				61B55A29C55951FDC8D65A9D1C70DA65 /* GTUIIconView.h in Headers */,
+				81B967AC4E84DB076EB06BE39998DD4C /* GTUIImageView.h in Headers */,
+				D5A5F259FDC522392646E139EDCCCBA9 /* GTUIInkGestureRecognizer.h in Headers */,
+				CEB33DDC11AB5C2DDB27D6F8E0125F30 /* GTUIInkLayer.h in Headers */,
+				3ED5DF5DED5825DFA4E4980682BB8293 /* GTUIInkTouchController.h in Headers */,
+				FE2042BFD2DC2EB1DC25ADCE857A06CE /* GTUIInkView.h in Headers */,
+				896A0D4CBD4F3E8F0F7BE52D9B338B67 /* GTUIKeyboardWatcher.h in Headers */,
+				006C8AEDD7F07425ACB3DD611021C864 /* GTUIKit-umbrella.h in Headers */,
+				E3E66B7B298D7BFA4F711CF0BE525701 /* GTUILabel.h in Headers */,
+				C9B2D4770351EB99E3F5862E09537B10 /* GTUILayoutMetrics.h in Headers */,
+				345A7604BF1FAA3BE39E1419C88E209F /* GTUILegacyInkLayer+Testing.h in Headers */,
+				55D984A711F24F1FBFFB59464AA9DDDA /* GTUILegacyInkLayer.h in Headers */,
+				408FAC381FDD7E06BACA0923BC5F74FA /* GTUIMath.h in Headers */,
+				3773E2AA4C9BADF7FD6972A3B57AD1F8 /* GTUIMetrics.h in Headers */,
+				E92C4BB833311163C6B9E20C50B747AF /* GTUIPathGenerator.h in Headers */,
+				D7DE63BAF1A87F374E2C08031C5EF848 /* GTUIPillShapeGenerator.h in Headers */,
+				30A31A03755685C26C69BB7C95859D66 /* GTUIRectangleShapeGenerator.h in Headers */,
+				F2F587263EE97E3BF901930E74E34CB1 /* GTUIRoundedCornerTreatment.h in Headers */,
+				4B3265FF92D7CB330867CC6E2427712C /* GTUIShadowElevations.h in Headers */,
+				C102761CC795495548FC2B21C2C32917 /* GTUIShadowLayer.h in Headers */,
+				DD999831FA1F523095D0E74F8C4BA450 /* GTUIShapeCategory.h in Headers */,
+				7F91343DCD577979DA8303510BECC647 /* GTUIShapedShadowLayer.h in Headers */,
+				873ECB78F5B83BB0A57311BA9D22298B /* GTUIShapedView.h in Headers */,
+				08A28F232CECBAD37E8A6F119949F91D /* GTUIShapeGenerating.h in Headers */,
+				21DD79978B000AEAE149B09A0372F8B4 /* GTUIShapeScheme.h in Headers */,
+				E0EFB4D36FF7F639F0C5BCCAD5BD8B16 /* GTUISlantedRectShapeGenerator.h in Headers */,
+				F3F1C3048D7A20A799111C5820AFEFC4 /* GTUISwitch.h in Headers */,
+				3C30D762CE55E211760B905B2C5182C0 /* GTUITonalPalette.h in Headers */,
+				BB538B9F8BB5F3CD5FF8B531EE681580 /* GTUITriangleEdgeTreatment.h in Headers */,
+				350D3767B70C15F135673E7BA93172C7 /* GTUITypography.h in Headers */,
+				3D15108B95B955852B9F8D901809E01C /* GTUITypographyScheme.h in Headers */,
+				4054BEF2CA5780C63E6B847F2E0BB9CA /* UIApplication+AppExtensions.h in Headers */,
+				A1579EF7AE0E07B77845FDEB51B1FEAB /* UIFont+GTUITypography.h in Headers */,
+				479A3E17BAEDBF655D80525D940E81AF /* UIFont+GTUITypographyPrivate.h in Headers */,
+				E93B385D02D06D944D64CC007D7FBDEA /* UIFontDescriptor+GTUITypography.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B742DE6F8114678D9B698256F77E10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE2CE2D0FBA788B0E58617E7B325C2C8 /* GTCatalog-umbrella.h in Headers */,
+				B8E939A8025F8B0FB4E8A019B7DAA059 /* GTCatalog.h in Headers */,
+				2CC454F9DCAD381E7D8B840E5F514429 /* GTFCatalogExample.h in Headers */,
+				D24C4968BD0855809091466381E2FE7C /* GTFNodeListViewController.h in Headers */,
+				129670419CF6D3695AB142DC656626D6 /* GTFRuntime.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1D49F021C9E15A275D21AAA51112739 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD426DF6673814ECBAFF67B3F265D460 /* GTFInternationalization-umbrella.h in Headers */,
+				77E1A6BD92A2BA9DC93F365E0AED7CBA /* GTFInternationalization.h in Headers */,
+				626C17B0A4495D4182B938460C93D70A /* GTFRTL.h in Headers */,
+				2B0091B0DB629048D04D1148D224B0B3 /* NSLocale+GTRTL.h in Headers */,
+				9A8EFD6DAB061FA8242725B8C6119987 /* NSString+GTBidi.h in Headers */,
+				366CD0FB63C5DFF4B4B0CFC6E3A5268D /* UIImage+GTRTL.h in Headers */,
+				C8C8D3B30649B8C48F4476017C1085FF /* UIView+GTRTL.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2BC6D0CF95C234BB8A1AB6BEFAD9B730 /* GTFTextAccessibility */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E8EDEC860DE4A6953FC8BA0CF9EB542 /* Build configuration list for PBXNativeTarget "GTFTextAccessibility" */;
+			buildPhases = (
+				3D493FD8AC128150DA838974FF180CF9 /* Sources */,
+				7740CE511E8547C7A80D5C8D842360E8 /* Frameworks */,
+				19729FA0B1C9CF3DD7CD9287E0F86661 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTFTextAccessibility;
+			productName = GTFTextAccessibility;
+			productReference = 948F45CC60FE7D4D4A14444C9A3C518D /* GTFTextAccessibility.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		64BA33547A029AC817449BF746A78A70 /* GTFInternationalization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0CE89015E7716F1D95418E43729B20F /* Build configuration list for PBXNativeTarget "GTFInternationalization" */;
+			buildPhases = (
+				7867DC9224D9DF070F5114675940ED87 /* Sources */,
+				4390D09720C3B3F31D10F1721CB05A14 /* Frameworks */,
+				B1D49F021C9E15A275D21AAA51112739 /* Headers */,
+				780C247CB25B0ACCF6F914DE8C5CBA3A /* Copy . Public Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTFInternationalization;
+			productName = GTFInternationalization;
+			productReference = C40EE86A866AB75092DA452FBC2711FD /* GTFInternationalization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		688A67C0E5F60FA3D9A0A044F5BC385B /* GTCatalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0AF60ECAB7BCD088E278E0C0DF722FB /* Build configuration list for PBXNativeTarget "GTCatalog" */;
+			buildPhases = (
+				18D8D957CD17C097BAE100FC59A74B19 /* Sources */,
+				75F159700EDD7507E7CC58D53A8086F5 /* Frameworks */,
+				59B742DE6F8114678D9B698256F77E10 /* Headers */,
+				EF042B9FC353BBFB2983A54CCE99E2E3 /* Copy . Public Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTCatalog;
+			productName = GTCatalog;
+			productReference = 8BBA765012646360613858AB849D6217 /* GTCatalog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF321559B5E1C53FEB049AF24F38085D /* GTUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C1057297F38D44CDD6DFACEC3C6CB3 /* Build configuration list for PBXNativeTarget "GTUIKit" */;
+			buildPhases = (
+				0B329A26631F8723FEAED8CF015772BA /* Sources */,
+				8F386A7DDF4149C9C1E2B8BA6EA1DDC0 /* Frameworks */,
+				2AB69562D0A266A146DA39999DF45C6D /* Headers */,
+				DE3BC07815F4EE9C894BC9D1D9715CD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				860770DF967C648D8CE0344146325431 /* PBXTargetDependency */,
+				406C361391F30C5CE3D66855D5E0241A /* PBXTargetDependency */,
+			);
+			name = GTUIKit;
+			productName = GTUIKit;
+			productReference = F8A5FC19CEFBB2D502C47B1C4C5B7942 /* GTUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC323555418641B46F7D1928ADCAFCFC /* Pods-GTUICatalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD577FD67BFC4492585AFC4D0363AC47 /* Build configuration list for PBXNativeTarget "Pods-GTUICatalog" */;
+			buildPhases = (
+				63FAF90D046C12457BC4EE3FDF324600 /* Sources */,
+				ABA345B105EEB66244CEE5F1AC772976 /* Frameworks */,
+				0847F42456E375E1A9EBA9482B654AD5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90B696FA132A8848B9ED4D10E70F9344 /* PBXTargetDependency */,
+				647EDA9DBF9B1666710F53F6640D496E /* PBXTargetDependency */,
+				C619E8059871F431E99D5C97BA8B5F96 /* PBXTargetDependency */,
+				2155D9E21B6C48D8B55D435D4C2F6D67 /* PBXTargetDependency */,
+			);
+			name = "Pods-GTUICatalog";
+			productName = "Pods-GTUICatalog";
+			productReference = CB070FAAC15DFD8C00E43BCC9B7C59CF /* Pods_GTUICatalog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EE983EFAA9B7251F7A873D106CB51577 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				688A67C0E5F60FA3D9A0A044F5BC385B /* GTCatalog */,
+				64BA33547A029AC817449BF746A78A70 /* GTFInternationalization */,
+				2BC6D0CF95C234BB8A1AB6BEFAD9B730 /* GTFTextAccessibility */,
+				AF321559B5E1C53FEB049AF24F38085D /* GTUIKit */,
+				BC323555418641B46F7D1928ADCAFCFC /* Pods-GTUICatalog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE3BC07815F4EE9C894BC9D1D9715CD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818247155193F735ABF96169017FBFE0 /* GTIconfont.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B329A26631F8723FEAED8CF015772BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7038AE9894DC3C1C6CF4C3720CA5F94 /* GTUIActivityIndicatorView.m in Sources */,
+				16F1134D946910EB0EFC15B7DD31EFA3 /* GTUIAttributedLabel.m in Sources */,
+				FA027A395DDB8010C1FA34532FE7C52C /* GTUIBorderEdgeTreatment.m in Sources */,
+				20511B13B1E9F93BF814461D274C1E9F /* GTUIButton.m in Sources */,
+				4316DA8BB6978B472F4E9BC851C693C2 /* GTUICheckBox.m in Sources */,
+				EC06D02F43ACDA3AE00ED119344D122F /* GTUICheckBoxAnimations.m in Sources */,
+				E2E9CFD1704BF2D39D46EA46869502B3 /* GTUICheckBoxGroup.m in Sources */,
+				0E47F6458240EAB687A9C041D1AE8676 /* GTUICheckBoxPath.m in Sources */,
+				CE50313EAFCF0632704A2EA4508777EA /* GTUIColorScheme.m in Sources */,
+				54D54C61F51452676454D99B24F22520 /* GTUICornerTreatment+CornerTypeInitalizer.m in Sources */,
+				647C5B92203FB9A901F7E7C3E387A71F /* GTUICornerTreatment.m in Sources */,
+				00FC8FA6ADC1A56F41BB8914E4B66A21 /* GTUICurvedCornerTreatment.m in Sources */,
+				E41134531A391D4130E32EC11780A712 /* GTUICurvedRectShapeGenerator.m in Sources */,
+				2199CB835598B7281D453A13C205D147 /* GTUICutCornerTreatment.m in Sources */,
+				BDFF587DC76BD97DDE8A8AB26477A126 /* GTUIEdgeTreatment.m in Sources */,
+				0746C1F6F9739000087D4C4F0A473059 /* GTUIFontTraits.m in Sources */,
+				D015D3B8C6A94E63F2154D4A0941A788 /* GTUIIconView.m in Sources */,
+				81FA681158BE04A05FC78E68553CC62A /* GTUIImageView.m in Sources */,
+				09D74BF7B127B108FE8503B05AC33093 /* GTUIInkGestureRecognizer.m in Sources */,
+				E3A43B1614A67988951642EA19C664DB /* GTUIInkLayer.m in Sources */,
+				388A9F7BA96FF15CD44AD98469B37661 /* GTUIInkTouchController.m in Sources */,
+				0901B2AEB586924424846DF101E7C69D /* GTUIInkView.m in Sources */,
+				C2C789299079FA1BD17902F785679BE6 /* GTUIKeyboardWatcher.m in Sources */,
+				BE8625C22895F2F503D0BD21AA1ED666 /* GTUIKit-dummy.m in Sources */,
+				3F43881CE0A12EEAAE4F5FBC4FD61355 /* GTUILabel.m in Sources */,
+				270B483DBA4EF6AEB834403A9CD967D5 /* GTUILayoutMetrics.m in Sources */,
+				F1B5A9DEA0C7142D6CBE44B94E6009DE /* GTUILegacyInkLayer.m in Sources */,
+				75B184725AD5AC32DD81E0942D99FE15 /* GTUIPathGenerator.m in Sources */,
+				E5EF1EC7EE9B8F1F76C4E687F9D352F7 /* GTUIPillShapeGenerator.m in Sources */,
+				306627893E413BF633980FF0C3248A84 /* GTUIRectangleShapeGenerator.m in Sources */,
+				D25096E4FF5EC7EDACA7B12D12EDEEC7 /* GTUIRoundedCornerTreatment.m in Sources */,
+				E6E01BD597AA2632BEBADA0D8E198DE3 /* GTUIShadowElevations.m in Sources */,
+				0E3B9325A407446FABCEE49CF01F6A59 /* GTUIShadowLayer.m in Sources */,
+				BE2B8DC19E85C34E8C7EA8D25159EF46 /* GTUIShapeCategory.m in Sources */,
+				C698364E0968C0995B8679842351FDE2 /* GTUIShapedShadowLayer.m in Sources */,
+				776F4823F608E064F1601E7E93F14BF5 /* GTUIShapedView.m in Sources */,
+				CC96EE197FF0F62C82FDCAE6574F003C /* GTUIShapeScheme.m in Sources */,
+				D5E3F2CE31AB4CE9A11E1EDB1004338A /* GTUISlantedRectShapeGenerator.m in Sources */,
+				A84BECEB4ED74C62D1ACB28ED049F13E /* GTUISwitch.m in Sources */,
+				3AD1F883F0A04220BC66F2A26A5C3322 /* GTUITonalPalette.m in Sources */,
+				34B32DF8AE65E4896F46B299F7ACF707 /* GTUITriangleEdgeTreatment.m in Sources */,
+				0DBD41A55DBA9E6B54DD146312E5330C /* GTUITypography.m in Sources */,
+				8EC2D1248CBA51B34FDAEABC90F88A5F /* GTUITypographyScheme.m in Sources */,
+				9A9C7111DE1E86ABA3AEC4BC33350E52 /* UIApplication+AppExtensions.m in Sources */,
+				7A1C6AB44DD9BEAF6CA5E5B804751467 /* UIFont+GTUITypography.m in Sources */,
+				91C0A3F052C180219D685FB292E3B84A /* UIFont+GTUITypographyPrivate.m in Sources */,
+				C5B140B889A77DFC0C25F8BE10A675D1 /* UIFontDescriptor+GTUITypography.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D8D957CD17C097BAE100FC59A74B19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F721A8CD8BDBA81467EAFA2A54BD7017 /* GTCatalog-dummy.m in Sources */,
+				A9316D7CF0AC41BD13875F6397791D75 /* GTFNodeListViewController.m in Sources */,
+				5A460FE4638EC0B6348B15055E6DC56E /* GTFRuntime.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D493FD8AC128150DA838974FF180CF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B234EE7A94E0BDF9FFF67C9532845F9 /* GTFColorCalculations.m in Sources */,
+				997BB53EAF83758EB946934D323F1499 /* GTFImageCalculations.m in Sources */,
+				76F622DFC9FE40CE0421CA6151B01512 /* GTFTextAccessibility-dummy.m in Sources */,
+				BEB0564714AAC42223F8AE9A0BC41CD6 /* GTFTextAccessibility.m in Sources */,
+				1ECD4AF722FE51714CD2BE12C6703AD1 /* NSArray+GTFUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63FAF90D046C12457BC4EE3FDF324600 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F8B4B0C501A24DE44D036527AE726E /* Pods-GTUICatalog-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7867DC9224D9DF070F5114675940ED87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DC4DD21D524BE3C98AF752E3DF91E01 /* GTFInternationalization-dummy.m in Sources */,
+				37CFED4C6FC3318BB714752525D31879 /* GTFRTL.m in Sources */,
+				1DAB2E19CF36A13EF4D5F7E26576DBE3 /* NSLocale+GTRTL.m in Sources */,
+				E42383D097F982142253A25A2C915F50 /* NSString+GTBidi.m in Sources */,
+				2390C49CD0E12661DF71546EBBEE2F57 /* UIImage+GTRTL.m in Sources */,
+				00D415DF1B601F881738B39B1D127446 /* UIView+GTRTL.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2155D9E21B6C48D8B55D435D4C2F6D67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTUIKit;
+			target = AF321559B5E1C53FEB049AF24F38085D /* GTUIKit */;
+			targetProxy = DC175A2A76D1B2925A9B45C81445879D /* PBXContainerItemProxy */;
+		};
+		406C361391F30C5CE3D66855D5E0241A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTFTextAccessibility;
+			target = 2BC6D0CF95C234BB8A1AB6BEFAD9B730 /* GTFTextAccessibility */;
+			targetProxy = 24A2EE20893922D53F0FB0DBEF3AFECE /* PBXContainerItemProxy */;
+		};
+		647EDA9DBF9B1666710F53F6640D496E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTFInternationalization;
+			target = 64BA33547A029AC817449BF746A78A70 /* GTFInternationalization */;
+			targetProxy = EB149B8D0A74C889504E035308FDC9E1 /* PBXContainerItemProxy */;
+		};
+		860770DF967C648D8CE0344146325431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTFInternationalization;
+			target = 64BA33547A029AC817449BF746A78A70 /* GTFInternationalization */;
+			targetProxy = ED17D2CC2CB0367F9F613C8C2AC974D1 /* PBXContainerItemProxy */;
+		};
+		90B696FA132A8848B9ED4D10E70F9344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTCatalog;
+			target = 688A67C0E5F60FA3D9A0A044F5BC385B /* GTCatalog */;
+			targetProxy = 50FC0E924D8B8EF84E5AC6CC2564258D /* PBXContainerItemProxy */;
+		};
+		C619E8059871F431E99D5C97BA8B5F96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTFTextAccessibility;
+			target = 2BC6D0CF95C234BB8A1AB6BEFAD9B730 /* GTFTextAccessibility */;
+			targetProxy = 95D07C85F6B36AE1E2551C1E9BC102C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0016BDF060C646FE780D828715E7051F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A076F4424AC16ECF7E613084BDD813B8 /* GTFTextAccessibility.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTFTextAccessibility/GTFTextAccessibility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTFTextAccessibility/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTFTextAccessibility/GTFTextAccessibility.modulemap";
+				PRODUCT_MODULE_NAME = GTFTextAccessibility;
+				PRODUCT_NAME = GTFTextAccessibility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07DA92E2C3EFCAB7214B693F1B847376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2DF7A3501D57021C86C859D22AEB89 /* Pods-GTUICatalog.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GTUICatalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GTUICatalog/Pods-GTUICatalog.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5223B5C70C964505C05DD4445EB5D486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0105EE318AC67539833DA8A483FAC7A3 /* GTCatalog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTCatalog/GTCatalog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTCatalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTCatalog/GTCatalog.modulemap";
+				PRODUCT_MODULE_NAME = GTCatalog;
+				PRODUCT_NAME = GTCatalog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7908AE2BEEF501385E8CCF7E0674FED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB68E5511933571233CBA34A2F514EA /* GTUIKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTUIKit/GTUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTUIKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTUIKit/GTUIKit.modulemap";
+				PRODUCT_MODULE_NAME = GTUIKit;
+				PRODUCT_NAME = GTUIKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87DEF10B5DD86007CB2047177D29FC6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A076F4424AC16ECF7E613084BDD813B8 /* GTFTextAccessibility.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTFTextAccessibility/GTFTextAccessibility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTFTextAccessibility/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTFTextAccessibility/GTFTextAccessibility.modulemap";
+				PRODUCT_MODULE_NAME = GTFTextAccessibility;
+				PRODUCT_NAME = GTFTextAccessibility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9C9AEA1490D2DD544192CA0386D593D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0105EE318AC67539833DA8A483FAC7A3 /* GTCatalog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTCatalog/GTCatalog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTCatalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTCatalog/GTCatalog.modulemap";
+				PRODUCT_MODULE_NAME = GTCatalog;
+				PRODUCT_NAME = GTCatalog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B14FE7F5E5FDDCE82D4D08B3819B63B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E7B254DCC1FF5A1ACFABD7292EC9EAA /* GTFInternationalization.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTFInternationalization/GTFInternationalization-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTFInternationalization/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTFInternationalization/GTFInternationalization.modulemap";
+				PRODUCT_MODULE_NAME = GTFInternationalization;
+				PRODUCT_NAME = GTFInternationalization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB5CAAB3CA7CA0422E7776E4FAE84835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 538FB4CA80BD8196B16ACD1EC649AB97 /* Pods-GTUICatalog.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GTUICatalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GTUICatalog/Pods-GTUICatalog.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BED0C4CB4093F5A08AAA41B9A59E30E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E7B254DCC1FF5A1ACFABD7292EC9EAA /* GTFInternationalization.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTFInternationalization/GTFInternationalization-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTFInternationalization/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTFInternationalization/GTFInternationalization.modulemap";
+				PRODUCT_MODULE_NAME = GTFInternationalization;
+				PRODUCT_NAME = GTFInternationalization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7329A208900DA991975A3B1CB3F9CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB68E5511933571233CBA34A2F514EA /* GTUIKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTUIKit/GTUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTUIKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTUIKit/GTUIKit.modulemap";
+				PRODUCT_MODULE_NAME = GTUIKit;
+				PRODUCT_NAME = GTUIKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04C1057297F38D44CDD6DFACEC3C6CB3 /* Build configuration list for PBXNativeTarget "GTUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7908AE2BEEF501385E8CCF7E0674FED3 /* Debug */,
+				C7329A208900DA991975A3B1CB3F9CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E8EDEC860DE4A6953FC8BA0CF9EB542 /* Build configuration list for PBXNativeTarget "GTFTextAccessibility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0016BDF060C646FE780D828715E7051F /* Debug */,
+				87DEF10B5DD86007CB2047177D29FC6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0AF60ECAB7BCD088E278E0C0DF722FB /* Build configuration list for PBXNativeTarget "GTCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9AEA1490D2DD544192CA0386D593D7 /* Debug */,
+				5223B5C70C964505C05DD4445EB5D486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD577FD67BFC4492585AFC4D0363AC47 /* Build configuration list for PBXNativeTarget "Pods-GTUICatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07DA92E2C3EFCAB7214B693F1B847376 /* Debug */,
+				BB5CAAB3CA7CA0422E7776E4FAE84835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0CE89015E7716F1D95418E43729B20F /* Build configuration list for PBXNativeTarget "GTFInternationalization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B14FE7F5E5FDDCE82D4D08B3819B63B6 /* Debug */,
+				BED0C4CB4093F5A08AAA41B9A59E30E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

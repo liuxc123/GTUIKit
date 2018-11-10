@@ -1,0 +1,96 @@
+PODS:
+  - GTCatalog (0.0.1)
+  - GTFInternationalization (0.0.1)
+  - GTFTextAccessibility (0.0.1)
+  - GTUIKit (0.0.1):
+    - GTUIKit/BasicComponent (= 0.0.1)
+    - GTUIKit/CommonComponent (= 0.0.1)
+    - GTUIKit/private (= 0.0.1)
+  - GTUIKit/BasicComponent (0.0.1):
+    - GTUIKit/BasicComponent/IconFont (= 0.0.1)
+    - GTUIKit/BasicComponent/ShadowLayer (= 0.0.1)
+    - GTUIKit/BasicComponent/ShapeLibrary (= 0.0.1)
+    - GTUIKit/BasicComponent/Shapes (= 0.0.1)
+    - GTUIKit/BasicComponent/Typography (= 0.0.1)
+  - GTUIKit/BasicComponent/IconFont (0.0.1)
+  - GTUIKit/BasicComponent/ShadowLayer (0.0.1)
+  - GTUIKit/BasicComponent/ShapeLibrary (0.0.1):
+    - GTUIKit/BasicComponent/Shapes
+    - GTUIKit/private/Math
+  - GTUIKit/BasicComponent/Shapes (0.0.1):
+    - GTUIKit/BasicComponent/ShadowLayer
+    - GTUIKit/private/Math
+  - GTUIKit/BasicComponent/Typography (0.0.1)
+  - GTUIKit/CommonComponent (0.0.1):
+    - GTUIKit/CommonComponent/ActivityIndicatorView (= 0.0.1)
+    - GTUIKit/CommonComponent/Button (= 0.0.1)
+    - GTUIKit/CommonComponent/CheckBox (= 0.0.1)
+    - GTUIKit/CommonComponent/ImageView (= 0.0.1)
+    - GTUIKit/CommonComponent/Ink (= 0.0.1)
+    - GTUIKit/CommonComponent/Label (= 0.0.1)
+    - GTUIKit/CommonComponent/schemes (= 0.0.1)
+    - GTUIKit/CommonComponent/Switch (= 0.0.1)
+  - GTUIKit/CommonComponent/ActivityIndicatorView (0.0.1)
+  - GTUIKit/CommonComponent/Button (0.0.1):
+    - GTFInternationalization
+    - GTFTextAccessibility
+    - GTUIKit/BasicComponent/ShadowLayer
+    - GTUIKit/BasicComponent/Shapes
+    - GTUIKit/CommonComponent/Ink
+    - GTUIKit/private/Math
+  - GTUIKit/CommonComponent/CheckBox (0.0.1)
+  - GTUIKit/CommonComponent/ImageView (0.0.1):
+    - GTUIKit/private/Math
+  - GTUIKit/CommonComponent/Ink (0.0.1)
+  - GTUIKit/CommonComponent/Label (0.0.1)
+  - GTUIKit/CommonComponent/schemes (0.0.1):
+    - GTUIKit/CommonComponent/schemes/ColorScheme (= 0.0.1)
+    - GTUIKit/CommonComponent/schemes/ShapeScheme (= 0.0.1)
+    - GTUIKit/CommonComponent/schemes/TypographyScheme (= 0.0.1)
+  - GTUIKit/CommonComponent/schemes/ColorScheme (0.0.1)
+  - GTUIKit/CommonComponent/schemes/ShapeScheme (0.0.1):
+    - GTUIKit/BasicComponent/ShapeLibrary
+    - GTUIKit/BasicComponent/Shapes
+  - GTUIKit/CommonComponent/schemes/TypographyScheme (0.0.1)
+  - GTUIKit/CommonComponent/Switch (0.0.1)
+  - GTUIKit/private (0.0.1):
+    - GTUIKit/private/Application (= 0.0.1)
+    - GTUIKit/private/KeyboardWatcher (= 0.0.1)
+    - GTUIKit/private/Math (= 0.0.1)
+    - GTUIKit/private/UIMetrics (= 0.0.1)
+  - GTUIKit/private/Application (0.0.1)
+  - GTUIKit/private/KeyboardWatcher (0.0.1):
+    - GTUIKit/private/Application
+  - GTUIKit/private/Math (0.0.1)
+  - GTUIKit/private/UIMetrics (0.0.1):
+    - GTUIKit/private/Application
+  - GTUIKitExamples (0.0.1):
+    - GTUIKit
+
+DEPENDENCIES:
+  - GTCatalog
+  - GTUIKit (from `../`)
+  - GTUIKitExamples (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GTCatalog
+    - GTFInternationalization
+    - GTFTextAccessibility
+
+EXTERNAL SOURCES:
+  GTUIKit:
+    :path: "../"
+  GTUIKitExamples:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GTCatalog: d6bb60421469aaaf6bee50c6419881427843809a
+  GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
+  GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
+  GTUIKit: 593621759601fa33317e630d6bddb2fb72b74f30
+  GTUIKitExamples: 87e9de58f29d026dd3c2c87888f6187af78417d3
+
+PODFILE CHECKSUM: baa48098b3d9fd6a49f0e9fa432dfbd0340464a8
+
+COCOAPODS: 1.5.0

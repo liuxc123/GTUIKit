@@ -1,0 +1,6 @@
+framework module GTUIKit {
+  umbrella header "GTUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

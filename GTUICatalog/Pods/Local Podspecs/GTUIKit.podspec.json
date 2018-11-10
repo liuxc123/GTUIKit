@@ -1,0 +1,297 @@
+{
+  "name": "GTUIKit",
+  "version": "0.0.1",
+  "summary": "This spec is an aggregate of all the GTUIKit Components.",
+  "homepage": "https://github.com/liuxc123/GTUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liuxc123": "lxc_work@126.com"
+  },
+  "source": {
+    "git": "https://github.com/liuxc123/GTUIKit.git",
+    "tag": "0.0.1"
+  },
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0"
+  },
+  "subspecs": [
+    {
+      "name": "BasicComponent",
+      "subspecs": [
+        {
+          "name": "IconFont",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/BasicComponent/IconFont/src/*.h",
+          "source_files": [
+            "components/BasicComponent/IconFont/src/*.{h,m}",
+            "components/BasicComponent/IconFont/src/private/*.{h,m}"
+          ],
+          "resources": [
+            "components/BasicComponent/IconFont/src/GTIconFont.bundle",
+            "components/BasicComponent/IconFont/src/iconfont.ttf"
+          ]
+        },
+        {
+          "name": "Typography",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/BasicComponent/Typography/src/*.h",
+          "source_files": [
+            "components/BasicComponent/Typography/src/*.{h,m}",
+            "components/BasicComponent/Typography/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "ShadowLayer",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/BasicComponent/ShadowLayer/src/*.h",
+          "source_files": [
+            "components/BasicComponent/ShadowLayer/src/*.{h,m}",
+            "components/BasicComponent/ShadowLayer/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "ShapeLibrary",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/BasicComponent/ShapeLibrary/src/*.h",
+          "source_files": [
+            "components/BasicComponent/ShapeLibrary/src/*.{h,m}",
+            "components/BasicComponent/ShapeLibrary/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/BasicComponent/Shapes": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "Shapes",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/BasicComponent/Shapes/src/*.h",
+          "source_files": [
+            "components/BasicComponent/Shapes/src/*.{h,m}",
+            "components/BasicComponent/Shapes/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/BasicComponent/ShadowLayer": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "CommonComponent",
+      "subspecs": [
+        {
+          "name": "ActivityIndicatorView",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/ActivityIndicatorView/src/*.h",
+          "source_files": [
+            "components/CommonComponent/ActivityIndicatorView/src/*.{h,m}",
+            "components/CommonComponent/ActivityIndicatorView/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "CheckBox",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/CheckBox/src/*.h",
+          "source_files": [
+            "components/CommonComponent/CheckBox/src/*.{h,m}",
+            "components/CommonComponent/CheckBox/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "Label",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Label/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Label/src/*.{h,m}",
+            "components/CommonComponent/Label/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "Button",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Button/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Button/src/*.{h,m}",
+            "components/CommonComponent/Button/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTFInternationalization": [
+
+            ],
+            "GTFTextAccessibility": [
+
+            ],
+            "GTUIKit/CommonComponent/Ink": [
+
+            ],
+            "GTUIKit/BasicComponent/ShadowLayer": [
+
+            ],
+            "GTUIKit/BasicComponent/Shapes": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "Switch",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Switch/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Switch/src/*.{h,m}",
+            "components/CommonComponent/Switch/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "ImageView",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/ImageView/src/*.h",
+          "source_files": [
+            "components/CommonComponent/ImageView/src/*.{h,m}",
+            "components/CommonComponent/ImageView/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "Ink",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Ink/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Ink/src/*.{h,m}",
+            "components/CommonComponent/Ink/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "schemes",
+          "subspecs": [
+            {
+              "name": "ColorScheme",
+              "platforms": {
+                "ios": "8.0"
+              },
+              "public_header_files": "components/CommonComponent/schemes/ColorScheme/src/*.h",
+              "source_files": "components/CommonComponent/schemes/ColorScheme/src/*.{h,m}"
+            },
+            {
+              "name": "ShapeScheme",
+              "platforms": {
+                "ios": "8.0"
+              },
+              "public_header_files": "components/CommonComponent/schemes/ShapeScheme/src/*.h",
+              "source_files": "components/CommonComponent/schemes/ShapeScheme/src/*.{h,m}",
+              "dependencies": {
+                "GTUIKit/BasicComponent/ShapeLibrary": [
+
+                ],
+                "GTUIKit/BasicComponent/Shapes": [
+
+                ]
+              }
+            },
+            {
+              "name": "TypographyScheme",
+              "platforms": {
+                "ios": "8.0"
+              },
+              "public_header_files": "components/CommonComponent/schemes/TypographyScheme/src/*.h",
+              "source_files": "components/CommonComponent/schemes/TypographyScheme/src/*.{h,m}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "private",
+      "subspecs": [
+        {
+          "name": "Application",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/Application/src/*.h",
+          "source_files": "components/private/Application/src/*.{h,m}"
+        },
+        {
+          "name": "Math",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/Math/src/*.h",
+          "source_files": "components/private/Math/src/*.{h,m}"
+        },
+        {
+          "name": "KeyboardWatcher",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/KeyboardWatcher/src/*.h",
+          "source_files": "components/private/KeyboardWatcher/src/*.{h,m}",
+          "dependencies": {
+            "GTUIKit/private/Application": [
+
+            ]
+          }
+        },
+        {
+          "name": "UIMetrics",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/UIMetrics/src/*.h",
+          "source_files": [
+            "components/private/UIMetrics/src/*.{h,m}",
+            "components/private/UIMetrics/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/private/Application": [
+
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

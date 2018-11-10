@@ -1,0 +1,47 @@
+{
+  "name": "GTUIKitExamples",
+  "version": "0.0.1",
+  "summary": "This spec is an aggregate of all the GTUIKit Components examples.",
+  "homepage": "https://github.com/liuxc123/GTUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liuxc123": "lxc_work@126.com"
+  },
+  "source": {
+    "git": "https://github.com/liuxc123/GTUIKit.git",
+    "tag": "0.0.1"
+  },
+  "requires_arc": true,
+  "source_files": [
+    "components/*/examples/*.{h,m,swift}",
+    "components/*/examples/supplemental/*.{h,m,swift}",
+    "components/private/*/examples/*.{h,m,swift}",
+    "components/schemes/*/examples/*.{h,m,swift}",
+    "components/schemes/*/examples/supplemental/*.{h,m,swift}"
+  ],
+  "resources": [
+    "components/*/examples/resources/*",
+    "components/private/*/examples/resources/*",
+    "components/schemes/*/examples/resources/*"
+  ],
+  "public_header_files": [
+    "components/*/examples/*.h",
+    "components/*/examples/supplemental/*.h",
+    "components/private/*/examples/*.h",
+    "components/schemes/*/examples/*.h"
+  ],
+  "dependencies": {
+    "GTUIKit": [
+
+    ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

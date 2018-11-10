@@ -1,0 +1,6 @@
+framework module GTCatalog {
+  umbrella header "GTCatalog-umbrella.h"
+
+  export *
+  module * { export * }
+}

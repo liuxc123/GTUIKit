@@ -1,0 +1,15 @@
+workspace 'GTUICatalog.xcworkspace'
+
+
+target 'GTUICatalog' do
+  platform :ios, '8.0'
+  project 'GTUICatalog.xcodeproj'
+  use_frameworks!
+
+  pod 'GTCatalog'
+  pod 'GTUIKitExamples', :path => '../'
+  pod 'GTUIKit', :path => '../'
+
+
+end
+

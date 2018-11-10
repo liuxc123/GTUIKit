@@ -1,0 +1,6 @@
+framework module GTFTextAccessibility {
+  umbrella header "GTFTextAccessibility-umbrella.h"
+
+  export *
+  module * { export * }
+}
