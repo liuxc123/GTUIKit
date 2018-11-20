@@ -8,6 +8,5 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXPORT CGFloat GTUIDeviceStatusBarHeight(void);
-
+FOUNDATION_EXPORT CGFloat GTUIDeviceTopSafeAreaInset(void);
 

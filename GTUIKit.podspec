@@ -61,6 +61,8 @@ Pod::Spec.new do |s|
       component.dependency "GTUIKit/private/Math"
     end
 
+
+
   end
 
   # 通用UI组件
@@ -74,12 +76,55 @@ Pod::Spec.new do |s|
       component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
       component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
     end
+
+    # Button
+    common_spec.subspec "Button" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency 'GTFInternationalization'
+        component.dependency 'GTFTextAccessibility'
+        component.dependency "GTUIKit/CommonComponent/Ink"
+        component.dependency "GTUIKit/BasicComponent/ShadowLayer"
+        component.dependency "GTUIKit/BasicComponent/Shapes"
+        component.dependency "GTUIKit/private/Math"
+    end
+
+    # ButtonBar
+    common_spec.subspec "ButtonBar" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency "GTUIKit/CommonComponent/Button"
+    end
  
     # CheckBox
     common_spec.subspec "CheckBox" do |component|
       component.ios.deployment_target = '8.0'
       component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
       component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+    end
+
+    # FlexibleHeader
+
+    common_spec.subspec "FlexibleHeader" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency 'GTFTextAccessibility'
+        component.dependency "GTUIKit/private/Application"
+        component.dependency "GTUIKit/private/UIMetrics"
+    end
+
+    # HeaderStackView
+
+    common_spec.subspec "HeaderStackView" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}"
     end
 
     # Label
@@ -90,18 +135,40 @@ Pod::Spec.new do |s|
     end
 
 
-    # Button
-    common_spec.subspec "Button" do |component|
-      component.ios.deployment_target = '8.0'
-      component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
-      component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+    # NavigationBar
+    common_spec.subspec "NavigationBar" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
 
-      component.dependency 'GTFInternationalization'
-      component.dependency 'GTFTextAccessibility'
-      component.dependency "GTUIKit/CommonComponent/Ink"
-      component.dependency "GTUIKit/BasicComponent/ShadowLayer"
-      component.dependency "GTUIKit/BasicComponent/Shapes"
-      component.dependency "GTUIKit/private/Math"
+        # Accessibility Configurator
+        component.dependency "GTFTextAccessibility"
+        component.dependency "GTFInternationalization"
+
+        component.dependency "GTUIKit/CommonComponent/ButtonBar"
+        component.dependency "GTUIKit/private/Math"
+    end
+
+    # NavigationController
+    common_spec.subspec "NavigationController" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+        component.resources = ["components/CommonComponent/#{component.base_name}/src/resource/*.png"]
+
+
+        # Navigation bar contents
+        component.dependency "GTUIKit/CommonComponent/HeaderStackView"
+        component.dependency "GTUIKit/CommonComponent/NavigationBar"
+        component.dependency "GTUIKit/BasicComponent/Typography"
+        component.dependency "GTUIKit/private/Application"
+        # Flexible header + shadow
+        component.dependency "GTUIKit/CommonComponent/FlexibleHeader"
+        component.dependency "GTUIKit/BasicComponent/ShadowLayer"
+
+        component.dependency "GTUIKit/BasicComponent/IconFont"
+        component.dependency "GTFInternationalization"
+        component.dependency "GTUIKit/private/UIMetrics"
     end
 
     # Switch
@@ -128,6 +195,33 @@ Pod::Spec.new do |s|
       component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
     end
 
+    # TabBar
+    common_spec.subspec "TabBar" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+    component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+    component.dependency "GTFInternationalization"
+    component.dependency "GTUIKit/BasicComponent/ShadowLayer"
+    component.dependency "GTUIKit/BasicComponent/Typography"
+    component.dependency "GTUIKit/CommonComponent/Ink"
+    component.dependency "GTUIKit/private/AnimationTiming"
+    component.dependency "GTUIKit/private/Math"
+
+    end
+
+    # ToolBar
+    common_spec.subspec "ToolBar" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency "GTFInternationalization"
+        component.dependency "GTUIKit/CommonComponent/Button"
+        component.dependency "GTUIKit/CommonComponent/NavigationBar"
+        component.dependency "GTUIKit/private/Math"
+    end
+
     # schemes
     common_spec.subspec "schemes" do |scheme_spec|
       scheme_spec.subspec "ColorScheme" do |scheme|
@@ -149,6 +243,9 @@ Pod::Spec.new do |s|
       end
     end
 
+
+
+
   end
 
 
@@ -161,12 +258,20 @@ Pod::Spec.new do |s|
   # 工具类组件
   s.subspec "private" do |private_spec|
 
+    # AnimationTiming
+    private_spec.subspec "AnimationTiming" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/private/#{component.base_name}/src/*.h"
+        component.source_files = "components/private/#{component.base_name}/src/*.{h,m}", "components/private/#{component.base_name}/src/private/*.{h,m}"
+    end
+
     # Application
     private_spec.subspec "Application" do |component|
       component.ios.deployment_target = '8.0'
       component.public_header_files = "components/private/#{component.base_name}/src/*.h"
       component.source_files = "components/private/#{component.base_name}/src/*.{h,m}"
     end
+
 
 
     # Math

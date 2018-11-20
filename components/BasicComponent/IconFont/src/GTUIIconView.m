@@ -11,7 +11,6 @@
 #define kICONFONT_DefaultColor [UIColor colorWithRed:0.0/255.0 green:142/255.0 blue:229/255.0 alpha:1.0];
 #define kICONFONT_BundleName (@"GTIconfont.bundle")
 
-
 @implementation GTUIIconView
 
 + (void)load {

@@ -11,6 +11,7 @@
 		0435AD6121913D1A00E1F1F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435AD6021913D1A00E1F1F1 /* ViewController.swift */; };
 		0435AD6421913D1A00E1F1F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0435AD6221913D1A00E1F1F1 /* Main.storyboard */; };
 		0435AD6921913D1B00E1F1F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0435AD6721913D1B00E1F1F1 /* LaunchScreen.storyboard */; };
+		04DE495121A3E53F004459E2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE495021A3E53F004459E2 /* SecondViewController.swift */; };
 		04FDBA0D2192E2880061EBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0435AD6521913D1B00E1F1F1 /* Assets.xcassets */; };
 		04FDBA192192EA770061EBFF /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDBA182192EA770061EBFF /* UnitTests.m */; };
 		04FDBA292192EAAE0061EBFF /* UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDBA282192EAAE0061EBFF /* UITests.m */; };
@@ -43,6 +44,7 @@
 		0435AD6821913D1B00E1F1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0435AD6A21913D1B00E1F1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BC5DF92191754100593536 /* GTUICatalog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTUICatalog-Bridging-Header.h"; sourceTree = "<group>"; };
+		04DE495021A3E53F004459E2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		04FDBA0B2192E09B0061EBFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04FDBA0E2192E2C10061EBFF /* GTUIKitUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTUIKitUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FDBA162192EA760061EBFF /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 			children = (
 				0435AD5E21913D1A00E1F1F1 /* AppDelegate.swift */,
 				0435AD6021913D1A00E1F1F1 /* ViewController.swift */,
+				04DE495021A3E53F004459E2 /* SecondViewController.swift */,
 				0435AD6221913D1A00E1F1F1 /* Main.storyboard */,
 				0435AD6521913D1B00E1F1F1 /* Assets.xcassets */,
 				0435AD6721913D1B00E1F1F1 /* LaunchScreen.storyboard */,
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DE495121A3E53F004459E2 /* SecondViewController.swift in Sources */,
 				0435AD6121913D1A00E1F1F1 /* ViewController.swift in Sources */,
 				0435AD5F21913D1A00E1F1F1 /* AppDelegate.swift in Sources */,
 			);

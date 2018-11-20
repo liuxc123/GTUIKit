@@ -30,7 +30,7 @@ static BOOL HasHardwareSafeAreas(void) {
     return hasHardwareSafeAreas;
 }
 
-CGFloat GTUIDeviceStatusBarHeight(void) {
+CGFloat GTUIDeviceTopSafeAreaInset(void) {
     CGFloat topInset = kFixedStatusBarHeightOnPreiPhoneXDevices;
     if (@available(iOS 11.0, *)) {
         if (HasHardwareSafeAreas()) {

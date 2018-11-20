@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "PodSpec">
+      <FileRef
+         location = "group:../GTUIKitExamples.podspec">
+      </FileRef>
+      <FileRef
+         location = "group:../GTUIKit.podspec">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:GTUICatalog.xcodeproj">
    </FileRef>

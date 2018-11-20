@@ -7,16 +7,40 @@
 //
 
 import UIKit
+import GTUIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GTUINavigationControllerDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let viewController = ViewController()
+        let navigationController = GTUINavigationController(rootViewController: viewController)
+        let appBarController = navigationController.naviBarViewController(for: viewController)
+
+        setupDefaultNaviBackground(appBarViewController: appBarController!)
+        navigationController.delegate = self
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
         return true
+    }
+
+    func navigationController(_ navigationController: GTUINavigationController, willAdd appBarViewController: GTUIAppBarViewController, asChildOf viewController: UIViewController) {
+        appBarViewController.headerView.backgroundColor = UIColor.yellow
+        setupDefaultNaviBackground(appBarViewController: appBarViewController)
+    }
+
+    func setupDefaultNaviBackground(appBarViewController: GTUIAppBarViewController) {
+        let navImageView = UIImageView(image: UIImage(named: "titlebg"))
+        navImageView.frame = appBarViewController.headerView.bounds;
+        navImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        appBarViewController.headerView.insertSubview(navImageView, at: 0)
+        appBarViewController.navigationBar.setButtonsTitleColor(UIColor.black, for: .normal)
+        appBarViewController.navigationBar.tintColor = UIColor.black
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

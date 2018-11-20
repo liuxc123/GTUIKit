@@ -6,4 +6,8 @@
 //
 
 #import "GTUIButton.h"
+#import "GTUIFloatingButton.h"
+#import "GTUIFloatingButton+Animation.h"
+#import "GTUIButton+GTSubmitting.h"
+#import "GTUIButton+GTCountDown.h"
 

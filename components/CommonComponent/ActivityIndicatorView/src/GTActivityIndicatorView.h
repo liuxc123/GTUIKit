@@ -6,4 +6,5 @@
 //
 
 #import "GTUIActivityIndicatorView.h"
+#import "GTUILoadingIndicatorView.h"
 

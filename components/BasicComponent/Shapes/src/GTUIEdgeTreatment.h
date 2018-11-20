@@ -12,7 +12,6 @@
 /**
  GTUIEdgeTreatment is a factory for creating GTUIPathGenerators that represent the
  path of a edge.
- 边框方案
 
  GTUIEdgeTreaments only generate in the top quadrant (i.e. the top edge of a
  rectangle). GTUIShapeModel will transform the generated GTUIPathGenerator to the

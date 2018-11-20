@@ -114,28 +114,6 @@
           ]
         },
         {
-          "name": "CheckBox",
-          "platforms": {
-            "ios": "8.0"
-          },
-          "public_header_files": "components/CommonComponent/CheckBox/src/*.h",
-          "source_files": [
-            "components/CommonComponent/CheckBox/src/*.{h,m}",
-            "components/CommonComponent/CheckBox/src/private/*.{h,m}"
-          ]
-        },
-        {
-          "name": "Label",
-          "platforms": {
-            "ios": "8.0"
-          },
-          "public_header_files": "components/CommonComponent/Label/src/*.h",
-          "source_files": [
-            "components/CommonComponent/Label/src/*.{h,m}",
-            "components/CommonComponent/Label/src/private/*.{h,m}"
-          ]
-        },
-        {
           "name": "Button",
           "platforms": {
             "ios": "8.0"
@@ -162,6 +140,142 @@
 
             ],
             "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "ButtonBar",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/ButtonBar/src/*.h",
+          "source_files": [
+            "components/CommonComponent/ButtonBar/src/*.{h,m}",
+            "components/CommonComponent/ButtonBar/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/CommonComponent/Button": [
+
+            ]
+          }
+        },
+        {
+          "name": "CheckBox",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/CheckBox/src/*.h",
+          "source_files": [
+            "components/CommonComponent/CheckBox/src/*.{h,m}",
+            "components/CommonComponent/CheckBox/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "FlexibleHeader",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/FlexibleHeader/src/*.h",
+          "source_files": [
+            "components/CommonComponent/FlexibleHeader/src/*.{h,m}",
+            "components/CommonComponent/FlexibleHeader/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTFTextAccessibility": [
+
+            ],
+            "GTUIKit/private/Application": [
+
+            ],
+            "GTUIKit/private/UIMetrics": [
+
+            ]
+          }
+        },
+        {
+          "name": "HeaderStackView",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/HeaderStackView/src/*.h",
+          "source_files": "components/CommonComponent/HeaderStackView/src/*.{h,m}"
+        },
+        {
+          "name": "Label",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Label/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Label/src/*.{h,m}",
+            "components/CommonComponent/Label/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "NavigationBar",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/NavigationBar/src/*.h",
+          "source_files": [
+            "components/CommonComponent/NavigationBar/src/*.{h,m}",
+            "components/CommonComponent/NavigationBar/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTFTextAccessibility": [
+
+            ],
+            "GTFInternationalization": [
+
+            ],
+            "GTUIKit/CommonComponent/ButtonBar": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "NavigationController",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/NavigationController/src/*.h",
+          "source_files": [
+            "components/CommonComponent/NavigationController/src/*.{h,m}",
+            "components/CommonComponent/NavigationController/src/private/*.{h,m}"
+          ],
+          "resources": [
+            "components/CommonComponent/NavigationController/src/resource/*.png"
+          ],
+          "dependencies": {
+            "GTUIKit/CommonComponent/HeaderStackView": [
+
+            ],
+            "GTUIKit/CommonComponent/NavigationBar": [
+
+            ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
+            "GTUIKit/private/Application": [
+
+            ],
+            "GTUIKit/CommonComponent/FlexibleHeader": [
+
+            ],
+            "GTUIKit/BasicComponent/ShadowLayer": [
+
+            ],
+            "GTUIKit/BasicComponent/IconFont": [
+
+            ],
+            "GTFInternationalization": [
+
+            ],
+            "GTUIKit/private/UIMetrics": [
 
             ]
           }
@@ -205,6 +319,62 @@
           ]
         },
         {
+          "name": "TabBar",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/TabBar/src/*.h",
+          "source_files": [
+            "components/CommonComponent/TabBar/src/*.{h,m}",
+            "components/CommonComponent/TabBar/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTFInternationalization": [
+
+            ],
+            "GTUIKit/BasicComponent/ShadowLayer": [
+
+            ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
+            "GTUIKit/CommonComponent/Ink": [
+
+            ],
+            "GTUIKit/private/AnimationTiming": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "ToolBar",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/ToolBar/src/*.h",
+          "source_files": [
+            "components/CommonComponent/ToolBar/src/*.{h,m}",
+            "components/CommonComponent/ToolBar/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTFInternationalization": [
+
+            ],
+            "GTUIKit/CommonComponent/Button": [
+
+            ],
+            "GTUIKit/CommonComponent/NavigationBar": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
           "name": "schemes",
           "subspecs": [
             {
@@ -246,6 +416,17 @@
     {
       "name": "private",
       "subspecs": [
+        {
+          "name": "AnimationTiming",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/AnimationTiming/src/*.h",
+          "source_files": [
+            "components/private/AnimationTiming/src/*.{h,m}",
+            "components/private/AnimationTiming/src/private/*.{h,m}"
+          ]
+        },
         {
           "name": "Application",
           "platforms": {

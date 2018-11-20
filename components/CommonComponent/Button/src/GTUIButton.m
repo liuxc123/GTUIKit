@@ -13,8 +13,8 @@
 #import "GTTypography.h"
 #import "private/GTUIButton+Subclassing.h"
 
-static const CGFloat GTUIButtonMinimumTouchTargetHeight = 48;
-static const CGFloat GTUIButtonMinimumTouchTargetWidth = 48;
+static const CGFloat GTUIButtonMinimumTouchTargetHeight = 40;
+static const CGFloat GTUIButtonMinimumTouchTargetWidth = 40;
 static const CGFloat GTUIButtonDefaultCornerRadius = 2.0;
 
 static const NSTimeInterval GTUIButtonAnimationDuration = 0.2;
@@ -256,24 +256,39 @@ static NSAttributedString *uppercaseAttributedString(NSAttributedString *string)
     // The diagram above assumes an LTR user interface orientation
     // and a .leadingIcon imageLocation for this button.
 
-    BOOL isLeadingIcon = self.imageLocation == GTUIButtonImageLocationLeading;
+    CGFloat imageWith = self.imageView.image.size.width;
+    CGFloat imageHeight = self.imageView.image.size.height;
+    CGFloat spacing = self.imageTitleSpace;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    CGFloat labelWidth = [self.titleLabel.text sizeWithFont:self.titleLabel.font].width;
+    CGFloat labelHeight = [self.titleLabel.text sizeWithFont:self.titleLabel.font].height;
+#pragma clang diagnostic pop
+    CGFloat imageOffsetX = (imageWith + labelWidth) / 2 - imageWith / 2;//image中心移动的x距离
+    CGFloat imageOffsetY = imageHeight / 2 + spacing / 2;//image中心移动的y距离
+    CGFloat labelOffsetX = (imageWith + labelWidth / 2) - (imageWith + labelWidth) / 2;//label中心移动的x距离
+    CGFloat labelOffsetY = labelHeight / 2 + spacing / 2;//label中心移动的y距离
 
     switch (self.imageLocation) {
-        case GTUIButtonImageLocationTop:
-            break;
         case GTUIButtonImageLocationLeading:
-            break;
-        case GTUIButtonImageLocationBottom:
+            self.imageEdgeInsets = UIEdgeInsetsMake(0, -spacing/2, 0, spacing/2);
+            self.titleEdgeInsets = UIEdgeInsetsMake(0, spacing/2, 0, -spacing/2);
             break;
         case GTUIButtonImageLocationTrailing:
+            self.imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth + spacing/2, 0, -(labelWidth + spacing/2));
+            self.titleEdgeInsets = UIEdgeInsetsMake(0, -(imageHeight + spacing/2), 0, imageHeight + spacing/2);
+            break;
+        case GTUIButtonImageLocationTop:
+            self.imageEdgeInsets = UIEdgeInsetsMake(-imageOffsetY, imageOffsetX, imageOffsetY, -imageOffsetX);
+            self.titleEdgeInsets = UIEdgeInsetsMake(labelOffsetY, -labelOffsetX, -labelOffsetY, labelOffsetX);
+            break;
+        case GTUIButtonImageLocationBottom:
+            self.imageEdgeInsets = UIEdgeInsetsMake(imageOffsetY, imageOffsetX, -imageOffsetY, -imageOffsetX);
+            self.titleEdgeInsets = UIEdgeInsetsMake(-labelOffsetY, -labelOffsetX, labelOffsetY, labelOffsetX);
             break;
         default:
             break;
     }
-
-
-
-    self.titleLabel.frame = GTUIRectAlignToScale(self.titleLabel.frame, [UIScreen mainScreen].scale);
 }
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
@@ -313,22 +328,6 @@ static NSAttributedString *uppercaseAttributedString(NSAttributedString *string)
         size = CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX);
     }
 
-//    BOOL isImageViewShowing = !!self.currentImage;
-//    BOOL isTitleLabelShowing = !!self.currentTitle || self.currentAttributedTitle;
-//    CGSize imageTotalSize = CGSizeZero;// 包含 imageEdgeInsets 那些空间
-//    CGSize titleTotalSize = CGSizeZero;// 包含 titleEdgeInsets 那些空间
-//    CGFloat spacingBetweenImageAndTitle = flatSpecificScale((isImageViewShowing && isTitleLabelShowing ? self.imageTitleSpace : 0), 0);// 如果图片或文字某一者没显示，则这个 spacing 不考虑进布局
-//    UIEdgeInsets contentEdgeInsets = UIEdgeInsetsRemoveFloatMin(self.contentEdgeInsets);
-
-
-
-
-
-
-
-
-
-
     if (self.minimumSize.height > 0) {
         superSize.height = MAX(self.minimumSize.height, superSize.height);
     }
@@ -341,6 +340,9 @@ static NSAttributedString *uppercaseAttributedString(NSAttributedString *string)
     if (self.maximumSize.width > 0) {
         superSize.width = MIN(self.maximumSize.width, superSize.width);
     }
+
+    [self.titleLabel sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
+
     return superSize;
 }
 
