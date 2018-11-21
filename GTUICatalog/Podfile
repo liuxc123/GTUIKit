@@ -9,7 +9,7 @@ target 'GTUICatalog' do
   pod 'GTCatalog'
   pod 'GTUIKitExamples', :path => '../'
   pod 'GTUIKit', :path => '../'
-
+  pod 'Masonry'
 
 end
 

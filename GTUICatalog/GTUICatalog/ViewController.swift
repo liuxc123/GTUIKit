@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         self.navigationItem.leftBarButtonItems = [actionItem, secondActionItem]
         self.navigationItem.rightBarButtonItems = [actionItem1]
 
+        
 
 //        let buttonBar = GTUIButtonBar()
 //        buttonBar.inkColor = UIColor.black
@@ -208,7 +209,6 @@ class ShapesShadows: UIView {
 //        let borderTreatment = GTUIBorderEdgeTreatment(borderWidth: 10, borderColor: UIColor.blue)
 //        shapeGenerator.setEdges(borderTreatment)
         shapeGenerator.topEdge = cutCornerTreatment
-
 
         layer.shapeGenerator = shapeGenerator
         layer.shapedBackgroundColor = .red

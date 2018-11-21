@@ -46,7 +46,12 @@
           "source_files": [
             "components/BasicComponent/Typography/src/*.{h,m}",
             "components/BasicComponent/Typography/src/private/*.{h,m}"
-          ]
+          ],
+          "dependencies": {
+            "GTUIKit/private/Math": [
+
+            ]
+          }
         },
         {
           "name": "ShadowLayer",
@@ -96,6 +101,17 @@
 
             ]
           }
+        },
+        {
+          "name": "Palettes",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/BasicComponent/Palettes/src/*.h",
+          "source_files": [
+            "components/BasicComponent/Palettes/src/*.{h,m}",
+            "components/BasicComponent/Palettes/src/private/*.{h,m}"
+          ]
         }
       ]
     },
@@ -202,6 +218,33 @@
           "source_files": "components/CommonComponent/HeaderStackView/src/*.{h,m}"
         },
         {
+          "name": "ImageView",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/ImageView/src/*.h",
+          "source_files": [
+            "components/CommonComponent/ImageView/src/*.{h,m}",
+            "components/CommonComponent/ImageView/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "Ink",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Ink/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Ink/src/*.{h,m}",
+            "components/CommonComponent/Ink/src/private/*.{h,m}"
+          ]
+        },
+        {
           "name": "Label",
           "platforms": {
             "ios": "8.0"
@@ -281,6 +324,28 @@
           }
         },
         {
+          "name": "ProgressView",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/ProgressView/src/*.h",
+          "source_files": [
+            "components/CommonComponent/ProgressView/src/*.{h,m}",
+            "components/CommonComponent/ProgressView/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTFInternationalization": [
+
+            ],
+            "GTMotionInterchange": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
           "name": "Switch",
           "platforms": {
             "ios": "8.0"
@@ -292,31 +357,32 @@
           ]
         },
         {
-          "name": "ImageView",
+          "name": "TextFields",
           "platforms": {
             "ios": "8.0"
           },
-          "public_header_files": "components/CommonComponent/ImageView/src/*.h",
+          "public_header_files": "components/CommonComponent/TextFields/src/*.h",
           "source_files": [
-            "components/CommonComponent/ImageView/src/*.{h,m}",
-            "components/CommonComponent/ImageView/src/private/*.{h,m}"
+            "components/CommonComponent/TextFields/src/*.{h,m}",
+            "components/CommonComponent/TextFields/src/private/*.{h,m}"
           ],
           "dependencies": {
+            "GTUIKit/private/AnimationTiming": [
+
+            ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
+            "GTUIKit/BasicComponent/Palettes": [
+
+            ],
+            "GTFInternationalization": [
+
+            ],
             "GTUIKit/private/Math": [
 
             ]
           }
-        },
-        {
-          "name": "Ink",
-          "platforms": {
-            "ios": "8.0"
-          },
-          "public_header_files": "components/CommonComponent/Ink/src/*.h",
-          "source_files": [
-            "components/CommonComponent/Ink/src/*.{h,m}",
-            "components/CommonComponent/Ink/src/private/*.{h,m}"
-          ]
         },
         {
           "name": "TabBar",

@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
       component.ios.deployment_target = '8.0'
       component.public_header_files = "components/BasicComponent/#{component.base_name}/src/*.h"
       component.source_files = "components/BasicComponent/#{component.base_name}/src/*.{h,m}", "components/BasicComponent/#{component.base_name}/src/private/*.{h,m}"
+
+      component.dependency "GTUIKit/private/Math"
     end
 
     # ShadowLayer
@@ -61,7 +63,12 @@ Pod::Spec.new do |s|
       component.dependency "GTUIKit/private/Math"
     end
 
-
+    # Palettes
+    basic_spec.subspec "Palettes" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/BasicComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/BasicComponent/#{component.base_name}/src/*.{h,m}", "components/BasicComponent/#{component.base_name}/src/private/*.{h,m}"
+    end
 
   end
 
@@ -120,11 +127,27 @@ Pod::Spec.new do |s|
     end
 
     # HeaderStackView
-
     common_spec.subspec "HeaderStackView" do |component|
         component.ios.deployment_target = '8.0'
         component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
         component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}"
+    end
+
+    # ImageView
+    common_spec.subspec "ImageView" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency "GTUIKit/private/Math"
+    end
+
+
+    # Ink
+    common_spec.subspec "Ink" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
     end
 
     # Label
@@ -171,6 +194,19 @@ Pod::Spec.new do |s|
         component.dependency "GTUIKit/private/UIMetrics"
     end
 
+    # ProgressView
+    common_spec.subspec "ProgressView" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+
+        component.dependency "GTFInternationalization"
+        component.dependency "GTMotionInterchange"
+        component.dependency "GTUIKit/private/Math"
+
+    end
+
     # Switch
     common_spec.subspec "Switch" do |component|
       component.ios.deployment_target = '8.0'
@@ -178,21 +214,18 @@ Pod::Spec.new do |s|
       component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
     end
 
-    #ImageView
-    common_spec.subspec "ImageView" do |component|
-      component.ios.deployment_target = '8.0'
-      component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
-      component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+    # TextFields
 
-      component.dependency "GTUIKit/private/Math"
-    end
+    common_spec.subspec "TextFields" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
 
-
-    # Ink
-    common_spec.subspec "Ink" do |component|
-      component.ios.deployment_target = '8.0'
-      component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
-      component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+        component.dependency "GTUIKit/private/AnimationTiming"
+        component.dependency "GTUIKit/BasicComponent/Typography"
+        component.dependency "GTUIKit/BasicComponent/Palettes"
+        component.dependency "GTFInternationalization"
+        component.dependency "GTUIKit/private/Math"
     end
 
     # TabBar

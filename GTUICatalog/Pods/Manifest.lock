@@ -2,17 +2,20 @@ PODS:
   - GTCatalog (0.0.1)
   - GTFInternationalization (0.0.1)
   - GTFTextAccessibility (0.0.1)
+  - GTMotionInterchange (0.0.2)
   - GTUIKit (0.0.1):
     - GTUIKit/BasicComponent (= 0.0.1)
     - GTUIKit/CommonComponent (= 0.0.1)
     - GTUIKit/private (= 0.0.1)
   - GTUIKit/BasicComponent (0.0.1):
     - GTUIKit/BasicComponent/IconFont (= 0.0.1)
+    - GTUIKit/BasicComponent/Palettes (= 0.0.1)
     - GTUIKit/BasicComponent/ShadowLayer (= 0.0.1)
     - GTUIKit/BasicComponent/ShapeLibrary (= 0.0.1)
     - GTUIKit/BasicComponent/Shapes (= 0.0.1)
     - GTUIKit/BasicComponent/Typography (= 0.0.1)
   - GTUIKit/BasicComponent/IconFont (0.0.1)
+  - GTUIKit/BasicComponent/Palettes (0.0.1)
   - GTUIKit/BasicComponent/ShadowLayer (0.0.1)
   - GTUIKit/BasicComponent/ShapeLibrary (0.0.1):
     - GTUIKit/BasicComponent/Shapes
@@ -20,7 +23,8 @@ PODS:
   - GTUIKit/BasicComponent/Shapes (0.0.1):
     - GTUIKit/BasicComponent/ShadowLayer
     - GTUIKit/private/Math
-  - GTUIKit/BasicComponent/Typography (0.0.1)
+  - GTUIKit/BasicComponent/Typography (0.0.1):
+    - GTUIKit/private/Math
   - GTUIKit/CommonComponent (0.0.1):
     - GTUIKit/CommonComponent/ActivityIndicatorView (= 0.0.1)
     - GTUIKit/CommonComponent/Button (= 0.0.1)
@@ -33,9 +37,11 @@ PODS:
     - GTUIKit/CommonComponent/Label (= 0.0.1)
     - GTUIKit/CommonComponent/NavigationBar (= 0.0.1)
     - GTUIKit/CommonComponent/NavigationController (= 0.0.1)
+    - GTUIKit/CommonComponent/ProgressView (= 0.0.1)
     - GTUIKit/CommonComponent/schemes (= 0.0.1)
     - GTUIKit/CommonComponent/Switch (= 0.0.1)
     - GTUIKit/CommonComponent/TabBar (= 0.0.1)
+    - GTUIKit/CommonComponent/TextFields (= 0.0.1)
     - GTUIKit/CommonComponent/ToolBar (= 0.0.1)
   - GTUIKit/CommonComponent/ActivityIndicatorView (0.0.1)
   - GTUIKit/CommonComponent/Button (0.0.1):
@@ -72,6 +78,10 @@ PODS:
     - GTUIKit/CommonComponent/NavigationBar
     - GTUIKit/private/Application
     - GTUIKit/private/UIMetrics
+  - GTUIKit/CommonComponent/ProgressView (0.0.1):
+    - GTFInternationalization
+    - GTMotionInterchange
+    - GTUIKit/private/Math
   - GTUIKit/CommonComponent/schemes (0.0.1):
     - GTUIKit/CommonComponent/schemes/ColorScheme (= 0.0.1)
     - GTUIKit/CommonComponent/schemes/ShapeScheme (= 0.0.1)
@@ -87,6 +97,12 @@ PODS:
     - GTUIKit/BasicComponent/ShadowLayer
     - GTUIKit/BasicComponent/Typography
     - GTUIKit/CommonComponent/Ink
+    - GTUIKit/private/AnimationTiming
+    - GTUIKit/private/Math
+  - GTUIKit/CommonComponent/TextFields (0.0.1):
+    - GTFInternationalization
+    - GTUIKit/BasicComponent/Palettes
+    - GTUIKit/BasicComponent/Typography
     - GTUIKit/private/AnimationTiming
     - GTUIKit/private/Math
   - GTUIKit/CommonComponent/ToolBar (0.0.1):
@@ -109,17 +125,21 @@ PODS:
     - GTUIKit/private/Application
   - GTUIKitExamples (0.0.1):
     - GTUIKit
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - GTCatalog
   - GTUIKit (from `../`)
   - GTUIKitExamples (from `../`)
+  - Masonry
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GTCatalog
     - GTFInternationalization
     - GTFTextAccessibility
+    - GTMotionInterchange
+    - Masonry
 
 EXTERNAL SOURCES:
   GTUIKit:
@@ -131,9 +151,11 @@ SPEC CHECKSUMS:
   GTCatalog: d6bb60421469aaaf6bee50c6419881427843809a
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
-  GTUIKit: 87dd77822fbebc2c12ea8dca8fdd69eba5ccfaaf
+  GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
+  GTUIKit: 8e0612782c927c1852a19cd0b9b7f18cde7ea150
   GTUIKitExamples: 87e9de58f29d026dd3c2c87888f6187af78417d3
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: baa48098b3d9fd6a49f0e9fa432dfbd0340464a8
+PODFILE CHECKSUM: 6a96aef87f5f2b3c26a45238edaf117071dbbeaf
 
 COCOAPODS: 1.5.3

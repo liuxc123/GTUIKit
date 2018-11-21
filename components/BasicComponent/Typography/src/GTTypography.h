@@ -7,6 +7,6 @@
 
 #import "GTUIFontTextStyle.h"
 #import "GTUITypography.h"
-//#import "UIFont+GTUISimpleEquality.h"
+#import "UIFont+GTUISimpleEquality.h"
 #import "UIFont+GTUITypography.h"
 #import "UIFontDescriptor+GTUITypography.h"

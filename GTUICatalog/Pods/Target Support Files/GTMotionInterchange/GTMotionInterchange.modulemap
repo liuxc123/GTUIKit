@@ -1,0 +1,6 @@
+framework module GTMotionInterchange {
+  umbrella header "GTMotionInterchange-umbrella.h"
+
+  export *
+  module * { export * }
+}
