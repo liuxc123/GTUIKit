@@ -42,7 +42,7 @@
 - (BOOL)trackingScrollViewIsWebKit;
 
 /**
- See MDCFlexibleHeaderViewController.h for documentation on this flag.
+ See GTUIFlexibleHeaderViewController.h for documentation on this flag.
  */
 @property(nonatomic) BOOL useAdditionalSafeAreaInsetsForWebKitScrollViews;
 

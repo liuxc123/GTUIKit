@@ -6,4 +6,5 @@
 //
 
 #import "GTUINavigationBar.h"
+#import "GTUIDoubleTitleView.h"
 

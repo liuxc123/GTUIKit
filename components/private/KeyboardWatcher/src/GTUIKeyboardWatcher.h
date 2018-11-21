@@ -16,7 +16,7 @@ OBJC_EXTERN NSString *const GTUIKeyboardWatcherKeyboardWillChangeFrameNotificati
 @interface GTUIKeyboardWatcher : NSObject
 
 /**
- Shared singleton instance of MDCKeyboardWatcher.
+ Shared singleton instance of GTUIKeyboardWatcher.
  */
 + (instancetype)sharedKeyboardWatcher;
 

@@ -248,7 +248,7 @@ static const int kGTUIButtonAnimationDuration = 200;
     [self renderPathBasedOnFloatingButtonVisibitlityAnimated:NO];
 }
 
-- (UIEdgeInsets)mdc_safeAreaInsets {
+- (UIEdgeInsets)gtui_safeAreaInsets {
     UIEdgeInsets insets = UIEdgeInsetsZero;
     if (@available(iOS 11.0, *)) {
 
@@ -259,7 +259,7 @@ static const int kGTUIButtonAnimationDuration = 200;
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    UIEdgeInsets insets = self.mdc_safeAreaInsets;
+    UIEdgeInsets insets = self.gtui_safeAreaInsets;
     CGFloat heightWithInset = kGTUIToolBarHeight + insets.bottom;
     CGSize insetSize = CGSizeMake(size.width, heightWithInset);
     return insetSize;

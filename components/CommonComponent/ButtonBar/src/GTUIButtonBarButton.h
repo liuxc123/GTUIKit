@@ -8,7 +8,7 @@
 #import "GTButton.h"
 
 /**
- The MDCButtonBarButton class is used by MDCButtonBar.
+ The GTUIButtonBarButton class is used by GTUIButtonBar.
  */
 @interface GTUIButtonBarButton : GTUIButton
 

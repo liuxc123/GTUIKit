@@ -97,14 +97,14 @@
 /**
  Called when the ink ripple animation begins.
 
- @param inkLayer The MDCInkLayer that starts animating.
+ @param inkLayer The GTUIInkLayer that starts animating.
  */
 - (void)inkLayerAnimationDidStart:(nonnull GTUIInkLayer *)inkLayer;
 
 /**
  Called when the ink ripple animation ends.
 
- @param inkLayer The MDCInkLayer that ends animating.
+ @param inkLayer The GTUIInkLayer that ends animating.
  */
 - (void)inkLayerAnimationDidEnd:(nonnull GTUIInkLayer *)inkLayer;
 

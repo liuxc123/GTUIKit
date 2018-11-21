@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, GTUIButtonImageLocation) {
 
 /*
  Maximum radius of the button's ink. If the radius <= 0 then half the length of the diagonal of
- self.bounds is used. This value is ignored if button's @c inkStyle is set to |MDCInkStyleBounded|.
+ self.bounds is used. This value is ignored if button's @c inkStyle is set to |GTUIInkStyleBounded|.
  */
 @property(nonatomic, assign) CGFloat inkMaxRippleRadius UI_APPEARANCE_SELECTOR;
 
@@ -131,7 +131,7 @@ typedef NS_ENUM(NSInteger, GTUIButtonImageLocation) {
  This property is modeled after the adjustsFontForContentSizeCategory property in the
  UIConnectSizeCategoryAdjusting protocol added by Apple in iOS 10.0.
 
- If set to YES, this button will base its text font on MDCFontTextStyleButton.
+ If set to YES, this button will base its text font on GTUIFontTextStyleButton.
 
  Defaults value is NO.
  */
@@ -144,7 +144,7 @@ BOOL gtui_adjustsFontForContentSizeCategory UI_APPEARANCE_SELECTOR;
  note: If a layer property is explicitly set after the shapeGenerator has been set,
  it can lead to unexpected behavior.
 
- When the shapeGenerator is nil, MDCButton will use the default underlying layer with
+ When the shapeGenerator is nil, GTUIButton will use the default underlying layer with
  its default settings.
 
  Default value for shapeGenerator is nil.

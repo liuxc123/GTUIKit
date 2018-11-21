@@ -137,8 +137,7 @@ class ViewController: UIViewController {
     @objc func btnClickAction(_ sender: GTUIButton) {
 
         let vc = SecondViewController()
-        vc.view.backgroundColor = UIColor.white
-        vc.title = "子标题"
+
         self.navigationController?.pushViewController(vc, animated: true)
 
     }

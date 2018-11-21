@@ -18,22 +18,22 @@ class SecondViewController: UIViewController {
         return appBarViewController
     }()
 
+    var titleView = GTUIDoubleTitleView(title: "标题", detailTitle: "副标题")
     var toolBarView = GTUIToolBarView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
+        title = "子标题"
         self.addChildViewController(appBarViewController)
         self.view.addSubview(self.appBarViewController.view);
         appBarViewController.didMove(toParentViewController: self)
         appBarViewController.navigationBar.setButtonsTitleColor(UIColor.black, for: .normal)
+        appBarViewController.headerView.backgroundColor = UIColor.yellow
 
         appBarViewController.navigationBar.hidesBackButton = true
-
-
-
-
-
-
+        appBarViewController.navigationBar.titleView = titleView
 
         toolBarView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         view.addSubview(toolBarView)
