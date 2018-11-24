@@ -238,6 +238,11 @@ BOOL gtui_adjustsFontForContentSizeCategory;
 @property(nonatomic, assign) CGFloat actionCornerRadius;
 
 /**
+ 按钮高度（）
+ */
+@property(nonatomic, assign) CGFloat actionHeight;
+
+/**
  actionsheet取消按钮间隔宽度
  */
 @property(nonatomic, assign) CGFloat cancelActionSpaceWidth;

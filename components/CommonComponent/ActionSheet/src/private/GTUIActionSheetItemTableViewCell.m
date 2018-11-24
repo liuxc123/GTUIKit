@@ -8,14 +8,6 @@
 #import "GTUIActionSheetItemTableViewCell.h"
 #import "GTTypography.h"
 
-static const CGFloat kLabelAlpha = 0.87f;
-static const CGFloat kImageLeadingPadding = 16.f;
-static const CGFloat kImageTopPadding = 16.f;
-static const CGFloat kImageHeightAndWidth = 24.f;
-static const CGFloat kTitleLeadingPadding = 72.f;
-static const CGFloat kTitleTrailingPadding = 16.f;
-static const CGFloat kActionItemTitleVerticalPadding = 18.f;
-
 @interface GTUIActionSheetItemTableViewCell ()
 
 @end
@@ -33,7 +25,6 @@ static const CGFloat kActionItemTitleVerticalPadding = 18.f;
 }
 
 - (void)commonGTUIActionSheetItemViewInit {
-    self.translatesAutoresizingMaskIntoConstraints = NO;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.accessibilityTraits = UIAccessibilityTraitButton;
 
@@ -80,15 +71,6 @@ static const CGFloat kActionItemTitleVerticalPadding = 18.f;
                                  attribute:NSLayoutAttributeRight
                                 multiplier:1
                                   constant:0]
-    .active = YES;
-
-    [NSLayoutConstraint constraintWithItem:_itemView
-                                 attribute:NSLayoutAttributeHeight
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:nil
-                                 attribute:NSLayoutAttributeNotAnAttribute
-                                multiplier:1
-                                  constant:50]
     .active = YES;
 }
 

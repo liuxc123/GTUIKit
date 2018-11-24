@@ -127,11 +127,12 @@ static const CGFloat kActionTextAlpha = 0.87f;
         _transitionController.trackingScrollView = _scrollView;
         _scrollView.autoresizingMask = (UIViewAutoresizingFlexibleWidth
                                        | UIViewAutoresizingFlexibleHeight);
+
         _contentView = [[UIView alloc] init];
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.estimatedRowHeight = 56.f;
+        _tableView.estimatedRowHeight = self.actionHeight;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerClass:[GTUIActionSheetItemTableViewCell class]
@@ -149,45 +150,18 @@ static const CGFloat kActionTextAlpha = 0.87f;
         _header.title = [title copy];
         _header.message = [message copy];
         _backgroundColor = UIColor.clearColor;
+        _header.titleAlignment = self.titleAlignment;
+        _header.messageAlignment = self.messageAlignment;
         _header.backgroundColor = self.headerBackgroundColor;
-        _tableView.backgroundColor = self.backgroundColor;
+        _tableView.backgroundColor = self.actionBackgroundColor;
         _actionTextColor = [UIColor.blackColor colorWithAlphaComponent:kActionTextAlpha];
         _actionTintColor = [UIColor.blackColor colorWithAlphaComponent:kActionImageAlpha];
         _actionImageRenderingMode = UIImageRenderingModeAlwaysTemplate;
 
         _footContainView = [[UIView alloc] init];
-
-//
-//        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-//        _tableView.delegate = self;
-//        _tableView.dataSource = self;
-//        _tableView.estimatedRowHeight = 56.f;
-//        _tableView.estimatedSectionHeaderHeight = 0;
-//        _tableView.estimatedSectionFooterHeight = 0;
-//        _tableView.rowHeight = UITableViewAutomaticDimension;
-//        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//        [_tableView registerClass:[GTUIActionSheetItemTableViewCell class]
-//           forCellReuseIdentifier:kReuseIdentifier];
-//
-//        if (@available(iOS 11.0, *)) {
-//            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//            _scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//        }else {
-//            self.automaticallyAdjustsScrollViewInsets = NO;
-//        }
-//
-//        _header = [[GTUIActionSheetHeaderView alloc] initWithFrame:CGRectZero];
-//        _header.title = [title copy];
-//        _header.message = [message copy];
-//        _header.backgroundColor = self.headerBackgroundColor;
-//        _header.titleAlignment = self.titleAlignment;
-//        _header.messageAlignment = self.messageAlignment;
-//        _tableView.backgroundColor = self.actionBackgroundColor;
-//
-//
-//        _footContainView = [[UIView alloc] init];
-//        _footContainView.backgroundColor = UIColor.greenColor;
-//        _cancelItemView.backgroundColor = UIColor.yellowColor;
+        
+        self.contentView.layer.cornerRadius = self.cornerRadius;
+        self.contentView.layer.masksToBounds = true;
     }
     return self;
 }
@@ -202,13 +176,14 @@ static const CGFloat kActionTextAlpha = 0.87f;
         case GTUIActionSheetTypeNormal:
             self.backgroundColor = [UIColor blueColor];
             self.headerBackgroundColor = [UIColor whiteColor];
-            self.actionBackgroundColor = [UIColor redColor];
+            self.actionBackgroundColor = [UIColor whiteColor];
             self.titleFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleSubheadline];
             self.messageFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleBody1];
             self.actionImageRenderingMode = UIImageRenderingModeAlwaysTemplate;
             self.actionSheetMaxWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - 40;
             self.cancelActionSpaceWidth = 10;
             self.actionSheetBottomMargin = 10;
+            self.actionHeight = 56;
             self.cornerRadius = 13;
             self.titleAlignment = NSTextAlignmentCenter;
             self.messageAlignment = NSTextAlignmentCenter;
@@ -230,8 +205,17 @@ static const CGFloat kActionTextAlpha = 0.87f;
     if (action.type == GTUIActionSheetActionTypeCancel) {
         _cancelAction = action;
         self.cancelItemView = [[GTUIActionSheetItemView alloc] initWithType:self.actionSheetType];
-        self.cancelItemView.backgroundColor = self.actionBackgroundColor;
         self.cancelItemView.action = _cancelAction;
+        self.cancelItemView.type = self.actionSheetType;
+        self.cancelItemView.gtui_adjustsFontForContentSizeCategory = self.gtui_adjustsFontForContentSizeCategory;
+        self.cancelItemView.actionFont = self.actionFont;
+        self.cancelItemView.accessibilityIdentifier = action.accessibilityIdentifier;
+        self.cancelItemView.inkColor = self.inkColor;
+        self.cancelItemView.tintColor = self.actionTintColor;
+        self.cancelItemView.backgroundColor = self.actionBackgroundColor;
+        self.cancelItemView.imageRenderingMode = self.actionImageRenderingMode;
+        self.cancelItemView.layer.cornerRadius = self.cornerRadius;
+        self.cancelItemView.layer.masksToBounds = YES;
     } else {
         [_actions addObject:action];
     }
@@ -244,33 +228,11 @@ static const CGFloat kActionTextAlpha = 0.87f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//
-//    self.view.backgroundColor = self.backgroundColor;
-//    self.scrollView.frame = self.view.bounds;
-//    CGFloat x = (CGRectGetWidth(self.view.bounds) - self.actionSheetMaxWidth)/2;
-//    self.contentView.frame = CGRectMake(x, 0, self.actionSheetMaxWidth, CGRectGetHeight(self.scrollView.bounds));
-//    self.tableView.frame = CGRectMake(0, 0, self.actionSheetMaxWidth, CGRectGetHeight(self.scrollView.bounds));
-//
-//    self.contentView.backgroundColor = UIColor.yellowColor;
-//    self.tableView.backgroundColor = UIColor.redColor;
-//
-//    [self.view addSubview:self.scrollView];
-//    [self.scrollView addSubview:self.contentView];
-//
-//    [self.contentView addSubview:self.tableView];
-//    [self.contentView addSubview:self.header];
-//    [self.scrollView addSubview:self.footContainView];
-//    [self.footContainView addSubview:self.cancelItemView];
-
-    self.tableView.backgroundColor = UIColor.redColor;
     self.view.backgroundColor = self.backgroundColor;
     self.scrollView.frame = self.view.bounds;
     CGFloat x = (CGRectGetWidth(self.view.bounds) - self.actionSheetMaxWidth)/2;
     self.contentView.frame = CGRectMake(x, 0, self.actionSheetMaxWidth, CGRectGetHeight(self.scrollView.bounds));
     self.tableView.frame = self.contentView.bounds;
-
-//    [self.view addSubview:self.tableView];
-//    [self.view addSubview:self.header];
 
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.contentView];
@@ -288,16 +250,17 @@ static const CGFloat kActionTextAlpha = 0.87f;
     } else {
         self.gtui_bottomSheetPresentationController.preferredSheetHeight = 0;
     }
+    
 
     CGFloat x = (CGRectGetWidth(self.view.bounds) - self.actionSheetMaxWidth)/2;
     CGRect bounds = CGRectMake(x, 0, self.actionSheetMaxWidth, CGRectGetHeight(self.view.bounds));
     CGFloat headerHeight = [self.header sizeThatFits:CGRectStandardize(bounds).size].height;
-    CGFloat cellHeight = self.tableView.contentSize.height / (CGFloat)_actions.count;
+    CGFloat cellHeight = self.actionHeight;
     CGFloat cancelItemHeight = (!_cancelAction) ? 0 : cellHeight;
     CGFloat cancelItemY = (!_cancelAction) ? 0 : self.cancelActionSpaceWidth;
     CGFloat footHeight = cancelItemHeight + cancelItemY;
     CGFloat maxTableHeight = CGRectGetHeight(self.view.bounds) - headerHeight - footHeight;
-    CGFloat tableHeight = MIN(self.tableView.contentSize.height, maxTableHeight);
+    CGFloat tableHeight = MIN(((CGFloat)_actions.count * cellHeight), maxTableHeight);
 
     self.header.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), headerHeight);
     self.tableView.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), tableHeight + headerHeight);
@@ -308,25 +271,6 @@ static const CGFloat kActionTextAlpha = 0.87f;
 
     UIEdgeInsets insets = UIEdgeInsetsMake(self.header.frame.size.height, 0, 0, 0);
     self.tableView.contentInset = insets;
-
-//    if (self.tableView.contentSize.height > (CGRectGetHeight(self.view.bounds) / 2)) {
-//        self.gtui_bottomSheetPresentationController.preferredSheetHeight = [self openingSheetHeight];
-//    } else {
-//        self.gtui_bottomSheetPresentationController.preferredSheetHeight = 0;
-//    }
-
-//
-//    self.tableView.contentInset = UIEdgeInsetsMake(headerHeight, 0, 0, 0);
-//    self.tableView.contentOffset = CGPointMake(0, -headerHeight);
-//
-//
-//    self.header.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), headerHeight);
-//    self.tableView.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), tableHeight + headerHeight);
-//    self.contentView.frame = CGRectMake(x, 0, CGRectGetWidth(bounds), headerHeight + tableHeight);
-//
-//    self.footContainView.frame = CGRectMake(x, CGRectGetMaxY(self.contentView.frame), CGRectGetWidth(bounds), footHeight);
-//    self.cancelItemView.frame = CGRectMake(0, cancelItemY, CGRectGetWidth(bounds), cancelItemHeight);
-//    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), headerHeight + tableHeight + footHeight);
 }
 
 - (CGFloat)openingSheetHeight {
@@ -454,6 +398,10 @@ static const CGFloat kActionTextAlpha = 0.87f;
 
     [cell setNeedsLayout];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.actionHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

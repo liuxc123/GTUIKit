@@ -182,9 +182,6 @@ static UIScrollView *GTUIBottomSheetGetPrimaryScrollView(UIViewController *viewC
     if (GTUICGFloatEqual(preferredSheetHeight, 0)) {
         preferredSheetHeight = GTUIRound(CGRectGetHeight(self.sheetView.frame) / 2);
     }
-
-    NSLog(@"preferredContentSize: %f", self.presentedViewController.preferredContentSize.height);
-    NSLog(@"preferredSheetHeight: %f", preferredSheetHeight);
     self.sheetView.preferredSheetHeight = preferredSheetHeight;
 }
 
