@@ -322,6 +322,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/GTUIKit/GTUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTUIKitExamples/GTUIKitExamples.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -331,6 +332,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTUIKitExamples.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -130,6 +130,56 @@
           ]
         },
         {
+          "name": "ActionSheet",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/ActionSheet/src/*.h",
+          "source_files": [
+            "components/CommonComponent/ActionSheet/src/*.{h,m}",
+            "components/CommonComponent/ActionSheet/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/CommonComponent/BottomSheet": [
+
+            ],
+            "GTUIKit/CommonComponent/Ink": [
+
+            ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "BottomSheet",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/BottomSheet/src/*.h",
+          "source_files": [
+            "components/CommonComponent/BottomSheet/src/*.{h,m}",
+            "components/CommonComponent/BottomSheet/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/private/KeyboardWatcher": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ],
+            "GTUIKit/BasicComponent/ShapeLibrary": [
+
+            ],
+            "GTUIKit/BasicComponent/Shapes": [
+
+            ]
+          }
+        },
+        {
           "name": "Button",
           "platforms": {
             "ios": "8.0"
@@ -186,6 +236,48 @@
             "components/CommonComponent/CheckBox/src/*.{h,m}",
             "components/CommonComponent/CheckBox/src/private/*.{h,m}"
           ]
+        },
+        {
+          "name": "Toast",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Toast/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Toast/src/*.{h,m}",
+            "components/CommonComponent/Toast/src/private/*.{h,m}"
+          ],
+          "resources": [
+            "components/CommonComponent/Toast/src/resource/*.bundle"
+          ]
+        },
+        {
+          "name": "Dialogs",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Dialogs/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Dialogs/src/*.{h,m}",
+            "components/CommonComponent/Dialogs/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/CommonComponent/Button": [
+
+            ],
+            "GTUIKit/BasicComponent/ShadowLayer": [
+
+            ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
+            "GTUIKit/private/KeyboardWatcher": [
+
+            ],
+            "GTFInternationalization": [
+
+            ]
+          }
         },
         {
           "name": "FlexibleHeader",
@@ -357,34 +449,6 @@
           ]
         },
         {
-          "name": "TextFields",
-          "platforms": {
-            "ios": "8.0"
-          },
-          "public_header_files": "components/CommonComponent/TextFields/src/*.h",
-          "source_files": [
-            "components/CommonComponent/TextFields/src/*.{h,m}",
-            "components/CommonComponent/TextFields/src/private/*.{h,m}"
-          ],
-          "dependencies": {
-            "GTUIKit/private/AnimationTiming": [
-
-            ],
-            "GTUIKit/BasicComponent/Typography": [
-
-            ],
-            "GTUIKit/BasicComponent/Palettes": [
-
-            ],
-            "GTFInternationalization": [
-
-            ],
-            "GTUIKit/private/Math": [
-
-            ]
-          }
-        },
-        {
           "name": "TabBar",
           "platforms": {
             "ios": "8.0"
@@ -408,6 +472,34 @@
 
             ],
             "GTUIKit/private/AnimationTiming": [
+
+            ],
+            "GTUIKit/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "TextFields",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/TextFields/src/*.h",
+          "source_files": [
+            "components/CommonComponent/TextFields/src/*.{h,m}",
+            "components/CommonComponent/TextFields/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/private/AnimationTiming": [
+
+            ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
+            "GTUIKit/BasicComponent/Palettes": [
+
+            ],
+            "GTFInternationalization": [
 
             ],
             "GTUIKit/private/Math": [

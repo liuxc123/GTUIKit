@@ -70,6 +70,8 @@ extern const CGFloat GTUITextInputControllerBaseDefaultBorderRadius;
  If the text input does not conform to GTUIMultilineTextInput, this parameter has no effect.
 
  Default is YES.
+
+ 跟随内容拓展 默认是YES
  */
 @property(nonatomic, assign) BOOL expandsOnOverflow;
 
@@ -85,6 +87,8 @@ extern const CGFloat GTUITextInputControllerBaseDefaultBorderRadius;
  If the text input does not conform to GTUIMultilineTextInput, this parameter has no effect.
 
  Default is 1.
+
+ 最小行数 默认1行
  */
 @property(nonatomic, assign) NSUInteger minimumLines;
 

@@ -9,10 +9,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # Conventions
-  s.source_files = 'components/*/examples/*.{h,m,swift}', 'components/*/examples/supplemental/*.{h,m,swift}', 'components/private/*/examples/*.{h,m,swift}', 'components/schemes/*/examples/*.{h,m,swift}', 'components/schemes/*/examples/supplemental/*.{h,m,swift}'
-  s.resources = ['components/*/examples/resources/*', 'components/private/*/examples/resources/*', 'components/schemes/*/examples/resources/*']
-  s.public_header_files = 'components/*/examples/*.h', 'components/*/examples/supplemental/*.h', 'components/private/*/examples/*.h', 'components/schemes/*/examples/*.h'
+  s.source_files = 'components/CommonComponent/*/examples/*.{h,m,swift}', 'components/CommonComponent/*/examples/supplemental/*.{h,m,swift}'
+  s.resources = ['components/CommonComponent/*/examples/resources/*']
+  s.public_header_files = 'components/CommonComponent/*/examples/*.h', 'components/CommonComponent/*/examples/supplemental/*.h'
+
 
   s.dependency 'GTUIKit'
-
 end

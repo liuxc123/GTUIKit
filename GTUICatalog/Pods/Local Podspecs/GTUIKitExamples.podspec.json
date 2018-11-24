@@ -16,22 +16,15 @@
   },
   "requires_arc": true,
   "source_files": [
-    "components/*/examples/*.{h,m,swift}",
-    "components/*/examples/supplemental/*.{h,m,swift}",
-    "components/private/*/examples/*.{h,m,swift}",
-    "components/schemes/*/examples/*.{h,m,swift}",
-    "components/schemes/*/examples/supplemental/*.{h,m,swift}"
+    "components/CommonComponent/*/examples/*.{h,m,swift}",
+    "components/CommonComponent/*/examples/supplemental/*.{h,m,swift}"
   ],
   "resources": [
-    "components/*/examples/resources/*",
-    "components/private/*/examples/resources/*",
-    "components/schemes/*/examples/resources/*"
+    "components/CommonComponent/*/examples/resources/*"
   ],
   "public_header_files": [
-    "components/*/examples/*.h",
-    "components/*/examples/supplemental/*.h",
-    "components/private/*/examples/*.h",
-    "components/schemes/*/examples/*.h"
+    "components/CommonComponent/*/examples/*.h",
+    "components/CommonComponent/*/examples/supplemental/*.h"
   ],
   "dependencies": {
     "GTUIKit": [

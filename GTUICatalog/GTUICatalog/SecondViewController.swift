@@ -87,7 +87,7 @@ class SecondViewController: UIViewController {
         textViewController = GTUITextInputControllerUnderline(textInput: textView)
         textViewController.placeholderText = "GTUITextInputControllerUnderline"
         textViewController.isFloatingEnabled = false
-
+        textViewController.expandsOnOverflow = false
 
         textField.mas_makeConstraints { (make) in
             make?.top.equalTo()(self.view.mas_top)?.setOffset(appBarViewController.headerView.frame.size.height + 20)

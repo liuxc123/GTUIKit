@@ -148,6 +148,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTUIKit/GTUIKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTUIKitExamples/GTUIKitExamples.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -156,6 +157,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTUIKit/GTUIKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTUIKitExamples/GTUIKitExamples.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

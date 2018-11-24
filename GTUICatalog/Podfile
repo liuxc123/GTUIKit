@@ -1,4 +1,5 @@
 workspace 'GTUICatalog.xcworkspace'
+#install! 'cocoapods', :deterministic_uuids => false
 
 
 target 'GTUICatalog' do
