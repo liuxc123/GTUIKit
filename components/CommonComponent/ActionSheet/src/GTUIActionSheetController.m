@@ -9,6 +9,7 @@
 
 #import "GTMath.h"
 #import "GTTypography.h"
+#import "GTUIMetrics.h"
 #import "GTBottomSheet.h"
 #import "private/GTUIActionSheetHeaderView.h"
 #import "private/GTUIActionSheetItemTableViewCell.h"
@@ -134,10 +135,11 @@ static const CGFloat kActionTextAlpha = 0.87f;
         _tableView.dataSource = self;
         _tableView.estimatedRowHeight = self.actionHeight;
         _tableView.rowHeight = UITableViewAutomaticDimension;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.separatorInset = UIEdgeInsetsZero;
+        _tableView.backgroundColor = self.actionBackgroundColor;
         [_tableView registerClass:[GTUIActionSheetItemTableViewCell class]
            forCellReuseIdentifier:kReuseIdentifier];
-
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
             _scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -145,21 +147,18 @@ static const CGFloat kActionTextAlpha = 0.87f;
             // Fallback on earlier versions
             self.automaticallyAdjustsScrollViewInsets = NO;
         }
-
         _header = [[GTUIActionSheetHeaderView alloc] initWithFrame:CGRectZero];
         _header.title = [title copy];
         _header.message = [message copy];
-        _backgroundColor = UIColor.clearColor;
+        _header.customView = customView;
         _header.titleAlignment = self.titleAlignment;
         _header.messageAlignment = self.messageAlignment;
         _header.backgroundColor = self.headerBackgroundColor;
-        _tableView.backgroundColor = self.actionBackgroundColor;
-        _actionTextColor = [UIColor.blackColor colorWithAlphaComponent:kActionTextAlpha];
-        _actionTintColor = [UIColor.blackColor colorWithAlphaComponent:kActionImageAlpha];
         _actionImageRenderingMode = UIImageRenderingModeAlwaysTemplate;
 
         _footContainView = [[UIView alloc] init];
-        
+        _footContainView.backgroundColor = self.cancelActionSpaceColor;
+
         self.contentView.layer.cornerRadius = self.cornerRadius;
         self.contentView.layer.masksToBounds = true;
     }
@@ -174,28 +173,60 @@ static const CGFloat kActionTextAlpha = 0.87f;
 - (void)configDefaultActionSheetType:(GTUIActionSheetType)type {
     switch (type) {
         case GTUIActionSheetTypeNormal:
-            self.backgroundColor = [UIColor blueColor];
-            self.headerBackgroundColor = [UIColor whiteColor];
-            self.actionBackgroundColor = [UIColor whiteColor];
+            _backgroundColor = [UIColor whiteColor];
+            _headerBackgroundColor = [UIColor whiteColor];
+            _actionBackgroundColor = [UIColor whiteColor];
+            _cancelActionSpaceColor = [UIColor colorWithWhite:0.92 alpha:1.0f];
+            _actionTextColor = [UIColor.blackColor colorWithAlphaComponent:kActionTextAlpha];
+            _actionTintColor = [UIColor.blackColor colorWithAlphaComponent:kActionImageAlpha];
+            _titleAlignment = NSTextAlignmentCenter;
+            _messageAlignment = NSTextAlignmentCenter;
             self.titleFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleSubheadline];
             self.messageFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleBody1];
-            self.actionImageRenderingMode = UIImageRenderingModeAlwaysTemplate;
-            self.actionSheetMaxWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - 40;
-            self.cancelActionSpaceWidth = 10;
-            self.actionSheetBottomMargin = 10;
-            self.actionHeight = 56;
-            self.cornerRadius = 13;
-            self.titleAlignment = NSTextAlignmentCenter;
-            self.messageAlignment = NSTextAlignmentCenter;
+            _actionImageRenderingMode = UIImageRenderingModeAlwaysTemplate;
+            _actionSheetMaxWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
+            _cancelActionSpaceWidth = 10;
+            _actionHeight = 56;
+            _cornerRadius = 0;
+            _actionSheetBottomMargin = 0;
 
             break;
         case GTUIActionSheetTypeUIKit:
-            self.backgroundColor = UIColor.whiteColor;
+            _backgroundColor = [UIColor clearColor];
+            _headerBackgroundColor = [UIColor whiteColor];
+            _actionBackgroundColor = [UIColor whiteColor];
+            _cancelActionSpaceColor = [UIColor clearColor];
+            _actionTextColor = [UIColor.blackColor colorWithAlphaComponent:kActionTextAlpha];
+            _actionTintColor = [UIColor.blackColor colorWithAlphaComponent:kActionImageAlpha];
+            _titleAlignment = NSTextAlignmentCenter;
+            _messageAlignment = NSTextAlignmentCenter;
+            self.titleFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleSubheadline];
+            self.messageFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleBody1];
+            _actionImageRenderingMode = UIImageRenderingModeAlwaysTemplate;
+            _actionSheetMaxWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - 40;
+            _cancelActionSpaceWidth = 10;
+            _actionHeight = 56;
+            _cornerRadius = 13;
+            _actionSheetBottomMargin = 13;
             break;
         case GTUIActionSheetTypeMaterial:
-            self.backgroundColor = UIColor.whiteColor;
+            _backgroundColor = [UIColor clearColor];
+            _headerBackgroundColor = [UIColor whiteColor];
+            _actionBackgroundColor = [UIColor whiteColor];
+            _cancelActionSpaceColor = [UIColor clearColor];
+            _actionTextColor = [UIColor.blackColor colorWithAlphaComponent:kActionTextAlpha];
+            _actionTintColor = [UIColor.blackColor colorWithAlphaComponent:kActionImageAlpha];
+            _titleAlignment = NSTextAlignmentCenter;
+            _messageAlignment = NSTextAlignmentCenter;
+            self.titleFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleSubheadline];
+            self.messageFont = [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleBody1];
+            _actionImageRenderingMode = UIImageRenderingModeAlwaysTemplate;
+            _actionSheetMaxWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - 40;
+            _cancelActionSpaceWidth = 10;
+            _actionHeight = 56;
+            _cornerRadius = 13;
+            _actionSheetBottomMargin = 13;
             break;
-
         default:
             break;
     }
@@ -204,18 +235,7 @@ static const CGFloat kActionTextAlpha = 0.87f;
 - (void)addAction:(GTUIActionSheetAction *)action {
     if (action.type == GTUIActionSheetActionTypeCancel) {
         _cancelAction = action;
-        self.cancelItemView = [[GTUIActionSheetItemView alloc] initWithType:self.actionSheetType];
-        self.cancelItemView.action = _cancelAction;
-        self.cancelItemView.type = self.actionSheetType;
-        self.cancelItemView.gtui_adjustsFontForContentSizeCategory = self.gtui_adjustsFontForContentSizeCategory;
-        self.cancelItemView.actionFont = self.actionFont;
-        self.cancelItemView.accessibilityIdentifier = action.accessibilityIdentifier;
-        self.cancelItemView.inkColor = self.inkColor;
-        self.cancelItemView.tintColor = self.actionTintColor;
-        self.cancelItemView.backgroundColor = self.actionBackgroundColor;
-        self.cancelItemView.imageRenderingMode = self.actionImageRenderingMode;
-        self.cancelItemView.layer.cornerRadius = self.cornerRadius;
-        self.cancelItemView.layer.masksToBounds = YES;
+        [self setCancelItemViewAction:_cancelAction];
     } else {
         [_actions addObject:action];
     }
@@ -259,18 +279,15 @@ static const CGFloat kActionTextAlpha = 0.87f;
     CGFloat cancelItemHeight = (!_cancelAction) ? 0 : cellHeight;
     CGFloat cancelItemY = (!_cancelAction) ? 0 : self.cancelActionSpaceWidth;
     CGFloat footHeight = cancelItemHeight + cancelItemY;
-    CGFloat maxTableHeight = CGRectGetHeight(self.view.bounds) - headerHeight - footHeight;
+    CGFloat maxTableHeight = CGRectGetHeight(self.view.bounds) - headerHeight - footHeight - GTUIDeviceTopSafeAreaInset() - GTUIDeviceBottomSafeAreaInset() - self.actionSheetBottomMargin;
     CGFloat tableHeight = MIN(((CGFloat)_actions.count * cellHeight), maxTableHeight);
-
     self.header.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), headerHeight);
     self.tableView.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), tableHeight + headerHeight);
+    self.tableView.contentInset = UIEdgeInsetsMake(self.header.frame.size.height, 0, 0, 0);;
     self.contentView.frame = CGRectMake(x, 0, CGRectGetWidth(bounds), headerHeight + tableHeight);
     self.footContainView.frame = CGRectMake(x, CGRectGetMaxY(self.contentView.frame), CGRectGetWidth(bounds), footHeight);
     self.cancelItemView.frame = CGRectMake(0, cancelItemY, CGRectGetWidth(bounds), cancelItemHeight);
-    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), headerHeight + tableHeight + footHeight);
-
-    UIEdgeInsets insets = UIEdgeInsetsMake(self.header.frame.size.height, 0, 0, 0);
-    self.tableView.contentInset = insets;
+    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), headerHeight + tableHeight + footHeight + self.actionSheetBottomMargin);
 }
 
 - (CGFloat)openingSheetHeight {
@@ -284,6 +301,9 @@ static const CGFloat kActionTextAlpha = 0.87f;
     CGFloat cancelItemY = (!_cancelAction) ? 0 : self.cancelActionSpaceWidth;
     CGFloat footHeight = cancelItemHeight + cancelItemY;
     CGFloat maxTableHeight = maxHeight - headerHeight - footHeight;
+    if (GTUIDeviceBottomSafeAreaInset() == 0) {
+        maxTableHeight -= self.actionSheetBottomMargin;
+    }
     NSInteger amountOfCellsToShow = (NSInteger)(maxTableHeight / cellHeight);
     // There is already a partially shown cell that is showing and more than half is visable
     if (fmod(maxTableHeight, cellHeight) > (cellHeight * 0.5f)) {
@@ -292,10 +312,7 @@ static const CGFloat kActionTextAlpha = 0.87f;
     CGFloat preferredHeight = (((CGFloat)amountOfCellsToShow - 0.5f) * cellHeight) + headerHeight + footHeight;
     // When updating the preferredSheetHeight the presentation controller takes into account the
     // safe area so we have to remove that.
-    if (@available(iOS 11.0, *)) {
-        preferredHeight = preferredHeight - self.view.safeAreaInsets.bottom;
-    }
-
+    preferredHeight = preferredHeight - GTUIDeviceBottomSafeAreaInset();
     return GTUICeil(preferredHeight);
 }
 
@@ -361,7 +378,8 @@ static const CGFloat kActionTextAlpha = 0.87f;
 
 - (void)updateTable {
     [self.tableView reloadData];
-    [self.tableView setNeedsLayout];
+    [self setCancelItemViewAction:_cancelAction];
+    [self.view setNeedsLayout];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -418,6 +436,214 @@ static const CGFloat kActionTextAlpha = 0.87f;
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     return [[UIView alloc] init];
+}
+
+
+- (void)setCancelItemViewAction:(GTUIActionSheetAction *)cancelAction {
+    if (self.cancelItemView == nil) {
+        self.cancelItemView = [[GTUIActionSheetItemView alloc] initWithType:self.actionSheetType];
+        [self.cancelItemView addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelItemViewClick)]];
+    }
+    self.cancelItemView.type = self.actionSheetType;
+    self.cancelItemView.gtui_adjustsFontForContentSizeCategory = self.gtui_adjustsFontForContentSizeCategory;
+    self.cancelItemView.actionFont = self.actionFont;
+    self.cancelItemView.accessibilityIdentifier = cancelAction.accessibilityIdentifier;
+    self.cancelItemView.inkColor = self.inkColor;
+    self.cancelItemView.tintColor = self.actionTintColor;
+    self.cancelItemView.backgroundColor = self.actionBackgroundColor;
+    self.cancelItemView.imageRenderingMode = self.actionImageRenderingMode;
+    self.cancelItemView.layer.masksToBounds = YES;
+    self.cancelItemView.cornerRadius = self.cornerRadius;
+    self.cancelItemView.action = cancelAction;
+}
+
+- (void)cancelItemViewClick {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^(void){
+        if (self->_cancelAction.completionHandler) {
+            self->_cancelAction.completionHandler(self->_cancelAction);
+        }
+    }];
+}
+
+- (void)setTitle:(NSString *)title {
+    self.header.title = title;
+    [self.view setNeedsLayout];
+}
+
+- (NSString *)title {
+    return self.header.title;
+}
+
+- (void)setMessage:(NSString *)message {
+    self.header.message = message;
+    [self.view setNeedsLayout];
+}
+
+- (NSString *)message {
+    return self.header.message;
+}
+
+- (void)setCustomView:(UIView *)customView {
+    self.header.customView = customView;
+    [self.view setNeedsLayout];
+}
+
+- (UIView *)customView {
+    return self.header.customView;
+}
+
+
+- (void)setTitleFont:(UIFont *)titleFont {
+    self.header.titleFont = titleFont;
+}
+
+- (UIFont *)titleFont {
+    return self.header.titleFont;
+}
+
+- (void)setMessageFont:(UIFont *)messageFont {
+    self.header.messageFont = messageFont;
+}
+
+- (UIFont *)messageFont {
+    return self.header.messageFont;
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    _backgroundColor = backgroundColor;
+    self.view.backgroundColor = backgroundColor;
+    self.tableView.backgroundColor = backgroundColor;
+    self.header.backgroundColor = backgroundColor;
+}
+
+- (void)setTitleTextColor:(UIColor *)titleTextColor {
+    self.header.titleTextColor = titleTextColor;
+}
+
+- (UIColor *)titleTextColor {
+    return self.header.titleTextColor;
+}
+
+- (void)setMessageTextColor:(UIColor *)messageTextColor {
+    self.header.messageTextColor = messageTextColor;
+}
+
+- (UIColor *)messageTextColor {
+    return self.header.messageTextColor;
+}
+
+#pragma mark - Dynamic Type
+
+- (void)gtui_setAdjustsFontForContentSizeCategory:(BOOL)adjusts {
+    _gtui_adjustsFontForContentSizeCategory = adjusts;
+    self.header.gtui_adjustsFontForContentSizeCategory = adjusts;
+    [self updateFontsForDynamicType];
+    if (_gtui_adjustsFontForContentSizeCategory) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(updateFontsForDynamicType)
+                                                     name:UIContentSizeCategoryDidChangeNotification
+                                                   object:nil];
+    } else {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UIContentSizeCategoryDidChangeNotification
+                                                      object:nil];
+    }
+    [self.view setNeedsLayout];
+}
+
+- (void)updateTableFonts {
+    UIFont *finalActionsFont = _actionFont ?:
+    [UIFont gtui_standardFontForTextStyle:GTUIFontTextStyleSubheadline];
+    if (self.gtui_adjustsFontForContentSizeCategory) {
+        finalActionsFont =
+        [finalActionsFont gtui_fontSizedForFontTextStyle:GTUIFontTextStyleSubheadline
+                                       scaledForDynamicType:self.gtui_adjustsFontForContentSizeCategory];
+    }
+    _actionFont = finalActionsFont;
+    [self updateTable];
+}
+
+- (void)updateFontsForDynamicType {
+    [self updateTableFonts];
+    [self.view setNeedsLayout];
+}
+
+#pragma mark - Table customization
+
+- (void)setActionFont:(UIFont *)actionFont {
+    _actionFont = actionFont;
+    [self updateTable];
+}
+
+- (void)setActionAlignment:(NSTextAlignment)actionAlignment {
+    _actionAlignment = actionAlignment;
+    [self updateTable];
+}
+
+- (void)setActionTextColor:(UIColor *)actionTextColor {
+    _actionTextColor = actionTextColor;
+    [self updateTable];
+}
+
+- (void)setActionTintColor:(UIColor *)actionTintColor {
+    _actionTintColor = actionTintColor;
+    [self updateTable];
+}
+
+- (void)setActionImageRenderingMode:(UIImageRenderingMode)actionImageRenderingMode {
+    _actionImageRenderingMode = actionImageRenderingMode;
+    [self updateTable];
+}
+
+- (void)setInkColor:(UIColor *)inkColor {
+    _inkColor = inkColor;
+    [self updateTable];
+}
+
+- (void)setActionCornerRadius:(CGFloat)actionCornerRadius {
+    _actionCornerRadius = actionCornerRadius;
+    [self updateTable];
+}
+
+- (void)setActionHeight:(CGFloat)actionHeight {
+    _actionHeight = actionHeight;
+    [self updateTable];
+}
+
+#pragma mark - ActionSheet 属性配置
+
+- (void)setCancelActionSpaceWidth:(CGFloat)cancelActionSpaceWidth {
+    _cancelActionSpaceWidth = cancelActionSpaceWidth;
+    [self.view setNeedsLayout];
+}
+
+- (void)setActionSheetBottomMargin:(CGFloat)actionSheetBottomMargin {
+    _actionSheetBottomMargin = actionSheetBottomMargin;
+    [self.view setNeedsLayout];
+}
+
+- (void)setActionSheetMaxWidth:(CGFloat)actionSheetMaxWidth {
+    _actionSheetMaxWidth = actionSheetMaxWidth;
+    [self.view setNeedsLayout];
+}
+
+
+#pragma mark - 旋转
+
+- (BOOL)shouldAutorotate{
+
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskAll;
+}
+
+#pragma mark - 状态栏
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+
+    return UIStatusBarStyleDefault;
 }
 
 @end

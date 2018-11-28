@@ -10,12 +10,9 @@
 #import "GTTypography.h"
 
 static const CGFloat kLabelAlpha = 0.87f;
-static const CGFloat kImageLeadingPadding = 16.f;
-static const CGFloat kImageTopPadding = 16.f;
 static const CGFloat kImageHeightAndWidth = 24.f;
-static const CGFloat kTitleLeadingPadding = 72.f;
-static const CGFloat kTitleTrailingPadding = 16.f;
-static const CGFloat kActionItemTitleVerticalPadding = 18.f;
+
+#define DEFAULTBORDERWIDTH (1.0f / [[UIScreen mainScreen] scale] + 0.02f)
 
 @interface GTUIActionSheetItemView ()
 @property(nonatomic, strong) UILabel *actionLabel;
@@ -23,6 +20,12 @@ static const CGFloat kActionItemTitleVerticalPadding = 18.f;
 @property(nonatomic, strong) UIButton *actionButton;
 @property(nonatomic, strong) GTUIInkTouchController *inkTouchController;
 @property(nonatomic, strong) UIView *contentView;
+
+@property (nonatomic , strong ) CALayer *topLayer;
+@property (nonatomic , strong ) CALayer *bottomLayer;
+@property (nonatomic , strong ) CALayer *leftLayer;
+@property (nonatomic , strong ) CALayer *rightLayer;
+
 @end
 
 @implementation GTUIActionSheetItemView{
@@ -202,6 +205,14 @@ static const CGFloat kActionItemTitleVerticalPadding = 18.f;
         _titleLabelLeadingConstraint.constant = 10;
     }
     self.actionImageView.image = [_itemAction.image imageWithRenderingMode:self.imageRenderingMode];
+
+    if (_topLayer) _topLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.borderWidth);
+
+    if (_bottomLayer) _bottomLayer.frame = CGRectMake(0, self.frame.size.height - self.borderWidth, self.frame.size.width, self.borderWidth);
+
+    if (_leftLayer) _leftLayer.frame = CGRectMake(0, 0, self.borderWidth, self.frame.size.height);
+
+    if (_rightLayer) _rightLayer.frame = CGRectMake(self.frame.size.width - self.borderWidth, 0, self.borderWidth, self.frame.size.height);
 }
 
 
@@ -212,6 +223,46 @@ static const CGFloat kActionItemTitleVerticalPadding = 18.f;
     _itemAction = [action copy];
     self.actionLabel.text = _itemAction.title;
     self.actionImageView.image = _itemAction.image;
+    if (self.borderColor) [self setBorderColor:self.borderColor];
+
+    if (self.borderWidth > 0) [self setBorderWidth:self.borderWidth < DEFAULTBORDERWIDTH ? DEFAULTBORDERWIDTH : self.borderWidth]; else [self setBorderWidth:0.0f];
+
+    if (self.cornerRadius) [self.layer setCornerRadius:self.cornerRadius];
+
+
+    if (self.borderPosition & GTUIActionBorderPositionTop &&
+        self.borderPosition & GTUIActionBorderPositionBottom &&
+        self.borderPosition & GTUIActionBorderPositionLeft &&
+        self.borderPosition & GTUIActionBorderPositionRight) {
+
+        self.layer.borderWidth = self.borderWidth;
+
+        self.layer.borderColor = self.borderColor.CGColor;
+
+        [self removeTopBorder];
+
+        [self removeBottomBorder];
+
+        [self removeLeftBorder];
+
+        [self removeRightBorder];
+
+    } else {
+
+        self.layer.borderWidth = 0.0f;
+
+        self.layer.borderColor = [UIColor clearColor].CGColor;
+
+        if (self.borderPosition & GTUIActionBorderPositionTop) [self addTopBorder]; else [self removeTopBorder];
+
+        if (self.borderPosition & GTUIActionBorderPositionBottom) [self addBottomBorder]; else [self removeBottomBorder];
+
+        if (self.borderPosition & GTUIActionBorderPositionLeft) [self addLeftBorder]; else [self removeLeftBorder];
+
+        if (self.borderPosition & GTUIActionBorderPositionRight) [self addRightBorder]; else [self removeRightBorder];
+    }
+
+
     [self setNeedsLayout];
 }
 
@@ -318,5 +369,86 @@ static const CGFloat kActionItemTitleVerticalPadding = 18.f;
     }
     return _inkTouchController;
 }
+
+
+
+
+- (void)addTopBorder{
+
+    [self.layer addSublayer:self.topLayer];
+}
+
+- (void)addBottomBorder{
+
+    [self.layer addSublayer:self.bottomLayer];
+}
+
+- (void)addLeftBorder{
+
+    [self.layer addSublayer:self.leftLayer];
+}
+
+- (void)addRightBorder{
+
+    [self.layer addSublayer:self.rightLayer];
+}
+
+- (void)removeTopBorder{
+
+    if (_topLayer) [_topLayer removeFromSuperlayer]; _topLayer = nil;
+}
+
+- (void)removeBottomBorder{
+
+    if (_bottomLayer) [_bottomLayer removeFromSuperlayer]; _bottomLayer = nil;
+}
+
+- (void)removeLeftBorder{
+
+    if (_leftLayer) [_leftLayer removeFromSuperlayer]; _leftLayer = nil;
+}
+
+- (void)removeRightBorder{
+
+    if (_rightLayer) [_rightLayer removeFromSuperlayer]; _rightLayer = nil;
+}
+
+- (CALayer *)createLayer{
+
+    CALayer *layer = [CALayer layer];
+
+    layer.backgroundColor = self.borderColor.CGColor;
+
+    return layer;
+}
+
+- (CALayer *)topLayer{
+
+    if (!_topLayer) _topLayer = [self createLayer];
+
+    return _topLayer;
+}
+
+- (CALayer *)bottomLayer{
+
+    if (!_bottomLayer) _bottomLayer = [self createLayer];
+
+    return _bottomLayer;
+}
+
+- (CALayer *)leftLayer{
+
+    if (!_leftLayer) _leftLayer = [self createLayer];
+
+    return _leftLayer;
+}
+
+- (CALayer *)rightLayer{
+
+    if (!_rightLayer) _rightLayer = [self createLayer];
+
+    return _rightLayer;
+}
+
 
 @end

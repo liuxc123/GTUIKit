@@ -4,113 +4,132 @@
 //
 //  Created by liuxc on 2018/11/22.
 //
-
 #import "GTUIAlertController.h"
+#import "GTUIDialogAction.h"
 
 #import <GTFInternationalization/GTFInternationalization.h>
-
-#import "GTUIAlertControllerView.h"
 #import "GTUIDialogPresentationController.h"
 #import "GTUIDialogTransitionController.h"
+#import "UIViewController+GTUIDialogs.h"
 #import "GTButton.h"
 #import "GTTypography.h"
-#import "UIViewController+GTUIDialogs.h"
-#import "private/GTUIAlertActionManager.h"
-#import "private/GTUIAlertControllerView+Private.h"
+#import "GTUIDialogItemView.h"
 
-@interface GTUIAlertAction ()
-
-@property(nonatomic, nullable, copy) GTUIActionHandler completionHandler;
-
-@end
-
-@implementation GTUIAlertAction
-
-+ (instancetype)actionWithTitle:(nonnull NSString *)title
-                        handler:(void (^__nullable)(GTUIAlertAction *action))handler {
-    return [[GTUIAlertAction alloc] initWithTitle:title emphasis:GTUIActionEmphasisLow handler:handler];
-}
-
-+ (instancetype)actionWithTitle:(nonnull NSString *)title
-                       emphasis:(GTUIActionEmphasis)emphasis
-                        handler:(void (^__nullable)(GTUIAlertAction *action))handler {
-    return [[GTUIAlertAction alloc] initWithTitle:title emphasis:emphasis handler:handler];
-}
-
-- (instancetype)initWithTitle:(nonnull NSString *)title
-                     emphasis:(GTUIActionEmphasis)emphasis
-                      handler:(void (^__nullable)(GTUIAlertAction *action))handler {
-    self = [super init];
-    if (self) {
-        _title = [title copy];
-        _emphasis = emphasis;
-        _completionHandler = [handler copy];
-    }
-    return self;
-}
-
-- (id)copyWithZone:(__unused NSZone *)zone {
-    GTUIAlertAction *action = [[self class] actionWithTitle:self.title
-                                                  emphasis:self.emphasis
-                                                   handler:self.completionHandler];
-    action.accessibilityIdentifier = self.accessibilityIdentifier;
-
-    return action;
-}
-
-@end
+#define DEFAULTBORDERWIDTH (1.0f / [[UIScreen mainScreen] scale] + 0.02f)
+#define VIEWSAFEAREAINSETS(view) ({UIEdgeInsets i; if(@available(iOS 11.0, *)) {i = view.safeAreaInsets;} else {i = UIEdgeInsetsZero;} i;})
 
 @interface GTUIAlertController ()
 
-@property(nonatomic, nullable, weak) GTUIAlertControllerView *alertView;
 @property(nonatomic, strong) GTUIDialogTransitionController *transitionController;
-@property(nonatomic, nonnull, strong) GTUIAlertActionManager *actionManager;
 
-- (nonnull instancetype)initWithTitle:(nullable NSString *)title
-                              message:(nullable NSString *)message;
+@property (nonatomic , strong ) UIScrollView *alertView;
+
+@property (nonatomic , strong ) NSMutableArray <id>*alertItemArray;
+
+@property (nonatomic , strong ) NSMutableArray <GTUIDialogActionButton *>*alertActionArray;
 
 @end
 
-@implementation GTUIAlertController{
-
-    // This is because title is overlapping with view controller title, However Apple alertController
-    // redefines title as well.
-    NSString *_alertTitle;
-
-    CGSize _previousLayoutSize;
-
-    BOOL _gtui_adjustsFontForContentSizeCategory;
+@implementation GTUIAlertController {
+    CGFloat alertViewHeight;
 }
 
 
-+ (instancetype)alertControllerWithTitle:(nullable NSString *)alertTitle
-                                 message:(nullable NSString *)message {
-    GTUIAlertController *alertController =
-    [[GTUIAlertController alloc] initWithTitle:alertTitle message:message];
 
++ (instancetype)alertControllerWithTitle:(NSString *)title
+                                 message:(NSString *)message {
+    GTUIAlertController *alertController = [[GTUIAlertController alloc] initWithTitle:title message:message customView:nil config: nil];
+    return alertController;
+}
+
++ (instancetype)alertControllerWithTitle:(NSString *)title
+                                 message:(NSString *)message
+                              customView:(UIView *)customView {
+    GTUIAlertController *alertController = [[GTUIAlertController alloc] initWithTitle:title message:message customView:customView config: nil];
+    return alertController;
+}
+
++ (instancetype)alertControllerWithTitle:(NSString *)title
+                                 message:(NSString *)message
+                              customView:(UIView *)customView
+                             config:(GTUIDialogConfigModel *)config
+{
+    GTUIAlertController *alertController = [[GTUIAlertController alloc] initWithTitle:title message:message customView:customView config: config];
     return alertController;
 }
 
 - (instancetype)init {
-    return [self initWithTitle:nil message:nil];
+    return [self initWithTitle:nil message:nil customView:nil config:nil];
 }
 
-- (nonnull instancetype)initWithTitle:(nullable NSString *)title
-                              message:(nullable NSString *)message {
+- (instancetype)initWithTitle:(NSString *)title
+                              message:(NSString *)message
+                           customView:(UIView *)custom
+                          config:(GTUIDialogConfigModel *)config
+{
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _transitionController = [[GTUIDialogTransitionController alloc] init];
 
-        _alertTitle = [title copy];
-        _message = [message copy];
-        _titleAlignment = NSTextAlignmentNatural;
-        _messageAlignment = NSTextAlignmentNatural;
-        _actionManager = [[GTUIAlertActionManager alloc] init];
+        if (config) {
+             self.config = config;
+        } else {
+            self.config = [[GTUIDialogConfigModel alloc] initWithStyle:GTUIDialogStyleNormal];
+        }
+
+        if (title) [self addTitle:[title copy]];
+        if (message) [self addMessage:[message copy]];
+        if (custom) [self addCustomView:custom];
 
         super.transitioningDelegate = _transitionController;
         super.modalPresentationStyle = UIModalPresentationCustom;
     }
     return self;
+}
+
+
+- (NSArray<GTUIDialogAction *> *)actions {
+    return self.config.modelActionArray;
+}
+
+
+#pragma mark - UIViewController
+
+- (void)dealloc{
+
+    _alertView = nil;
+
+    _alertItemArray = nil;
+
+    _alertActionArray = nil;
+}
+
+- (void)viewDidLoad {
+
+    [self configAlert];
+
+}
+
+- (void)viewDidLayoutSubviews{
+
+    [super viewDidLayoutSubviews];
+
+    [self updateAlertLayout];
+
+}
+
+- (void)viewSafeAreaInsetsDidChange{
+
+    [super viewSafeAreaInsetsDidChange];
+
+    [self updateAlertLayout];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        self.preferredContentSize = self.alertView.bounds.size;
+    } completion:nil];
 }
 
 /* Disable setter. Always use internal transition controller */
@@ -126,316 +145,451 @@
     return;
 }
 
-- (void)setTitle:(NSString *)title {
-    _alertTitle = [title copy];
-    if (self.alertView) {
-        self.alertView.titleLabel.text = title;
-        self.preferredContentSize =
-        [self.alertView calculatePreferredContentSizeForBounds:CGRectInfinite.size];
-
-    }
+/** 更新AlertLayout */
+- (void)updateAlertLayout{
+    [self updateAlertLayoutWithViewWidth:CGRectGetWidth(self.view.frame) ViewHeight:CGRectGetHeight(self.view.frame)];
 }
 
-- (NSString *)title {
-    return _alertTitle;
+/** 更新AlertLayout */
+- (void)updateAlertLayoutWithViewWidth:(CGFloat)viewWidth ViewHeight:(CGFloat)viewHeight {
+
+    CGFloat alertViewMaxWidth = self.config.maxWidth;
+
+    CGFloat alertViewMaxHeight = self.config.maxHeight;
+
+    [self updateAlertItemsLayout];
+
+    CGRect alertViewFrame = self.alertView.frame;
+
+    alertViewFrame.size.width = alertViewMaxWidth;
+
+    alertViewFrame.size.height = alertViewHeight > alertViewMaxHeight ? alertViewMaxHeight : alertViewHeight;
+
+    self.alertView.frame = alertViewFrame;
+
+    self.preferredContentSize = alertViewFrame.size;
+
 }
 
-- (void)setMessage:(NSString *)message {
-    _message = [message copy];
-    if (self.alertView) {
-        self.alertView.messageLabel.text = message;
-        self.preferredContentSize =
-        [self.alertView calculatePreferredContentSizeForBounds:CGRectInfinite.size];
-    }
-}
+- (void)updateAlertItemsLayout {
 
-- (NSArray<GTUIAlertAction *> *)actions {
-    return self.actionManager.actions;
-}
+    [UIView setAnimationsEnabled:NO];
 
-- (void)addAction:(GTUIAlertAction *)action {
-    [self.actionManager addAction:action];
-    [self addButtonToAlertViewForAction:action];
-}
+    alertViewHeight = 0.0f;
 
-- (nullable GTUIButton *)buttonForAction:(nonnull GTUIAlertAction *)action {
-    GTUIButton *button = [self.actionManager buttonForAction:action];
-    if (!button && [self.actionManager hasAction:action]) {
-        button = [self.actionManager createButtonForAction:action
-                                                    target:self
-                                                  selector:@selector(actionButtonPressed:)];
-        [GTUIAlertControllerView styleAsTextButton:button];
-    }
-    return button;
-}
+    CGFloat alertViewMaxWidth = self.config.maxWidth;
 
-- (void)addButtonToAlertViewForAction:(GTUIAlertAction *)action {
-    if (self.alertView) {
-        GTUIButton *button = [self buttonForAction:action];
-        [self.alertView addActionButton:button];
-        self.preferredContentSize =
-        [self.alertView calculatePreferredContentSizeForBounds:CGRectInfinite.size];
-        [self.alertView setNeedsLayout];
-    }
-}
+    [self.alertItemArray enumerateObjectsUsingBlock:^(id  _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
 
-- (void)setTitleFont:(UIFont *)titleFont {
-    _titleFont = titleFont;
-    if (self.alertView) {
-        self.alertView.titleFont = titleFont;
-    }
-}
+        if (idx == 0) self->alertViewHeight += self.config.headerInsets.top;
 
-- (void)setMessageFont:(UIFont *)messageFont {
-    _messageFont = messageFont;
-    if (self.alertView) {
-        self.alertView.messageFont = messageFont;
-    }
-}
+        if ([item isKindOfClass:UIView.class]) {
 
-// b/117717380: Will be deprecated
-- (void)setButtonFont:(UIFont *)buttonFont {
-    _buttonFont = buttonFont;
-    if (self.alertView) {
-        self.alertView.buttonFont = buttonFont;
-    }
-}
+            GTUIDialogItemView *view = (GTUIDialogItemView *)item;
 
-- (void)setTitleColor:(UIColor *)titleColor {
-    _titleColor = titleColor;
-    if (self.alertView) {
-        self.alertView.titleColor = titleColor;
-    }
-}
+            CGRect viewFrame = view.frame;
 
-- (void)setMessageColor:(UIColor *)messageColor {
-    _messageColor = messageColor;
-    if (self.alertView) {
-        self.alertView.messageColor = messageColor;
-    }
-}
+            viewFrame.origin.x = self.config.headerInsets.left + view.item.insets.left + VIEWSAFEAREAINSETS(view).left;
 
-// b/117717380: Will be deprecated
-- (void)setButtonTitleColor:(UIColor *)buttonColor {
-    _buttonTitleColor = buttonColor;
-    if (self.alertView) {
-        self.alertView.buttonColor = buttonColor;
-    }
-}
+            viewFrame.origin.y = self->alertViewHeight + view.item.insets.top;
 
-- (void)setTitleAlignment:(NSTextAlignment)titleAlignment {
-    _titleAlignment = titleAlignment;
-    if (self.alertView) {
-        self.alertView.titleAlignment = titleAlignment;
-    }
-}
+            viewFrame.size.width = alertViewMaxWidth - viewFrame.origin.x - self.config.headerInsets.right - view.item.insets.right - VIEWSAFEAREAINSETS(view).left - VIEWSAFEAREAINSETS(view).right;
 
-- (void)setMessageAlignment:(NSTextAlignment)messageAlignment {
-    _messageAlignment = messageAlignment;
-    if (self.alertView) {
-        self.alertView.messageAlignment = messageAlignment;
-    }
-}
+            if ([item isKindOfClass:UILabel.class]) viewFrame.size.height = [item sizeThatFits:CGSizeMake(viewFrame.size.width, MAXFLOAT)].height;
 
-- (void)setTitleIcon:(UIImage *)titleIcon {
-    _titleIcon = titleIcon;
-    if (self.alertView) {
-        self.alertView.titleIcon = titleIcon;
-    }
-}
+            view.frame = viewFrame;
 
-- (void)setTitleIconTintColor:(UIColor *)titleIconTintColor {
-    _titleIconTintColor = titleIconTintColor;
-    if (self.alertView) {
-        self.alertView.titleIconTintColor = titleIconTintColor;
-    }
-}
+            self->alertViewHeight += view.frame.size.height + view.item.insets.top + view.item.insets.bottom;
 
-- (void)setScrimColor:(UIColor *)scrimColor {
-    _scrimColor = scrimColor;
-    self.gtui_dialogPresentationController.scrimColor = scrimColor;
-}
+        } else if ([item isKindOfClass:GTUIDialogItemCustomView.class]) {
 
-- (void)setCornerRadius:(CGFloat)cornerRadius {
-    _cornerRadius = cornerRadius;
-    if (self.alertView) {
-        self.alertView.cornerRadius = cornerRadius;
-    }
-    self.gtui_dialogPresentationController.dialogCornerRadius = cornerRadius;
-}
+            GTUIDialogItemCustomView *custom = (GTUIDialogItemCustomView *)item;
 
-- (void)setElevation:(GTUIShadowElevation)elevation {
-    _elevation = elevation;
-    self.gtui_dialogPresentationController.dialogElevation = elevation;
-}
+            CGRect viewFrame = custom.view.frame;
 
-- (void)gtui_setAdjustsFontForContentSizeCategory:(BOOL)adjusts {
-    _gtui_adjustsFontForContentSizeCategory = adjusts;
+            if (custom.isAutoWidth) {
 
-    if (self.alertView) {
-        self.alertView.gtui_adjustsFontForContentSizeCategory = adjusts;
-        [self updateFontsForDynamicType];
-    }
-    if (_gtui_adjustsFontForContentSizeCategory) {
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(contentSizeCategoryDidChange:)
-                                                     name:UIContentSizeCategoryDidChangeNotification
-                                                   object:nil];
-    } else {
-        [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                        name:UIContentSizeCategoryDidChangeNotification
-                                                      object:nil];
-    }
-}
+                custom.positionType = GTUICustomViewPositionTypeCenter;
 
-// Handles UIContentSizeCategoryDidChangeNotifications
-- (void)contentSizeCategoryDidChange:(__unused NSNotification *)notification {
-    [self updateFontsForDynamicType];
-}
+                viewFrame.size.width = alertViewMaxWidth - self.config.headerInsets.left - custom.item.insets.left - self.config.headerInsets.right - custom.item.insets.right;
+            }
 
-// Update the fonts used based on gtui_preferredFontForMaterialTextStyle and recalculate the
-// preferred content size.
-- (void)updateFontsForDynamicType {
-    if (self.alertView) {
-        [self.alertView updateFonts];
+            switch (custom.positionType) {
 
-        // Our presentation controller reacts to changes to preferredContentSize to determine our
-        // frame at the presented controller.
-        self.preferredContentSize =
-        [self.alertView calculatePreferredContentSizeForBounds:CGRectInfinite.size];
-    }
-}
+                case GTUICustomViewPositionTypeCenter:
 
-- (void)actionButtonPressed:(id)button {
-    GTUIAlertAction *action = [self.actionManager actionForButton:button];
+                    viewFrame.origin.x = (alertViewMaxWidth - viewFrame.size.width) * 0.5f;
 
-    // We call our action.completionHandler after we dismiss the existing alert in case the handler
-    // also presents a view controller. Otherwise we get a warning about presenting on a controller
-    // which is already presenting.
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:^(void){
-        if (action.completionHandler) {
-            action.completionHandler(action);
+                    break;
+
+                case GTUICustomViewPositionTypeLeft:
+
+                    viewFrame.origin.x = self.config.headerInsets.left + custom.item.insets.left;
+
+                    break;
+
+                case GTUICustomViewPositionTypeRight:
+
+                    viewFrame.origin.x = alertViewMaxWidth - self.config.headerInsets.right - custom.item.insets.right - viewFrame.size.width;
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            viewFrame.origin.y = self->alertViewHeight + custom.item.insets.top;
+
+            custom.view.frame = viewFrame;
+
+            self->alertViewHeight += viewFrame.size.height + custom.item.insets.top + custom.item.insets.bottom;
         }
+
+        if (item == self.alertItemArray.lastObject) self->alertViewHeight += self.config.headerInsets.bottom;
     }];
+
+    for (GTUIDialogActionButton *button in self.alertActionArray) {
+
+        CGRect buttonFrame = button.frame;
+
+        buttonFrame.origin.x = button.action.insets.left;
+
+        buttonFrame.origin.y = alertViewHeight + button.action.insets.top;
+
+        buttonFrame.size.width = alertViewMaxWidth - button.action.insets.left - button.action.insets.right;
+
+        button.frame = buttonFrame;
+
+        alertViewHeight += buttonFrame.size.height + button.action.insets.top + button.action.insets.bottom;
+    }
+
+    if (self.alertActionArray.count == 2) {
+
+        GTUIDialogActionButton *buttonA = self.alertActionArray.count == self.config.modelActionArray.count ? self.alertActionArray.firstObject : self.alertActionArray.lastObject;
+
+        GTUIDialogActionButton *buttonB = self.alertActionArray.count == self.config.modelActionArray.count ? self.alertActionArray.lastObject : self.alertActionArray.firstObject;
+
+        UIEdgeInsets buttonAInsets = buttonA.action.insets;
+
+        UIEdgeInsets buttonBInsets = buttonB.action.insets;
+
+        CGFloat buttonAHeight = CGRectGetHeight(buttonA.frame) + buttonAInsets.top + buttonAInsets.bottom;
+
+        CGFloat buttonBHeight = CGRectGetHeight(buttonB.frame) + buttonBInsets.top + buttonBInsets.bottom;
+
+        //CGFloat maxHeight = buttonAHeight > buttonBHeight ? buttonAHeight : buttonBHeight;
+
+        CGFloat minHeight = buttonAHeight < buttonBHeight ? buttonAHeight : buttonBHeight;
+
+        CGFloat minY = (buttonA.frame.origin.y - buttonAInsets.top) > (buttonB.frame.origin.y - buttonBInsets.top) ? (buttonB.frame.origin.y - buttonBInsets.top) : (buttonA.frame.origin.y - buttonAInsets.top);
+
+        buttonA.frame = CGRectMake(buttonAInsets.left, minY + buttonAInsets.top, (alertViewMaxWidth / 2) - buttonAInsets.left - buttonAInsets.right, buttonA.frame.size.height);
+
+        buttonB.frame = CGRectMake((alertViewMaxWidth / 2) + buttonBInsets.left, minY + buttonBInsets.top, (alertViewMaxWidth / 2) - buttonBInsets.left - buttonBInsets.right, buttonB.frame.size.height);
+
+        alertViewHeight -= minHeight;
+    }
+
+    self.alertView.contentSize = CGSizeMake(alertViewMaxWidth, alertViewHeight);
+
+
+    [UIView setAnimationsEnabled:YES];
 }
 
-#pragma mark - UIViewController
+/** 配置视图 */
+- (void)configAlert {
 
-- (void)loadView {
-    self.view = [[GTUIAlertControllerView alloc] initWithFrame:CGRectZero];
-    self.alertView = (GTUIAlertControllerView *)self.view;
-    // sharing GTUIActionManager with with the alert view
-    self.alertView.actionManager = self.actionManager;
-}
+    __weak typeof(self) weakSelf = self;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+    [self.view addSubview: self.alertView];
 
-    [self setupAlertView];
+    self.view.layer.shadowOffset = self.config.shadowOffset;
 
-    _previousLayoutSize = CGSizeZero;
-    CGSize idealSize = [self.alertView calculatePreferredContentSizeForBounds:CGRectInfinite.size];
-    self.preferredContentSize = idealSize;
+    self.view.layer.shadowRadius = self.config.shadowRadius;
 
-    self.preferredContentSize =
-    [self.alertView calculatePreferredContentSizeForBounds:CGRectInfinite.size];
+    self.view.layer.shadowOpacity = self.config.shadowOpacity;
 
-    [self.view setNeedsLayout];
-}
+    self.view.layer.shadowColor = self.config.shadowColor.CGColor;
 
-- (void)setupAlertView {
-    // Explicitly overwrite the view default if true
-    if (_gtui_adjustsFontForContentSizeCategory) {
-        self.alertView.gtui_adjustsFontForContentSizeCategory = YES;
-    }
-    self.alertView.titleLabel.text = self.title;
-    self.alertView.messageLabel.text = self.message;
-    self.alertView.titleFont = self.titleFont;
-    self.alertView.messageFont = self.messageFont;
-    self.alertView.titleColor = self.titleColor;
-    self.alertView.messageColor = self.messageColor;
-    if (self.buttonTitleColor) {
-        // Avoid reset title color to white when setting it to nil. only set it for an actual UIColor.
-        self.alertView.buttonColor = self.buttonTitleColor;  // b/117717380: Will be deprecated
-    }
-    self.alertView.buttonFont = self.buttonFont;  // b/117717380: Will be deprecated
-    if (self.buttonInkColor) {
-        // Avoid reset ink color to white when setting it to nil. only set it for an actual UIColor.
-        self.alertView.buttonInkColor = self.buttonInkColor;  // b/117717380: Will be deprecated
-    }
-    self.alertView.titleAlignment = self.titleAlignment;
-    self.alertView.messageAlignment = self.messageAlignment;
-    self.alertView.titleIcon = self.titleIcon;
-    self.alertView.titleIconTintColor = self.titleIconTintColor;
-    self.alertView.cornerRadius = self.cornerRadius;
+    self.alertView.layer.cornerRadius = self.config.cornerRadius;
 
-    // Create buttons for the actions (if not already created) and apply default styling
-    for (GTUIAlertAction *action in self.actions) {
-        [self addButtonToAlertViewForAction:action];
-    }
-}
+    self.alertView.layer.masksToBounds = YES;
 
-- (void)viewDidLayoutSubviews {
-    // Recalculate preferredSize, which is based on width available, if the viewSize has changed.
-    if (CGRectGetWidth(self.view.bounds) != _previousLayoutSize.width ||
-        CGRectGetHeight(self.view.bounds) != _previousLayoutSize.height) {
-        CGSize currentPreferredContentSize = self.preferredContentSize;
-        CGSize calculatedPreferredContentSize =
-        [self.alertView calculatePreferredContentSizeForBounds:CGRectStandardize(self.alertView.bounds).size];
+    self.gtui_dialogPresentationController.dialogCornerRadius = self.config.cornerRadius;
 
-        if (!CGSizeEqualToSize(currentPreferredContentSize, calculatedPreferredContentSize)) {
-            // NOTE: Setting the preferredContentSize can lead to a change to self.view.bounds.
-            self.preferredContentSize = calculatedPreferredContentSize;
+    [self.config.modelItemArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+
+        void (^itemBlock)(GTUIDialogItem *) = obj;
+
+        GTUIDialogItem *item = [[GTUIDialogItem alloc] init];
+
+        if (itemBlock) itemBlock(item);
+
+        NSValue *insetValue = [self.config.modelItemInsetsInfo objectForKey:@(idx)];
+
+        if (insetValue) item.insets = insetValue.UIEdgeInsetsValue;
+
+        switch (item.type) {
+            case GTUIItemTypeTitle:
+            {
+                void(^block)(UILabel *label) = item.block;
+
+                GTUIDialogItemLabel *label = [GTUIDialogItemLabel label];
+
+                [self.alertView addSubview:label];
+
+                [self.alertItemArray addObject:label];
+
+                label.textAlignment = self.config.titleTextAlignment;
+
+                label.font = self.config.titleFont;
+
+                label.textColor = self.config.titleTextColor;
+
+                label.numberOfLines = 0;
+
+                if (block) block(label);
+
+                label.item = item;
+
+                label.textChangedBlock = ^{
+
+                    if (weakSelf) [weakSelf updateAlertLayout];
+                };
+
+            }
+                break;
+
+            case GTUIItemTypeMessage:
+            {
+                void(^block)(UILabel *label) = item.block;
+
+                GTUIDialogItemLabel *label = [GTUIDialogItemLabel label];
+
+                [self.alertView addSubview:label];
+
+                [self.alertItemArray addObject:label];
+
+                label.textAlignment = self.config.messageTextAlignment;
+
+                label.font = self.config.messageFont;
+
+                label.textColor = self.config.messageTextColor;
+
+                label.numberOfLines = 0;
+
+                if (block) block(label);
+
+                label.item = item;
+
+                label.textChangedBlock = ^{
+
+                    if (weakSelf) [weakSelf updateAlertLayout];
+                };
+            }
+                break;
+
+            case GTUIItemTypeCustomView:
+            {
+                void(^block)(GTUIDialogItemCustomView *) = item.block;
+
+                GTUIDialogItemCustomView *custom = [[GTUIDialogItemCustomView alloc] init];
+
+                block(custom);
+
+                [self.alertView addSubview:custom.view];
+
+                [self.alertItemArray addObject:custom];
+
+                custom.item = item;
+
+                custom.sizeChangedBlock = ^{
+
+                    if (weakSelf) [weakSelf updateAlertLayout];
+                };
+            }
+                break;
+
+            case GTUIItemTypeTextField:
+            {
+                GTUIDialogItemTextField *textField = [GTUIDialogItemTextField textField];
+
+                textField.frame = CGRectMake(0, 0, 0, 40.0f);
+
+                [self.alertView addSubview:textField];
+
+                [self.alertItemArray addObject:textField];
+
+                textField.borderStyle = UITextBorderStyleRoundedRect;
+
+                void(^block)(UITextField *textField) = item.block;
+
+                if (block) block(textField);
+
+                textField.item = item;
+            }
+                break;
+
+            default:
+                break;
         }
 
-        _previousLayoutSize = CGRectStandardize(self.alertView.bounds).size;
-    }
+    }];
+
+    [self.config.modelActionArray enumerateObjectsUsingBlock:^(id item, NSUInteger idx, BOOL * _Nonnull stop) {
+
+        void (^block)(GTUIDialogAction *action) = item;
+
+        GTUIDialogAction *action = [[GTUIDialogAction alloc] init];
+
+        if (block) block(action);
+
+        if (!action.font) action.font = self.config.defaultActionFont;
+
+        if (!action.title) action.title = @"按钮";
+
+        if (!action.titleColor) action.titleColor = self.config.defaultActionTextColor;
+
+        if (!action.backgroundColor) action.backgroundColor = self.config.actionBackgroundColor;
+
+        if (!action.backgroundHighlightColor) action.backgroundHighlightColor = action.backgroundHighlightColor = [UIColor colorWithWhite:0.97 alpha:1.0f];
+
+        if (!action.borderColor) action.borderColor = [UIColor colorWithWhite:0.84 alpha:1.0f];
+
+        if (!action.borderWidth) action.borderWidth = DEFAULTBORDERWIDTH;
+
+        if (!action.borderPosition) action.borderPosition = (self.config.modelActionArray.count == 2 && idx == 0) ? GTUIActionBorderPositionTop | GTUIActionBorderPositionRight : GTUIActionBorderPositionTop;
+
+        if (!action.height) action.height = 45.0f;
+
+        GTUIDialogActionButton *button = [GTUIDialogActionButton buttonWithType: UIButtonTypeCustom];
+
+        button.action = action;
+
+        [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+
+        [self.alertView addSubview:button];
+
+        [self.alertActionArray addObject:button];
+
+        button.heightChangedBlock = ^{
+
+            if (weakSelf) [weakSelf updateAlertLayout];
+        };
+
+        // 更新布局
+        [self updateAlertLayout];
+
+    }];
+
 }
 
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
+- (void)buttonAction:(UIButton *)sender{
 
-    // Recalculate preferredSize, which is based on width available, if the viewSize has changed.
-    if (CGRectGetWidth(self.view.bounds) != _previousLayoutSize.width ||
-        CGRectGetHeight(self.view.bounds) != _previousLayoutSize.height) {
-        CGSize currentPreferredContentSize = self.preferredContentSize;
-        CGSize contentSize = CGRectStandardize(self.alertView.bounds).size;
-        CGSize calculatedPreferredContentSize =
-        [self.alertView calculatePreferredContentSizeForBounds:contentSize];
+    BOOL isClose = NO;
 
-        if (!CGSizeEqualToSize(currentPreferredContentSize, calculatedPreferredContentSize)) {
-            // NOTE: Setting the preferredContentSize can lead to a change to self.view.bounds.
-            self.preferredContentSize = calculatedPreferredContentSize;
+    void (^clickBlock)(void) = nil;
+
+    for (GTUIDialogActionButton *button in self.alertActionArray) {
+
+        if (button == sender) {
+
+            switch (button.action.type) {
+
+                case GTUIActionTypeDefault:
+
+                    isClose = button.action.isClickNotClose ? NO : YES;
+
+                    break;
+
+                case GTUIActionTypeCancel:
+
+                    isClose = YES;
+
+                    break;
+
+                case GTUIActionTypeDestructive:
+
+                    isClose = YES;
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            if (isClose) {
+
+                [self.presentingViewController dismissViewControllerAnimated:YES completion:^(void){
+                    if (clickBlock) clickBlock();
+                }];
+
+            } else {
+
+                if (clickBlock) clickBlock();
+            }
+            break;
         }
-
-        _previousLayoutSize = CGRectStandardize(self.alertView.bounds).size;
     }
+
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size
-       withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 
-    [coordinator animateAlongsideTransition:
-     ^(__unused id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {
-         // Reset preferredContentSize on viewWIllTransition to take advantage of additional width
-         self.preferredContentSize =
-         [self.alertView calculatePreferredContentSizeForBounds:CGRectInfinite.size];
-     }
-                                 completion:nil];
+#pragma mark Tool
+
+- (UIView *)findFirstResponder:(UIView *)view{
+
+    if (view.isFirstResponder) return view;
+
+    for (UIView *subView in view.subviews) {
+
+        UIView *firstResponder = [self findFirstResponder:subView];
+
+        if (firstResponder) return firstResponder;
+    }
+
+    return nil;
 }
 
-#pragma mark - UIAccessibilityAction
+#pragma mark delegate
 
-- (BOOL)accessibilityPerformEscape {
-    GTUIDialogPresentationController *dialogPresentationController =
-    self.gtui_dialogPresentationController;
-    if (dialogPresentationController.dismissOnBackgroundTap) {
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
-        return YES;
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+
+    return (touch.view == self.alertView) ? YES : NO;
+}
+
+#pragma mark LazyLoading
+
+- (UIScrollView *)alertView{
+
+    if (!_alertView) {
+
+        _alertView = [[UIScrollView alloc] init];
+
+        _alertView.backgroundColor = self.config.headerColor;
+
+        _alertView.directionalLockEnabled = YES;
+
+        _alertView.bounces = NO;
+
     }
-    return NO;
+
+    return _alertView;
+}
+
+- (NSMutableArray *)alertItemArray{
+
+    if (!_alertItemArray) _alertItemArray = [NSMutableArray array];
+
+    return _alertItemArray;
+}
+
+- (NSMutableArray <GTUIDialogActionButton *>*)alertActionArray{
+
+    if (!_alertActionArray) _alertActionArray = [NSMutableArray array];
+
+    return _alertActionArray;
 }
 
 

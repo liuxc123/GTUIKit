@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "DialogsActionSheetViewController.h"
 #import "DialogsAlertViewController.h"
 #import "TextFieldControllerStylesExampleSupplemental.h"
 

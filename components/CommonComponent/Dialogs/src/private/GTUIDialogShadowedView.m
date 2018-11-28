@@ -2,11 +2,12 @@
 //  GTUIDialogShadowedView.m
 //  GTCatalog
 //
-//  Created by liuxc on 2018/11/22.
+//  Created by liuxc on 2018/11/26.
 //
 
 #import "GTUIDialogShadowedView.h"
 
+#import "GTShadowLayer.h"
 
 @implementation GTUIDialogShadowedView
 
@@ -33,6 +34,5 @@
 - (void)setElevation:(GTUIShadowElevation)elevation {
     [[self shadowLayer] setElevation:elevation];
 }
-
 
 @end

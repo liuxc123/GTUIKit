@@ -26,7 +26,6 @@ PODS:
   - GTUIKit/BasicComponent/Typography (0.0.1):
     - GTUIKit/private/Math
   - GTUIKit/CommonComponent (0.0.1):
-    - GTUIKit/CommonComponent/ActionSheet (= 0.0.1)
     - GTUIKit/CommonComponent/ActivityIndicatorView (= 0.0.1)
     - GTUIKit/CommonComponent/BottomSheet (= 0.0.1)
     - GTUIKit/CommonComponent/Button (= 0.0.1)
@@ -47,11 +46,6 @@ PODS:
     - GTUIKit/CommonComponent/TextFields (= 0.0.1)
     - GTUIKit/CommonComponent/Toast (= 0.0.1)
     - GTUIKit/CommonComponent/ToolBar (= 0.0.1)
-  - GTUIKit/CommonComponent/ActionSheet (0.0.1):
-    - GTUIKit/BasicComponent/Typography
-    - GTUIKit/CommonComponent/BottomSheet
-    - GTUIKit/CommonComponent/Ink
-    - GTUIKit/private/Math
   - GTUIKit/CommonComponent/ActivityIndicatorView (0.0.1)
   - GTUIKit/CommonComponent/BottomSheet (0.0.1):
     - GTUIKit/BasicComponent/ShapeLibrary
@@ -173,7 +167,7 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: 08186c8c0752b1c7ecf63a935fdfb1d5416eeae8
+  GTUIKit: f152e33a97762a595cf1227c34014e4df511dc22
   GTUIKitExamples: 7877cab6eaba1329484fd8e3d0bd074c77e9a5c8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 

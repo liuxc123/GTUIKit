@@ -10,3 +10,4 @@
 
 FOUNDATION_EXPORT CGFloat GTUIDeviceTopSafeAreaInset(void);
 
+FOUNDATION_EXPORT CGFloat GTUIDeviceBottomSafeAreaInset(void);

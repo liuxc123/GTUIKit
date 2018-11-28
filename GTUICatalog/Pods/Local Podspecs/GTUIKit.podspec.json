@@ -130,31 +130,6 @@
           ]
         },
         {
-          "name": "ActionSheet",
-          "platforms": {
-            "ios": "8.0"
-          },
-          "public_header_files": "components/CommonComponent/ActionSheet/src/*.h",
-          "source_files": [
-            "components/CommonComponent/ActionSheet/src/*.{h,m}",
-            "components/CommonComponent/ActionSheet/src/private/*.{h,m}"
-          ],
-          "dependencies": {
-            "GTUIKit/CommonComponent/BottomSheet": [
-
-            ],
-            "GTUIKit/CommonComponent/Ink": [
-
-            ],
-            "GTUIKit/BasicComponent/Typography": [
-
-            ],
-            "GTUIKit/private/Math": [
-
-            ]
-          }
-        },
-        {
           "name": "BottomSheet",
           "platforms": {
             "ios": "8.0"

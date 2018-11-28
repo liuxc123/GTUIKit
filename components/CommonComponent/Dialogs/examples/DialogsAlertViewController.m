@@ -8,65 +8,116 @@
 #import "DialogsAlertViewController.h"
 #import "GTDialogs.h"
 
+
 @interface DialogsAlertViewController ()
 
 @end
 
 @implementation DialogsAlertViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.whiteColor;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self didTapShowAlert];
-    });
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
-- (void)didTapShowAlert {
+        UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        customView.backgroundColor = [UIColor blueColor];
 
-    NSString *titleString = @"Using Material alert controller?";
-    NSString *messageString = @"Be careful with modal alerts as they can be annoying if over-used.";
 
-    GTUIAlertController *materialAlertController =
-    [GTUIAlertController alertControllerWithTitle:titleString message:messageString];
-    materialAlertController.titleAlignment = NSTextAlignmentCenter;
-    materialAlertController.messageAlignment = NSTextAlignmentCenter;
-    materialAlertController.cornerRadius = 10;
-//    [self themeAlertController:materialAlertController];
+        GTUIDialogConfigModel *configModel = [[GTUIDialogConfigModel alloc] initWithStyle:GTUIDialogStyleNormal];
+        GTUIAlertController *alert = [GTUIAlertController alertControllerWithTitle:@"标题" message:@"内容" customView:customView config:configModel];
 
-    GTUIAlertAction *agreeAaction = [GTUIAlertAction actionWithTitle:@"AGREE"
-                                                           handler:^(GTUIAlertAction *action) {
-                                                               NSLog(@"%@", @"AGREE pressed");
-                                                           }];
-    [materialAlertController addAction:agreeAaction];
-
-    GTUIAlertAction *disagreeAaction = [GTUIAlertAction actionWithTitle:@"DISAGREE"
-                                                              handler:^(GTUIAlertAction *action) {
-                                                                  NSLog(@"%@", @"DISAGREE pressed");
-                                                              }];
-    [materialAlertController addAction:disagreeAaction];
-    
-//    GTUIAlertAction *disagreeAaction1 = [GTUIAlertAction actionWithTitle:@"DISAGREE"
-//                                                                handler:^(GTUIAlertAction *action) {
-//                                                                    NSLog(@"%@", @"DISAGREE1 pressed");
-//                                                                }];
-//    [materialAlertController addAction:disagreeAaction1];
+//        [alert addTextFieldWithBlock:^(UITextField *textField) {
+//            textField.placeholder = @"占位符";
+//        }];
+//        for (int i = 0; i < 20; i++) {
+//            [alert addDefaultActionWithTitle:@"确定" block:^{
 //
-//    GTUIAlertAction *disagreeAaction2 = [GTUIAlertAction actionWithTitle:@"DISAGREE"
-//                                                                 handler:^(GTUIAlertAction *action) {
-//                                                                     NSLog(@"%@", @"DISAGREE2 pressed");
-//                                                                 }];
-//    [materialAlertController addAction:disagreeAaction2];
+//            }];
+//        }
 
-    [self presentViewController:materialAlertController animated:YES completion:NULL];
+//        [alert addDefaultActionWithTitle:@"确定" block:^{
+//
+//        }];
+//
+//
+//        [alert addCancelActionWithTitle:@"取消" block:^{
+//
+//        }];
+
+//        [alert addDestructiveActionWithTitle:@"销毁" block:^{
+//
+//        }];
+//
+//        [alert addDefaultActionWithTitle:@"确定1" block:^{
+//
+//        }];
+//
+//        [alert addDefaultActionWithTitle:@"确定1" block:^{
+//
+//        }];
+//        [alert addDefaultActionWithTitle:@"确定1" block:^{
+//
+//        }];
+//        [alert addDefaultActionWithTitle:@"确定1" block:^{
+//
+//        }];
+        [self presentViewController:alert animated:YES completion:nil];
+
+    });
+    
+
+
 }
-
+//
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
+//
+//- (void)didTapShowAlert {
+//
+//    NSString *titleString = @"Using Material alert controller?";
+//    NSString *messageString = @"Be careful with modal alerts as they can be annoying if over-used.";
+//
+//    GTUIAlertController *materialAlertController =
+//    [GTUIAlertController alertControllerWithTitle:titleString message:messageString];
+//    materialAlertController.titleAlignment = NSTextAlignmentCenter;
+//    materialAlertController.messageAlignment = NSTextAlignmentCenter;
+//    materialAlertController.cornerRadius = 10;
+////    [self themeAlertController:materialAlertController];
+//
+//    GTUIAlertAction *agreeAaction = [GTUIAlertAction actionWithTitle:@"AGREE"
+//                                                           handler:^(GTUIAlertAction *action) {
+//                                                               NSLog(@"%@", @"AGREE pressed");
+//                                                           }];
+//    [materialAlertController addAction:agreeAaction];
+//
+//    GTUIAlertAction *disagreeAaction = [GTUIAlertAction actionWithTitle:@"DISAGREE"
+//                                                              handler:^(GTUIAlertAction *action) {
+//                                                                  NSLog(@"%@", @"DISAGREE pressed");
+//                                                              }];
+//    [materialAlertController addAction:disagreeAaction];
+//    
+////    GTUIAlertAction *disagreeAaction1 = [GTUIAlertAction actionWithTitle:@"DISAGREE"
+////                                                                handler:^(GTUIAlertAction *action) {
+////                                                                    NSLog(@"%@", @"DISAGREE1 pressed");
+////                                                                }];
+////    [materialAlertController addAction:disagreeAaction1];
+////
+////    GTUIAlertAction *disagreeAaction2 = [GTUIAlertAction actionWithTitle:@"DISAGREE"
+////                                                                 handler:^(GTUIAlertAction *action) {
+////                                                                     NSLog(@"%@", @"DISAGREE2 pressed");
+////                                                                 }];
+////    [materialAlertController addAction:disagreeAaction2];
+//
+//    [self presentViewController:materialAlertController animated:YES completion:NULL];
+//}
+//
 + (NSDictionary *)catalogMetadata {
     return @{
              @"breadcrumbs": @[ @"Dialogs", @"AlertController" ],

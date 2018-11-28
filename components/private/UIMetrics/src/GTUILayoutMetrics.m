@@ -41,6 +41,15 @@ CGFloat GTUIDeviceTopSafeAreaInset(void) {
     return topInset;
 }
 
-
+CGFloat GTUIDeviceBottomSafeAreaInset(void) {
+    CGFloat bottomInset = 0;
+    if (@available(iOS 11.0, *)) {
+        if (HasHardwareSafeAreas()) {
+            UIEdgeInsets insets = [UIApplication gtui_safeSharedApplication].keyWindow.safeAreaInsets;
+            bottomInset = insets.bottom;
+        }
+    }
+    return bottomInset;
+}
 
 

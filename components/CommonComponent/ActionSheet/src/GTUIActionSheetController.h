@@ -23,6 +23,7 @@ typedef NS_ENUM(NSUInteger, GTUIActionSheetType) {
     GTUIActionSheetTypeMaterial
 };
 
+
 __attribute__((objc_subclassing_restricted))
 @interface GTUIActionSheetController : UIViewController
 
@@ -170,10 +171,20 @@ BOOL gtui_adjustsFontForContentSizeCategory;
  */
 @property(nonatomic, nullable, strong) UIFont *actionFont;
 
+
+/**
+ The font applied to the title of the action sheet controller.
+ */
 @property(nonatomic, assign) NSTextAlignment titleAlignment;
 
+/**
+ The font applied to the message of the action sheet controller.
+ */
 @property(nonatomic, assign) NSTextAlignment messageAlignment;
 
+/**
+ The font applied to the action item of the action sheet controller.
+ */
 @property(nonatomic, assign) NSTextAlignment actionAlignment;
 
 /**
@@ -190,6 +201,12 @@ BOOL gtui_adjustsFontForContentSizeCategory;
  按钮背景颜色
  */
 @property(nonatomic, nonnull, strong) UIColor *actionBackgroundColor;
+
+
+@property(nonatomic, nonnull, strong) UIColor *cancelActionSpaceColor;
+
+
+
 
 /**
  The color applied to the title of the action sheet controller.
@@ -238,7 +255,7 @@ BOOL gtui_adjustsFontForContentSizeCategory;
 @property(nonatomic, assign) CGFloat actionCornerRadius;
 
 /**
- 按钮高度（）
+ 按钮高度
  */
 @property(nonatomic, assign) CGFloat actionHeight;
 
@@ -257,7 +274,6 @@ BOOL gtui_adjustsFontForContentSizeCategory;
  */
 @property(nonatomic, assign) CGFloat actionSheetMaxWidth;
 
-
 /**
  默认模糊效果类型Dark
  */
@@ -268,7 +284,15 @@ BOOL gtui_adjustsFontForContentSizeCategory;
  */
 @property(nonatomic, assign) UIInterfaceOrientation *supportedInterfaceOrientations;
 
+@property(nonatomic, assign) UIStatusBarStyle *statusBarStyle;
 
+
+
+
+
+/**
+ 阴影样式
+ */
 @property(nonatomic, assign) CGFloat shadowOpacity;
 @property(nonatomic, assign) CGFloat shadowRadius;
 @property(nonatomic, assign) CGSize shadowOffset;
@@ -291,6 +315,7 @@ typedef NS_ENUM(NSUInteger, GTUIActionSheetActionType) {
     GTUIActionSheetActionTypeCancel,
     GTUIActionSheetActionTypeDestructive,
 };
+
 
 /**
  GTUIActionSheetActionHandler is a block that will be invoked when the action is
@@ -349,5 +374,10 @@ typedef void (^GTUIActionSheetHandler)(GTUIActionSheetAction *_Nonnull action);
  The @c accessibilityIdentifier for the view associated with this action.
  */
 @property(nonatomic, nullable, copy) NSString *accessibilityIdentifier;
+
+@property (nonatomic, assign, readonly) GTUIActionBorderPosition borderPosition;
+@property (nonatomic , strong ) UIColor *borderColor;
+@property (nonatomic , assign ) CGFloat borderWidth;
+@property (nonatomic , assign ) CGFloat cornerRadius;
 
 @end

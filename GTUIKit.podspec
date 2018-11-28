@@ -84,19 +84,6 @@ Pod::Spec.new do |s|
       component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
     end
 
-    # ActionSheet
-    common_spec.subspec "ActionSheet" do |component|
-        component.ios.deployment_target = '8.0'
-        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
-        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
-
-        component.dependency "GTUIKit/CommonComponent/BottomSheet"
-        component.dependency "GTUIKit/CommonComponent/Ink"
-        component.dependency "GTUIKit/BasicComponent/Typography"
-        component.dependency "GTUIKit/private/Math"
-    end
-
-
     # BottomSheet
     common_spec.subspec "BottomSheet" do |component|
         component.ios.deployment_target = '8.0'

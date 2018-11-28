@@ -29,7 +29,10 @@ BOOL gtui_adjustsFontForContentSizeCategory;
 
 @property(nonatomic) UIImageRenderingMode imageRenderingMode;
 
-
-
+/** action边框位置 */
+@property (nonatomic , assign ) GTUIActionBorderPosition borderPosition;
+@property (nonatomic , strong ) UIColor *borderColor;
+@property (nonatomic , assign ) CGFloat borderWidth;
+@property (nonatomic , assign ) CGFloat cornerRadius;
 
 @end
