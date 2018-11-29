@@ -317,6 +317,10 @@
 
     self.gtui_dialogPresentationController.dialogCornerRadius = self.config.cornerRadius;
 
+    self.gtui_dialogPresentationController.closeFinishHandler = ^{
+        if (weakSelf.closeFinishHandler) weakSelf.closeFinishHandler();
+    };
+
     [self.config.modelItemArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 
         void (^itemBlock)(GTUIDialogItem *) = obj;
@@ -521,7 +525,12 @@
 
             if (isClose) {
 
+                __weak typeof(self) weakSelf = self;
+
                 [self.presentingViewController dismissViewControllerAnimated:YES completion:^(void){
+                    //关闭回调
+                    if (weakSelf.closeFinishHandler)  weakSelf.closeFinishHandler();
+
                     if (clickBlock) clickBlock();
                 }];
 

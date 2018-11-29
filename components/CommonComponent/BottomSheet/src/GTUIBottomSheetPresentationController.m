@@ -195,7 +195,11 @@ static UIScrollView *GTUIBottomSheetGetPrimaryScrollView(UIViewController *viewC
     if ([contentView pointInside:pointInContentView withEvent:nil]) {
         return;
     }
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+
+    __weak typeof(self) weakSelf = self;
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+        if (weakSelf.closeFinishHandler) weakSelf.closeFinishHandler();
+    }];
 
     id<GTUIBottomSheetPresentationControllerDelegate> strongDelegate = self.delegate;
     if ([strongDelegate respondsToSelector:

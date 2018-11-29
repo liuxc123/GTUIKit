@@ -7,16 +7,9 @@
 
 #import "GTUIDialog.h"
 #import "GTUIMetrics.h"
+#import "GTUIDialogBaseViewController.h"
+#import "GTUIDialog+Private.h"
 
-@interface GTUIDialog ()
-
-@property (nonatomic , strong) UIWindow *mainWindow;
-
-@property (nonatomic , strong ) UIWindow *dialogWindow;
-
-@property (nonatomic , strong ) NSMutableArray *queueArray;
-
-@end
 
 @implementation GTUIDialog
 
@@ -46,12 +39,24 @@
 }
 
 + (void)continueQueueDisplay{
-
+    if ([GTUIDialog shareManager].queueArray.count) {
+        [(GTUIDialogBaseViewController *)[GTUIDialog shareManager].queueArray.lastObject show];
+    }
 }
 
 + (void)clearQueue{
     [[GTUIDialog shareManager].queueArray removeAllObjects];
 }
+
++ (void)closeWithCompletionBlock:(void (^)(void))completionBlock {
+    if ([GTUIDialog shareManager].queueArray.count) {
+
+        GTUIDialogBaseViewController *item = [GTUIDialog shareManager].queueArray.lastObject;
+
+        if ([item respondsToSelector:@selector(closeWithCompletionBlock:)]) [item performSelector:@selector(closeWithCompletionBlock:) withObject:completionBlock];
+    }
+}
+
 
 #pragma mark LazyLoading
 

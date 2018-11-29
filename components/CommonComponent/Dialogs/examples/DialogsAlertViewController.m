@@ -16,7 +16,6 @@
 @implementation DialogsAlertViewController
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,9 +26,32 @@
         UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
         customView.backgroundColor = [UIColor blueColor];
 
-
         GTUIDialogConfigModel *configModel = [[GTUIDialogConfigModel alloc] initWithStyle:GTUIDialogStyleNormal];
+        configModel.isQueue = YES;
+        configModel.isContinueQueueDisplay = YES;
+        configModel.queuePriority = 1;
+
         GTUIAlertController *alert = [GTUIAlertController alertControllerWithTitle:@"标题" message:@"内容" customView:customView config:configModel];
+        [alert addDefaultActionWithTitle:@"确定" block:^{
+
+        }];
+        [alert addCancelActionWithTitle:@"取消" block:^{
+
+        }];
+        [alert queueShowController];
+
+        GTUIDialogConfigModel *configModel1 = [[GTUIDialogConfigModel alloc] initWithStyle:GTUIDialogStyleNormal];
+        configModel1.isQueue = YES;
+        configModel1.isContinueQueueDisplay = YES;
+        configModel.queuePriority = 2;
+        GTUIAlertController *alert1 = [GTUIAlertController alertControllerWithTitle:@"标题" message:@"内容" customView:nil config:configModel1];
+        [alert1 addDefaultActionWithTitle:@"确定" block:^{
+
+        }];
+        [alert1 addCancelActionWithTitle:@"取消" block:^{
+
+        }];
+        [alert1 queueShowController];
 
 //        [alert addTextFieldWithBlock:^(UITextField *textField) {
 //            textField.placeholder = @"占位符";
@@ -40,14 +62,6 @@
 //            }];
 //        }
 
-//        [alert addDefaultActionWithTitle:@"确定" block:^{
-//
-//        }];
-//
-//
-//        [alert addCancelActionWithTitle:@"取消" block:^{
-//
-//        }];
 
 //        [alert addDestructiveActionWithTitle:@"销毁" block:^{
 //
@@ -66,7 +80,8 @@
 //        [alert addDefaultActionWithTitle:@"确定1" block:^{
 //
 //        }];
-        [self presentViewController:alert animated:YES completion:nil];
+
+
 
     });
     

@@ -307,6 +307,10 @@
 
     self.actionSheetView.layer.cornerRadius = self.config.cornerRadius;
 
+    self.gtui_bottomSheetPresentationController.closeFinishHandler = ^{
+        if (weakSelf.closeFinishHandler) weakSelf.closeFinishHandler();
+    };
+
     [self.config.modelItemArray enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 
         void (^itemBlock)(GTUIDialogItem *) = obj;
@@ -522,7 +526,12 @@
 
     if (isClose) {
 
+        __weak typeof(self) weakSelf = self;
+
         [self.presentingViewController dismissViewControllerAnimated:YES completion:^(void){
+            //关闭完成
+            if (weakSelf.closeFinishHandler)  weakSelf.closeFinishHandler();
+
 
             if (clickBlock) clickBlock();
 
@@ -539,7 +548,11 @@
 
     void (^clickBlock)(void) = self.actionSheetCancelAction.action.clickBlock;
 
+    __weak typeof(self) weakSelf = self;
+
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^(void){
+        //关闭完成
+        if (weakSelf.closeFinishHandler)  weakSelf.closeFinishHandler();
 
         if (clickBlock) clickBlock();
 

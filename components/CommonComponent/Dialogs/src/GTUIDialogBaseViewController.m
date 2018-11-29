@@ -7,6 +7,7 @@
 
 #import "GTUIDialogBaseViewController.h"
 #import "GTUIDialogItemView.h"
+#import "GTUIDialog+Private.h"
 
 @implementation GTUIDialogBaseViewController
 
@@ -92,6 +93,77 @@
 - (UIStatusBarStyle)preferredStatusBarStyle {
 
     return self.config.statusBarStyle;
+}
+
+
+
+- (void)show {
+
+    //配置队列
+    if ([GTUIDialog shareManager].queueArray.count) {
+
+        GTUIDialogBaseViewController *last = [GTUIDialog shareManager].queueArray.lastObject;
+
+        if (!self.config.isQueue && last.config.queuePriority > self.config.queuePriority) {
+            return;
+        }
+
+        if (!last.config.isQueue && last.config.queuePriority <= self.config.queuePriority) {
+            [[GTUIDialog shareManager].queueArray removeObject:last];
+        }
+
+        if (![[GTUIDialog shareManager].queueArray containsObject:self]) {
+
+            [[GTUIDialog shareManager].queueArray addObject:self];
+
+            [[GTUIDialog shareManager].queueArray sortUsingComparator:^NSComparisonResult(GTUIDialogBaseViewController *itemA, GTUIDialogBaseViewController *itemB) {
+
+                return itemA.config.queuePriority > itemB.config.queuePriority ? NSOrderedDescending
+                : itemA.config.queuePriority == itemB.config.queuePriority ? NSOrderedSame : NSOrderedAscending;
+            }];
+        }
+
+        if ([GTUIDialog shareManager].queueArray.lastObject == self) {
+            [self show];
+        }
+    } else {
+        //展示
+        [self show];
+
+        [[GTUIDialog shareManager].queueArray addObject:self];
+    }
+
+}
+
+- (void)showController {
+
+    __weak typeof(self) weakSelf = self;
+
+    [[GTUIDialog getMainWindow].rootViewController presentViewController:self animated:YES completion:^{
+
+    }];
+
+    self.closeFinishHandler = ^{
+
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+
+        if (!strongSelf) return;
+
+        [[GTUIDialog shareManager].queueArray removeObject:strongSelf];
+
+        if (strongSelf.config.isContinueQueueDisplay) {
+            [GTUIDialog continueQueueDisplay];
+        }
+    };
+}
+
+
+
+
+
+
+- (void)closeWithCompletionBlock:(void (^)(void))completionBlock{
+
 }
 
 #pragma mark - 添加Item 内容方法
@@ -224,6 +296,7 @@
 - (void)addActionWithblock:(void(^)(GTUIDialogAction * _Nonnull action))block {
     [self.config.modelActionArray addObject:block];
 }
+
 
 
 @end

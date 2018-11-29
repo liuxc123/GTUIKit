@@ -131,6 +131,12 @@ typedef NS_ENUM(NSInteger, GTUIActionBorderPosition) {
 
 @end
 
+@protocol GTUIDialogProtocol <NSObject>
+
+- (void)closeWithCompletionBlock:(void (^)(void))completionBlock;
+
+@end
+
 
 /**  ✨样式被配置 */
 @interface GTUIDialogConfigModel : NSObject

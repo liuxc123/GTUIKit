@@ -58,6 +58,11 @@
 @property(nonatomic, assign) BOOL dismissOnBackgroundTap;
 
 /**
+ 关闭完成回调
+ */
+@property (nonatomic , copy ) void (^closeFinishHandler)(void);
+
+/**
  This is used to set a custom height on the sheet view.
 
  @note If a positive value is passed then the sheet view will be that height even if

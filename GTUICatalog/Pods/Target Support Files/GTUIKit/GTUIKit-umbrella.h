@@ -133,6 +133,8 @@
 #import "GTUITextInputControllerOutlinedTextArea.h"
 #import "GTUITextInputControllerUnderline.h"
 #import "GTUITextInputUnderlineView.h"
+#import "GTToast.h"
+#import "GTUIToast.h"
 #import "GTToolBar.h"
 #import "GTUIToolBarView.h"
 #import "GTColorScheme.h"

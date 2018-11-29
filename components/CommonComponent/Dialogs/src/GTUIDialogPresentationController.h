@@ -58,6 +58,13 @@
  */
 @property(nonatomic, strong, nullable) UIColor *scrimColor;
 
+
+/**
+ 关闭完成回调
+ */
+@property (nonatomic , copy ) void (^closeFinishHandler)(void);
+
+
 /**
  Returns the size of the specified child view controller's content.
 

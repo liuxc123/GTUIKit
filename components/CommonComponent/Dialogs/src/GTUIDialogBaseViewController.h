@@ -10,7 +10,7 @@
 #import "GTUIDialogAction.h"
 #import "GTUIDialogItemView.h"
 
-@interface GTUIDialogBaseViewController : UIViewController
+@interface GTUIDialogBaseViewController : UIViewController <GTUIDialogProtocol>
 
 @property (nonatomic , strong ) GTUIDialogConfigModel *config;
 
@@ -27,6 +27,13 @@
 @property (nonatomic , copy ) void (^openFinishHandler)(void);
 
 @property (nonatomic , copy ) void (^closeFinishHandler)(void);
+
+/** 队列展示 */
+- (void)show;
+
+/** 直接展示 */
+- (void)showController;
+
 
 #pragma mark - 添加Item
 
