@@ -61,7 +61,6 @@
                 NSLog(@"province:%@ city:%@ area:%@", province.name, city.name, area.name);
             }];
 
-
             break;
         default:
             break;

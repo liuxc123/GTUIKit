@@ -32,6 +32,7 @@ PODS:
     - GTUIKit/CommonComponent/ButtonBar (= 0.0.1)
     - GTUIKit/CommonComponent/CheckBox (= 0.0.1)
     - GTUIKit/CommonComponent/Dialogs (= 0.0.1)
+    - GTUIKit/CommonComponent/EmptyView (= 0.0.1)
     - GTUIKit/CommonComponent/FlexibleHeader (= 0.0.1)
     - GTUIKit/CommonComponent/HeaderStackView (= 0.0.1)
     - GTUIKit/CommonComponent/ImageView (= 0.0.1)
@@ -69,6 +70,8 @@ PODS:
     - GTUIKit/BasicComponent/Typography
     - GTUIKit/CommonComponent/Button
     - GTUIKit/private/KeyboardWatcher
+  - GTUIKit/CommonComponent/EmptyView (0.0.1):
+    - GTUIKit/private/UIMetrics
   - GTUIKit/CommonComponent/FlexibleHeader (0.0.1):
     - GTFTextAccessibility
     - GTUIKit/private/Application
@@ -170,7 +173,7 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: f1282d365c4e5a7fc5f3a97a755256a2c7cfafef
+  GTUIKit: b22c94a9e375a9c4844ec230ec8ef9858c3daf3d
   GTUIKitExamples: 7877cab6eaba1329484fd8e3d0bd074c77e9a5c8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 

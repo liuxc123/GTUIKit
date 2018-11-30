@@ -147,6 +147,16 @@ Pod::Spec.new do |s|
         component.dependency "GTFInternationalization"
     end
 
+    # EmptyView
+    common_spec.subspec "EmptyView" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+        component.resources = ["components/CommonComponent/#{component.base_name}/src/resource/GTUINetErrorView.bundle"]
+
+        component.dependency "GTUIKit/private/UIMetrics"
+    end
+
     # FlexibleHeader
     common_spec.subspec "FlexibleHeader" do |component|
         component.ios.deployment_target = '8.0'

@@ -254,6 +254,25 @@
           }
         },
         {
+          "name": "EmptyView",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/EmptyView/src/*.h",
+          "source_files": [
+            "components/CommonComponent/EmptyView/src/*.{h,m}",
+            "components/CommonComponent/EmptyView/src/private/*.{h,m}"
+          ],
+          "resources": [
+            "components/CommonComponent/EmptyView/src/resource/GTUINetErrorView.bundle"
+          ],
+          "dependencies": {
+            "GTUIKit/private/UIMetrics": [
+
+            ]
+          }
+        },
+        {
           "name": "FlexibleHeader",
           "platforms": {
             "ios": "8.0"
