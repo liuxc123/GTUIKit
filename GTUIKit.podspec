@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
       component.ios.deployment_target = '8.0'
       component.public_header_files = "components/BasicComponent/#{component.base_name}/src/*.h"
       component.source_files = "components/BasicComponent/#{component.base_name}/src/*.{h,m}", "components/BasicComponent/#{component.base_name}/src/private/*.{h,m}"
-      component.resources = ["components/BasicComponent/#{component.base_name}/src/GT#{component.base_name}.bundle", "components/BasicComponent/#{component.base_name}/src/iconfont.ttf"]
+      component.resources = ["components/BasicComponent/#{component.base_name}/src/GT#{component.base_name}.bundle"]
     end
 
     # Typography
@@ -223,6 +223,16 @@ Pod::Spec.new do |s|
 
         component.dependency "GTUIKit/BasicComponent/IconFont"
         component.dependency "GTFInternationalization"
+        component.dependency "GTUIKit/private/UIMetrics"
+    end
+
+    # PickerView
+    common_spec.subspec "PickerView" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+        component.resources = ["components/CommonComponent/#{component.base_name}/src/resource/GTUIPickerView.bundle"]
+
         component.dependency "GTUIKit/private/UIMetrics"
     end
 

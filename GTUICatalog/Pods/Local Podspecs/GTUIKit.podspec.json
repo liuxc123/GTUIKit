@@ -33,8 +33,7 @@
             "components/BasicComponent/IconFont/src/private/*.{h,m}"
           ],
           "resources": [
-            "components/BasicComponent/IconFont/src/GTIconFont.bundle",
-            "components/BasicComponent/IconFont/src/iconfont.ttf"
+            "components/BasicComponent/IconFont/src/GTIconFont.bundle"
           ]
         },
         {
@@ -385,6 +384,25 @@
             "GTFInternationalization": [
 
             ],
+            "GTUIKit/private/UIMetrics": [
+
+            ]
+          }
+        },
+        {
+          "name": "PickerView",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/PickerView/src/*.h",
+          "source_files": [
+            "components/CommonComponent/PickerView/src/*.{h,m}",
+            "components/CommonComponent/PickerView/src/private/*.{h,m}"
+          ],
+          "resources": [
+            "components/CommonComponent/PickerView/src/resource/GTUIPickerView.bundle"
+          ],
+          "dependencies": {
             "GTUIKit/private/UIMetrics": [
 
             ]

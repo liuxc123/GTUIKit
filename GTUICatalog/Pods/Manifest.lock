@@ -39,6 +39,7 @@ PODS:
     - GTUIKit/CommonComponent/Label (= 0.0.1)
     - GTUIKit/CommonComponent/NavigationBar (= 0.0.1)
     - GTUIKit/CommonComponent/NavigationController (= 0.0.1)
+    - GTUIKit/CommonComponent/PickerView (= 0.0.1)
     - GTUIKit/CommonComponent/ProgressView (= 0.0.1)
     - GTUIKit/CommonComponent/schemes (= 0.0.1)
     - GTUIKit/CommonComponent/Switch (= 0.0.1)
@@ -91,6 +92,8 @@ PODS:
     - GTUIKit/CommonComponent/HeaderStackView
     - GTUIKit/CommonComponent/NavigationBar
     - GTUIKit/private/Application
+    - GTUIKit/private/UIMetrics
+  - GTUIKit/CommonComponent/PickerView (0.0.1):
     - GTUIKit/private/UIMetrics
   - GTUIKit/CommonComponent/ProgressView (0.0.1):
     - GTFInternationalization
@@ -167,7 +170,7 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: f152e33a97762a595cf1227c34014e4df511dc22
+  GTUIKit: f1282d365c4e5a7fc5f3a97a755256a2c7cfafef
   GTUIKitExamples: 7877cab6eaba1329484fd8e3d0bd074c77e9a5c8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 

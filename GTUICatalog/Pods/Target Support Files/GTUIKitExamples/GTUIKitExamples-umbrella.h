@@ -12,6 +12,7 @@
 
 #import "DialogsActionSheetViewController.h"
 #import "DialogsAlertViewController.h"
+#import "PickerViewViewController.h"
 #import "ToastsViewController.h"
 #import "TextFieldControllerStylesExampleSupplemental.h"
 
