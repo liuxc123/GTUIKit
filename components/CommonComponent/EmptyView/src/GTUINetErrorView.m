@@ -55,28 +55,28 @@ const NSString *kBtnStrKey = @"btnStrKey";
     if (style == GTUINetErrorStyleMiniimalist) {
         switch (type) {
             case GTUINetErrorTypeLimit://系统繁忙
-                infoDictionary[kImageKey] = @"";
+                infoDictionary[kImageKey] = nil;
                 infoDictionary[kTitleStrKey] = @"请稍等哦，马上出来";
                 infoDictionary[kBtnStrKey] = @"刷新";
                 break;
             case GTUINetErrorTypeAlert:
             case GTUINetErrorTypeNotFound:
-                infoDictionary[kImageKey] = @"";
+                infoDictionary[kImageKey] = nil;
                 infoDictionary[kTitleStrKey] = @"忙不过来了，客官请稍候";
                 infoDictionary[kBtnStrKey] = @"刷新";
                 break;
             case GTUINetErrorTypeNetworkError:
-                infoDictionary[kImageKey] = @"";
+                infoDictionary[kImageKey] = nil;
                 infoDictionary[kTitleStrKey] = @"网络不给力";
                 infoDictionary[kBtnStrKey] = @"点击重试";
                 break;
             case GTUINetErrorTypeEmpty:
-                infoDictionary[kImageKey] = @"";
+                infoDictionary[kImageKey] = nil;
                 infoDictionary[kTitleStrKey] = @"什么都没有";
                 infoDictionary[kBtnStrKey] = @"点击重试";
                 break;
             case GTUINetErrorTypeUserLogout:
-                infoDictionary[kImageKey] = @"";
+                infoDictionary[kImageKey] = nil;
                 infoDictionary[kTitleStrKey] = @"此用户注销";
                 infoDictionary[kBtnStrKey] = @"刷新";
                 break;

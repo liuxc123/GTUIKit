@@ -4,6 +4,7 @@
 //
 //  Created by liuxc on 2018/11/30.
 //
+//  定制的异常页面
 
 #import "GTUIEmptyView.h"
 
