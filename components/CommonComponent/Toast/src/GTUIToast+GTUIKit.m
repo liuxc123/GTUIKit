@@ -119,6 +119,12 @@ static NSString *const kGTUIToastBundle = @"GTUIToast.bundle";
     [GTUIToast hideAllHUDsForView:view animated:YES];
 }
 
++ (void)dismissAllToast {
+    UIView *winView = (UIView*)[UIApplication sharedApplication].delegate.window;
+    [self hideAllHUDsForView:winView animated:YES];
+    [self hideAllHUDsForView:[self getCurrentUIVC].view animated:YES];
+}
+
 - (CGFloat)yOffset {
     return self.offset.y;
 }
@@ -349,11 +355,6 @@ static NSString *const kGTUIToastBundle = @"GTUIToast.bundle";
     UINavigationController  *na = (UINavigationController*)[[self class] getCurrentNaVC];
     if ([na isKindOfClass:[UINavigationController class]]) {
         cc =  na.viewControllers.lastObject;
-
-        if (cc.childViewControllers.count>0) {
-
-            cc = [[self class] getSubUIVCWithVC:cc];
-        }
     }else
     {
         cc = (UIViewController*)na;

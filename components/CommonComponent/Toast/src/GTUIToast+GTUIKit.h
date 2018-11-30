@@ -181,10 +181,15 @@ typedef NS_ENUM(NSUInteger, GTUIToastIcon) {
 - (void)dismissToast;
 
 /**
- 使 所有View上的toast 消失
+ 使 View上的所有toast 消失
  */
 + (void)dismissAllToastWithView:(UIView *)view;
 
+
+/**
+  使 所有View上的toast 消失
+ */
++ (void)dismissAllToast;
 
 /**
  *  设置进度的前缀文本，如果不设置，默认为“加载数据”
