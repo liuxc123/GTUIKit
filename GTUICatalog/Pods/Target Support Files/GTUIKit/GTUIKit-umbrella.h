@@ -134,6 +134,7 @@
 #import "GTUITextInputControllerUnderline.h"
 #import "GTUITextInputUnderlineView.h"
 #import "GTToast.h"
+#import "GTUIToast+GTUIKit.h"
 #import "GTUIToast.h"
 #import "GTToolBar.h"
 #import "GTUIToolBarView.h"

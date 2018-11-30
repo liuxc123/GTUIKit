@@ -38,7 +38,7 @@
         [alert addCancelActionWithTitle:@"取消" block:^{
 
         }];
-        [alert queueShowController];
+        [alert show];
 
         GTUIDialogConfigModel *configModel1 = [[GTUIDialogConfigModel alloc] initWithStyle:GTUIDialogStyleNormal];
         configModel1.isQueue = YES;
@@ -51,7 +51,7 @@
         [alert1 addCancelActionWithTitle:@"取消" block:^{
 
         }];
-        [alert1 queueShowController];
+        [alert1 show];
 
 //        [alert addTextFieldWithBlock:^(UITextField *textField) {
 //            textField.placeholder = @"占位符";

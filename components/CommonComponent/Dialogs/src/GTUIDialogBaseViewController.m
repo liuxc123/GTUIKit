@@ -124,11 +124,11 @@
         }
 
         if ([GTUIDialog shareManager].queueArray.lastObject == self) {
-            [self show];
+            [self showController];
         }
     } else {
         //展示
-        [self show];
+        [self showController];
 
         [[GTUIDialog shareManager].queueArray addObject:self];
     }

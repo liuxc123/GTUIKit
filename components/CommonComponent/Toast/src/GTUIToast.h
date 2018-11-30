@@ -5,205 +5,405 @@
 //  Created by liuxc on 2018/11/22.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
 
-static const NSTimeInterval GTUIToast_Default_Duration     = 2.0f;     // GTUIToast 默认展示时间
-static const NSTimeInterval GTUIToast_Strong_Duration      = 1.5f;     // GTUIToast 强提示展示时长
-static const NSTimeInterval GTUIToast_Weak_Duration        = 1.0f;     // GTUIToast 弱提示展示时长
+@class GTUIBackgroundView;
+@protocol GTUIToastDelegate;
 
-/**
- *  添加新的 toastIcon 时，请向后添加，不要在中间插入，否则业务使用会有问题
- */
-typedef NS_ENUM(NSUInteger, GTUIToastIcon) {
-    GTUIToastIconNone = 0,    // 无图标
-    GTUIToastIconSuccess,     // 成功图标
-    GTUIToastIconFailure,     // 失败图标
-    GTUIToastIconLoading,     // 加载图标
-    GTUIToastIconNetFailure,  // 网络失败
-    GTUIToastIconSecurityScan,// 安全扫描
-    GTUIToastIconNetError,    // 网络错误，完全无法连接
-    GTUIToastIconProgress,    // 加载图标，显示加载进度
-    GTUIToastIconAlert,       // 警示图标
+
+extern CGFloat const GTUIProgressTopMaxOffset;
+extern CGFloat const GTUIProgressBottomMaxOffset;
+
+typedef NS_ENUM(NSInteger, GTUIToastMode) {
+    /// UIActivityIndicatorView.
+    GTUIToastModeIndeterminate,
+    /// A round, pie-chart like, progress view.
+    GTUIToastModeDeterminate,
+    /// Horizontal progress bar.
+    GTUIToastModeDeterminateHorizontalBar,
+    /// Ring-shaped progress view.
+    GTUIToastModeAnnularDeterminate,
+    /// Shows a custom view.
+    GTUIToastModeCustomView,
+    /// Shows only labels.
+    GTUIToastModeText
 };
 
-typedef NS_ENUM(NSUInteger, GTUIToastPosition) {
-    GTUIToastPositionTop,
-    GTUIToastPositionCenter,
-    GTUIToastPositionBottom
+typedef NS_ENUM(NSInteger, GTUIToastAnimation) {
+    /// Opacity animation
+    GTUIToastAnimationFade,
+    /// Opacity + scale animation (zoom in when appearing zoom out when disappearing)
+    GTUIToastAnimationZoom,
+    /// Opacity + scale animation (zoom out style)
+    GTUIToastAnimationZoomOut,
+    /// Opacity + scale animation (zoom in style)
+    GTUIToastAnimationZoomIn
 };
 
+typedef NS_ENUM(NSInteger, GTUIToastBackgroundStyle) {
+    /// Solid color background
+    GTUIToastBackgroundStyleSolidColor,
+    /// UIVisualEffectView or UIToolbar.layer background view
+    GTUIToastBackgroundStyleBlur
+};
+
+typedef void (^GTUIToastCompletionBlock)(void);
+
+
+NS_ASSUME_NONNULL_BEGIN
+
+
 /**
- * Toast控件
+ * Displays a simple HUD window containing a progress indicator and two optional labels for short messages.
+ *
+ * This is a simple drop-in class for displaying a progress HUD view similar to Apple's private UIProgressHUD class.
+ * The GTUIToast window spans over the entire space given to it by the initWithFrame: constructor and catches all
+ * user input on this region, thereby preventing the user operations on components below the view.
+ *
+ * @note To still allow touches to pass through the HUD, you can set hud.userInteractionEnabled = NO.
+ * @attention GTUIToast is a UI class and should therefore only be accessed on the main thread.
  */
 @interface GTUIToast : UIView
 
-@property (nonatomic, assign) CGFloat xOffset; // 设置相对父视图中心位置 X 轴方向的偏移量
-@property (nonatomic, assign) CGFloat yOffset; // 设置相对父视图中心位置 Y 轴方向的偏移量
+/**
+ * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
+ *
+ * @note This method sets removeFromSuperViewOnHide. The HUD will automatically be removed from the view hierarchy when hidden.
+ *
+ * @param view The view that the HUD will be added to
+ * @param animated If set to YES the HUD will appear using the current animationType. If set to NO the HUD will not use
+ * animations while appearing.
+ * @return A reference to the created HUD.
+ *
+ * @see hideHUDForView:animated:
+ * @see animationType
+ */
++ (instancetype)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
 
+/// @name Showing and hiding
 
 /**
- 模态显示提示，此时屏幕不响应用户操作（显示在 keywindow 上面），
- 需调用 dismissToast 方法使 Toast 消失
-
- @param text 显示文本，默认为 loading 加载
- @return 返回显示的 Toast 对象
+ * Finds the top-most HUD subview that hasn't finished and hides it. The counterpart to this method is showHUDAddedTo:animated:.
+ *
+ * @note This method sets removeFromSuperViewOnHide. The HUD will automatically be removed from the view hierarchy when hidden.
+ *
+ * @param view The view that is going to be searched for a HUD subview.
+ * @param animated If set to YES the HUD will disappear using the current animationType. If set to NO the HUD will not use
+ * animations while disappearing.
+ * @return YES if a HUD was found and removed, NO otherwise.
+ *
+ * @see showHUDAddedTo:animated:
+ * @see animationType
  */
-+ (GTUIToast *)presentToastWithText:(NSString *)text;
++ (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated;
 
 /**
-  显示 Toast，需调用 dismissToast 方法使 Toast 消失
-
- @param superView 父视图
- @param text 显示文本
- @return 返回显示的 Toast 对象
+ * Finds all the HUD subviews and hides them.
+ *
+ * @note This method sets `removeFromSuperViewOnHide`. The HUDs will automatically be removed from the view hierarchy when hidden.
+ *
+ * @param view The view that is going to be searched for HUD subviews.
+ * @param animated If set to YES the HUDs will disappear using the current animationType. If set to NO the HUDs will not use
+ * animations while disappearing.
+ * @return the number of HUDs found and removed.
+ *
+ * @see hideHUDForView:animated:
+ * @see animationType
  */
-+ (GTUIToast *)presentToastWithIn:(UIView *)superView
-                             text:(NSString *)text;
-
-
++ (NSUInteger)hideAllHUDsForView:(UIView *)view animated:(BOOL)animated;
 
 /**
- 显示 Toast，需调用 dismissToast 方法使 Toast 消失
-
- @param superview 父视图
- @param icon 图标类型
- @param text  显示文本
- @return 返回显示的 Toast 对象
+ * Finds the top-most HUD subview that hasn't finished and returns it.
+ *
+ * @param view The view that is going to be searched.
+ * @return A reference to the last HUD subview discovered.
  */
-+ (GTUIToast *)presentToastWithin:(UIView *)superview
-                         withIcon:(GTUIToastIcon)icon
-                             text:(NSString *)text;
-
++ (nullable GTUIToast *)HUDForView:(UIView *)view;
 
 /**
- 显示 Toast
-
- @param superview superview 父视图
- @param icon  图标类型
- @param text 显示文本
- @param duration 显示时长
- @return 返回显示的 Toast 对象
+ * Finds all HUD subviews and returns them.
+ *
+ * @param view The view that is going to be searched.
+ * @return All found HUD views (array of MBProgressHUD objects).
  */
-+ (GTUIToast *)presentToastWithin:(UIView *)superview
-                         withIcon:(GTUIToastIcon)icon
-                             text:(NSString *)text
-                         duration:(NSTimeInterval)duration;
-
-
++ (NSArray *)allHUDsForView:(UIView *)view;
 
 /**
- 显示 Toast
-
- @param superview superview 父视图
- @param icon  图标类型
- @param text 显示文本
- @param duration 显示时长
- @return 返回显示的 Toast 对象
- @param completion Toast 自动消失后的回调
- @return 返回显示的 Toast 对象
+ * A convenience constructor that initializes the HUD with the view's bounds. Calls the designated constructor with
+ * view.bounds as the parameter.
+ *
+ * @param view The view instance that will provide the bounds for the HUD. Should be the same instance as
+ * the HUD's superview (i.e., the view that the HUD will be added to).
  */
-+ (GTUIToast *)presentToastWithin:(UIView *)superview
-                         withIcon:(GTUIToastIcon)icon
-                             text:(NSString *)text
-                         duration:(NSTimeInterval)duration
-                       completion:(void(^)(void))completion;
-
+- (instancetype)initWithView:(UIView *)view;
 
 /**
- 显示 Toast
-
- @param superview superview 父视图
- @param icon  图标类型
- @param text 显示文本
- @param duration 显示时长
- @param delay 延迟显示时长
- @return 返回显示的 Toast 对象
- @param completion Toast 自动消失后的回调
- @return 返回显示的 Toast 对象
+ * Displays the HUD.
+ *
+ * @note You need to make sure that the main thread completes its run loop soon after this method call so that
+ * the user interface can be updated. Call this method when your task is already set up to be executed in a new thread
+ * (e.g., when using something like NSOperation or making an asynchronous call like NSURLRequest).
+ *
+ * @param animated If set to YES the HUD will appear using the current animationType. If set to NO the HUD will not use
+ * animations while appearing.
+ *
+ * @see animationType
  */
-+ (GTUIToast *)presentToastWithin:(UIView *)superview
-                         withIcon:(GTUIToastIcon)icon
-                             text:(NSString *)text
-                         duration:(NSTimeInterval)duration
-                            delay:(NSTimeInterval)delay
-                       completion:(void(^)(void))completion;
-
-
+- (void)showAnimated:(BOOL)animated;
 
 /**
- * 模态 toast，需调用 dismissToast 方法使 Toast 消失
- * 跟普通的 toast 区别是，会添加一个透明的背景层，防止用户屏幕点击
-
- @param superview superview 父视图
- @param text 显示文本
- @return 返回显示的 Toast 对象
+ * Hides the HUD. This still calls the hudWasHidden: delegate. This is the counterpart of the show: method. Use it to
+ * hide the HUD when your task completes.
+ *
+ * @param animated If set to YES the HUD will disappear using the current animationType. If set to NO the HUD will not use
+ * animations while disappearing.
+ *
+ * @see animationType
  */
-+ (GTUIToast *)presentModelToastWithin:(UIView *)superview
-                                  text:(NSString *)text;
-
-
+- (void)hideAnimated:(BOOL)animated;
 
 /**
- * 显示模态 Toast
- * 跟普通的 toast 区别是，会添加一个透明的背景层，防止用户屏幕点击
-
- @param superview 要在其中显示 Toast 的视图
- @param icon 图标类型
- @param text 显示文本
- @param duration 显示时长
- @param completion Toast 自动消失后的回调
- @return 返回显示的 Toast 对象
+ * Hides the HUD after a delay. This still calls the hudWasHidden: delegate. This is the counterpart of the show: method. Use it to
+ * hide the HUD when your task completes.
+ *
+ * @param animated If set to YES the HUD will disappear using the current animationType. If set to NO the HUD will not use
+ * animations while disappearing.
+ * @param delay Delay in seconds until the HUD is hidden.
+ *
+ * @see animationType
  */
-+ (GTUIToast *)presentModelToastWithin:(UIView *)superview
-                              withIcon:(GTUIToastIcon)icon
-                                  text:(NSString *)text
-                              duration:(NSTimeInterval)duration
-                            completion:(void(^)(void))completion;
-
+- (void)hideAnimated:(BOOL)animated afterDelay:(NSTimeInterval)delay;
 
 /**
- * 显示模态 Toast
- * 跟普通的 toast 区别是，会添加一个透明的背景层，防止用户屏幕点击
-
- @param superview 要在其中显示 Toast 的视图
- @param icon 图标类型
- @param text 显示文本
- @param duration 显示时长
- @param delay 延迟显示时长
- @param completion Toast 自动消失后的回调
- @return 返回显示的 Toast 对象
+ * The HUD delegate object. Receives HUD state notifications.
  */
-+ (GTUIToast *)presentModelToastWithin:(UIView *)superview
-                              withIcon:(GTUIToastIcon)icon
-                                  text:(NSString *)text
-                              duration:(NSTimeInterval)duration
-                                 delay:(NSTimeInterval)delay
-                            completion:(void(^)(void))completion;
+@property (weak, nonatomic) id<GTUIToastDelegate> delegate;
+
+/**
+ * Called after the HUD is hiden.
+ */
+@property (copy, nullable) GTUIToastCompletionBlock completionBlock;
 
 /*
- * 使 toast 消失
+ * Grace period is the time (in seconds) that the invoked method may be run without
+ * showing the HUD. If the task finishes before the grace time runs out, the HUD will
+ * not be shown at all.
+ * This may be used to prevent HUD display for very short tasks.
+ * Defaults to 0 (no grace time).
+ * @note The graceTime needs to be set before the hud is shown. You thus can't use `showHUDAddedTo:animated:`,
+ * but instead need to alloc / init the HUD, configure the grace time and than show it manually.
  */
-- (void)dismissToast;
+@property (assign, nonatomic) NSTimeInterval graceTime;
 
 /**
- *  设置进度的前缀文本，如果不设置，默认为“加载数据”
- *  当 toast 类型为 GTUIToastIconProgress 时设置有效，否则忽略
- *
- *  @param prefix 文本
+ * The minimum time (in seconds) that the HUD is shown.
+ * This avoids the problem of the HUD being shown and than instantly hidden.
+ * Defaults to 0 (no minimum show time).
  */
-- (void)setProgressPrefix:(NSString*)prefix;
-
+@property (assign, nonatomic) NSTimeInterval minShowTime;
 
 /**
- * 显示当前加载数据的进度百分比
- * 当 toast 类型为 GTToastIconProgress 时设置有效，否则忽略
- *
- * @param value      当前已加载的数据，范围为<0.0，1.0>
- *
+ * Removes the HUD from its parent view when hidden.
+ * Defaults to NO.
  */
-- (void)setProgressText:(float)value;
+@property (assign, nonatomic) BOOL removeFromSuperViewOnHide;
+
+/// @name Appearance
+
+/**
+ * GTUIToast operation mode. The default is GTUIToastModeIndeterminate.
+ */
+@property (assign, nonatomic) GTUIToastMode mode;
+
+/**
+ * A color that gets forwarded to all labels and supported indicators. Also sets the tintColor
+ * for custom views on iOS 7+. Set to nil to manage color individually.
+ * Defaults to semi-translucent black on iOS 7 and later and white on earlier iOS versions.
+ */
+@property (strong, nonatomic, nullable) UIColor *contentColor UI_APPEARANCE_SELECTOR;
+
+/**
+ * The animation type that should be used when the HUD is shown and hidden.
+ */
+@property (assign, nonatomic) GTUIToastAnimation animationType UI_APPEARANCE_SELECTOR;
+
+/**
+ * The bezel offset relative to the center of the view. You can use GTUIProgressMaxOffset
+ * and -GTUIProgressMaxOffset to move the HUD all the way to the screen edge in each direction.
+ * E.g., CGPointMake(0.f, GTUIProgressMaxOffset) would position the HUD centered on the bottom edge.
+ */
+@property (assign, nonatomic) CGPoint offset UI_APPEARANCE_SELECTOR;
+
+/**
+ * The amount of space between the HUD edge and the HUD elements (labels, indicators or custom views).
+ * This also represents the minimum bezel distance to the edge of the HUD view.
+ * Defaults to 20.f
+ */
+@property (assign, nonatomic) CGFloat margin UI_APPEARANCE_SELECTOR;
+
+/**
+ * The minimum size of the HUD bezel. Defaults to CGSizeZero (no minimum size).
+ */
+@property (assign, nonatomic) CGSize minSize UI_APPEARANCE_SELECTOR;
+
+/**
+ * Force the HUD dimensions to be equal if possible.
+ */
+@property (assign, nonatomic, getter = isSquare) BOOL square UI_APPEARANCE_SELECTOR;
+
+/**
+ * When enabled, the bezel center gets slightly affected by the device accelerometer data.
+ * Has no effect on iOS < 7.0. Defaults to YES.
+ */
+@property (assign, nonatomic, getter=areDefaultMotionEffectsEnabled) BOOL defaultMotionEffectsEnabled UI_APPEARANCE_SELECTOR;
+
+/// @name Progress
+
+/**
+ * The progress of the progress indicator, from 0.0 to 1.0. Defaults to 0.0.
+ */
+@property (assign, nonatomic) float progress;
+
+/// @name ProgressObject
+
+/**
+ * The NSProgress object feeding the progress information to the progress indicator.
+ */
+@property (strong, nonatomic, nullable) NSProgress *progressObject;
+
+/// @name Views
+
+/**
+ * The view containing the labels and indicator (or customView).
+ */
+@property (strong, nonatomic, readonly) GTUIBackgroundView *bezelView;
+
+/**
+ * View covering the entire HUD area, placed behind bezelView.
+ */
+@property (strong, nonatomic, readonly) GTUIBackgroundView *backgroundView;
+
+/**
+ * The UIView (e.g., a UIImageView) to be shown when the HUD is in GTUIToastModeCustomView.
+ * The view should implement intrinsicContentSize for proper sizing. For best results use approximately 37 by 37 pixels.
+ */
+@property (strong, nonatomic, nullable) UIView *customView;
+
+/**
+ * A label that holds an optional short message to be displayed below the activity indicator. The HUD is automatically resized to fit
+ * the entire text.
+ */
+@property (strong, nonatomic, readonly) UILabel *label;
+
+/**
+ * A label that holds an optional details message displayed below the labelText message. The details text can span multiple lines.
+ */
+@property (strong, nonatomic, readonly) UILabel *detailsLabel;
+
+/**
+ * A button that is placed below the labels. Visible only if a target / action is added.
+ */
+@property (strong, nonatomic, readonly) UIButton *button;
 
 @end
 
 
+@protocol GTUIToastDelegate <NSObject>
+
+@optional
+
+/**
+ * Called after the HUD was fully hidden from the screen.
+ */
+- (void)hudWasHidden:(GTUIToast *)hud;
+
+@end
+
+
+/**
+ * A progress view for showing definite progress by filling up a circle (pie chart).
+ */
+@interface GTUIRoundProgressView : UIView
+
+/**
+ * Progress (0.0 to 1.0)
+ */
+@property (nonatomic, assign) float progress;
+
+/**
+ * Indicator progress color.
+ * Defaults to white [UIColor whiteColor].
+ */
+@property (nonatomic, strong) UIColor *progressTintColor;
+
+/**
+ * Indicator background (non-progress) color.
+ * Only applicable on iOS versions older than iOS 7.
+ * Defaults to translucent white (alpha 0.1).
+ */
+@property (nonatomic, strong) UIColor *backgroundTintColor;
+
+/*
+ * Display mode - NO = round or YES = annular. Defaults to round.
+ */
+@property (nonatomic, assign, getter = isAnnular) BOOL annular;
+
+@end
+
+
+/**
+ * A flat bar progress view.
+ */
+@interface GTUIBarProgressView : UIView
+
+/**
+ * Progress (0.0 to 1.0)
+ */
+@property (nonatomic, assign) float progress;
+
+/**
+ * Bar border line color.
+ * Defaults to white [UIColor whiteColor].
+ */
+@property (nonatomic, strong) UIColor *lineColor;
+
+/**
+ * Bar background color.
+ * Defaults to clear [UIColor clearColor];
+ */
+@property (nonatomic, strong) UIColor *progressRemainingColor;
+
+/**
+ * Bar progress color.
+ * Defaults to white [UIColor whiteColor].
+ */
+@property (nonatomic, strong) UIColor *progressColor;
+
+@end
+
+
+@interface GTUIBackgroundView : UIView
+
+/**
+ * The background style.
+ * Defaults to GTUIToastBackgroundStyleBlur.
+ */
+@property (nonatomic) GTUIToastBackgroundStyle style;
+
+/**
+ * The blur effect style, when using GTUIToastBackgroundStyleBlur.
+ * Defaults to UIBlurEffectStyleLight.
+ */
+@property (nonatomic) UIBlurEffectStyle blurEffectStyle;
+
+/**
+ * The background color or the blur tint color.
+ */
+@property (nonatomic, strong) UIColor *color;
+
+@end
+
+NS_ASSUME_NONNULL_END
 

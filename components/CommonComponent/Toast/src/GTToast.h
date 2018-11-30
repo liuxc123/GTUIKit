@@ -6,3 +6,4 @@
 //
 
 #import "GTUIToast.h"
+#import "GTUIToast+GTUIKit.h"
