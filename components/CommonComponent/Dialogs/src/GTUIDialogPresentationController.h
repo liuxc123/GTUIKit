@@ -62,7 +62,7 @@
 /**
  关闭完成回调
  */
-@property (nonatomic , copy ) void (^closeFinishHandler)(void);
+@property (nonatomic , copy, nullable) void (^closeFinishHandler)(void);
 
 
 /**

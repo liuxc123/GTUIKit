@@ -10,11 +10,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  # # Conventions
-  # s.source_files = 'components/private/*/src/**/*.{h,m,swift}', 'components/*/src/**/*.{h,m,swift}'
-  # s.resources = ['components/*/examples/resources/*', 'components/private/*/examples/resources/*', 'components/schemes/*/examples/resources/*']
-
-
   # 基础组件
   # 视觉规范单元化的体现，构建 GTUIKit 体系的基础，主要包含原子资源、原子控件和 Iconfont 图标。基础层是由视觉规范最小的单元构建。
   s.subspec "BasicComponent" do |basic_spec|
@@ -34,6 +29,7 @@ Pod::Spec.new do |s|
       component.source_files = "components/BasicComponent/#{component.base_name}/src/*.{h,m}", "components/BasicComponent/#{component.base_name}/src/private/*.{h,m}"
 
       component.dependency "GTUIKit/private/Math"
+      component.dependency "GTUIKit/private/Application"
     end
 
     # ShadowLayer
@@ -115,7 +111,9 @@ Pod::Spec.new do |s|
         component.dependency "GTUIKit/CommonComponent/Ink"
         component.dependency "GTUIKit/BasicComponent/ShadowLayer"
         component.dependency "GTUIKit/BasicComponent/Shapes"
+        component.dependency "GTUIKit/BasicComponent/Typography"
         component.dependency "GTUIKit/private/Math"
+        component.dependency "GTUIKit/private/Application"
     end
 
     # ButtonBar
@@ -148,10 +146,12 @@ Pod::Spec.new do |s|
         component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
         component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
 
+        component.dependency "GTUIKit/CommonComponent/BottomSheet"
         component.dependency "GTUIKit/CommonComponent/Button"
         component.dependency "GTUIKit/BasicComponent/ShadowLayer"
         component.dependency "GTUIKit/BasicComponent/Typography"
         component.dependency "GTUIKit/private/KeyboardWatcher"
+        component.dependency "GTUIKit/private/UIMetrics"
         component.dependency "GTFInternationalization"
     end
 
@@ -168,7 +168,7 @@ Pod::Spec.new do |s|
     # FlexibleHeader
     common_spec.subspec "FlexibleHeader" do |component|
         component.ios.deployment_target = '8.0'
-        component.public_header_files = "components/#{component.base_name}/src/*.h"
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
         component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
 
         component.dependency 'GTFTextAccessibility'
@@ -198,6 +198,9 @@ Pod::Spec.new do |s|
         component.ios.deployment_target = '8.0'
         component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
         component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency "GTUIKit/private/Math"
+
     end
 
     # Label
@@ -319,6 +322,7 @@ Pod::Spec.new do |s|
     component.dependency "GTUIKit/CommonComponent/Ink"
     component.dependency "GTUIKit/private/AnimationTiming"
     component.dependency "GTUIKit/private/Math"
+    component.dependency "GTUIKit/private/Application"
 
     end
 

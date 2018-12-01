@@ -28,7 +28,6 @@
 		09C4FE70EE774F162074D8E1748E8171 /* GTUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A348EFC5EB78DF8EDE76E3D8294C9040 /* GTUITextField.m */; };
 		09DC7CA00A527AE859559FE459A7DC3C /* GTUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5791CC93C5BBC20F09D2DA933FF61C /* GTUIKit.framework */; };
 		09E45CAE80275E5318DCD969041252A2 /* GTFInternationalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD99C1C50DFBAAA4B97FBB737C80928D /* GTFInternationalization.framework */; };
-		09E8D959A1578E4614F720554CF51EC1 /* GTUIStatusBarShifter.h in Headers */ = {isa = PBXBuildFile; fileRef = B14E3A33B1A7C14ABE846277CFA01E7B /* GTUIStatusBarShifter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B234EE7A94E0BDF9FFF67C9532845F9 /* GTFColorCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = C67BC6F3CFF60F32554308AB7C0DBC12 /* GTFColorCalculations.m */; };
 		0D49126B4946F1D310DDF2596D03936A /* GTToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 443392095F70B082B3AAF2F6C31409C4 /* GTToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D939F53BE5F2D89A18A939A6A554CAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0E510E30965BE8D8EB55752639C9AA /* Foundation.framework */; };
@@ -133,6 +132,7 @@
 		3ECED29417E81E853893B664A7D92874 /* GTUINavigationBarButtonBarBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0089CD703083338E8DA566DD9EC3A7 /* GTUINavigationBarButtonBarBuilder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3FABDAE217242165F2C1A745FD93AFC3 /* GTNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 423592C9F116E102719ED17FD7A4DA60 /* GTNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4011281FD9C844E63AB29C7056932D9B /* GTUITextInputControllerUnderline.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C22392ADC5E0F922A8AC7B99A293CE2 /* GTUITextInputControllerUnderline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4086178F3E09BFBDE3204C4B2D24F5CB /* GTUIStatusBarShifter.h in Headers */ = {isa = PBXBuildFile; fileRef = B14E3A33B1A7C14ABE846277CFA01E7B /* GTUIStatusBarShifter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		41888083B8A727BA5D51772215072113 /* GTUIPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 258845C9872579EB0086618192EF9D5B /* GTUIPickerView.m */; };
 		41B3EE1CED5E324E988AA2A346B0F8FB /* GTUIInkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9127A518FCE05DF65DCBDCBBCDE26 /* GTUIInkLayer.m */; };
 		41C5841F2A8314110ABB04291F6EC861 /* GTFRTL.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 191C74B148F7C98FB2CE125745EB1009 /* GTFRTL.h */; };
@@ -179,13 +179,13 @@
 		599434F2CA26CDBDC7412F6BC0DD335E /* GTUIPathGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BA67F452BF3916C3EDF1D3F23153C8 /* GTUIPathGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59F81DE0305CC2AC448D2A3C6B3280A2 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E5333EE1E06EB548996B36AF931BAECA /* MASConstraint.m */; };
 		5A460FE4638EC0B6348B15055E6DC56E /* GTFRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 80318EF35971B1BF73D039957C902DFF /* GTFRuntime.m */; };
-		5BF1BA0349AE987AEA679B8EEEFC0DAB /* GTUIFlexibleHeaderView+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C461AA2A8C74CCDE1B0E87088756B0 /* GTUIFlexibleHeaderView+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C6C7C8C8C3644408A4181DB26615B53 /* GTIconfont.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF96C6A22D395897087F7DCA53A94829 /* GTIconfont.bundle */; };
 		5D9D0960D42FE10C8A1DF3C968A25E97 /* GTNotificationBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BFBDB702DBDC2D3572910D553A50885 /* GTNotificationBar.bundle */; };
 		5E453802A741FAD526CEF7733ED95F4D /* GTUILoadingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A1E55D9D82471729EEF418F8ABF42E /* GTUILoadingBaseView.m */; };
 		5EB75D655C7EB26B45432BDF073ECF57 /* GTUITabBarAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = A25B1CEEBAD036A4BF924498442DA57B /* GTUITabBarAlignment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FF8F05DD3D58121440A4E2FA0229CEF /* GTMRepetitionOverTime.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6722203D06F86BD6C0C50A31E2CE9 /* GTMRepetitionOverTime.m */; };
 		61351CDAD8CBB27697F9240561EFB493 /* GTUIOverlayUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BCBFE2CC75134DF72FD48EB398BE94 /* GTUIOverlayUtilities.m */; };
+		621404276E7066C9E647CE08BEE2709B /* GTUIFlexibleHeaderTopSafeArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BBC5185EA09E323049E3003F0B0E6A /* GTUIFlexibleHeaderTopSafeArea.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		626C17B0A4495D4182B938460C93D70A /* GTFRTL.h in Headers */ = {isa = PBXBuildFile; fileRef = 191C74B148F7C98FB2CE125745EB1009 /* GTFRTL.h */; };
 		62866A49BCBE58BC9D3D7F99933000B9 /* GTUINotificationBarEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4B4682DA8E8B751B05ADCC26CCF8AB /* GTUINotificationBarEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD560438764CA1FAB723F5983F8FA9 /* GTUIKitExamples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 257F737431CF874D4F5675A8460EFC88 /* GTUIKitExamples-dummy.m */; };
@@ -197,7 +197,6 @@
 		64CEEF5C022680C1E458CB6B9D512369 /* GTUIToast+GTUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6867F494D7E734E44DC3FF1292BF88 /* GTUIToast+GTUIKit.m */; };
 		650CE4C5044C29A0F499667D79533650 /* GTMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 958D1C637336CF50233E597AF00C14CF /* GTMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		650DAE49EBD61B6582CBE58B799BF2D1 /* GTUIFlexibleHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14582197703AC3F8A27551E272B3700 /* GTUIFlexibleHeaderViewController.m */; };
-		657851A1842B9940179600FDC34582C5 /* GTUIFlexibleHeaderTopSafeArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BBC5185EA09E323049E3003F0B0E6A /* GTUIFlexibleHeaderTopSafeArea.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65BC7111177F6C4DB2876B29574B3634 /* GTUIButtonBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D461922FC8112EA9B554157F57EF0218 /* GTUIButtonBarButton.m */; };
 		65D4F8A81A2C23CC07D92649DCC39B42 /* GTUIInkTouchController.h in Headers */ = {isa = PBXBuildFile; fileRef = 379B31EBFBCEA1C3938828A7EC02B303 /* GTUIInkTouchController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66DB29E0B8FF08AFA60F717550551908 /* GTUITabBarItemAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = A61AAB464B55CEF3B1A45838E42EECF6 /* GTUITabBarItemAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -254,6 +253,7 @@
 		81C777F10A2C44F1C9CCC9DD6332A500 /* GTCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A7E47E3DDBF8A48F7AFA29D972171F8 /* GTCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81EF035812A810DE8F38292E0AC3F66C /* GTUITextInputBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA537C8A4F7A5BFB3B135983A6C64C /* GTUITextInputBorderView.m */; };
 		8224BC2E5A1202E8A87D5DBF228C33FD /* GTUITextInputAllCharactersCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0D609B9EBAF40C08B73AA0E43F /* GTUITextInputAllCharactersCounter.m */; };
+		825419AA114B8849B3D5A41F23DF8DB7 /* GTUIFlexibleHeaderMinMaxHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 322F770B02B0B43C4208E21695F07FAA /* GTUIFlexibleHeaderMinMaxHeight.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8272C001D82243F2A9DB7722751109D0 /* GTUIDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C65FF1CC9BAE09464CB83946D822A /* GTUIDialog.m */; };
 		8333AA1D4E5BCBBCDA6AF7B0716B89E2 /* GTUITextInputUnderlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9792AB6365233E8C46B94FBE015ED32C /* GTUITextInputUnderlineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8541232004180E0BF4F5BD0CF9E4D98E /* GTUITabBarIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF8896A51BE36BF8E398F539F9C97F9D /* GTUITabBarIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -320,6 +320,7 @@
 		A5D75AD5EC276D17A9A19AEB26289A82 /* GTUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF316EC9C4E913C1F836F46B8B3F30 /* GTUIImageView.m */; };
 		A68060468C9ADD744E6FE6F01FDA9E67 /* GTMotionInterchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DE9E19453D999243F352F4EB961BF4 /* GTMotionInterchange.framework */; };
 		A7370CE9231F9A4927142D79021879EC /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B9046FBDDC2B069DB8CCA185C63EFC0C /* MASViewAttribute.m */; };
+		A746EE40E1DABCFE8715718A7D0CCA0B /* GTUIFlexibleHeaderView+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C461AA2A8C74CCDE1B0E87088756B0 /* GTUIFlexibleHeaderView+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A7ACCDCD5A7455015051A0C274909634 /* ic_arrow_back_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E12EB34F120E5A708D801ED2918A73D /* ic_arrow_back_ios.png */; };
 		A7FA75CDEC29BD0789C7816F31CEF4C6 /* GTUITonalPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BFBBF0A08B6904486A597D5BA997192 /* GTUITonalPalette.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7FDB5A6F8FC109B3A95C606A3B25070 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0E510E30965BE8D8EB55752639C9AA /* Foundation.framework */; };
@@ -415,7 +416,6 @@
 		CFEC5E330624D5676AA36D2E0C96B44C /* GTUITypographyScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = A38FBB5308AE6A5AC6E861A224E22D29 /* GTUITypographyScheme.m */; };
 		D055A98E531D720263012DEA9306F154 /* UIFont+GTUISimpleEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B11A8C87C5E3D7B323AB06F50B9B2C /* UIFont+GTUISimpleEquality.m */; };
 		D105B2199129D1EE96F605281440E92B /* GTUIRectangleShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E63521677DC4D1B3D76397F94C6A860D /* GTUIRectangleShapeGenerator.m */; };
-		D19E1AB3C40D705012B237535E1FB9CD /* GTUIFlexibleHeaderMinMaxHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 322F770B02B0B43C4208E21695F07FAA /* GTUIFlexibleHeaderMinMaxHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D20A06E3E983331539C15815FA124B51 /* CAAnimation+GTUIAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19487B7A495253A39048EA7A1958822B /* CAAnimation+GTUIAnimation.m */; };
 		D24C4968BD0855809091466381E2FE7C /* GTFNodeListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 560AD4E049AA395042D299A5E260B9F4 /* GTFNodeListViewController.h */; };
 		D24E9F3A0E0177E9786B8906E9D0553E /* GTUIImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 81836BA7DC6A2E0733997782D7183F45 /* GTUIImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2782,9 +2782,9 @@
 				7594B682639AE7343C25F09EA5EC3C4A /* GTUIEmptyBaseView.h in Headers */,
 				759109793F73B5974CE376FF382B39C6 /* GTUIEmptyView.h in Headers */,
 				22ABA717DC39B7E8A67F9600A02EA85D /* GTUIFlexibleHeaderContainerViewController.h in Headers */,
-				D19E1AB3C40D705012B237535E1FB9CD /* GTUIFlexibleHeaderMinMaxHeight.h in Headers */,
-				657851A1842B9940179600FDC34582C5 /* GTUIFlexibleHeaderTopSafeArea.h in Headers */,
-				5BF1BA0349AE987AEA679B8EEEFC0DAB /* GTUIFlexibleHeaderView+Private.h in Headers */,
+				825419AA114B8849B3D5A41F23DF8DB7 /* GTUIFlexibleHeaderMinMaxHeight.h in Headers */,
+				621404276E7066C9E647CE08BEE2709B /* GTUIFlexibleHeaderTopSafeArea.h in Headers */,
+				A746EE40E1DABCFE8715718A7D0CCA0B /* GTUIFlexibleHeaderView+Private.h in Headers */,
 				4D0A87A139FF96AC1C4DA1D4FFE8C901 /* GTUIFlexibleHeaderView+ShiftBehavior.h in Headers */,
 				15E905BF686B78BA17FC6722C99E7E95 /* GTUIFlexibleHeaderView.h in Headers */,
 				861E03FB5632A426CEAB93809957FAF0 /* GTUIFlexibleHeaderViewController.h in Headers */,
@@ -2857,7 +2857,7 @@
 				C86D3D7F6C723D01AA3BB22BAA006D01 /* GTUISheetContainerView.h in Headers */,
 				D320A01E7ABCC2B2DB8B217299C21FB0 /* GTUISheetState.h in Headers */,
 				E5D41F2471C10AB8F9BD8BCE2E787085 /* GTUISlantedRectShapeGenerator.h in Headers */,
-				09E8D959A1578E4614F720554CF51EC1 /* GTUIStatusBarShifter.h in Headers */,
+				4086178F3E09BFBDE3204C4B2D24F5CB /* GTUIStatusBarShifter.h in Headers */,
 				EEB29C57713359E6BD9696EBCBC32535 /* GTUISwitch.h in Headers */,
 				B6D90DCE096EE85046A37D747A273588 /* GTUITabBar.h in Headers */,
 				5EB75D655C7EB26B45432BDF073ECF57 /* GTUITabBarAlignment.h in Headers */,

@@ -24,6 +24,7 @@ PODS:
     - GTUIKit/BasicComponent/ShadowLayer
     - GTUIKit/private/Math
   - GTUIKit/BasicComponent/Typography (0.0.1):
+    - GTUIKit/private/Application
     - GTUIKit/private/Math
   - GTUIKit/CommonComponent (0.0.1):
     - GTUIKit/CommonComponent/ActivityIndicatorView (= 0.0.1)
@@ -63,7 +64,9 @@ PODS:
     - GTFTextAccessibility
     - GTUIKit/BasicComponent/ShadowLayer
     - GTUIKit/BasicComponent/Shapes
+    - GTUIKit/BasicComponent/Typography
     - GTUIKit/CommonComponent/Ink
+    - GTUIKit/private/Application
     - GTUIKit/private/Math
   - GTUIKit/CommonComponent/ButtonBar (0.0.1):
     - GTUIKit/CommonComponent/Button
@@ -72,8 +75,10 @@ PODS:
     - GTFInternationalization
     - GTUIKit/BasicComponent/ShadowLayer
     - GTUIKit/BasicComponent/Typography
+    - GTUIKit/CommonComponent/BottomSheet
     - GTUIKit/CommonComponent/Button
     - GTUIKit/private/KeyboardWatcher
+    - GTUIKit/private/UIMetrics
   - GTUIKit/CommonComponent/EmptyView (0.0.1):
     - GTUIKit/private/UIMetrics
   - GTUIKit/CommonComponent/FlexibleHeader (0.0.1):
@@ -83,7 +88,8 @@ PODS:
   - GTUIKit/CommonComponent/HeaderStackView (0.0.1)
   - GTUIKit/CommonComponent/ImageView (0.0.1):
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/Ink (0.0.1)
+  - GTUIKit/CommonComponent/Ink (0.0.1):
+    - GTUIKit/private/Math
   - GTUIKit/CommonComponent/Label (0.0.1)
   - GTUIKit/CommonComponent/NavigationBar (0.0.1):
     - GTFInternationalization
@@ -133,6 +139,7 @@ PODS:
     - GTUIKit/BasicComponent/Typography
     - GTUIKit/CommonComponent/Ink
     - GTUIKit/private/AnimationTiming
+    - GTUIKit/private/Application
     - GTUIKit/private/Math
   - GTUIKit/CommonComponent/TextFields (0.0.1):
     - GTFInternationalization
@@ -190,7 +197,7 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: 0ef4ea339e16c0fa300a055b850c0b16646a1562
+  GTUIKit: 4e7d0790088abecb944c055b3be2c8eab9dd7048
   GTUIKitExamples: 7877cab6eaba1329484fd8e3d0bd074c77e9a5c8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 

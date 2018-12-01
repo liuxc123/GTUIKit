@@ -757,7 +757,7 @@ typedef enum : NSUInteger {
             } else if (component == 4) {
                 _minuteIndex = row;
             }
-            selectDateValue = [NSString stringWithFormat:@"%@-%02ld-%02ld %02ld:%02ld", self.yearArr[_yearIndex], [self.monthArr[_monthIndex] integerValue], [self.dayArr[_dayIndex] integerValue], [self.hourArr[_hourIndex] integerValue], [self.minuteArr[_minuteIndex] integerValue]];
+            selectDateValue = [NSString stringWithFormat:@"%@-%02ld-%02ld %02ld:%02ld", self.yearArr[_yearIndex], (long)[self.monthArr[_monthIndex] integerValue], (long)[self.dayArr[_dayIndex] integerValue], (long)[self.hourArr[_hourIndex] integerValue], (long)[self.minuteArr[_minuteIndex] integerValue]];
             break;
         case GTUIDatePickerModeMDHM:
             if (component == 0) {
@@ -778,7 +778,7 @@ typedef enum : NSUInteger {
             } else if (component == 3) {
                 _minuteIndex = row;
             }
-            selectDateValue = [NSString stringWithFormat:@"%02ld-%02ld %02ld:%02ld", [self.monthArr[_monthIndex] integerValue], [self.dayArr[_dayIndex] integerValue], [self.hourArr[_hourIndex] integerValue], [self.minuteArr[_minuteIndex] integerValue]];
+            selectDateValue = [NSString stringWithFormat:@"%02ld-%02ld %02ld:%02ld", (long)[self.monthArr[_monthIndex] integerValue], (long)[self.dayArr[_dayIndex] integerValue], (long)[self.hourArr[_hourIndex] integerValue], (long)[self.minuteArr[_minuteIndex] integerValue]];
             break;
         case GTUIDatePickerModeYMD:
             if (component == 0) {
@@ -793,7 +793,7 @@ typedef enum : NSUInteger {
             } else if (component == 2) {
                 _dayIndex = row;
             }
-            selectDateValue = [NSString stringWithFormat:@"%@-%02ld-%02ld", self.yearArr[_yearIndex], [self.monthArr[_monthIndex] integerValue], [self.dayArr[_dayIndex] integerValue]];
+            selectDateValue = [NSString stringWithFormat:@"%@-%02ld-%02ld", self.yearArr[_yearIndex], (long)[self.monthArr[_monthIndex] integerValue], (long)[self.dayArr[_dayIndex] integerValue]];
             break;
         case GTUIDatePickerModeYM:
             if (component == 0) {
@@ -803,7 +803,7 @@ typedef enum : NSUInteger {
             } else if (component == 1) {
                 _monthIndex = row;
             }
-            selectDateValue = [NSString stringWithFormat:@"%@-%02ld", self.yearArr[_yearIndex], [self.monthArr[_monthIndex] integerValue]];
+            selectDateValue = [NSString stringWithFormat:@"%@-%02ld", self.yearArr[_yearIndex], (long)[self.monthArr[_monthIndex] integerValue]];
             break;
         case GTUIDatePickerModeY:
             if (component == 0) {
@@ -819,7 +819,7 @@ typedef enum : NSUInteger {
             } else if (component == 1) {
                 _dayIndex = row;
             }
-            selectDateValue = [NSString stringWithFormat:@"%02ld-%02ld", [self.monthArr[_monthIndex] integerValue], [self.dayArr[_dayIndex] integerValue]];
+            selectDateValue = [NSString stringWithFormat:@"%02ld-%02ld", (long)[self.monthArr[_monthIndex] integerValue], (long)[self.dayArr[_dayIndex] integerValue]];
             break;
         case GTUIDatePickerModeHM:
             if (component == 0) {
@@ -829,7 +829,7 @@ typedef enum : NSUInteger {
             } else if (component == 1) {
                 _minuteIndex = row;
             }
-            selectDateValue = [NSString stringWithFormat:@"%02ld:%02ld", [self.hourArr[_hourIndex] integerValue], [self.minuteArr[_minuteIndex] integerValue]];
+            selectDateValue = [NSString stringWithFormat:@"%02ld:%02ld", (long)[self.hourArr[_hourIndex] integerValue], (long)[self.minuteArr[_minuteIndex] integerValue]];
             break;
 
         default:
@@ -904,7 +904,7 @@ typedef enum : NSUInteger {
     }
     NSMutableArray *tempArr = [NSMutableArray array];
     for (NSInteger i = startDay; i <= endDay; i++) {
-        [tempArr addObject:[NSString stringWithFormat:@"%zi",i]];
+        [tempArr addObject:[NSString stringWithFormat:@"%zi",(long)i]];
     }
     self.dayArr = [tempArr copy];
 }

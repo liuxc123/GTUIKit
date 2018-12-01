@@ -46,7 +46,6 @@ typedef NS_ENUM(NSUInteger, GTUIBadgeAnimType)
 
 @protocol GTUIBadgeProtocol <NSObject>
 
-
 @required
 
 @property (nonatomic, strong) UILabel *badge;                       /* badge entity, which is adviced not to set manually */
@@ -66,9 +65,6 @@ typedef NS_ENUM(NSUInteger, GTUIBadgeAnimType)
 @property (nonatomic, assign) NSInteger badgeMaximumBadgeNumber;    /*for GTUIBadgeStyleNumber style badge,
                                                                      if badge value is above badgeMaximumBadgeNumber,
                                                                      "badgeMaximumBadgeNumber+" will be printed. */
-
-@property (nonatomic, assign) CGFloat badgeRadius;
-// nomal use for red dot style of badge
 
 /**
  *  show badge with red dot style and GTUIBadgeAnimTypeNone by default.
@@ -92,5 +88,9 @@ typedef NS_ENUM(NSUInteger, GTUIBadgeAnimType)
  *  clear badge
  */
 - (void)clearBadge;
+
+@optional
+
+@property (nonatomic, assign) CGFloat badgeRadius;
 
 @end

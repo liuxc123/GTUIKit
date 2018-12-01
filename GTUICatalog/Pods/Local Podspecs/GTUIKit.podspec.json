@@ -49,6 +49,9 @@
           "dependencies": {
             "GTUIKit/private/Math": [
 
+            ],
+            "GTUIKit/private/Application": [
+
             ]
           }
         },
@@ -190,7 +193,13 @@
             "GTUIKit/BasicComponent/Shapes": [
 
             ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
             "GTUIKit/private/Math": [
+
+            ],
+            "GTUIKit/private/Application": [
 
             ]
           }
@@ -247,6 +256,9 @@
             "components/CommonComponent/Dialogs/src/private/*.{h,m}"
           ],
           "dependencies": {
+            "GTUIKit/CommonComponent/BottomSheet": [
+
+            ],
             "GTUIKit/CommonComponent/Button": [
 
             ],
@@ -257,6 +269,9 @@
 
             ],
             "GTUIKit/private/KeyboardWatcher": [
+
+            ],
+            "GTUIKit/private/UIMetrics": [
 
             ],
             "GTFInternationalization": [
@@ -288,7 +303,7 @@
           "platforms": {
             "ios": "8.0"
           },
-          "public_header_files": "components/FlexibleHeader/src/*.h",
+          "public_header_files": "components/CommonComponent/FlexibleHeader/src/*.h",
           "source_files": [
             "components/CommonComponent/FlexibleHeader/src/*.{h,m}",
             "components/CommonComponent/FlexibleHeader/src/private/*.{h,m}"
@@ -338,7 +353,12 @@
           "source_files": [
             "components/CommonComponent/Ink/src/*.{h,m}",
             "components/CommonComponent/Ink/src/private/*.{h,m}"
-          ]
+          ],
+          "dependencies": {
+            "GTUIKit/private/Math": [
+
+            ]
+          }
         },
         {
           "name": "Label",
@@ -554,6 +574,9 @@
 
             ],
             "GTUIKit/private/Math": [
+
+            ],
+            "GTUIKit/private/Application": [
 
             ]
           }
