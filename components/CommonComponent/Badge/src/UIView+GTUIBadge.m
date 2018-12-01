@@ -9,7 +9,6 @@
 #import <objc/runtime.h>
 #import "private/CAAnimation+GTUIAnimation.h"
 
-
 #define kGTUIBadgeDefaultFont                ([UIFont boldSystemFontOfSize:9])
 
 #define kGTUIBadgeDefaultMaximumBadgeNumber                     99
