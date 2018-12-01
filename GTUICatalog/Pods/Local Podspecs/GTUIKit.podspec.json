@@ -129,6 +129,17 @@
           ]
         },
         {
+          "name": "Badge",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Badge/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Badge/src/*.{h,m}",
+            "components/CommonComponent/Badge/src/private/*.{h,m}"
+          ]
+        },
+        {
           "name": "BottomSheet",
           "platforms": {
             "ios": "8.0"
@@ -409,6 +420,62 @@
           }
         },
         {
+          "name": "NotificationBar",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/NotificationBar/src/*.h",
+          "source_files": [
+            "components/CommonComponent/NotificationBar/src/*.{h,m}",
+            "components/CommonComponent/NotificationBar/src/private/*.{h,m}"
+          ],
+          "resources": [
+            "components/CommonComponent/NotificationBar/src/resource/GTNotificationBar.bundle"
+          ],
+          "dependencies": {
+            "GTFTextAccessibility": [
+
+            ],
+            "GTFInternationalization": [
+
+            ],
+            "GTUIKit/BasicComponent/Typography": [
+
+            ],
+            "GTUIKit/CommonComponent/OverlayWindow": [
+
+            ],
+            "GTUIKit/CommonComponent/Button": [
+
+            ],
+            "GTUIKit/private/Application": [
+
+            ],
+            "GTUIKit/private/KeyboardWatcher": [
+
+            ],
+            "GTUIKit/private/Overlay": [
+
+            ]
+          }
+        },
+        {
+          "name": "OverlayWindow",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/OverlayWindow/src/*.h",
+          "source_files": [
+            "components/CommonComponent/OverlayWindow/src/*.{h,m}",
+            "components/CommonComponent/OverlayWindow/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTUIKit/private/Application": [
+
+            ]
+          }
+        },
+        {
           "name": "PickerView",
           "platforms": {
             "ios": "8.0"
@@ -641,6 +708,17 @@
 
             ]
           }
+        },
+        {
+          "name": "Overlay",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/Overlay/src/*.h",
+          "source_files": [
+            "components/private/Overlay/src/*.{h,m}",
+            "components/private/Overlay/src/private/*.{h,m}"
+          ]
         }
       ]
     }

@@ -84,6 +84,14 @@ Pod::Spec.new do |s|
       component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
     end
 
+    # Badge
+    common_spec.subspec "Badge" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+    end
+
     # BottomSheet
     common_spec.subspec "BottomSheet" do |component|
         component.ios.deployment_target = '8.0'
@@ -236,6 +244,37 @@ Pod::Spec.new do |s|
         component.dependency "GTUIKit/private/UIMetrics"
     end
 
+    # NavigationBar
+    common_spec.subspec "NotificationBar" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+        component.resources = ["components/CommonComponent/#{component.base_name}/src/resource/GTNotificationBar.bundle"]
+
+        # Accessibility Configurator
+        component.dependency "GTFTextAccessibility"
+        component.dependency "GTFInternationalization"
+
+
+        component.dependency "GTUIKit/BasicComponent/Typography"
+        component.dependency "GTUIKit/CommonComponent/OverlayWindow"
+        component.dependency "GTUIKit/CommonComponent/Button"
+
+        component.dependency "GTUIKit/private/Application"
+        component.dependency "GTUIKit/private/KeyboardWatcher"
+        component.dependency "GTUIKit/private/Overlay"
+
+    end
+
+    # OverlayWindow
+    common_spec.subspec "OverlayWindow" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency "GTUIKit/private/Application"
+    end
+
     # PickerView
     common_spec.subspec "PickerView" do |component|
         component.ios.deployment_target = '8.0'
@@ -358,8 +397,6 @@ Pod::Spec.new do |s|
       component.source_files = "components/private/#{component.base_name}/src/*.{h,m}"
     end
 
-
-
     # Math
     private_spec.subspec "Math" do |component|
       component.ios.deployment_target = '8.0'
@@ -383,6 +420,13 @@ Pod::Spec.new do |s|
       component.source_files = "components/private/#{component.base_name}/src/*.{h,m}", "components/private/#{component.base_name}/src/private/*.{h,m}"
 
       component.dependency "GTUIKit/private/Application"
+    end
+
+    # Overlay
+    private_spec.subspec "Overlay" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/private/#{component.base_name}/src/*.h"
+        component.source_files = "components/private/#{component.base_name}/src/*.{h,m}", "components/private/#{component.base_name}/src/private/*.{h,m}"
     end
 
   end
