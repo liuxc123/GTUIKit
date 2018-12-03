@@ -32,6 +32,13 @@ Pod::Spec.new do |s|
       component.dependency "GTUIKit/private/Application"
     end
 
+    # Layout
+    basic_spec.subspec "Layout" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/BasicComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/BasicComponent/#{component.base_name}/src/*.{h,m}", "components/BasicComponent/#{component.base_name}/src/private/*.{h,m}"
+    end
+
     # ShadowLayer
     basic_spec.subspec "ShadowLayer" do |component|
       component.ios.deployment_target = '8.0'

@@ -56,6 +56,17 @@
           }
         },
         {
+          "name": "Layout",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/BasicComponent/Layout/src/*.h",
+          "source_files": [
+            "components/BasicComponent/Layout/src/*.{h,m}",
+            "components/BasicComponent/Layout/src/private/*.{h,m}"
+          ]
+        },
+        {
           "name": "ShadowLayer",
           "platforms": {
             "ios": "8.0"

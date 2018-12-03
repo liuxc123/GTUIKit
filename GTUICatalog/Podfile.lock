@@ -9,12 +9,14 @@ PODS:
     - GTUIKit/private (= 0.0.1)
   - GTUIKit/BasicComponent (0.0.1):
     - GTUIKit/BasicComponent/IconFont (= 0.0.1)
+    - GTUIKit/BasicComponent/Layout (= 0.0.1)
     - GTUIKit/BasicComponent/Palettes (= 0.0.1)
     - GTUIKit/BasicComponent/ShadowLayer (= 0.0.1)
     - GTUIKit/BasicComponent/ShapeLibrary (= 0.0.1)
     - GTUIKit/BasicComponent/Shapes (= 0.0.1)
     - GTUIKit/BasicComponent/Typography (= 0.0.1)
   - GTUIKit/BasicComponent/IconFont (0.0.1)
+  - GTUIKit/BasicComponent/Layout (0.0.1)
   - GTUIKit/BasicComponent/Palettes (0.0.1)
   - GTUIKit/BasicComponent/ShadowLayer (0.0.1)
   - GTUIKit/BasicComponent/ShapeLibrary (0.0.1):
@@ -197,7 +199,7 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: 4e7d0790088abecb944c055b3be2c8eab9dd7048
+  GTUIKit: 25517d0b04f87bdd37a4ec7f0a3fe077e66f968e
   GTUIKitExamples: 7877cab6eaba1329484fd8e3d0bd074c77e9a5c8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
