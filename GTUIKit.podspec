@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.author           = { 'liuxc123' => 'lxc_work@126.com' }
   s.source           = { :git => 'https://github.com/liuxc123/GTUIKit.git', :tag => s.version.to_s }
   s.requires_arc = true
-
   s.ios.deployment_target = '8.0'
 
   # 基础组件
