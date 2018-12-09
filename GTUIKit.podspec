@@ -318,17 +318,9 @@ Pod::Spec.new do |s|
 
     # TabBar
     common_spec.subspec "TabBar" do |component|
-    component.ios.deployment_target = '8.0'
-    component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
-    component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
-
-    component.dependency "GTFInternationalization"
-    component.dependency "GTUIKit/BasicComponent/ShadowLayer"
-    component.dependency "GTUIKit/BasicComponent/Typography"
-    component.dependency "GTUIKit/CommonComponent/Ink"
-    component.dependency "GTUIKit/private/AnimationTiming"
-    component.dependency "GTUIKit/private/Math"
-    component.dependency "GTUIKit/private/Application"
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/**/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/**/*.{h,m}"
 
     end
 

@@ -563,34 +563,8 @@
           "platforms": {
             "ios": "8.0"
           },
-          "public_header_files": "components/CommonComponent/TabBar/src/*.h",
-          "source_files": [
-            "components/CommonComponent/TabBar/src/*.{h,m}",
-            "components/CommonComponent/TabBar/src/private/*.{h,m}"
-          ],
-          "dependencies": {
-            "GTFInternationalization": [
-
-            ],
-            "GTUIKit/BasicComponent/ShadowLayer": [
-
-            ],
-            "GTUIKit/BasicComponent/Typography": [
-
-            ],
-            "GTUIKit/CommonComponent/Ink": [
-
-            ],
-            "GTUIKit/private/AnimationTiming": [
-
-            ],
-            "GTUIKit/private/Math": [
-
-            ],
-            "GTUIKit/private/Application": [
-
-            ]
-          }
+          "public_header_files": "components/CommonComponent/TabBar/src/**/*.h",
+          "source_files": "components/CommonComponent/TabBar/src/**/*.{h,m}"
         },
         {
           "name": "TextFields",

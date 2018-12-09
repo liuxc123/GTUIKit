@@ -135,14 +135,7 @@ PODS:
     - GTUIKit/BasicComponent/Shapes
   - GTUIKit/CommonComponent/schemes/TypographyScheme (0.0.1)
   - GTUIKit/CommonComponent/Switch (0.0.1)
-  - GTUIKit/CommonComponent/TabBar (0.0.1):
-    - GTFInternationalization
-    - GTUIKit/BasicComponent/ShadowLayer
-    - GTUIKit/BasicComponent/Typography
-    - GTUIKit/CommonComponent/Ink
-    - GTUIKit/private/AnimationTiming
-    - GTUIKit/private/Application
-    - GTUIKit/private/Math
+  - GTUIKit/CommonComponent/TabBar (0.0.1)
   - GTUIKit/CommonComponent/TextFields (0.0.1):
     - GTFInternationalization
     - GTUIKit/BasicComponent/Palettes
@@ -199,10 +192,10 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: 25517d0b04f87bdd37a4ec7f0a3fe077e66f968e
-  GTUIKitExamples: 7877cab6eaba1329484fd8e3d0bd074c77e9a5c8
+  GTUIKit: 19114b9ece29f93bbbb34e914fa429683f9297d9
+  GTUIKitExamples: 00ca238e973669e505bdb57b8f147ad2332503cd
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: e91e24c791e617ae72da37f04b6dfd109d209f40
+PODFILE CHECKSUM: 25b77ce464358b8145df8b73a5dcba588c5c068d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2
