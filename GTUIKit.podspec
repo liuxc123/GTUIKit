@@ -321,7 +321,14 @@ Pod::Spec.new do |s|
         component.ios.deployment_target = '8.0'
         component.public_header_files = "components/CommonComponent/#{component.base_name}/src/**/*.h"
         component.source_files = "components/CommonComponent/#{component.base_name}/src/**/*.{h,m}"
-
+    end
+    
+    # TabBarController 拓展系统UITabBarController
+    common_spec.subspec "TabBarController" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+        
     end
 
     # TextFields
