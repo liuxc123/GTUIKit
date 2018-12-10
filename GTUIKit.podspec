@@ -171,6 +171,13 @@ Pod::Spec.new do |s|
         component.dependency "GTUIKit/private/UIMetrics"
     end
 
+    # Form
+    common_spec.subspec "Form" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/**/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/**/*.{h,m}"
+    end
+
     # FlexibleHeader
     common_spec.subspec "FlexibleHeader" do |component|
         component.ios.deployment_target = '8.0'

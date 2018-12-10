@@ -310,6 +310,14 @@
           }
         },
         {
+          "name": "Form",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Form/src/**/*.h",
+          "source_files": "components/CommonComponent/Form/src/**/*.{h,m}"
+        },
+        {
           "name": "FlexibleHeader",
           "platforms": {
             "ios": "8.0"
