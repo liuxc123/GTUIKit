@@ -12,7 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GTUIPageViewController : UIViewController
 
-@property (nonatomic, strong) GTUITabBarTitleImageView *categoryView;
+@property (nonatomic, strong) GTUITabBarTitleImageView *tabBarView;
+
+@property (nonatomic, strong) NSMutableArray <UIViewController *> *viewControllers;
+
+@property (nonatomic, strong) GTUITabBarListVCContainerView *listVCContainerView;
 
 @end
 

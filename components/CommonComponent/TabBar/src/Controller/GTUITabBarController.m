@@ -2,7 +2,7 @@
 //  GTUITabBarController.m
 //  GTCatalog
 //
-//  Created by liuxc on 2018/12/9.
+//  Created by liuxc on 2018/12/10.
 //
 
 #import "GTUITabBarController.h"
@@ -17,6 +17,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+
+}
+
+- (void)viewDidLayoutSubviews {
+
+
+}
+
+
+
 
 
 @end
