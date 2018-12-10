@@ -42,9 +42,6 @@
     return NO;
 }
 
-
-
-
 #pragma mark - GTUITabBarViewDelegate
 
 - (void)tabBarView:(GTUITabBarBaseView *)tabBarView didSelectedItemAtIndex:(NSInteger)index {
