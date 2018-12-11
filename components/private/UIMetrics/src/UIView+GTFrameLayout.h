@@ -1,5 +1,5 @@
 //
-//  UIView+FrameLayout.h
+//  UIView+GTFrameLayout.h
 //  GTCatalog
 //
 //  Created by liuxc on 2018/11/30.

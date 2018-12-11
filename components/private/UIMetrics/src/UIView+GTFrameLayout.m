@@ -1,11 +1,11 @@
 //
-//  UIView+FrameLayout.m
+//  UIView+GTFrameLayout.m
 //  GTCatalog
 //
 //  Created by liuxc on 2018/11/30.
 //
 
-#import "UIView+FrameLayout.h"
+#import "UIView+GTFrameLayout.h"
 #import <objc/runtime.h>
 
 static void *kUIViewLayoutMethodPropertyBottomGap = &kUIViewLayoutMethodPropertyBottomGap;

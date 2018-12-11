@@ -275,7 +275,7 @@
 #import "GTUIOverlayTransitioning.h"
 #import "GTUILayoutMetrics.h"
 #import "GTUIMetrics.h"
-#import "UIView+FrameLayout.h"
+#import "UIView+GTFrameLayout.h"
 
 FOUNDATION_EXPORT double GTUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char GTUIKitVersionString[];
