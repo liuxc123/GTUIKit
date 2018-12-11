@@ -315,7 +315,12 @@
             "ios": "8.0"
           },
           "public_header_files": "components/CommonComponent/Form/src/**/*.h",
-          "source_files": "components/CommonComponent/Form/src/**/*.{h,m}"
+          "source_files": "components/CommonComponent/Form/src/**/*.{h,m}",
+          "dependencies": {
+            "GTUIKit/private/UIMetrics": [
+
+            ]
+          }
         },
         {
           "name": "FlexibleHeader",

@@ -8,6 +8,8 @@
 
 #import "GTUILayoutDefine.h"
 
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -25,21 +27,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface GTUILayoutSize : NSObject
 
-#if UIKIT_DEFINE_AS_PROPERTIES
+#if GTUIKIT_DEFINE_AS_PROPERTIES
 /**特殊的尺寸，表示尺寸由子视图决定或者由内容决定。目前只用在表格布局GTUITableLayout和栅格布局GTUIGridLayout中。*/
 @property(class, nonatomic, assign,readonly) CGFloat wrap;
 #else
 +(CGFloat)wrap;
 #endif
 
-#if UIKIT_DEFINE_AS_PROPERTIES
+#if GTUIKIT_DEFINE_AS_PROPERTIES
 /**特殊的尺寸，表示尺寸会填充满父视图的剩余空间。目前只用在表格布局GTUITableLayout和栅格布局GTUIGridLayout中。*/
 @property(class, nonatomic, assign,readonly) CGFloat fill;
 #else
 +(CGFloat)fill;
 #endif
 
-#if UIKIT_DEFINE_AS_PROPERTIES
+#if GTUIKIT_DEFINE_AS_PROPERTIES
 /**特殊的尺寸，表示尺寸会均分父视图的剩余空间。目前只用在表格布局GTUITableLayout */
 @property(class, nonatomic, assign,readonly) CGFloat average;
 #else

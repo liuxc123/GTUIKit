@@ -242,7 +242,7 @@
     _headerInsets = UIEdgeInsetsMake(20.0f, 20.0f, 20.0f, 20.0f); //默认间距
 
     //内容通用设置
-    _backgroundColor = [UIColor blackColor]; //默认背景半透明颜色
+    _backgroundColor = [UIColor clearColor]; //默认背景半透明颜色
     _backgroundStyle = GTUIBackgroundStyleTranslucent;//背景透明度
     _backgroundBlurEffectStyle = UIBlurEffectStyleDark; //背景样式
     _inkColor = [UIColor clearColor]; //默认墨水颜色
@@ -267,7 +267,7 @@
     _statusBarStyle = UIStatusBarStyleDefault; //默认状态栏样式
 
     //actionSheet设置
-    _actionSheetBackgroundColor = [UIColor colorWithRed:21/255.0f green:123/255.0f blue:245/255.0f alpha:1.0f]; //默认actionsheet背景颜色
+    _actionSheetBackgroundColor = [UIColor clearColor]; //默认actionsheet背景颜色
     _actionSheetCancelActionSpaceColor = [UIColor clearColor]; //默认actionsheet取消按钮间隔颜色
     _actionSheetCancelActionSpaceWidth = 10.0f; //默认actionsheet取消按钮间隔宽度
     _actionSheetBottomMargin = 13.0f; //默认actionsheet距离屏幕底部距离式

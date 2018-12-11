@@ -27,6 +27,11 @@
 #endif
 
 
+#if (!defined(SWIFT_CLASS_EXTRA) || (defined(SWIFT_SDK_OVERLAY_UIKIT_EPOCH) && SWIFT_SDK_OVERLAY_UIKIT_EPOCH >= 1))
+#define GTUIKIT_DEFINE_AS_PROPERTIES 1
+#else
+#define GTUIKIT_DEFINE_AS_PROPERTIES 0
+#endif
 
 /**
  *布局视图方向的枚举类型定义。用来指定布局内子视图的整体排列布局方向。

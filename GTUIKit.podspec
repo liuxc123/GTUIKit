@@ -176,6 +176,8 @@ Pod::Spec.new do |s|
         component.ios.deployment_target = '8.0'
         component.public_header_files = "components/CommonComponent/#{component.base_name}/src/**/*.h"
         component.source_files = "components/CommonComponent/#{component.base_name}/src/**/*.{h,m}"
+
+        component.dependency "GTUIKit/private/UIMetrics"
     end
 
     # FlexibleHeader
@@ -223,6 +225,15 @@ Pod::Spec.new do |s|
       component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
     end
 
+    # MoreOperationController
+    # common_spec.subspec "MoreOperationController" do |component|
+    #    component.ios.deployment_target = '8.0'
+    #    component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+    #    component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+#    component.dependency "GTUIKit/CommonComponent/Button"
+#   component.dependency "GTUIKit/CommonComponent/BottomSheet"
+#end
 
     # NavigationBar
     common_spec.subspec "NavigationBar" do |component|

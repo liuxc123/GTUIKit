@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GTUIKitExamples'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'This spec is an aggregate of all the GTUIKit Components examples.'
   s.homepage         = 'https://github.com/liuxc123/GTUIKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.resources = ['components/CommonComponent/*/examples/resources/*']
   s.public_header_files = 'components/CommonComponent/*/examples/*.h', 'components/CommonComponent/*/examples/supplemental/*.h'
 
-
   s.dependency 'GTUIKit'
+
 end

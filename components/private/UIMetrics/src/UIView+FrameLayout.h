@@ -13,6 +13,7 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
+
 #define SCREEN_WIDTH ([[UIScreen mainScreen]bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen]bounds].size.height)
 
@@ -27,7 +28,7 @@ static UIScreenType UIScreenType_iPhone5 = 320.0f;
 static UIScreenType UIScreenType_iPhone6 = 375.0f;
 static UIScreenType UIScreenType_iPhone6P = 414.0f;
 
-@interface UIView (FrameLayout)
+@interface UIView (GTFrameLayout)
 
 // coordinator getters
 - (CGFloat)height;

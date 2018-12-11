@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GTUILayoutPosition : NSObject <NSCopying>
 
-#if UIKIT_DEFINE_AS_PROPERTIES
+#if GTUIKIT_DEFINE_AS_PROPERTIES
 
 /**
  特殊的位置。只用在布局视图和非布局父视图之间的位置约束和没有导航条时的布局视图内子视图的padding设置上。

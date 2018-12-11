@@ -152,7 +152,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong,readonly)  GTUILayoutPosition *baselinePosInner;
 
-#if UIKIT_DEFINE_AS_PROPERTIES
+#if GTUIKIT_DEFINE_AS_PROPERTIES
 
 @property(class, nonatomic, assign) BOOL isRTL;
 #else

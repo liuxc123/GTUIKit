@@ -13,7 +13,7 @@ static void *kUIViewLayoutMethodPropertyTopGap = &kUIViewLayoutMethodPropertyTop
 static void *kUIViewLayoutMethodPropertyLeftGap = &kUIViewLayoutMethodPropertyLeftGap;
 static void *kUIViewLayoutMethodPropertyRightGap = &kUIViewLayoutMethodPropertyRightGap;
 
-@implementation UIView (FrameLayout)
+@implementation UIView (GTFrameLayout)
 
 #pragma mark - coordinator getters
 

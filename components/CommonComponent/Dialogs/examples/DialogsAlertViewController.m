@@ -26,7 +26,7 @@
         UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
         customView.backgroundColor = [UIColor blueColor];
 
-        GTUIDialogConfigModel *configModel = [[GTUIDialogConfigModel alloc] initWithStyle:GTUIDialogStyleNormal];
+        GTUIDialogConfigModel *configModel = [[GTUIDialogConfigModel alloc] initWithStyle:GTUIDialogStyleUIKit];
         configModel.isQueue = YES;
         configModel.isContinueQueueDisplay = YES;
         configModel.queuePriority = 1;
