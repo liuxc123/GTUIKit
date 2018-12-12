@@ -25,3 +25,6 @@
 #import "GTUITabBarIndicatorBackgroundView.h"
 #import "GTUITabBarIndicatorBallView.h"
 
+#import "GTUIPageView.h"
+#import "GTUIPageMainTableView.h"
+#import "GTUIPageListContainerView.h"

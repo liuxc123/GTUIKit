@@ -10,6 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol GTUIPageViewControllerDelegate <NSObject>
+
+
+@end
+
 @interface GTUIPageViewController : UIViewController
 
 @property (nonatomic, strong) GTUITabBarTitleImageView *tabBarView;
