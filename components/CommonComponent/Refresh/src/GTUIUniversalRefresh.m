@@ -69,7 +69,7 @@ static NSArray *refreshingfooterImageArray;
 
             for (NSInteger i = 1; i < 32; i++) {
 
-                UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refreshing_%.2ld.png" , i]];
+                UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refreshing_%.2ld.png" , (long)i]];
 
                 if (image) [imageArray addObject:image];
             }
@@ -161,7 +161,7 @@ static NSArray *refreshingfooterImageArray;
 
             for (NSInteger i = 1; i < 32; i++) {
 
-                UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refreshing_%.2ld.png" , i]];
+                UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refreshing_%.2ld.png" , (long)i]];
 
                 if (image) [imageArray addObject:image];
             }
@@ -251,7 +251,7 @@ static NSArray *refreshingfooterImageArray;
 
             for (NSInteger i = 1; i < 32; i++) {
 
-                UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refreshing_%.2ld.png" , i]];
+                UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refreshing_%.2ld.png" , (long)i]];
 
                 if (image) [imageArray addObject:image];
             }
