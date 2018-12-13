@@ -16,6 +16,7 @@ class FormDemoViewController: GTUIFormViewController {
         self.title = "Form"
 
         initializeForm()
+
     }
 
     func initializeForm() {
@@ -117,6 +118,7 @@ class FormDemoViewController: GTUIFormViewController {
         section.addFormRow(row)
 
         self.form = form
+
     }
 
     // MARK: GTUIFormDescriptorDelegate

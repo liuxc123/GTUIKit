@@ -49,6 +49,7 @@ PODS:
     - GTUIKit/CommonComponent/OverlayWindow (= 0.0.3)
     - GTUIKit/CommonComponent/PickerView (= 0.0.3)
     - GTUIKit/CommonComponent/ProgressView (= 0.0.3)
+    - GTUIKit/CommonComponent/Refresh (= 0.0.3)
     - GTUIKit/CommonComponent/schemes (= 0.0.3)
     - GTUIKit/CommonComponent/Switch (= 0.0.3)
     - GTUIKit/CommonComponent/TabBar (= 0.0.3)
@@ -128,6 +129,8 @@ PODS:
     - GTFInternationalization
     - GTMotionInterchange
     - GTUIKit/private/Math
+  - GTUIKit/CommonComponent/Refresh (0.0.3):
+    - MJRefresh
   - GTUIKit/CommonComponent/schemes (0.0.3):
     - GTUIKit/CommonComponent/schemes/ColorScheme (= 0.0.3)
     - GTUIKit/CommonComponent/schemes/ShapeScheme (= 0.0.3)
@@ -169,6 +172,7 @@ PODS:
   - GTUIKitExamples (0.0.2):
     - GTUIKit
   - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
 
 DEPENDENCIES:
   - GTCatalog
@@ -183,6 +187,7 @@ SPEC REPOS:
     - GTFTextAccessibility
     - GTMotionInterchange
     - Masonry
+    - MJRefresh
 
 EXTERNAL SOURCES:
   GTUIKit:
@@ -195,9 +200,10 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: 25eb5937740d5ec3658c57c69c4852995a7b3199
+  GTUIKit: 0bb3758e0364e50a6f5f60994881ede5da60f4ab
   GTUIKitExamples: 9a51fa52b42e6161b72d2ac338a1dd5f383e62e6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
 
 PODFILE CHECKSUM: e91e24c791e617ae72da37f04b6dfd109d209f40
 

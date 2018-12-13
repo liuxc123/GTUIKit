@@ -561,6 +561,22 @@
           }
         },
         {
+          "name": "Refresh",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/CommonComponent/Refresh/src/*.h",
+          "source_files": [
+            "components/CommonComponent/Refresh/src/*.{h,m}",
+            "components/CommonComponent/Refresh/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "MJRefresh": [
+
+            ]
+          }
+        },
+        {
           "name": "Switch",
           "platforms": {
             "ios": "8.0"

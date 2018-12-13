@@ -325,6 +325,15 @@ Pod::Spec.new do |s|
 
     end
 
+    # Refresh
+    common_spec.subspec "Refresh" do |component|
+        component.ios.deployment_target = '8.0'
+        component.public_header_files = "components/CommonComponent/#{component.base_name}/src/*.h"
+        component.source_files = "components/CommonComponent/#{component.base_name}/src/*.{h,m}", "components/CommonComponent/#{component.base_name}/src/private/*.{h,m}"
+
+        component.dependency "MJRefresh"
+    end
+
     # Switch
     common_spec.subspec "Switch" do |component|
       component.ios.deployment_target = '8.0'

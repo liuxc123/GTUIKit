@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GTUINavigationControllerD
         appBarViewController.headerView.insertSubview(navImageView, at: 0)
         appBarViewController.navigationBar.setButtonsTitleColor(UIColor.black, for: .normal)
         appBarViewController.navigationBar.tintColor = UIColor.black
+        appBarViewController.headerView.canOverExtend = false
     }
 
 }
