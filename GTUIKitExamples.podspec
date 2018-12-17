@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GTUIKitExamples'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'This spec is an aggregate of all the GTUIKit Components examples.'
   s.homepage         = 'https://github.com/liuxc123/GTUIKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
