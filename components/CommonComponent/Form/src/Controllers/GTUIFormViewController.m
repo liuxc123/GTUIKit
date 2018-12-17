@@ -228,7 +228,8 @@
                                                GTUIFormRowDescriptorTypePicker : [GTUIFormPickerCell class],
                                                GTUIFormRowDescriptorTypeSlider : [GTUIFormSliderCell class],
                                                GTUIFormRowDescriptorTypeSelectorLeftRight : [GTUIFormLeftRightSelectorCell class],
-                                               GTUIFormRowDescriptorTypeStepCounter: [GTUIFormStepCounterCell class]
+                                               GTUIFormRowDescriptorTypeStepCounter: [GTUIFormStepCounterCell class],
+                                               GTUIFormRowDescriptorTypeCountDownCode: [GTUIFormCodeCell class]
                                                } mutableCopy];
     });
     return _cellClassesForRowDescriptorTypes;
@@ -711,13 +712,21 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    NSString *title = [[self.form.formSections objectAtIndex:section] title];
-    return  [GTUIFormViewController createHeaderOrFooterViewWithTitle:title];
+    GTUIFormSectionDescriptor *sectionDescriptor = (GTUIFormSectionDescriptor *)[self.form.formSections objectAtIndex:section];
+    if (sectionDescriptor.customHeaderView) {
+        return sectionDescriptor.customHeaderView;
+    }
+    NSString *title = [sectionDescriptor title];
+    return [GTUIFormViewController createHeaderOrFooterViewWithTitle:title];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    NSString *title = [[self.form.formSections objectAtIndex:section] footerTitle];
+    GTUIFormSectionDescriptor *sectionDescriptor = (GTUIFormSectionDescriptor *)[self.form.formSections objectAtIndex:section];
+    if (sectionDescriptor.customFooterView) {
+        return sectionDescriptor.customFooterView;
+    }
+    NSString *title = [sectionDescriptor footerTitle];
     return [GTUIFormViewController createHeaderOrFooterViewWithTitle:title];
 }
 

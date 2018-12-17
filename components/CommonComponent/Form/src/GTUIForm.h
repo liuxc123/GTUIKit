@@ -53,6 +53,8 @@
 #import "GTUIFormTextFieldCell.h"
 #import "GTUIFormTextViewCell.h"
 #import "GTUIFormImageCell.h"
+#import "GTUIFormCodeCell.h"
+
 
 //Validation
 #import "GTUIFormRegexValidator.h"
@@ -98,6 +100,7 @@ extern NSString *const GTUIFormRowDescriptorTypeTimeInline;
 extern NSString *const GTUIFormRowDescriptorTypeTwitter;
 extern NSString *const GTUIFormRowDescriptorTypeURL;
 extern NSString *const GTUIFormRowDescriptorTypeZipCode;
+extern NSString *const GTUIFormRowDescriptorTypeCountDownCode;
 
 
 

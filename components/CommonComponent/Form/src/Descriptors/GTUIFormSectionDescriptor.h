@@ -29,6 +29,8 @@ typedef NS_ENUM(NSUInteger, GTUIFormSectionInsertMode) {
 @property (readonly, nonnull) NSMutableArray * formRows;
 @property (nonatomic) CGFloat headerHeight;
 @property (nonatomic) CGFloat footerHeight;
+@property (nonatomic, nullable) UIView *customHeaderView;
+@property (nonatomic, nullable) UIView *customFooterView;
 
 
 @property (nonatomic, assign) BOOL cellTitleEqualWidth;

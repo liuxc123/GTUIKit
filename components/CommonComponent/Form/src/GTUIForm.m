@@ -47,3 +47,5 @@ NSString *const GTUIFormRowDescriptorTypeButton = @"button";
 NSString *const GTUIFormRowDescriptorTypeInfo = @"info";
 NSString *const GTUIFormRowDescriptorTypeStepCounter = @"stepCounter";
 NSString *const GTUIFormRowDescriptorTypeSelectorPush = @"selectorPush";
+NSString *const GTUIFormRowDescriptorTypeCountDownCode = @"countDownCode";
+

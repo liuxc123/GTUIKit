@@ -14,9 +14,7 @@ class FormDemoViewController: GTUIFormViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.title = "Form"
-
         initializeForm()
-
     }
 
     func initializeForm() {
@@ -29,6 +27,12 @@ class FormDemoViewController: GTUIFormViewController {
 
         section = GTUIFormSectionDescriptor.formSection()
         form.addFormSection(section)
+
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.width(), height: 100))
+        customView.backgroundColor = UIColor.red
+        section.customHeaderView = customView
+        section.headerHeight = 200
+
 
         // Title
         row = GTUIFormRowDescriptor(tag: "title", rowType: GTUIFormRowDescriptorTypeText)
@@ -203,7 +207,7 @@ class FormDemoViewController: GTUIFormViewController {
 extension FormDemoViewController {
     @objc class func catalogMetadata() -> [String: Any] {
         return [
-            "breadcrumbs": ["Form"],
+            "breadcrumbs": ["Form", "iOS Calendar Event Form"],
             "primaryDemo": true,
             "presentable": true
         ]

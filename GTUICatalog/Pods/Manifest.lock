@@ -3,67 +3,67 @@ PODS:
   - GTFInternationalization (0.0.1)
   - GTFTextAccessibility (0.0.1)
   - GTMotionInterchange (0.0.2)
-  - GTUIKit (0.0.3):
-    - GTUIKit/BasicComponent (= 0.0.3)
-    - GTUIKit/CommonComponent (= 0.0.3)
-    - GTUIKit/private (= 0.0.3)
-  - GTUIKit/BasicComponent (0.0.3):
-    - GTUIKit/BasicComponent/IconFont (= 0.0.3)
-    - GTUIKit/BasicComponent/Layout (= 0.0.3)
-    - GTUIKit/BasicComponent/Palettes (= 0.0.3)
-    - GTUIKit/BasicComponent/ShadowLayer (= 0.0.3)
-    - GTUIKit/BasicComponent/ShapeLibrary (= 0.0.3)
-    - GTUIKit/BasicComponent/Shapes (= 0.0.3)
-    - GTUIKit/BasicComponent/Typography (= 0.0.3)
-  - GTUIKit/BasicComponent/IconFont (0.0.3)
-  - GTUIKit/BasicComponent/Layout (0.0.3)
-  - GTUIKit/BasicComponent/Palettes (0.0.3)
-  - GTUIKit/BasicComponent/ShadowLayer (0.0.3)
-  - GTUIKit/BasicComponent/ShapeLibrary (0.0.3):
+  - GTUIKit (0.0.4):
+    - GTUIKit/BasicComponent (= 0.0.4)
+    - GTUIKit/CommonComponent (= 0.0.4)
+    - GTUIKit/private (= 0.0.4)
+  - GTUIKit/BasicComponent (0.0.4):
+    - GTUIKit/BasicComponent/IconFont (= 0.0.4)
+    - GTUIKit/BasicComponent/Layout (= 0.0.4)
+    - GTUIKit/BasicComponent/Palettes (= 0.0.4)
+    - GTUIKit/BasicComponent/ShadowLayer (= 0.0.4)
+    - GTUIKit/BasicComponent/ShapeLibrary (= 0.0.4)
+    - GTUIKit/BasicComponent/Shapes (= 0.0.4)
+    - GTUIKit/BasicComponent/Typography (= 0.0.4)
+  - GTUIKit/BasicComponent/IconFont (0.0.4)
+  - GTUIKit/BasicComponent/Layout (0.0.4)
+  - GTUIKit/BasicComponent/Palettes (0.0.4)
+  - GTUIKit/BasicComponent/ShadowLayer (0.0.4)
+  - GTUIKit/BasicComponent/ShapeLibrary (0.0.4):
     - GTUIKit/BasicComponent/Shapes
     - GTUIKit/private/Math
-  - GTUIKit/BasicComponent/Shapes (0.0.3):
+  - GTUIKit/BasicComponent/Shapes (0.0.4):
     - GTUIKit/BasicComponent/ShadowLayer
     - GTUIKit/private/Math
-  - GTUIKit/BasicComponent/Typography (0.0.3):
+  - GTUIKit/BasicComponent/Typography (0.0.4):
     - GTUIKit/private/Application
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent (0.0.3):
-    - GTUIKit/CommonComponent/ActivityIndicatorView (= 0.0.3)
-    - GTUIKit/CommonComponent/Badge (= 0.0.3)
-    - GTUIKit/CommonComponent/BottomSheet (= 0.0.3)
-    - GTUIKit/CommonComponent/Button (= 0.0.3)
-    - GTUIKit/CommonComponent/ButtonBar (= 0.0.3)
-    - GTUIKit/CommonComponent/CheckBox (= 0.0.3)
-    - GTUIKit/CommonComponent/Dialogs (= 0.0.3)
-    - GTUIKit/CommonComponent/EmptyView (= 0.0.3)
-    - GTUIKit/CommonComponent/FlexibleHeader (= 0.0.3)
-    - GTUIKit/CommonComponent/Form (= 0.0.3)
-    - GTUIKit/CommonComponent/HeaderStackView (= 0.0.3)
-    - GTUIKit/CommonComponent/ImageView (= 0.0.3)
-    - GTUIKit/CommonComponent/Ink (= 0.0.3)
-    - GTUIKit/CommonComponent/Label (= 0.0.3)
-    - GTUIKit/CommonComponent/NavigationBar (= 0.0.3)
-    - GTUIKit/CommonComponent/NavigationController (= 0.0.3)
-    - GTUIKit/CommonComponent/NotificationBar (= 0.0.3)
-    - GTUIKit/CommonComponent/OverlayWindow (= 0.0.3)
-    - GTUIKit/CommonComponent/PickerView (= 0.0.3)
-    - GTUIKit/CommonComponent/ProgressView (= 0.0.3)
-    - GTUIKit/CommonComponent/Refresh (= 0.0.3)
-    - GTUIKit/CommonComponent/schemes (= 0.0.3)
-    - GTUIKit/CommonComponent/Switch (= 0.0.3)
-    - GTUIKit/CommonComponent/TabBar (= 0.0.3)
-    - GTUIKit/CommonComponent/TextFields (= 0.0.3)
-    - GTUIKit/CommonComponent/Toast (= 0.0.3)
-    - GTUIKit/CommonComponent/ToolBar (= 0.0.3)
-  - GTUIKit/CommonComponent/ActivityIndicatorView (0.0.3)
-  - GTUIKit/CommonComponent/Badge (0.0.3)
-  - GTUIKit/CommonComponent/BottomSheet (0.0.3):
+  - GTUIKit/CommonComponent (0.0.4):
+    - GTUIKit/CommonComponent/ActivityIndicatorView (= 0.0.4)
+    - GTUIKit/CommonComponent/Badge (= 0.0.4)
+    - GTUIKit/CommonComponent/BottomSheet (= 0.0.4)
+    - GTUIKit/CommonComponent/Button (= 0.0.4)
+    - GTUIKit/CommonComponent/ButtonBar (= 0.0.4)
+    - GTUIKit/CommonComponent/CheckBox (= 0.0.4)
+    - GTUIKit/CommonComponent/Dialogs (= 0.0.4)
+    - GTUIKit/CommonComponent/EmptyView (= 0.0.4)
+    - GTUIKit/CommonComponent/FlexibleHeader (= 0.0.4)
+    - GTUIKit/CommonComponent/Form (= 0.0.4)
+    - GTUIKit/CommonComponent/HeaderStackView (= 0.0.4)
+    - GTUIKit/CommonComponent/ImageView (= 0.0.4)
+    - GTUIKit/CommonComponent/Ink (= 0.0.4)
+    - GTUIKit/CommonComponent/Label (= 0.0.4)
+    - GTUIKit/CommonComponent/NavigationBar (= 0.0.4)
+    - GTUIKit/CommonComponent/NavigationController (= 0.0.4)
+    - GTUIKit/CommonComponent/NotificationBar (= 0.0.4)
+    - GTUIKit/CommonComponent/OverlayWindow (= 0.0.4)
+    - GTUIKit/CommonComponent/PickerView (= 0.0.4)
+    - GTUIKit/CommonComponent/ProgressView (= 0.0.4)
+    - GTUIKit/CommonComponent/Refresh (= 0.0.4)
+    - GTUIKit/CommonComponent/schemes (= 0.0.4)
+    - GTUIKit/CommonComponent/Switch (= 0.0.4)
+    - GTUIKit/CommonComponent/TabBar (= 0.0.4)
+    - GTUIKit/CommonComponent/TextFields (= 0.0.4)
+    - GTUIKit/CommonComponent/Toast (= 0.0.4)
+    - GTUIKit/CommonComponent/ToolBar (= 0.0.4)
+  - GTUIKit/CommonComponent/ActivityIndicatorView (0.0.4)
+  - GTUIKit/CommonComponent/Badge (0.0.4)
+  - GTUIKit/CommonComponent/BottomSheet (0.0.4):
     - GTUIKit/BasicComponent/ShapeLibrary
     - GTUIKit/BasicComponent/Shapes
     - GTUIKit/private/KeyboardWatcher
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/Button (0.0.3):
+  - GTUIKit/CommonComponent/Button (0.0.4):
     - GTFInternationalization
     - GTFTextAccessibility
     - GTUIKit/BasicComponent/ShadowLayer
@@ -72,10 +72,10 @@ PODS:
     - GTUIKit/CommonComponent/Ink
     - GTUIKit/private/Application
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/ButtonBar (0.0.3):
+  - GTUIKit/CommonComponent/ButtonBar (0.0.4):
     - GTUIKit/CommonComponent/Button
-  - GTUIKit/CommonComponent/CheckBox (0.0.3)
-  - GTUIKit/CommonComponent/Dialogs (0.0.3):
+  - GTUIKit/CommonComponent/CheckBox (0.0.4)
+  - GTUIKit/CommonComponent/Dialogs (0.0.4):
     - GTFInternationalization
     - GTUIKit/BasicComponent/ShadowLayer
     - GTUIKit/BasicComponent/Typography
@@ -83,26 +83,26 @@ PODS:
     - GTUIKit/CommonComponent/Button
     - GTUIKit/private/KeyboardWatcher
     - GTUIKit/private/UIMetrics
-  - GTUIKit/CommonComponent/EmptyView (0.0.3):
+  - GTUIKit/CommonComponent/EmptyView (0.0.4):
     - GTUIKit/private/UIMetrics
-  - GTUIKit/CommonComponent/FlexibleHeader (0.0.3):
+  - GTUIKit/CommonComponent/FlexibleHeader (0.0.4):
     - GTFTextAccessibility
     - GTUIKit/private/Application
     - GTUIKit/private/UIMetrics
-  - GTUIKit/CommonComponent/Form (0.0.3):
+  - GTUIKit/CommonComponent/Form (0.0.4):
     - GTUIKit/private/UIMetrics
-  - GTUIKit/CommonComponent/HeaderStackView (0.0.3)
-  - GTUIKit/CommonComponent/ImageView (0.0.3):
+  - GTUIKit/CommonComponent/HeaderStackView (0.0.4)
+  - GTUIKit/CommonComponent/ImageView (0.0.4):
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/Ink (0.0.3):
+  - GTUIKit/CommonComponent/Ink (0.0.4):
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/Label (0.0.3)
-  - GTUIKit/CommonComponent/NavigationBar (0.0.3):
+  - GTUIKit/CommonComponent/Label (0.0.4)
+  - GTUIKit/CommonComponent/NavigationBar (0.0.4):
     - GTFInternationalization
     - GTFTextAccessibility
     - GTUIKit/CommonComponent/ButtonBar
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/NavigationController (0.0.3):
+  - GTUIKit/CommonComponent/NavigationController (0.0.4):
     - GTFInternationalization
     - GTUIKit/BasicComponent/IconFont
     - GTUIKit/BasicComponent/ShadowLayer
@@ -112,7 +112,7 @@ PODS:
     - GTUIKit/CommonComponent/NavigationBar
     - GTUIKit/private/Application
     - GTUIKit/private/UIMetrics
-  - GTUIKit/CommonComponent/NotificationBar (0.0.3):
+  - GTUIKit/CommonComponent/NotificationBar (0.0.4):
     - GTFInternationalization
     - GTFTextAccessibility
     - GTUIKit/BasicComponent/Typography
@@ -121,53 +121,53 @@ PODS:
     - GTUIKit/private/Application
     - GTUIKit/private/KeyboardWatcher
     - GTUIKit/private/Overlay
-  - GTUIKit/CommonComponent/OverlayWindow (0.0.3):
+  - GTUIKit/CommonComponent/OverlayWindow (0.0.4):
     - GTUIKit/private/Application
-  - GTUIKit/CommonComponent/PickerView (0.0.3):
+  - GTUIKit/CommonComponent/PickerView (0.0.4):
     - GTUIKit/private/UIMetrics
-  - GTUIKit/CommonComponent/ProgressView (0.0.3):
+  - GTUIKit/CommonComponent/ProgressView (0.0.4):
     - GTFInternationalization
     - GTMotionInterchange
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/Refresh (0.0.3):
+  - GTUIKit/CommonComponent/Refresh (0.0.4):
     - MJRefresh
-  - GTUIKit/CommonComponent/schemes (0.0.3):
-    - GTUIKit/CommonComponent/schemes/ColorScheme (= 0.0.3)
-    - GTUIKit/CommonComponent/schemes/ShapeScheme (= 0.0.3)
-    - GTUIKit/CommonComponent/schemes/TypographyScheme (= 0.0.3)
-  - GTUIKit/CommonComponent/schemes/ColorScheme (0.0.3)
-  - GTUIKit/CommonComponent/schemes/ShapeScheme (0.0.3):
+  - GTUIKit/CommonComponent/schemes (0.0.4):
+    - GTUIKit/CommonComponent/schemes/ColorScheme (= 0.0.4)
+    - GTUIKit/CommonComponent/schemes/ShapeScheme (= 0.0.4)
+    - GTUIKit/CommonComponent/schemes/TypographyScheme (= 0.0.4)
+  - GTUIKit/CommonComponent/schemes/ColorScheme (0.0.4)
+  - GTUIKit/CommonComponent/schemes/ShapeScheme (0.0.4):
     - GTUIKit/BasicComponent/ShapeLibrary
     - GTUIKit/BasicComponent/Shapes
-  - GTUIKit/CommonComponent/schemes/TypographyScheme (0.0.3)
-  - GTUIKit/CommonComponent/Switch (0.0.3)
-  - GTUIKit/CommonComponent/TabBar (0.0.3)
-  - GTUIKit/CommonComponent/TextFields (0.0.3):
+  - GTUIKit/CommonComponent/schemes/TypographyScheme (0.0.4)
+  - GTUIKit/CommonComponent/Switch (0.0.4)
+  - GTUIKit/CommonComponent/TabBar (0.0.4)
+  - GTUIKit/CommonComponent/TextFields (0.0.4):
     - GTFInternationalization
     - GTUIKit/BasicComponent/Palettes
     - GTUIKit/BasicComponent/Typography
     - GTUIKit/private/AnimationTiming
     - GTUIKit/private/Math
-  - GTUIKit/CommonComponent/Toast (0.0.3)
-  - GTUIKit/CommonComponent/ToolBar (0.0.3):
+  - GTUIKit/CommonComponent/Toast (0.0.4)
+  - GTUIKit/CommonComponent/ToolBar (0.0.4):
     - GTFInternationalization
     - GTUIKit/CommonComponent/Button
     - GTUIKit/CommonComponent/NavigationBar
     - GTUIKit/private/Math
-  - GTUIKit/private (0.0.3):
-    - GTUIKit/private/AnimationTiming (= 0.0.3)
-    - GTUIKit/private/Application (= 0.0.3)
-    - GTUIKit/private/KeyboardWatcher (= 0.0.3)
-    - GTUIKit/private/Math (= 0.0.3)
-    - GTUIKit/private/Overlay (= 0.0.3)
-    - GTUIKit/private/UIMetrics (= 0.0.3)
-  - GTUIKit/private/AnimationTiming (0.0.3)
-  - GTUIKit/private/Application (0.0.3)
-  - GTUIKit/private/KeyboardWatcher (0.0.3):
+  - GTUIKit/private (0.0.4):
+    - GTUIKit/private/AnimationTiming (= 0.0.4)
+    - GTUIKit/private/Application (= 0.0.4)
+    - GTUIKit/private/KeyboardWatcher (= 0.0.4)
+    - GTUIKit/private/Math (= 0.0.4)
+    - GTUIKit/private/Overlay (= 0.0.4)
+    - GTUIKit/private/UIMetrics (= 0.0.4)
+  - GTUIKit/private/AnimationTiming (0.0.4)
+  - GTUIKit/private/Application (0.0.4)
+  - GTUIKit/private/KeyboardWatcher (0.0.4):
     - GTUIKit/private/Application
-  - GTUIKit/private/Math (0.0.3)
-  - GTUIKit/private/Overlay (0.0.3)
-  - GTUIKit/private/UIMetrics (0.0.3):
+  - GTUIKit/private/Math (0.0.4)
+  - GTUIKit/private/Overlay (0.0.4)
+  - GTUIKit/private/UIMetrics (0.0.4):
     - GTUIKit/private/Application
   - GTUIKitExamples (0.0.2):
     - GTUIKit
@@ -200,7 +200,7 @@ SPEC CHECKSUMS:
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
-  GTUIKit: 0bb3758e0364e50a6f5f60994881ede5da60f4ab
+  GTUIKit: a69930a22a18bf2b5973e4c5ef60fcf1139551a6
   GTUIKitExamples: 9a51fa52b42e6161b72d2ac338a1dd5f383e62e6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f

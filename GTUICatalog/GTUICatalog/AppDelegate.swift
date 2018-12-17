@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GTUINavigationControllerD
         appBarViewController.navigationBar.setButtonsTitleColor(UIColor.black, for: .normal)
         appBarViewController.navigationBar.tintColor = UIColor.black
         appBarViewController.headerView.canOverExtend = false
+        appBarViewController.headerView.visibleShadowOpacity = 0.0
     }
 
 }

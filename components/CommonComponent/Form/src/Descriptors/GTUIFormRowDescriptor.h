@@ -135,6 +135,7 @@ typedef NS_ENUM(NSUInteger, GTUIFormLeftRightSelectorOptionLeftValueChangePolicy
 @property (nullable, nonatomic, strong) Class viewControllerClass;
 @property (nullable, nonatomic, strong) NSString * viewControllerStoryboardId;
 @property (nullable, nonatomic, strong) NSString * viewControllerNibName;
+@property (nullable, nonatomic, strong) void (^viewControllerFormBlock)(GTUIFormRowDescriptor * __nonnull sender);
 
 @property (nonatomic) GTUIFormPresentationMode viewControllerPresentationMode;
 
