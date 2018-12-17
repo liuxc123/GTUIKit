@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -924,7 +924,7 @@
 		13E3BF5106F75D5701BB3278366FF492 /* GTUIFormCodeCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUIFormCodeCell.m; sourceTree = "<group>"; };
 		13FF1E9C129D7EFEEB1F1211A18285EC /* GTUIActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIActivityIndicatorView.h; path = components/CommonComponent/ActivityIndicatorView/src/GTUIActivityIndicatorView.h; sourceTree = "<group>"; };
 		14E33368467B9CD3D2B9D897EF9A6AC8 /* GTMotionInterchange-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMotionInterchange-umbrella.h"; sourceTree = "<group>"; };
-		14E588A39238E0168847DF15923A356B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		14E588A39238E0168847DF15923A356B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		15724A069AB3D790CF95BD319799EBCD /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		15ACD025AB4FDA9EC1E40C06AA600BE1 /* GTMSpringTimingCurve.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSpringTimingCurve.h; path = src/GTMSpringTimingCurve.h; sourceTree = "<group>"; };
 		15C642FC77A10283B6E244C4591A4BDE /* GTUITextInputCommonFundament.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUITextInputCommonFundament.h; sourceTree = "<group>"; };
@@ -970,12 +970,12 @@
 		23C999DCF721D898B69D77CF1DA9B1C1 /* DialogsAlertViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DialogsAlertViewController.m; sourceTree = "<group>"; };
 		246DA2456CDD3ABB66DE7492F5DA506E /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
 		24F2134AAA18874152D0CE108D8DF8EE /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		24F40064DB20F9818D37892DF8F5F2B5 /* GTCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTCatalog.framework; path = GTCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F40064DB20F9818D37892DF8F5F2B5 /* GTCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		250E0CDB2EE95B337BDB3F6386D4080E /* GTUINetErrorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUINetErrorView.h; path = components/CommonComponent/EmptyView/src/GTUINetErrorView.h; sourceTree = "<group>"; };
 		25376F84B7BB9FD2C90B926B26879B96 /* GTUITextField+Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTUITextField+Testing.h"; sourceTree = "<group>"; };
 		266EFB657126943B07A48F1BF5D2CA2F /* GTMRepetition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMRepetition.m; path = src/GTMRepetition.m; sourceTree = "<group>"; };
 		26C886517FB21B31025F1DCB52CE8D47 /* GTUITabBarImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUITabBarImageView.m; sourceTree = "<group>"; };
-		272CDB236EB2AEF11315BE88BB4865C3 /* GTUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GTUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		272CDB236EB2AEF11315BE88BB4865C3 /* GTUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = GTUIKit.podspec; sourceTree = "<group>"; };
 		275621E422C38B7389DCE477170C8A87 /* GTNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTNavigationBar.h; path = components/CommonComponent/NavigationBar/src/GTNavigationBar.h; sourceTree = "<group>"; };
 		27888E3D1427A1328447FD2DD80F3EA6 /* GTUITabBarListVCContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUITabBarListVCContainerView.h; sourceTree = "<group>"; };
 		278C6C7313EA6A1FB8370D52B1A74339 /* UIImage+GTRTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GTRTL.h"; path = "src/UIImage+GTRTL.h"; sourceTree = "<group>"; };
@@ -1009,7 +1009,7 @@
 		30BDF22764DBFB3BFF7C8074D6471B25 /* GTUIFlexibleHeaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIFlexibleHeaderView.m; path = components/CommonComponent/FlexibleHeader/src/GTUIFlexibleHeaderView.m; sourceTree = "<group>"; };
 		30C3A3F244DB01CE4C9F6B5E16BDD4EE /* MJRefreshFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshFooter.m; path = MJRefresh/Base/MJRefreshFooter.m; sourceTree = "<group>"; };
 		30D59B10115705BA8BC412183E13F873 /* GTUIAddressPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIAddressPickerView.m; path = components/CommonComponent/PickerView/src/GTUIAddressPickerView.m; sourceTree = "<group>"; };
-		30F9DC766C772EF02F881E8FCCCEC563 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F9DC766C772EF02F881E8FCCCEC563 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FD209022F17477F1739EE78E6D49AB /* GTUIDialogAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIDialogAction.h; path = components/CommonComponent/Dialogs/src/GTUIDialogAction.h; sourceTree = "<group>"; };
 		324BCB359D1A44C577D034C6C9C0F791 /* GTUITextInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUITextInput.h; path = components/CommonComponent/TextFields/src/GTUITextInput.h; sourceTree = "<group>"; };
 		325EDF6AFB5F03653024B0DD7D57569F /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
@@ -1081,7 +1081,7 @@
 		46DC32EB6CBF8E594BF0052D1EF932AC /* GTUITabBarFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUITabBarFactory.m; sourceTree = "<group>"; };
 		471D569A8940B63D8DDA3F128EC23C28 /* NSArray+GTUIFormAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GTUIFormAdditions.m"; sourceTree = "<group>"; };
 		47A076A350407B7F84B2ADACCB15178C /* GTUIButton+GTSubmitting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTUIButton+GTSubmitting.m"; path = "components/CommonComponent/Button/src/GTUIButton+GTSubmitting.m"; sourceTree = "<group>"; };
-		4897289C5F49E7086FA74355AA4047B2 /* GTUIKitExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTUIKitExamples.framework; path = GTUIKitExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4897289C5F49E7086FA74355AA4047B2 /* GTUIKitExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTUIKitExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B7988575D7C3B0E765382DC24A07B5 /* GTUIFloatingButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIFloatingButton.m; path = components/CommonComponent/Button/src/GTUIFloatingButton.m; sourceTree = "<group>"; };
 		492A8845EACFF1C5625CDC5001D44F9D /* GTUIFormSliderCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUIFormSliderCell.h; sourceTree = "<group>"; };
 		49B8091C57836C8B37529A9102FFC17A /* GTUIFormTextFieldCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUIFormTextFieldCell.m; sourceTree = "<group>"; };
@@ -1120,7 +1120,7 @@
 		55A4C9CCFBCC1C60020B97AF2ABD0F4A /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		55AE9B3BD12F85B7E0A111960F0F3B1C /* GTUIBottomSheetTransitionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIBottomSheetTransitionController.h; path = components/CommonComponent/BottomSheet/src/GTUIBottomSheetTransitionController.h; sourceTree = "<group>"; };
 		55B3CD27068C42DA4F538BBAF77F8A10 /* GTAddressModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTAddressModel.m; path = components/CommonComponent/PickerView/src/GTAddressModel.m; sourceTree = "<group>"; };
-		55C947BE4FADC85BE9DCE137A181CB67 /* GTUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTUIKit.framework; path = GTUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C947BE4FADC85BE9DCE137A181CB67 /* GTUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E68396C15390F43CD97B2D00400700 /* GTUIBottomSheetPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIBottomSheetPresentationController.m; path = components/CommonComponent/BottomSheet/src/GTUIBottomSheetPresentationController.m; sourceTree = "<group>"; };
 		5629058B815989609EF00DB96E3E8160 /* GTShapes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShapes.h; path = components/BasicComponent/Shapes/src/GTShapes.h; sourceTree = "<group>"; };
 		566FD66BD69AD379810F14D5528B7883 /* GTUITabBarIndicatorTriangleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUITabBarIndicatorTriangleView.m; sourceTree = "<group>"; };
@@ -1224,7 +1224,7 @@
 		7FAF1E4A54D79BE4884D5B9380281916 /* GTUIFormButtonCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUIFormButtonCell.h; sourceTree = "<group>"; };
 		7FF33180EFD5039D460CDEC749BC0B0F /* GTMMotionTiming.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMotionTiming.h; path = src/GTMMotionTiming.h; sourceTree = "<group>"; };
 		800738E7FF64618950AF52884BD12FE2 /* GTUINavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUINavigationController.m; path = components/CommonComponent/NavigationController/src/GTUINavigationController.m; sourceTree = "<group>"; };
-		8018EB9B2C4486DCEBE20D8D1F17C8FF /* GTUIKitExamples.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GTUIKitExamples.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8018EB9B2C4486DCEBE20D8D1F17C8FF /* GTUIKitExamples.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = GTUIKitExamples.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		80317A0AC8B27096506C7675A07B6103 /* GTUIDoubleTitleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIDoubleTitleView.h; path = components/CommonComponent/NavigationBar/src/GTUIDoubleTitleView.h; sourceTree = "<group>"; };
 		8039D430C7553A50DBD6B7698100099C /* NSDate+GTDatePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+GTDatePickerView.h"; sourceTree = "<group>"; };
 		803DA443DA4EB3449872315FA5BC176D /* GTUILoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUILoadingView.m; path = components/CommonComponent/EmptyView/src/GTUILoadingView.m; sourceTree = "<group>"; };
@@ -1282,7 +1282,7 @@
 		929D699FCE1C065585553AA400D53033 /* GTUITabBarIndicatorCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUITabBarIndicatorCellModel.h; sourceTree = "<group>"; };
 		92D2D7EF36E3B11FBD4F12127FF27468 /* GTUIFrameLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIFrameLayout.m; path = components/BasicComponent/Layout/src/GTUIFrameLayout.m; sourceTree = "<group>"; };
 		93739DEADE918154986D038477CF4343 /* GTUIKitExamples.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTUIKitExamples.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93E3305CAF23FE11A44EB6F07ED3A6B6 /* GTUIFormDateCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUIFormDateCell.m; sourceTree = "<group>"; };
 		942CCCD94E43928E26F6206E1260E047 /* GTUITabBarIndicatorCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUITabBarIndicatorCellModel.m; sourceTree = "<group>"; };
 		946FD4D2FD86CDCEA4D9731E647FA6F6 /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
@@ -1317,7 +1317,7 @@
 		9DCD26C44C1DFB1B919C1B2923469F7D /* GTShapeScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShapeScheme.h; path = components/CommonComponent/schemes/ShapeScheme/src/GTShapeScheme.h; sourceTree = "<group>"; };
 		9F91576F57E68FA251971C09CA68FE01 /* GTUIOverlayObserverOverlay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUIOverlayObserverOverlay.m; sourceTree = "<group>"; };
 		A02AACBBEACDE9491566F3B48E377F8D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A048A35227ECD4AC09128FF0D239FB96 /* GTFInternationalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTFInternationalization.framework; path = GTFInternationalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A048A35227ECD4AC09128FF0D239FB96 /* GTFInternationalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFInternationalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A131FA11B5E7D9E0318D5C0F2ECB0B32 /* GTUILinearLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUILinearLayout.m; path = components/BasicComponent/Layout/src/GTUILinearLayout.m; sourceTree = "<group>"; };
 		A14DA6D26D49E06531D92A7A24E7B188 /* GTUIEmptyView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIEmptyView.m; path = components/CommonComponent/EmptyView/src/GTUIEmptyView.m; sourceTree = "<group>"; };
 		A167F905132A6A1C4F1B3A15B8220045 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
@@ -1415,7 +1415,7 @@
 		C0BB30A8F36543E4E9C8FDE827B059D9 /* UIImage+GTRTL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GTRTL.m"; path = "src/UIImage+GTRTL.m"; sourceTree = "<group>"; };
 		C0C25678CBCEBA5B1307F95901922952 /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
 		C0CC85AD682CA655987734C73D20AFAB /* GTFNodeListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFNodeListViewController.h; path = src/GTFNodeListViewController.h; sourceTree = "<group>"; };
-		C0F5AA82D8642EAD29241F7C234EC2A7 /* GTMotionInterchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMotionInterchange.framework; path = GTMotionInterchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0F5AA82D8642EAD29241F7C234EC2A7 /* GTMotionInterchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMotionInterchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FDDDFB6B3B804CBF88464EBD08B20B /* GTUINotificationBarEnum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUINotificationBarEnum.h; path = components/CommonComponent/NotificationBar/src/GTUINotificationBarEnum.h; sourceTree = "<group>"; };
 		C1885B4CD8BC800B2302DBA4C315839B /* GTRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTRefresh.h; path = components/CommonComponent/Refresh/src/GTRefresh.h; sourceTree = "<group>"; };
 		C20DDCB5BB44F6DE80139080B0E5D9ED /* UIView+GTUITimingFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+GTUITimingFunction.m"; path = "components/private/AnimationTiming/src/UIView+GTUITimingFunction.m"; sourceTree = "<group>"; };
@@ -1508,7 +1508,7 @@
 		DBC9B3D30EC1AB90850B3297067BC64A /* GTUIGridNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIGridNode.m; path = components/BasicComponent/Layout/src/GTUIGridNode.m; sourceTree = "<group>"; };
 		DBD466749220934E1A0383DBE245D946 /* GTUIInkView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUIInkView.m; path = components/CommonComponent/Ink/src/GTUIInkView.m; sourceTree = "<group>"; };
 		DC0D381DC23F5B33DD0167A586DF4528 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
-		DC10447A071396ADF3BFB8B7BC1B080D /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC10447A071396ADF3BFB8B7BC1B080D /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA60F26A82FE79FAEB1EE02E3098787 /* GTUIOverlayObserverOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUIOverlayObserverOverlay.h; sourceTree = "<group>"; };
 		DCE19AAE90894249F3EB431FFA6B0614 /* UIViewController+GTUIBottomSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+GTUIBottomSheet.h"; path = "components/CommonComponent/BottomSheet/src/UIViewController+GTUIBottomSheet.h"; sourceTree = "<group>"; };
 		DD3A6830D4DCFD187A1E9DA8B0122BF2 /* GTUIPageViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUIPageViewController.h; sourceTree = "<group>"; };
@@ -1550,7 +1550,7 @@
 		E818EDE9EBC2A4E6A1F5A43CAD2A042F /* GTUIFormRightDetailCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUIFormRightDetailCell.m; sourceTree = "<group>"; };
 		E8951C060AB5D77E4C97A3D956C0C90F /* GTUITriangleEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUITriangleEdgeTreatment.h; path = components/BasicComponent/ShapeLibrary/src/GTUITriangleEdgeTreatment.h; sourceTree = "<group>"; };
 		E8CADD99A3D54AE1B1342258A84E9D59 /* GTFInternationalization.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTFInternationalization.xcconfig; sourceTree = "<group>"; };
-		E8D92841CA83E4DDE46601E26F91B8D6 /* Pods_GTUICatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GTUICatalog.framework; path = "Pods-GTUICatalog.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D92841CA83E4DDE46601E26F91B8D6 /* Pods_GTUICatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTUICatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E937901F21C8D5CFC0AE3259338D4599 /* GTUITabBarTitleCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTUITabBarTitleCell.m; sourceTree = "<group>"; };
 		EA1761095B3EB706A28FE6191BBF9D2C /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoStateFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
 		EA1B79FF6190E1379288AE83FF5211A5 /* DialogsActionSheetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DialogsActionSheetViewController.h; sourceTree = "<group>"; };
@@ -1563,7 +1563,7 @@
 		EB4AF3809A849C84F60B77E9CB00839D /* GTUITabBarViewDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUITabBarViewDefines.h; sourceTree = "<group>"; };
 		EBD279024C110235E92C30E62E71B74D /* GTUISheetBehavior.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUISheetBehavior.h; sourceTree = "<group>"; };
 		ED0D927B15B4DE6FA45EDCA23F11854B /* PickerViewViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PickerViewViewController.h; sourceTree = "<group>"; };
-		EDC41CE9E91FCAEF952643A8FFDDBCD3 /* GTFTextAccessibility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTFTextAccessibility.framework; path = GTFTextAccessibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC41CE9E91FCAEF952643A8FFDDBCD3 /* GTFTextAccessibility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFTextAccessibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEDFC46410EAA57B62B41A041B5E943 /* MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = MJRefresh/MJRefresh.h; sourceTree = "<group>"; };
 		EE132E1E1E18265E8EE8A6BF242A5EC9 /* GTUICornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTUICornerTreatment.m; path = components/BasicComponent/Shapes/src/GTUICornerTreatment.m; sourceTree = "<group>"; };
 		EE6EBADDD49D75128C4F30FB8E14D8DE /* GTUITextInputArt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTUITextInputArt.h; sourceTree = "<group>"; };
@@ -1796,7 +1796,6 @@
 				5D08AEA098700A605CBC6133D58F28A1 /* ToastsViewController.h */,
 				6BE7C6D135944D200165540434E085C9 /* ToastsViewController.m */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
@@ -1869,7 +1868,6 @@
 				32E3CF364683FC267A6284684D33FEC0 /* GTUITabBarIndicatorTriangleView.h */,
 				566FD66BD69AD379810F14D5528B7883 /* GTUITabBarIndicatorTriangleView.m */,
 			);
-			name = IndicatorViews;
 			path = IndicatorViews;
 			sourceTree = "<group>";
 		};
@@ -1958,7 +1956,6 @@
 				A581620981633FE3A3F04A0F8F96BAC2 /* TextFieldControllerStylesExampleSupplemental.h */,
 				0039F24B2C5F19B9CC58A6734C8DBCA4 /* TextFieldControllerStylesExampleSupplemental.m */,
 			);
-			name = supplemental;
 			path = supplemental;
 			sourceTree = "<group>";
 		};
@@ -2036,7 +2033,6 @@
 				22FFA492338148529AAF26B59AF97F74 /* GTFRuntime.m */,
 				7D0F23D059DFD9E901F6B32B300BC7D1 /* Support Files */,
 			);
-			name = GTCatalog;
 			path = GTCatalog;
 			sourceTree = "<group>";
 		};
@@ -2084,7 +2080,6 @@
 				85F85B918A7B07E063BF8BBE3821BAC2 /* DialogsAlertViewController.h */,
 				23C999DCF721D898B69D77CF1DA9B1C1 /* DialogsAlertViewController.m */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
@@ -2188,7 +2183,6 @@
 			children = (
 				0365DD1AAF6F38FBE7F6BE1EDA8535E0 /* RefreshDemoViewController.swift */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
@@ -2217,7 +2211,6 @@
 				3DC9001B03215D139FD7BCD40A952594 /* GTMTimingCurve.h */,
 				AF075EAA0AD05A0D24C2B11D2774E060 /* Support Files */,
 			);
-			name = GTMotionInterchange;
 			path = GTMotionInterchange;
 			sourceTree = "<group>";
 		};
@@ -2361,7 +2354,6 @@
 				C4E97DF83735D319CEADA81ADA622F06 /* ViewController+MASAdditions.m */,
 				3FB98A95ED627E85868AC0292901BFA4 /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -2462,7 +2454,6 @@
 				D1AA3A0730A90A060278D8D73ECB2901 /* TestTableViewCell.swift */,
 				5480A505F193869D2CD5AAE1FEA7EB96 /* UIPageViewController.swift */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
@@ -2472,7 +2463,6 @@
 				113EF1F9754717433C39C23F84EA061E /* TextFieldControllerStylesExample.m */,
 				1A83BCA3EA2959B414AC472396CD54C3 /* supplemental */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
@@ -2633,7 +2623,6 @@
 				6B5CD3407C9E7BAB41EDC72B6A48EFED /* Resources */,
 				9E9AF2D4FE7CD5FCE11CE9E8AA944A13 /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -2642,7 +2631,6 @@
 			children = (
 				002969D04E2B5DC51A7D39343C77615C /* ActionSheetSwiftExample.swift */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
@@ -2705,7 +2693,6 @@
 				A322949B1D8D9E5B7570131D1E72E487 /* UIView+GTRTL.m */,
 				C6623F302315B3319BE6C1EFF81B50F7 /* Support Files */,
 			);
-			name = GTFInternationalization;
 			path = GTFInternationalization;
 			sourceTree = "<group>";
 		};
@@ -2939,7 +2926,6 @@
 				043E6FDCAFFA9B45F320D07D54F1BC43 /* NSArray+GTFUtils.m */,
 				E9A8299A88429D55D07837119D3BDEDB /* Support Files */,
 			);
-			name = GTFTextAccessibility;
 			path = GTFTextAccessibility;
 			sourceTree = "<group>";
 		};
@@ -3126,7 +3112,6 @@
 				643FA944432AE7A08BC06D210C295052 /* FormDemoViewController.swift */,
 				0DFCF5C6651DF4B3314E4E2544B50D7D /* FormOtherRowsViewController.swift */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
@@ -3445,7 +3430,6 @@
 				ED0D927B15B4DE6FA45EDCA23F11854B /* PickerViewViewController.h */,
 				2A6DDD20481957D571A66EE883DFBD3E /* PickerViewViewController.m */,
 			);
-			name = examples;
 			path = examples;
 			sourceTree = "<group>";
 		};
