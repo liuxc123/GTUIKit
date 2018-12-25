@@ -1,5 +1,5 @@
 //
-//  UINavigationController+GTUIFullscreenPopGesture.h
+//  GTUINavigationController+GTUIFullscreenPopGesture.h
 //  GTCatalog
 //
 //  Created by liuxc on 2018/11/20.

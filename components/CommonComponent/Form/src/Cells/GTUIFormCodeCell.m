@@ -130,7 +130,7 @@ NSString *const GTUIFormCodeTextFieldMaxNumberOfCharacters = @"textFieldMaxNumbe
     }
 }
 
-- (void)startCountDownWithTimeOut:(NSInteger)timeout {
+- (void)startCountDownWithTimeOut:(NSInteger)timeout completeBlock:(void (^)(void))completeBlock {
     __block NSInteger timeOut = timeout; //倒计时时间
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
@@ -142,6 +142,7 @@ NSString *const GTUIFormCodeTextFieldMaxNumberOfCharacters = @"textFieldMaxNumbe
                 //设置界面的按钮显示 根据自己需求设置
                 [self.codeButton setTitle:self.codeButtonNormalTitle forState:UIControlStateNormal];
                 self.codeButton.enabled = YES;
+                if (completeBlock) { completeBlock(); }
             });
         }else{
             NSInteger seconds = timeOut % 60 == 0 ? timeOut : timeOut % 60;

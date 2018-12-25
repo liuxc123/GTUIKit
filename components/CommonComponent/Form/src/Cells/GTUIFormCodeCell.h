@@ -28,6 +28,6 @@ extern NSString *const GTUIFormCodeTextFieldMaxNumberOfCharacters;
 
  @param timeout 倒计时时间（单位：秒）
  */
-- (void)startCountDownWithTimeOut:(NSInteger)timeout;
+- (void)startCountDownWithTimeOut:(NSInteger)timeout completeBlock:(void (^)(void))completeBlock;
 
 @end

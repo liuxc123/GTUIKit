@@ -37,7 +37,7 @@ typedef NS_ENUM(NSUInteger, GTUIToastIcon) {
 
 /**
  模态显示提示，此时屏幕不响应用户操作（显示在 keywindow 上面），
- 需调用 dismissToast 方法使 Toast 消失
+ 默认2秒后自动消失
 
  @param text 显示文本，默认为 loading 加载
  @return 返回显示的 Toast 对象
@@ -134,6 +134,18 @@ typedef NS_ENUM(NSUInteger, GTUIToastIcon) {
  @return 返回显示的 Toast 对象
  */
 + (GTUIToast *)presentModelToastWithin:(UIView *)superview
+                                  text:(NSString *)text;
+
+/**
+ * 模态 toast，需调用 dismissToast 方法使 Toast 消失
+ * 跟普通的 toast 区别是，会添加一个透明的背景层，防止用户屏幕点击
+
+ @param superview superview 父视图
+ @param text 显示文本
+ @return 返回显示的 Toast 对象
+ */
++ (GTUIToast *)presentModelToastWithin:(UIView *)superview
+                              withIcon:(GTUIToastIcon)icon
                                   text:(NSString *)text;
 
 

@@ -8,4 +8,4 @@
 #import "GTUIAppBarViewController.h"
 #import "GTUIAppBarContainerViewController.h"
 #import "GTUINavigationController.h"
-#import "UINavigationController+GTUIFullscreenPopGesture.h"
+#import "GTUINavigationController+GTUIFullscreenPopGesture.h"

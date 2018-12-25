@@ -23,6 +23,7 @@ static NSString *const kGTUIToastBundle = @"GTUIToast.bundle";
     toast.backgroundView.hidden = YES;
     toast.userInteractionEnabled = NO;
     toast.label.numberOfLines = 2;
+    [toast hideAnimated:YES afterDelay:GTUIToast_Default_Duration];
     return toast;
 }
 
@@ -63,9 +64,14 @@ static NSString *const kGTUIToastBundle = @"GTUIToast.bundle";
     GTUIToast *toast = [GTUIToast createGTUIProgressHUDviewWithtext:showText superView:superview];
     toast.completionBlock = completion;
     toast.userInteractionEnabled = NO;
-
     UIImage *iconName = [GTUIToast toastIconWithType:icon];
     toast.mode = [GTUIToast toastModeWithType:icon];
+    if (icon != GTUIToastIconNone) {
+        toast.minSize = CGSizeMake(100, 100);
+        toast.square = YES;
+    } else {
+        toast.yOffset = GTUIProgressBottomMaxOffset;
+    }
     if (iconName) toast.customView = [[UIImageView alloc] initWithImage:iconName];
     if (duration != 0) [toast hideAnimated:YES afterDelay:duration];
     return toast;
@@ -73,6 +79,10 @@ static NSString *const kGTUIToastBundle = @"GTUIToast.bundle";
 
 + (GTUIToast *)presentModelToastWithin:(UIView *)superview text:(NSString *)text {
     return [GTUIToast presentModelToastWithin:superview withIcon:GTUIToastIconNone text:text duration:GTUIToast_Default_Duration delay:0.f completion: nil];
+}
+
++ (GTUIToast *)presentModelToastWithin:(UIView *)superview withIcon:(GTUIToastIcon)icon text:(NSString *)text {
+    return [GTUIToast presentModelToastWithin:superview withIcon:icon text:text duration:GTUIToast_Default_Duration delay:0.f completion: nil];
 }
 
 + (GTUIToast *)presentModelToastWithin:(UIView *)superview
@@ -92,13 +102,18 @@ static NSString *const kGTUIToastBundle = @"GTUIToast.bundle";
     GTUIToast *toast = [GTUIToast createGTUIProgressHUDviewWithtext:showText superView:superview];
     toast.userInteractionEnabled = YES;
 
-    toast.backgroundView.style = GTUIToastBackgroundStyleBlur;
+    toast.backgroundView.style = GTUIToastBackgroundStyleSolidColor;
     toast.backgroundView.color = [UIColor colorWithWhite:0.f alpha:0.1f];
-
     UIImage *iconName = [GTUIToast toastIconWithType:icon];
     toast.mode = [GTUIToast toastModeWithType:icon];
     toast.customView = [[UIImageView alloc] initWithImage:iconName];
     toast.completionBlock = completion;
+    if (icon != GTUIToastIconNone) {
+        toast.minSize = CGSizeMake(100, 100);
+        toast.square = YES;
+    } else {
+        toast.yOffset = GTUIProgressBottomMaxOffset;
+    }
     if (duration != 0) [toast hideAnimated:YES afterDelay:duration];
     return toast;
 }
@@ -156,7 +171,6 @@ static NSString *const kGTUIToastBundle = @"GTUIToast.bundle";
     toast.label.font=[UIFont systemFontOfSize:15];
     toast.contentColor = [UIColor whiteColor];
     toast.removeFromSuperViewOnHide = YES;
-    toast.square = YES;
 
     return toast;
 }

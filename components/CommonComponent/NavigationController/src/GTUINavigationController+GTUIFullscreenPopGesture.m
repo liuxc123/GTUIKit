@@ -1,11 +1,11 @@
 //
-//  UINavigationController+GTUIFullscreenPopGesture.m
+//  GTUINavigationController+GTUIFullscreenPopGesture.m
 //  GTCatalog
 //
 //  Created by liuxc on 2018/11/20.
 //
 
-#import "UINavigationController+GTUIFullscreenPopGesture.h"
+#import "GTUINavigationController+GTUIFullscreenPopGesture.h"
 #import <objc/runtime.h>
 
 @interface _GTUIFullscreenPopGestureRecognizerDelegate : NSObject <UIGestureRecognizerDelegate>

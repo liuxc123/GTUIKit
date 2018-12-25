@@ -37,7 +37,7 @@ class FormOtherRowsViewController: GTUIFormViewController {
         row.height = 50
         row.action.formBlock = { [unowned self] sender in
             let cell = row.cell(forForm: self) as? GTUIFormCodeCell
-            cell?.startCountDown(withTimeOut: 60)
+            cell?.startCountDown(withTimeOut: 60, complete: nil)
         }
         section.addFormRow(row)
 

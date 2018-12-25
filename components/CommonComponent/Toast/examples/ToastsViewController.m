@@ -46,10 +46,10 @@
             [GTUIToast presentToastWithText:@"文本信息"];
             break;
         case 1:
-            [GTUIToast presentToastWithIn:self.view text:@"文本信息"];
+            [GTUIToast presentModelToastWithin:self.view text:@"文本信息"];
             break;
         case 2:
-            [GTUIToast presentToastWithin:self.view withIcon:GTUIToastIconLoading text:@"加载中"];
+            [GTUIToast presentModelToastWithin:self.view withIcon:GTUIToastIconLoading text:@"加载中"];
             break;
         case 3:
             [GTUIToast presentToastWithin:self.view withIcon:GTUIToastIconSuccess text:nil];
