@@ -63,7 +63,7 @@ typedef void (^_GTUIViewControllerWillAppearInjectBlock)(UIViewController *viewC
 @end
 
 
-@implementation UINavigationController (GTUIFullscreenPopGesture)
+@implementation GTUINavigationController (GTUIFullscreenPopGesture)
 
 + (void)load
 {

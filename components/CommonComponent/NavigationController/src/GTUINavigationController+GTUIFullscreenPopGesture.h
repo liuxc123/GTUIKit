@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTUINavigationController.h"
 
-@interface UINavigationController (GTUIFullscreenPopGesture)
+@interface GTUINavigationController (GTUIFullscreenPopGesture)
 
 @property (nonatomic, strong, readonly) UIPanGestureRecognizer *gtui_fullscreenPopGestureRecognizer;
 
