@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         btn.setTitle("标题", for: .normal)
         btn.addTarget(self, action: #selector(btnClickAction(_:)), for: .touchUpInside)
         btn.imageLocation = .leading
-        btn.imageTitleSpace = 2
+        btn.imageTitleSpace = 3
         self.view.addSubview(btn)
 
 

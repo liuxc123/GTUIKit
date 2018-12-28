@@ -12,7 +12,8 @@
 @property (nonatomic, strong) GTUIPageMainTableView *mainTableView;
 @property (nonatomic, strong) GTUIPageListContainerView *listContainerView;
 @property (nonatomic, strong) UIScrollView *currentScrollingListView;
-@property (nonatomic, strong) id<GTUIPageViewListViewDelegate> currentListView;
+@property (nonatomic, strong) id<GTUIPageViewListViewDelegate> currentList;
+@property (nonatomic, strong) NSMutableDictionary <NSNumber *, id<GTUIPageViewListViewDelegate>> *validListDict;
 
 @end
 
@@ -22,6 +23,7 @@
     self = [super initWithFrame:CGRectZero];
     if (self) {
         _delegate = delegate;
+        _validListDict = [NSMutableDictionary dictionary];
         [self initializeViews];
     }
     return self;
@@ -32,6 +34,7 @@
     self.mainTableView.showsVerticalScrollIndicator = NO;
     self.mainTableView.showsHorizontalScrollIndicator = NO;
     self.mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.mainTableView.scrollsToTop = NO;
     self.mainTableView.dataSource = self;
     self.mainTableView.delegate = self;
     self.mainTableView.tableHeaderView = [self.delegate tableHeaderViewInPagerView:self];
@@ -43,8 +46,6 @@
 
     _listContainerView = [[GTUIPageListContainerView alloc] initWithDelegate:self];
     self.listContainerView.mainTableView = self.mainTableView;
-
-    [self configListViewDidScrollCallback];
 
     self.isListHorizontalScrollEnabled = YES;
 }
@@ -62,9 +63,14 @@
 }
 
 - (void)reloadData {
-    self.currentListView = nil;
+    self.currentList = nil;
     self.currentScrollingListView = nil;
-    [self configListViewDidScrollCallback];
+
+    for (id<GTUIPageViewListViewDelegate> list in self.validListDict.allValues) {
+        [list.listView removeFromSuperview];
+    }
+    [_validListDict removeAllObjects];
+
     self.mainTableView.tableHeaderView = [self.delegate tableHeaderViewInPagerView:self];
     [self.mainTableView reloadData];
     [self.listContainerView reloadData];
@@ -73,8 +79,8 @@
 - (void)preferredProcessListViewDidScroll:(UIScrollView *)scrollView {
     if (self.mainTableView.contentOffset.y < [self.delegate tableHeaderViewHeightInPagerView:self]) {
         //mainTableView的header还没有消失，让listScrollView一直为0
-        if (self.currentListView && [self.currentListView respondsToSelector:@selector(listScrollViewWillResetContentOffset)]) {
-            [self.currentListView listScrollViewWillResetContentOffset];
+        if (self.currentList && [self.currentList respondsToSelector:@selector(listScrollViewWillResetContentOffset)]) {
+            [self.currentList listScrollViewWillResetContentOffset];
         }
         scrollView.contentOffset = CGPointZero;
         scrollView.showsVerticalScrollIndicator = NO;
@@ -93,12 +99,11 @@
 
     if (scrollView.contentOffset.y < [self.delegate tableHeaderViewHeightInPagerView:self]) {
         //mainTableView已经显示了header，listView的contentOffset需要重置
-        NSArray *listViews = [self.delegate listViewsInPagerView:self];
-        for (id<GTUIPageViewListViewDelegate> listView in listViews) {
-            if ([listView respondsToSelector:@selector(listScrollViewWillResetContentOffset)]) {
-                [listView listScrollViewWillResetContentOffset];
+        for (id<GTUIPageViewListViewDelegate> list in self.validListDict.allValues) {
+            if ([list respondsToSelector:@selector(listScrollViewWillResetContentOffset)]) {
+                [list listScrollViewWillResetContentOffset];
             }
-            [listView listScrollView].contentOffset = CGPointZero;
+            [list listScrollView].contentOffset = CGPointZero;
         }
     }
 
@@ -109,18 +114,6 @@
 }
 
 #pragma mark - Private
-
-- (void)configListViewDidScrollCallback {
-    NSArray *listViews = [self.delegate listViewsInPagerView:self];
-    __weak typeof(self)weakSelf = self;
-    for (id<GTUIPageViewListViewDelegate> listView in listViews) {
-        __weak typeof(id<GTUIPageViewListViewDelegate>) weakListView = listView;
-        [listView listViewDidScrollCallback:^(UIScrollView *scrollView) {
-            weakSelf.currentListView = weakListView;
-            [weakSelf listViewDidScroll:scrollView];
-        }];
-    }
-}
 
 - (void)listViewDidScroll:(UIScrollView *)scrollView {
     self.currentScrollingListView = scrollView;
@@ -199,18 +192,26 @@
 #pragma mark - JXPagingListContainerViewDelegate
 
 - (NSInteger)numberOfRowsInListContainerView:(GTUIPageListContainerView *)listContainerView {
-    NSArray *listViews = [self.delegate listViewsInPagerView:self];
-    return listViews.count;
+    return [self.delegate numberOfListsInPagerView:self];
 }
 
 - (UIView *)listContainerView:(GTUIPageListContainerView *)listContainerView listViewInRow:(NSInteger)row {
-    NSArray *listViews = [self.delegate listViewsInPagerView:self];
-    return [listViews[row] listView];
+    id<GTUIPageViewListViewDelegate> list = self.validListDict[@(row)];
+    if (list == nil) {
+        list = [self.delegate pagerView:self initListAtIndex:row];
+        __weak typeof(self)weakSelf = self;
+        __weak typeof(id<GTUIPageViewListViewDelegate>) weakList = list;
+        [list listViewDidScrollCallback:^(UIScrollView *scrollView) {
+            weakSelf.currentList = weakList;
+            [weakSelf listViewDidScroll:scrollView];
+        }];
+        _validListDict[@(row)] = list;
+    }
+    return [list listView];
 }
 
 - (void)listContainerView:(GTUIPageListContainerView *)listContainerView willDisplayCellAtRow:(NSInteger)row {
-    NSArray *listViews = [self.delegate listViewsInPagerView:self];
-    self.currentScrollingListView = [listViews[row] listScrollView];
+    self.currentScrollingListView = [self.validListDict[@(row)] listScrollView];
 }
 
 @end

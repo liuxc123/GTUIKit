@@ -129,7 +129,10 @@
 {
     if ([self.rowDescriptor.rowType isEqualToString:GTUIFormRowDescriptorTypeSelectorPush] || [self.rowDescriptor.rowType isEqualToString:GTUIFormRowDescriptorTypeSelectorPopover]){
         UIViewController * controllerToPresent = nil;
-        if (self.rowDescriptor.action.formSegueIdentifier){
+        if (self.rowDescriptor.action.viewControllerFormBlock) {
+            self.rowDescriptor.action.viewControllerFormBlock(self.rowDescriptor);
+        }
+        else if (self.rowDescriptor.action.formSegueIdentifier){
             [controller performSegueWithIdentifier:self.rowDescriptor.action.formSegueIdentifier sender:self.rowDescriptor];
         }
         else if (self.rowDescriptor.action.formSegueClass){

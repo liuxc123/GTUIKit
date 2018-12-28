@@ -22,12 +22,6 @@ class RefreshDemoViewController: UITableViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.tableFooterView = UIView()
 
-//        self.tableView.setRefreshWithHeaderBlock {
-//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
-//                self.tableView.endRefreshing(false)
-//            })
-//        }
-//
         self.tableView.setRefreshWithFooterBlock {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
                 self.tableView.endRefreshing(false)

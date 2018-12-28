@@ -14,7 +14,7 @@
 #import "private/GTUIButton+Subclassing.h"
 
 static const CGFloat GTUIButtonMinimumTouchTargetHeight = 40;
-static const CGFloat GTUIButtonMinimumTouchTargetWidth = 40;
+static const CGFloat GTUIButtonMinimumTouchTargetWidth = 20;
 static const CGFloat GTUIButtonDefaultCornerRadius = 2.0;
 
 static const NSTimeInterval GTUIButtonAnimationDuration = 0.2;

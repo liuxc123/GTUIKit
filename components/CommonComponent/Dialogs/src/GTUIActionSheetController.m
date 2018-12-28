@@ -493,6 +493,8 @@
 
         if (button == sender) {
 
+            clickBlock = button.action.clickBlock;
+
             switch (button.action.type) {
 
                 case GTUIActionTypeDefault:
